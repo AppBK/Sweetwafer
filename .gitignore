@@ -1,0 +1,13 @@
+# FOLDERS:
+instance/
+node_modules/
+.vscode/
+__pycache__/
+
+# FILES:
+dev.db
+.DS_Store
+*.env
+.flaskenv
+Pipfile
+Pipfile.lock
