@@ -24,3 +24,6 @@ class Inventory(db.Model, UserMixin):
   price = db.Column(db.Float, nullable=False)
   createdAt = db.Column(db.String(64), nullable=False)
   updatedAt = db.Column(db.String(64), nullable=False)
+
+
+Hoping...
