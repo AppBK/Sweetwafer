@@ -1,18 +1,18 @@
-from models import db, environment, SCHEMA, add_prefix_for_prod
+from . import db, environment, SCHEMA, add_prefix_for_prod
 from flask_login import UserMixin
 
-inventory_product_images = db.Tables(
+inventory_product_images = db.Table(
   "inventory_product_images",
   db.Column(
     "inventory_id",
     db.Integer,
-    db.ForeignKey(add_prefix_for_prod('inventory.id')),
+    db.ForeignKey(add_prefix_for_prod('inventories.id')),
     primary_key=True
   ),
   db.Column(
     "img_id",
     db.Integer,
-    db.ForeignKey(add_prefix_for_prod('inventory.id')),
+    db.ForeignKey(add_prefix_for_prod('product_images.id')),
     primary_key=True
   )
 )
@@ -31,7 +31,7 @@ class Inventory(db.Model, UserMixin):
   name = db.Column(db.String(128), nullable=False)
   description = db.Column(db.String(256), nullable=False)
   model = db.Column(db.String(32), nullable=False)
-  serial = db.COlumn(db.String(64), nullable=False)
+  serial = db.Column(db.String(64), nullable=False)
   tech_specs = db.Column(db.String(2048), nullable=False)
   price = db.Column(db.Float, nullable=False)
   createdAt = db.Column(db.String(64), nullable=False)

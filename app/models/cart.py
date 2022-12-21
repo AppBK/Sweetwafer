@@ -1,4 +1,4 @@
-from models import db, environment, SCHEMA, add_prefix_for_prod
+from . import db, environment, SCHEMA, add_prefix_for_prod
 from flask_login import UserMixin
 
 class Cart(db.Model, UserMixin):
@@ -10,7 +10,7 @@ class Cart(db.Model, UserMixin):
 
   id = db.Column(db.Integer, nullable=False, primary_key=True)
   user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
-  item_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('items.id')), nullable=False)
+  item_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('inventories.id')), nullable=False)
   quantity = db.Column(db.Integer, default=1) # Is nullable
   createdAt = db.Column(db.String(64), nullable=False)
   updatedAt = db.Column(db.String(64), nullable=False)

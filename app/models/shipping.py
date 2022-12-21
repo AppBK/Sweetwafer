@@ -1,4 +1,4 @@
-from models import db, environment, SCHEMA, add_prefix_for_prod
+from . import db, environment, SCHEMA, add_prefix_for_prod
 from flask_login import UserMixin
 
 class Shipping(db.Model, UserMixin):
