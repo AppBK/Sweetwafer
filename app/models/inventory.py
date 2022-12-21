@@ -1,6 +1,23 @@
 from models import db, environment, SCHEMA, add_prefix_for_prod
 from flask_login import UserMixin
 
+inventory_product_images = db.Tables(
+  "inventory_product_images",
+  db.Column(
+    "inventory_id",
+    db.Integer,
+    db.ForeignKey(add_prefix_for_prod('inventory.id')),
+    primary_key=True
+  ),
+  db.Column(
+    "img_id",
+    db.Integer,
+    db.ForeignKey(add_prefix_for_prod('inventory.id')),
+    primary_key=True
+  )
+)
+
+
 class Inventory(db.Model, UserMixin):
   __tablename__ = 'inventories'
 
@@ -19,7 +36,8 @@ class Inventory(db.Model, UserMixin):
   price = db.Column(db.Float, nullable=False)
   createdAt = db.Column(db.String(64), nullable=False)
   updatedAt = db.Column(db.String(64), nullable=False)
-  # a 'users' relationship should be created here by the user relationship...
+
+  product_images = db.relationship("ProductImages", secondary=inventory_product_images, back_populates="inventories")
 
   def to_dict(self):
     inventory = {
@@ -50,19 +68,4 @@ class ProductImages(db.Model, UserMixin):
   createdAt = db.Column(db.String(64), nullable=False)
   updatedAt = db.Column(db.String(64), nullable=False)
 
-
-inventory_product_images = db.Tables(
-  "inventory_product_images",
-  db.Column(
-    "inventory_id",
-    db.Integer,
-    db.ForeignKey(add_prefix_for_prod('inventory.id')),
-    primary_key=True
-  ),
-  db.Column(
-    "img_id",
-    db.Integer,
-    db.ForeignKey(add_prefix_for_prod('inventory.id')),
-    primary_key=True
-  )
-)
+  inventories = db.relationship("Inventory", secondary=inventory_product_images, back_populates="product_images")
