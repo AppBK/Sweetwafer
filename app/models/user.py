@@ -35,7 +35,6 @@ class User(db.Model, UserMixin):
             'id': self.id,
             'username': self.username,
             'email': self.email,
-            'cart_id': self.cart_id,
             'createdAt': self.createdAt,
             'updatedAt': self.updatedAt
         }

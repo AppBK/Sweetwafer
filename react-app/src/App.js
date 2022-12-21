@@ -7,7 +7,8 @@ import NavBar from './components/NavBar';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
-import { authenticate } from './store/session';
+import { authenticate, login } from './store/session';
+
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -22,6 +23,14 @@ function App() {
 
   if (!loaded) {
     return null;
+  }
+
+  const loginDemo = async (e) => {
+    e.preventDefault();
+    const data = await dispatch(login('demo@aa.io', 'password'))
+    if (data) {
+      console.log('Invalid Login!')
+    }
   }
 
   return (
@@ -42,6 +51,7 @@ function App() {
         </ProtectedRoute>
         <Route path='/' exact={true} >
           <h1>My Home Page</h1>
+          <button id="demo-user-login" onClick={loginDemo}>Demo User</button>
         </Route>
       </Switch>
     </BrowserRouter>
