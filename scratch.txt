@@ -1,0 +1,3 @@
+Expected General Workflow:
+
+    DB Tables => Backend Routes => Frontend Components => Error Handling => Styling
