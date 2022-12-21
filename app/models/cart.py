@@ -15,6 +15,7 @@ class Cart(db.Model, UserMixin):
   createdAt = db.Column(db.String(64), nullable=False)
   updatedAt = db.Column(db.String(64), nullable=False)
   # a 'users' relationship should be created here by the user relationship...
+  users = db.relationship('User', back_populates='cart')
 
   def to_dict(self):
     cart = {

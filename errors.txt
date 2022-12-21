@@ -24,3 +24,80 @@ INFO  [alembic.autogenerate.compare] Detected added column 'users.updatedAt'
   Generating /Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Cap
   stone/sweetwafer/project/migrations/versions/20221221_121143_create_migrations_f
   or_user_shipping_.py ...  done
+
+
+
+
+
+
+
+
+
+
+
+
+
+#####
+(project) bash-3.2$ flask seed all
+Traceback (most recent call last):
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 1986, in get_property
+    return self._props[key]
+KeyError: 'users'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/bin/flask", line 10, in <module>
+    sys.exit(main())
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/flask/cli.py", line 990, in main
+    cli.main(args=sys.argv[1:])
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/flask/cli.py", line 596, in main
+    return super().main(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/flask/cli.py", line 440, in decorator
+    return __ctx.invoke(f, *args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/seeds/__init__.py", line 20, in seed
+    seed_users()
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/seeds/users.py", line 7, in seed_users
+    demo = User(
+  File "<string>", line 4, in __init__
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/sqlalchemy/orm/state.py", line 474, in _initialize_instance
+    manager.dispatch.init(self, args, kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/sqlalchemy/event/attr.py", line 343, in __call__
+    fn(*args, **kw)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 3570, in _event_on_init
+    instrumenting_mapper._check_configure()
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 1874, in _check_configure
+    _configure_registries({self.registry}, cascade=True)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 3385, in _configure_registries
+    _do_configure_registries(registries, cascade)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 3424, in _do_configure_registries
+    mapper._post_configure_properties()
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 1891, in _post_configure_properties
+    prop.init()
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/sqlalchemy/orm/interfaces.py", line 222, in init
+    self.do_init()
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 2142, in do_init
+    self._generate_backref()
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 2478, in _generate_backref
+    self._add_reverse_property(self.back_populates)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/sqlalchemy/orm/relationships.py", line 2048, in _add_reverse_property
+    other = self.mapper.get_property(key, _configure_mappers=False)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/sqlalchemy/orm/mapper.py", line 1988, in get_property
+    util.raise_(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+sqlalchemy.exc.InvalidRequestError: Mapper 'mapped class Cart->carts' has no property 'users'

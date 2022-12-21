@@ -3,7 +3,7 @@ from app.models import db, environment, SCHEMA, Shipping
 from datetime import datetime
 
 # Adds a demo user, you can add other users here if you want
-def seed_inventory():
+def seed_shipping():
     item1 = Shipping(
         user_id=1, shipping_name='Demo', company='AppAcademy', street='333 App Wy.',
         apt_number=None, city='San Francisco', state='CA', zip='94000', country='United States',

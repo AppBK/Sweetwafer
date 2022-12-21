@@ -2,3 +2,25 @@ Expected General Workflow:
 
     DB Tables => Backend Routes => Frontend Components => Error Handling => Styling
 
+
+
+
+
+class Inventory(db.Model, UserMixin):
+  __tablename__ = 'inventories'
+
+  # ALL models should have this!!!
+  if environment == "production":
+    __table_args__ = {'schema': SCHEMA}
+
+  id = db.Column(db.Integer, nullable=False, primary_key=True)
+  vendor_name = db.Column(db.String(64), nullable=False)
+  manufacturer_id = db.Column(db.String(64), nullable=False)
+  name = db.Column(db.String(128), nullable=False)
+  description = db.Column(db.String(256), nullable=False)
+  model = db.Column(db.String(32), nullable=False)
+  serial = db.Column(db.String(64), nullable=False)
+  tech_specs = db.Column(db.String(2048), nullable=False)
+  price = db.Column(db.Float, nullable=False)
+  createdAt = db.Column(db.String(64), nullable=False)
+  updatedAt = db.Column(db.String(64), nullable=False)
