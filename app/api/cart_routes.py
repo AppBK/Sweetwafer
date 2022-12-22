@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, session, request
-from app.models import User, db
+from app.models import User, db, Inventory
 from app.forms import LoginForm
 from app.forms import SignUpForm
 from flask_login import current_user, login_user, logout_user, login_required
@@ -32,4 +32,6 @@ def delete_item():
 @cart_routes.route('/clear', methods=['DELETE'])
 @login_required
 def clear_cart():
-  pass
+  Inventory.delete();
+
+  return ['Cart Emptied']

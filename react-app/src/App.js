@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
+import Header from './components/Header/Header';
 import { authenticate, login } from './store/session';
 
 
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Header />
       <NavBar />
       <Switch>
         <Route path='/login' exact={true}>

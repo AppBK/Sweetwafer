@@ -69,3 +69,11 @@ class ProductImages(db.Model, UserMixin):
   updatedAt = db.Column(db.String(64), nullable=False)
 
   inventories = db.relationship("Inventory", secondary=inventory_product_images, back_populates="product_images")
+
+  def to_dict(self):
+    return {
+      'id': self.id,
+      'url': self.url,
+      'createdAt': self.createdAt,
+      'updatedAt': self.updatedAt
+    }
