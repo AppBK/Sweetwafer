@@ -96,12 +96,12 @@ export default function cartReducer(state = [], action) {
       return newState
     }
     case ADD_CART: {
-      newState = [...state]
+      const newState = [...state]
       newState.push(action.payload)
       return newState
     }
     case UPDATE_CART: {
-      newState = [...state]
+      const newState = [...state]
       for (let i = 0; i < newState.length; i++) {
         if (newState[i].id === action.payload.id) {
           newState[i] = action.payload;
