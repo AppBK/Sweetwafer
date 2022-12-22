@@ -27,3 +27,4 @@ class Inventory(db.Model, UserMixin):
 
 
 Hoping...More hoping...
+postgres://brian_kiesel_db_user:xMAqOO151aUwbzBRi4XY1JJehp1BwYbt@dpg-cehnqtta499fabmvhm00-a/brian_kiesel_db
