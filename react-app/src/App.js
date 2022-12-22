@@ -8,6 +8,7 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
 import Header from './components/Header/Header';
+import LoginPage from './components/myAuth/LoginPage';
 import { authenticate, login } from './store/session';
 
 
@@ -39,6 +40,9 @@ function App() {
       <Header />
       <NavBar />
       <Switch>
+        <Route path='/login_page' exact={true}>
+          <LoginPage />
+        </Route>
         <Route path='/login' exact={true}>
           <LoginForm />
         </Route>

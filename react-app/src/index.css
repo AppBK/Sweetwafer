@@ -1,1 +1,11 @@
 /* TODO Add site wide styles */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+* {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+}

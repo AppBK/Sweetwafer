@@ -4,13 +4,15 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: linear-gradient(#d6e6ee, #ffffff);
-  background-image: "/gif/snow-transparent.gif";
+  background: url(https://media.sweetwater.com/m/include/holiday/images/snow-transparent.gif?height=300&width=400), linear-gradient(#d5ebf5, #ffffff);
+  /* border: 1px solid red; */
 }
 
 #sweet-logo {
   border: none;
   background: transparent;
+  padding: 0px;
+  margin: 0px;
 }
 
 #sweet-logo:hover {
@@ -18,9 +20,44 @@
 }
 
 #img-logo {
-  width: 100px;
-  height: 50px;
+  width: 220px;
+  height: 70px;
   background-color: transparent;
+}
+
+#account {
+  font-weight: bold;
+  position: relative;
+  /* border: 1px solid black; */
+  height: 100%;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#account:hover {
+  color: #0072ba;
+  cursor: pointer;
+  background-color: #f2f1f0;
+}
+
+.down-arrow {
+  padding-left: 6px;
+  display: block;
+  height: 8px;
+  width: 10px;
+}
+
+#account-window {
+  position: absolute;
+  top: 74px;
+  right: 1px;
+  background-color: white;;
+  height: 150px;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 8px;
 }
 
 #cart-button {
@@ -30,6 +67,15 @@
 
 #cart-button:hover {
   cursor: pointer;
+}
+
+#contact {
+  color:#0072ba;
+  font-size: 10px;
+}
+
+#call {
+  color: black;
 }
 
 h2 {
