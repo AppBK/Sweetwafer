@@ -18,9 +18,14 @@ export const actionGetCart = (cart) => ({
   payload: cart
 })
 
-export const actionUpdateCart = (quantity) => ({
+export const actionUpdateCart = (item) => ({
   type: UPDATE_CART,
-  payload: quantity
+  payload: item
+})
+
+export const actionDeleteCart = (id) => ({
+  type: DELETE_CART,
+  payload: id
 })
 
 export const actionClearCart = () => ({
@@ -39,8 +44,10 @@ export const thunkAddCart = (user_id, item_id) => async (dispatch) => {
       item_id,
     })
   })
+
   if (response.ok) {
     const addedItem = await response.json();
+    dispatch(actionAddCart(addedItem));
   }
 }
 
@@ -60,20 +67,51 @@ export const thunkGetCart = () => async (dispatch) => {
   }
 }
 
+export const thunkClearCart = () => async (dispatch) => {
+  const response = await fetch('/api/cart/clear', {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  })
+
+  if (response.ok) {
+    console.log('DELETED CART')
+  } else {
+    const data = await response.json()
+    if (data.errors) {
+      return data;
+    } else {
+      return ['Could Not Empty the Cart']
+    }
+  }
+}
 
 // REDUCER
-export default function cartReducer(state = {}, action) {
+export default function cartReducer(state = [], action) {
   switch(action.type) {
     case READ_CART: {
-      const newState = {...action.payload}
+      const newState = [...action.payload]
       // need to add a quantity key to each item object
       return newState
     }
+    case ADD_CART: {
+      newState = [...state]
+      newState.push(action.payload)
+      return newState
+    }
     case UPDATE_CART: {
-      ;
+      newState = [...state]
+      for (let i = 0; i < newState.length; i++) {
+        if (newState[i].id === action.payload.id) {
+          newState[i] = action.payload;
+          break
+        }
+      }
+      return newState
     }
     case CLEAR_CART: {
-      return {};
+      return [];
     }
     default: return state;
   }

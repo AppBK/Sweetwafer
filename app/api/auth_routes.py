@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, session, request
-from app.models import User, db
+from app.models import User, db, Inventory
 from app.forms import LoginForm
 from app.forms import SignUpForm
 from flask_login import current_user, login_user, logout_user, login_required
@@ -41,7 +41,37 @@ def login():
         # Add the user to the session, we are logged in!
         user = User.query.filter(User.email == form.data['email']).first()
         login_user(user)
-        return user.to_dict()
+
+        cart_items = []
+        temp_product_images = []
+        for item in user.cart:
+            temp_dict = item.to_dict()
+            print('DICT ITEM: ', temp_dict)
+            # temp_item IS the object from the inventory array. Can we get it's images?...
+            temp_item = Inventory.query.filter(Inventory.id == temp_dict['item_id']).first()
+            # print('TEMP ITEM: ', temp_item.product_images)
+            if len(temp_item.product_images):
+                for img in temp_item.product_images:
+                    temp_product_images.append(img.to_dict())
+                    print('IN LOOP: ', temp_product_images)
+
+            temp_item = temp_item.to_dict() # turn this bizarre python iterable into a useable dictionary
+            temp_item['product_images'] = temp_product_images
+            temp_item['quantity'] = temp_dict['quantity']
+            temp_product_images = []    # reset the array for the next item
+
+            cart_items.append(temp_item)
+
+        print('TEMP PRODUCT IMAGES: ', temp_product_images)
+
+        fetched_user = user.to_dict()
+        fetched_user['cart'] = cart_items
+        print('FETCHED USER: ', fetched_user)
+
+
+
+        # print('CART: ', [item.to_dict for item in user.cart]);
+        return fetched_user
     return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
 
