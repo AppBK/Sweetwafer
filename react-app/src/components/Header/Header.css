@@ -40,7 +40,7 @@
 #account:hover {
   color: #0072ba;
   cursor: pointer;
-  background-color: #f2f1f0;
+  background-color: rgba(242, 241, 240, 0.5);
 }
 
 #account:hover #account-window {

@@ -11,6 +11,7 @@ import Header from './components/Header/Header';
 import LoginPage from './components/myAuth/LoginPage';
 import SignUpOne from './components/myAuth/SignUpOne';
 import SignUpTwo from './components/myAuth/SignUpTwo';
+import Inventory from './components/Temp/Inv';
 import Cart from './components/Cart/Cart';
 import { authenticate, login } from './store/session';
 
@@ -68,7 +69,8 @@ function App() {
         </ProtectedRoute>
         <Route path='/' exact={true} >
           <Header />
-          <div style={{ width: '100vw', height: '100vh', backgroundColor: '#d5ebf5'}}></div>
+          {/* <div style={{ width: '100vw', height: '100vh', backgroundColor: '#d5ebf5'}}></div> */}
+          <Inventory />
         </Route>
       </Switch>
     </BrowserRouter>
