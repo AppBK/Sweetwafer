@@ -1,0 +1,9 @@
+#inv-cont {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thumb-one {
+  width: 100px;
+  height: 80px;
+}
