@@ -6,6 +6,7 @@
   justify-content: space-evenly;
   background: url(https://media.sweetwater.com/m/include/holiday/images/snow-transparent.gif?height=300&width=400), linear-gradient(#d5ebf5, #ffffff);
   /* border: 1px solid red; */
+  border-bottom: 1px solid #f2f1f0;
 }
 
 #sweet-logo {
@@ -45,6 +46,7 @@
 #account:hover #account-window {
   visibility: visible;
   cursor: pointer;
+  width: 200px;
 }
 
 .down-arrow {
@@ -58,11 +60,11 @@
   position: absolute;
   top: 72px;
   right: 1px;
-  background-color: white;;
+  background-color: white;
   height: 150px;
   width: 200px;
-  border: 1px solid black;
-  border-radius: 8px;
+  border: 1px solid #f2f1f0;
+  border-radius: 1px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,7 +72,7 @@
   visibility: hidden;
   width: fit-content;
   height: fit-content;
-  padding: 32px 64px;
+  padding: 32px 0px;
 }
 
 #login-button {
@@ -105,6 +107,7 @@
   height: 50px;
   border-radius: 3px;
   margin-top: 16px;
+  margin-bottom: 16px;;
   cursor: pointer;
 }
 
@@ -128,4 +131,25 @@
 
 h2 {
   margin: 0px;
+}
+
+#borderline {
+  width: 100%;
+  margin: 2px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: 400;
+  font-size: 12px;
+  border-bottom: 1px solid #f2f1f0;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+
+#signup-link {
+  display: block;
+  color: #0072ba;
+  font-size: 12px;
 }

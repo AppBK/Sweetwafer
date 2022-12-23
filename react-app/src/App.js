@@ -9,6 +9,8 @@ import UsersList from './components/UsersList';
 import User from './components/User';
 import Header from './components/Header/Header';
 import LoginPage from './components/myAuth/LoginPage';
+import SignUpOne from './components/myAuth/SignUpOne';
+import SignUpTwo from './components/myAuth/SignUpTwo';
 import { authenticate, login } from './store/session';
 
 
@@ -41,6 +43,12 @@ function App() {
         <Route path='/login_page' exact={true}>
           <LoginPage />
         </Route>
+        <Route path='/signup-one' exact={true}>
+          <SignUpOne />
+        </Route>
+        <Route path='/signup-two' exact={true}>
+          <SignUpTwo />
+        </Route>
         <Route path='/login' exact={true}>
           <LoginForm />
         </Route>
@@ -55,8 +63,7 @@ function App() {
         </ProtectedRoute>
         <Route path='/' exact={true} >
           <Header />
-          <NavBar />
-          <h1>My Home Page</h1>
+          <div style={{ width: '100vw', height: '100vh', backgroundColor: '#d5ebf5'}}></div>
         </Route>
       </Switch>
     </BrowserRouter>

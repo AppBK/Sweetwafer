@@ -1,0 +1,2 @@
+https://media.sweetwater.com/auth0/icons-light.svg
+https://media.sweetwater.com/auth0/icons-dark.svg

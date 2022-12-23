@@ -5,7 +5,11 @@ import './Header.css'
 
 export default function Header() {
   const user = useSelector(state => state.session.user)
-  let render_cart = user ? true : false;
+  let renderCart = user ? true : false;
+  let renderLogout = user ? true : false;
+  let renderDemo = user ? false : true;
+  let renderLogin = user ? false : true;
+  let renderSignUp = user ? false : true;
 
   const history = useHistory();
   const dispatch = useDispatch();
@@ -45,15 +49,16 @@ export default function Header() {
         <p>Account</p>
         <img className="down-arrow" src="/svg/gobbled-svgs/arrow-down.svg"></img>
         <div id="account-window">
-          <button id="login-button" onClick={toLogin}>Log in</button>
-          <button id="demo-button" onClick={loginDemo}>Demo user</button>
-          <button id="logout-button" onClick={onLogout}>Logout</button>
+          {renderLogin && (<button id="login-button" onClick={toLogin}>Log in</button>)}
+          {renderSignUp && (<div id="borderline">
+            <div id="new-here">New&nbsp;here?&nbsp;&nbsp;</div>
+            <a id="signup-link" href="/signup-one">Create&nbsp;&nbsp;your account</a>
+          </div>)}
+          {renderDemo && (<button id="demo-button" onClick={loginDemo}>Demo user</button>)}
+          {renderLogout && (<button id="logout-button" onClick={onLogout}>Logout</button>)}
         </div>
-        {/* <div id="demo-login">
-          <button id="demo-button" onClick={loginDemo}>Demo user</button>
-        </div> */}
       </div>
-      {render_cart && (<button id="cart-button">
+      {renderCart && (<button id="cart-button">
         <img id="cart-img" src="/svg/cart-0.svg"></img>
       </button>)}
     </div>

@@ -1,6 +1,14 @@
+import { useHistory } from 'react-router-dom'
 import './LoginPage.css'
 
 export default function LoginPage() {
+  const history = useHistory();
+
+  const toSignUp = () => {
+    history.push('/signup-one');
+  }
+
+
   return (
     <div id="background-flex">
       <div id="form-container">
@@ -16,7 +24,7 @@ export default function LoginPage() {
           </form>
           <button id="login-button-form">Log in</button>
           <div id="no-account">Don't have an account?</div>
-          <button id="sign-up-from-login">Create an Account</button>
+          <button id="sign-up-from-login" onClick={toSignUp}>Create an Account</button>
         </div>
       </div>
     </div>
