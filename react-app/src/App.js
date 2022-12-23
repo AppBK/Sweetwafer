@@ -37,8 +37,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header />
-      <NavBar />
       <Switch>
         <Route path='/login_page' exact={true}>
           <LoginPage />
@@ -56,8 +54,9 @@ function App() {
           <User />
         </ProtectedRoute>
         <Route path='/' exact={true} >
+          <Header />
+          <NavBar />
           <h1>My Home Page</h1>
-          <button id="demo-user-login" onClick={loginDemo}>Demo User</button>
         </Route>
       </Switch>
     </BrowserRouter>

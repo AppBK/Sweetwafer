@@ -42,6 +42,11 @@
   background-color: #f2f1f0;
 }
 
+#account:hover #account-window {
+  visibility: visible;
+  cursor: pointer;
+}
+
 .down-arrow {
   padding-left: 6px;
   display: block;
@@ -51,13 +56,56 @@
 
 #account-window {
   position: absolute;
-  top: 74px;
+  top: 72px;
   right: 1px;
   background-color: white;;
   height: 150px;
   width: 200px;
   border: 1px solid black;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  width: fit-content;
+  height: fit-content;
+  padding: 32px 64px;
+}
+
+#login-button {
+  border: none;
+  background-color: #0072ba;
+  color: white;
+  font-size: 1.2em;
+  width: 120px;
+  height: 50px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#demo-button {
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 1.2em;
+  width: 120px;
+  height: 50px;
+  border-radius: 3px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+#logout-button {
+  border: none;
+  background-color: #0072ba;
+  color: white;
+  font-size: 1.2em;
+  width: 120px;
+  height: 50px;
+  border-radius: 3px;
+  margin-top: 16px;
+  cursor: pointer;
 }
 
 #cart-button {
