@@ -22,6 +22,10 @@ export default function Header() {
     history.push('/');
   }
 
+  const viewCart = () => {
+    history.push('/cart');
+  }
+
   const loginDemo = async (e) => {
     e.preventDefault();
     const data = await dispatch(login('demo@aa.io', 'password'))
@@ -59,7 +63,7 @@ export default function Header() {
         </div>
       </div>
       {renderCart && (<button id="cart-button">
-        <img id="cart-img" src="/svg/cart-0.svg"></img>
+        <img id="cart-img" src="/svg/cart-0.svg" onClick={viewCart}></img>
       </button>)}
     </div>
   )

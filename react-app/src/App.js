@@ -11,6 +11,7 @@ import Header from './components/Header/Header';
 import LoginPage from './components/myAuth/LoginPage';
 import SignUpOne from './components/myAuth/SignUpOne';
 import SignUpTwo from './components/myAuth/SignUpTwo';
+import Cart from './components/Cart/Cart';
 import { authenticate, login } from './store/session';
 
 
@@ -58,6 +59,10 @@ function App() {
         <ProtectedRoute path='/users' exact={true} >
           <UsersList/>
         </ProtectedRoute>
+        <Route path='/cart' exact={true}>
+          <Header />
+          <Cart />
+        </Route>
         <ProtectedRoute path='/users/:userId' exact={true} >
           <User />
         </ProtectedRoute>

@@ -1,0 +1,39 @@
+#top-o-page {
+  top: 74px;
+  width: 100vw;
+  height: 316px;
+  background-image: url(https://media.sweetwater.com/cart/empty-cart-bg-lines.jpg);
+  border-top: 48px solid #0072ba;
+  border-bottom: 48px solid #0072ba;
+}
+
+#guitar-img-cont {
+  width: 404px;
+  height: 270px;
+}
+
+#guitar-img {
+  width: 404px;
+  height: 270px;
+  display: block;
+}
+
+#cart-empty-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#empty-cart {
+  font-size: 2.3em;
+  font-weight: bold;
+}
+
+#gear-ideas {
+  text-align: center;
+  font-size: 17.6px;
+}
+
+#margin-empty {
+  margin-left: 24px;
+}
