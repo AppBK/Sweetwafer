@@ -3,6 +3,7 @@ from app.models import User, db, Inventory
 from app.forms import LoginForm
 from app.forms import SignUpForm
 from flask_login import current_user, login_user, logout_user, login_required
+from datetime import datetime
 
 auth_routes = Blueprint('auth', __name__)
 
@@ -95,7 +96,9 @@ def sign_up():
         user = User(
             username=form.data['username'],
             email=form.data['email'],
-            password=form.data['password']
+            password=form.data['password'],
+            createdAt=str(datetime.now()),
+            updatedAt=str(datetime.now())
         )
         db.session.add(user)
         db.session.commit()

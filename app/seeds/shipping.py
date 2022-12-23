@@ -2,7 +2,6 @@ from app.models import db, environment, SCHEMA, Shipping
 
 from datetime import datetime
 
-# Adds a demo user, you can add other users here if you want
 def seed_shipping():
     item1 = Shipping(
         user_id=1, shipping_name='Demo', company='AppAcademy', street='333 App Wy.',

@@ -4,13 +4,16 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: linear-gradient(#d6e6ee, #ffffff);
-  background-image: "/gif/snow-transparent.gif";
+  background: url(https://media.sweetwater.com/m/include/holiday/images/snow-transparent.gif?height=300&width=400), linear-gradient(#d5ebf5, #ffffff);
+  /* border: 1px solid red; */
+  border-bottom: 1px solid #f2f1f0;
 }
 
 #sweet-logo {
   border: none;
   background: transparent;
+  padding: 0px;
+  margin: 0px;
 }
 
 #sweet-logo:hover {
@@ -18,9 +21,94 @@
 }
 
 #img-logo {
-  width: 100px;
-  height: 50px;
+  width: 220px;
+  height: 70px;
   background-color: transparent;
+}
+
+#account {
+  font-weight: bold;
+  position: relative;
+  /* border: 1px solid black; */
+  height: 100%;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#account:hover {
+  color: #0072ba;
+  cursor: pointer;
+  background-color: #f2f1f0;
+}
+
+#account:hover #account-window {
+  visibility: visible;
+  cursor: pointer;
+  width: 200px;
+}
+
+.down-arrow {
+  padding-left: 6px;
+  display: block;
+  height: 8px;
+  width: 10px;
+}
+
+#account-window {
+  position: absolute;
+  top: 72px;
+  right: 1px;
+  background-color: white;
+  height: 150px;
+  width: 200px;
+  border: 1px solid #f2f1f0;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  width: fit-content;
+  height: fit-content;
+  padding: 32px 0px;
+}
+
+#login-button {
+  border: none;
+  background-color: #0072ba;
+  color: white;
+  font-size: 1.2em;
+  width: 120px;
+  height: 50px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#demo-button {
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 1.2em;
+  width: 120px;
+  height: 50px;
+  border-radius: 3px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+#logout-button {
+  border: none;
+  background-color: #0072ba;
+  color: white;
+  font-size: 1.2em;
+  width: 120px;
+  height: 50px;
+  border-radius: 3px;
+  margin-top: 16px;
+  margin-bottom: 16px;;
+  cursor: pointer;
 }
 
 #cart-button {
@@ -32,6 +120,36 @@
   cursor: pointer;
 }
 
+#contact {
+  color:#0072ba;
+  font-size: 10px;
+}
+
+#call {
+  color: black;
+}
+
 h2 {
   margin: 0px;
+}
+
+#borderline {
+  width: 100%;
+  margin: 2px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: 400;
+  font-size: 12px;
+  border-bottom: 1px solid #f2f1f0;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
+
+#signup-link {
+  display: block;
+  color: #0072ba;
+  font-size: 12px;
 }
