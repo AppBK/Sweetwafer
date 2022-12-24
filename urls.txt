@@ -1,2 +1,7 @@
 https://media.sweetwater.com/auth0/icons-light.svg
 https://media.sweetwater.com/auth0/icons-dark.svg
+
+# Preview Images
+https://media.sweetwater.com/api/i/q-70__h-300__w-300__f-png__b-original/images/items/1800/DBoxPlus-xlarge.jpg
+https://media.sweetwater.com/api/i/q-70__h-300__w-300__f-png__b-original/images/items/1800/2BusPlus-xlarge.jpg
+https://media.sweetwater.com/api/i/q-70__h-300__w-300__f-png__b-original/images/items/1800/DComp-xlarge.jpg

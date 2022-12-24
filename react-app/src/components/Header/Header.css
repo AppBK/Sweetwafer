@@ -41,6 +41,7 @@
   color: #0072ba;
   cursor: pointer;
   background-color: rgba(242, 241, 240, 0.5);
+  box-shadow: 2px 2px rgba(242, 241, 240, 0.5);
 }
 
 #account:hover #account-window {
@@ -51,9 +52,7 @@
 
 .down-arrow {
   padding-left: 6px;
-  display: block;
-  height: 8px;
-  width: 10px;
+  padding-top: 3px;
 }
 
 #account-window {
@@ -73,6 +72,7 @@
   width: fit-content;
   height: fit-content;
   padding: 32px 0px;
+  box-shadow: 2px 2px 4px rgba(242, 241, 240, 0.5);
 }
 
 #login-button {

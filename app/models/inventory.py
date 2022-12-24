@@ -34,6 +34,7 @@ class Inventory(db.Model, UserMixin):
   serial = db.Column(db.String(64), nullable=False)
   tech_specs = db.Column(db.String(2048), nullable=False)
   price = db.Column(db.Float, nullable=False)
+  preview = db.Column(db.String(512), nullable=False)
   createdAt = db.Column(db.String(64), nullable=False)
   updatedAt = db.Column(db.String(64), nullable=False)
 
@@ -50,6 +51,7 @@ class Inventory(db.Model, UserMixin):
       'serial': self.serial,
       'tech_specs': self.tech_specs,
       'price': self.price,
+      'preview': self.preview,
       'createdAt': self.createdAt,
       'updatedAt': self.updatedAt
     }

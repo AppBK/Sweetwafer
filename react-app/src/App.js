@@ -13,6 +13,8 @@ import SignUpOne from './components/myAuth/SignUpOne';
 import SignUpTwo from './components/myAuth/SignUpTwo';
 import Inventory from './components/Temp/Inv';
 import Cart from './components/Cart/Cart';
+import Product from './components/Product/Product';
+import Navigation from './components/Navigation/Navigation';
 import { authenticate, login } from './store/session';
 
 
@@ -62,15 +64,25 @@ function App() {
         </ProtectedRoute>
         <Route path='/cart' exact={true}>
           <Header />
+          <Navigation />
           <Cart />
+        </Route>
+        <Route path='/products/:id' exact={true}>
+          <Header />
+          <Navigation />
+          <Product />
         </Route>
         <ProtectedRoute path='/users/:userId' exact={true} >
           <User />
         </ProtectedRoute>
         <Route path='/' exact={true} >
           <Header />
+          <Navigation />
           {/* <div style={{ width: '100vw', height: '100vh', backgroundColor: '#d5ebf5'}}></div> */}
           <Inventory />
+        </Route>
+        <Route path='/Studio & Recording'>
+          <div>HEY NOW!!!</div>
         </Route>
       </Switch>
     </BrowserRouter>
