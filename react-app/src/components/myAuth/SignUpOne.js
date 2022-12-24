@@ -4,7 +4,7 @@ import { useHistory, Redirect } from 'react-router-dom'
 import './SignUp.css'
 
 export default function SignUpOne() {
-  const { signUpEmail, setSignUpEmail, signUpPass, setSignUpPass } = useContext(SweetContext);
+  const {signUpEmail, setSignUpEmail, signUpPass, setSignUpPass } = useContext(SweetContext);
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

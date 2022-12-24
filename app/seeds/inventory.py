@@ -11,6 +11,7 @@ def seed_inventory():
         model='DBox+', serial='DAN100',
         tech_specs='Output Channels:3 x Independent Speaker Out, 1 x Stereo Sum Out;Analog Inputs:2 x XLR-1/4 inch combo, 1 x DB-25 (8 ch Tascam format);Analog Outputs:	2 x 1/4 inch (sum out), 2 x 1/4 inch (line out), 6 x 1/4 inch (3 x speaker out), 2 x 1/4 inch (control room);Digital Inputs:	1 x XLR (AES,S/PDIF);Digital Outputs:	1 x XLR (AES,S/PDIF thru);Headphones:	2 x 1/4 inch;USB:	1 x Type B;Computer Connectivity:	USB, Bluetooth;Talkback:	Yes;Software:	D-Box+ App (current iOS/Android);OS Requirements - Mac:	OS X 10.8.6 or later, iOS 10.2 or later;OS Requirements - PC:	Windows 7 SP1 or later, Android 5.0 or later;Form Factor:	Rackmount;Power Supply:	Standard IEC AC cable;Height:	1.7 inch;Width:	19 inch;Depth:	13.5 inch;Weight:	11.6 lbs.;Manufacturer Part Number:	DBox+;',
         price=2499.00,
+        preview='https://media.sweetwater.com/api/i/q-70__h-300__w-300__f-png__b-original/images/items/1800/DBoxPlus-xlarge.jpg',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
     item2 = Inventory(
         vendor_name='Dangerous', name='Dangerous Music 2-BUS+ Analog Summing Mixer',
@@ -19,6 +20,7 @@ def seed_inventory():
         model='2Bus+', serial='DAN101',
         tech_specs='Type:	Analog;Channels:	16 x 2;Inputs - Line:	2 x DB-25;Inputs - Other:	2 x XLR (Exp);Outputs - Main:	2 x XLR;Outputs - Other:	2 x XLR (Monitor);Send/Return I/O:	2 x XLR (Send), 2 x XLR (Return);Rackmountable:	Yes;Height:	3.5 inch;Width:	19 inch;Manufacturer Part Number:	2Bus+;',
         price=2999.00,
+        preview='https://media.sweetwater.com/api/i/q-70__h-300__w-300__f-png__b-original/images/items/1800/2BusPlus-xlarge.jpg',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
     item3 = Inventory(
         vendor_name='Dangerous', name='Dangerous Music Compressor',
@@ -27,6 +29,7 @@ def seed_inventory():
         model='2Bus+', serial='DAN101',
         tech_specs='Type:	VCA;Number of Channels:	2;Controls:	Threshold, Ratio, Attack, Release;Threshold:	-30dB to +20dB;Ratio:	1:1 to 20:1;Frequency Response:	15Hz-80kHz;Inputs:	2 x XLR;Outputs:	2 x XLR;Sidechain I/O:	2 x XLR (Send), 2 x XLR (Return);Rack Spaces:	2U;Height:	3.5 inch;Width:	19 inch;Manufacturer Part Number:	Compressor;',
         price=2999.00,
+        preview='https://media.sweetwater.com/api/i/q-70__h-300__w-300__f-png__b-original/images/items/1800/DComp-xlarge.jpg',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
 
 

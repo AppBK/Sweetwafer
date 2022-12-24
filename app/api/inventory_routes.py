@@ -6,6 +6,7 @@ from flask_login import current_user, login_user, logout_user, login_required
 
 inv_routes = Blueprint('inventory', __name__)
 
+# GET the entire inventory
 @inv_routes.route('/')
 def get_inv():
   inv = Inventory.query.all()
@@ -23,3 +24,20 @@ def get_inv():
 
   # print('PARSED: ', parsed_items)
   return { 'parsed_items': parsed_items }
+
+
+# GET a single product
+@inv_routes.route('/<id>')
+def get_product(id):
+  product = Inventory.query.get(id)
+
+  temp_images = [];
+  for img in product.product_images:
+    temp_images.append(img.to_dict())
+
+  product = product.to_dict();
+  product['product_images'] = temp_images
+
+  print('FROM /<id>', product);
+
+  return product;
