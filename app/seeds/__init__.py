@@ -1,7 +1,7 @@
 from flask.cli import AppGroup
 from .users import seed_users, undo_users
 from .shipping import seed_shipping, undo_shipping
-from .inventory import seed_inventory, undo_inventory, seed_product_images, undo_product_images
+from .inventory import seed_inventory, undo_inventory, seed_product_images, undo_product_images, undo_inventory_product_images
 
 from app.models.db import db, environment, SCHEMA
 
@@ -36,4 +36,5 @@ def undo():
         undo_users()
         undo_inventory()
         undo_product_images()
+        undo_inventory_product_images()
     # Add other undo functions here

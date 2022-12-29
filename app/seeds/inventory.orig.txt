@@ -5,8 +5,6 @@ from datetime import datetime
 # Adds a demo user, you can add other users here if you want
 def seed_inventory():
 # DANGEROUS
-
-#DBOX+
     item1 = Inventory(
         category='Studio & Recording',
         vendor_name='Dangerous', name='Dangerous Music D-BOX+ Monitor Controller & Summing Mixer',
@@ -18,40 +16,6 @@ def seed_inventory():
         preview='https://media.sweetwater.com/api/i/q-70__h-300__w-300__f-png__b-original/images/items/1800/DBoxPlus-xlarge.jpg',
         logo='https://media.sweetwater.com/api/i/f-webp__ha-6ccdb673e7e97fee__hmac-bd2f94564a539c1f93e3f11cbc301e119189ae52/images/manufacturer-logos/dangerousmusic.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-
-    img1 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-07e4a36e23b6d98f__hmac-da4ed276700a3156441a08759e499154c009fe75/images/items/750/DBoxPlus-large.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img2 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-75__f-webp__ha-80e9dcd173c9846d__hmac-0d53dd34ab31a3c67c8fd2923e566ae7ad32d8cf/images/closeup/120-DBoxPlus_detail1.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img3 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-4fd0fea46eccee66__hmac-ba08b980e3895603b3da247bbb641546c28c9950/images/closeup/750-DBoxPlus_detail2.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img4 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bd60b11dc3f57191__hmac-15013265904515935468f8fbcbc9d00f71816d8e/images/closeup/750-DBoxPlus_detail3.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img5 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9800d94e40503053__hmac-50cea6783d82bb72be2a9798b7219d98923ff938/images/closeup/750-DBoxPlus_detail4.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img6 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9800d94e40503053__hmac-50cea6783d82bb72be2a9798b7219d98923ff938/images/closeup/750-DBoxPlus_detail4.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-
-    # Join Table
-    item1.product_images = [img1, img2, img3, img4, img5, img6]
-
-    db.session.add_all([item1, img1, img2, img3, img4, img5, img6])
-    db.session.commit()
-
-#2BUS
-
     item2 = Inventory(
         category='Studio & Recording',
         vendor_name='Dangerous', name='Dangerous Music 2-BUS+ Analog Summing Mixer',
@@ -63,39 +27,6 @@ def seed_inventory():
         preview='https://media.sweetwater.com/api/i/q-70__h-300__w-300__f-png__b-original/images/items/1800/2BusPlus-xlarge.jpg',
         logo='https://media.sweetwater.com/api/i/f-webp__ha-6ccdb673e7e97fee__hmac-bd2f94564a539c1f93e3f11cbc301e119189ae52/images/manufacturer-logos/dangerousmusic.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-
-    img7 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-76e93dd60a47e6dd__hmac-adfbace146ef1573d97a8cbfdb21197943705296/images/items/750/2BusPlus-large.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img8 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-52c76e16dcd781c3__hmac-af48a11a6c7f37eb1080dce0e89548da5fc82a0b/images/closeup/750-2BusPlus_detail1.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img9 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9809ded0f3fe6e1e__hmac-51576058b418639c6aae1ec8e3d167f53e24f976/images/closeup/750-2BusPlus_detail2.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img10 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-20a3eb70e29082d3__hmac-45b3105d7849d88212705f06ddcfe6795e0e1de0/images/closeup/750-2BusPlus_detail3.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img11 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7fe48a8fe625cd9d__hmac-7875d5f6e7d6fd0a5aa388edbff6c4af59b48303/images/closeup/750-2BusPlus_detail4.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img12 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1b94cda23fb02795__hmac-9eaa070d5f0c1b6b79cbf193932a50ae54da0175/images/closeup/750-2BusPlus_detail5.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-
-    # Join Table
-    item2.product_images = [img7, img8, img9, img10, img11, img12]
-
-    db.session.add_all([item2, img7, img8, img9, img10, img11, img12])
-    db.session.commit()
-
-#DCOMP
     item3 = Inventory(
         category='Studio & Recording',
         vendor_name='Dangerous', name='Dangerous Music Compressor',
@@ -107,39 +38,6 @@ def seed_inventory():
         preview='https://media.sweetwater.com/api/i/q-70__h-300__w-300__f-png__b-original/images/items/1800/DComp-xlarge.jpg',
         logo='https://media.sweetwater.com/api/i/f-webp__ha-6ccdb673e7e97fee__hmac-bd2f94564a539c1f93e3f11cbc301e119189ae52/images/manufacturer-logos/dangerousmusic.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-
-    img13 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-21333c81b5f91280__hmac-4446cfb84705a825380891e6874fe66b1a78ff4d/images/items/750/DComp-large.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img14 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-18d3c41c2059375d__hmac-8026fb9c53d44ee5e6adbe75575952e39cb89357/images/closeup/750-DComp_detail1.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img15 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8b5273d1bbec2133__hmac-00bd0aa05f1030d0d0e3657679a1ac8442b94ad1/images/closeup/750-DComp_detail2.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img16 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-94b25483e0b2c143__hmac-7f805b329ead0593ab87f10da58151a1505b5eed/images/closeup/750-DComp_detail3.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img17 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-fa375cc206f3af0e__hmac-aa7324e69c7cac098dd302fd6f199a19b2417d49/images/closeup/750-DComp_detail4.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img18 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b71bad23d34770f0__hmac-ad4c7c4a2ebd0997071aeaac6d021b3d6a64c33f/images/closeup/750-DComp_detail5.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-
-    # Join Table
-    item3.product_images = [img13, img14, img15, img16, img17, img18]
-
-    db.session.add_all([item3, img13, img14, img15, img16, img17, img18])
-    db.session.commit()
-
-#CONVERT-AD+
     item4 = Inventory(
         category='Studio & Recording',
         vendor_name='Dangerous', name='Dangerous Music CONVERT-AD+ Stereo Digital Converter',
@@ -151,38 +49,6 @@ def seed_inventory():
         preview='https://media.sweetwater.com/api/i/q-70__h-300__w-300__f-png__b-original/images/items/1800/ConvertAD-xlarge.jpg',
         logo='https://media.sweetwater.com/api/i/f-webp__ha-6ccdb673e7e97fee__hmac-bd2f94564a539c1f93e3f11cbc301e119189ae52/images/manufacturer-logos/dangerousmusic.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-
-    img19 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b71bad23d34770f0__hmac-ad4c7c4a2ebd0997071aeaac6d021b3d6a64c33f/images/closeup/750-DComp_detail5.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img20 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-544a9b8ef1d9fbf4__hmac-de2d355a754985a7cd30db29bd9b97a182f512ad/images/closeup/750-ConvertAD_detail1.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img21 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3642e15df77a848c__hmac-e7cb0f0cfee0349c007a57b0dfc93f61f3643826/images/closeup/750-ConvertAD_detail2.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img22 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-56468e1d82ad0811__hmac-64289840f3fb70a98edff84fba80b6af3dadba48/images/closeup/750-ConvertAD_detail3.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img23 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e9e70c1dad690fab__hmac-0c035044ea925e0ce093b2eac0e5d13c2087fe0f/images/closeup/750-ConvertAD_detail4.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img24 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6b8ffe9c770f0fd6__hmac-089df8966029717a352abfd0ba212c4e3adc368c/images/closeup/750-ConvertAD_detail6.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-
-    item4.product_images = [img19, img20, img21, img22, img23, img24]
-
-    db.session.add_all([item4, img19, img20, img21, img22, img23, img24])
-    db.session.commit()
-
-#LIASON
     item5 = Inventory(
         category='Studio & Recording',
         vendor_name='Dangerous', name='Dangerous Music LIAISON Analog Master Router',
@@ -194,39 +60,6 @@ def seed_inventory():
         preview='https://media.sweetwater.com/api/i/q-70__h-300__w-300__f-png__b-original/images/items/1800/Liaison-xlarge.jpg',
         logo='https://media.sweetwater.com/api/i/f-webp__ha-6ccdb673e7e97fee__hmac-bd2f94564a539c1f93e3f11cbc301e119189ae52/images/manufacturer-logos/dangerousmusic.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-
-    img25 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6cd9138371b3e1ed__hmac-6309554fd08d694e12c1561873af4eee9b594637/images/items/750/Liaison-large.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img26 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-eef64bdf3a73d8d9__hmac-a031dbc8b9c8eb2c0d34a59a317aff9ca0414530/images/closeup/750-Liaison_detail1.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img27 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-da034461f344d95d__hmac-d2aa0236ec7974790e6ebb04f685cfe652fd3953/images/closeup/750-Liaison_detail2.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img28 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-aad1d6ee144e91ed__hmac-a886d4e4d1c41f266653b6ad49b73389626ed554/images/closeup/750-Liaison_detail3.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img29 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ade7de08a7704819__hmac-7e5a5b50c6338bab45dcf3a8471ff6fa9ece3c3f/images/closeup/750-Liaison_detail4.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img30 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-25db3ccfe1e25fa9__hmac-16093eebb941ba4230e054a29687da4fd667c77b/images/closeup/750-Liaison_detail5.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-
-
-    item5.product_images = [img25, img26, img27, img28, img29, img30]
-
-    db.session.add_all([item5, img25, img26, img27, img28, img29, img30])
-    db.session.commit()
-
-#
     item6 = Inventory(
         category='Studio & Recording',
         vendor_name='Dangerous', name='Dangerous Music BAX EQ Mastering and Mix Bus EQ',
@@ -679,44 +512,44 @@ def seed_inventory():
     # db.session.add(item2)
     # db.session.add(item3)
     # db.session.add(item4)
-    db.session.add(item5)
-    db.session.add(item6)
-    db.session.add(item7)
-    db.session.add(item8)
-    db.session.add(item9)
-    db.session.add(item10)
-    db.session.add(item11)
-    db.session.add(item12)
-    db.session.add(item13)
-    db.session.add(item14)
-    db.session.add(item15)
-    db.session.add(item16)
-    db.session.add(item17)
-    db.session.add(item18)
-    db.session.add(item19)
-    db.session.add(item20)
-    db.session.add(item21)
-    db.session.add(item22)
-    db.session.add(item23)
-    db.session.add(item24)
-    db.session.add(item25)
-    db.session.add(item26)
-    db.session.add(item27)
-    db.session.add(item28)
-    db.session.add(item29)
-    db.session.add(item30)
-    db.session.add(item31)
-    db.session.add(item32)
-    db.session.add(item33)
-    db.session.add(item34)
-    db.session.add(item35)
-    db.session.add(item36)
-    db.session.add(item37)
-    db.session.add(item38)
-    db.session.add(item39)
-    db.session.add(item40)
-    db.session.add(item41)
-    db.session.commit()
+    # db.session.add(item5)
+    # db.session.add(item6)
+    # db.session.add(item7)
+    # db.session.add(item8)
+    # db.session.add(item9)
+    # db.session.add(item10)
+    # db.session.add(item11)
+    # db.session.add(item12)
+    # db.session.add(item13)
+    # db.session.add(item14)
+    # db.session.add(item15)
+    # db.session.add(item16)
+    # db.session.add(item17)
+    # db.session.add(item18)
+    # db.session.add(item19)
+    # db.session.add(item20)
+    # db.session.add(item21)
+    # db.session.add(item22)
+    # db.session.add(item23)
+    # db.session.add(item24)
+    # db.session.add(item25)
+    # db.session.add(item26)
+    # db.session.add(item27)
+    # db.session.add(item28)
+    # db.session.add(item29)
+    # db.session.add(item30)
+    # db.session.add(item31)
+    # db.session.add(item32)
+    # db.session.add(item33)
+    # db.session.add(item34)
+    # db.session.add(item35)
+    # db.session.add(item36)
+    # db.session.add(item37)
+    # db.session.add(item38)
+    # db.session.add(item39)
+    # db.session.add(item40)
+    # db.session.add(item41)
+    # db.session.commit()
 
 
 # Uses a raw SQL query to TRUNCATE or DELETE the users table. SQLAlchemy doesn't
@@ -735,135 +568,130 @@ def undo_inventory():
 
 
 def seed_product_images():
-# DBOX+
-    # img1 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-07e4a36e23b6d98f__hmac-da4ed276700a3156441a08759e499154c009fe75/images/items/750/DBoxPlus-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img2 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-75__f-webp__ha-80e9dcd173c9846d__hmac-0d53dd34ab31a3c67c8fd2923e566ae7ad32d8cf/images/closeup/120-DBoxPlus_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img3 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-4fd0fea46eccee66__hmac-ba08b980e3895603b3da247bbb641546c28c9950/images/closeup/750-DBoxPlus_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img4 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bd60b11dc3f57191__hmac-15013265904515935468f8fbcbc9d00f71816d8e/images/closeup/750-DBoxPlus_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img5 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9800d94e40503053__hmac-50cea6783d82bb72be2a9798b7219d98923ff938/images/closeup/750-DBoxPlus_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img6 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9800d94e40503053__hmac-50cea6783d82bb72be2a9798b7219d98923ff938/images/closeup/750-DBoxPlus_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
+    img1 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-07e4a36e23b6d98f__hmac-da4ed276700a3156441a08759e499154c009fe75/images/items/750/DBoxPlus-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img2 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-75__f-webp__ha-80e9dcd173c9846d__hmac-0d53dd34ab31a3c67c8fd2923e566ae7ad32d8cf/images/closeup/120-DBoxPlus_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img3 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-4fd0fea46eccee66__hmac-ba08b980e3895603b3da247bbb641546c28c9950/images/closeup/750-DBoxPlus_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img4 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bd60b11dc3f57191__hmac-15013265904515935468f8fbcbc9d00f71816d8e/images/closeup/750-DBoxPlus_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img5 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9800d94e40503053__hmac-50cea6783d82bb72be2a9798b7219d98923ff938/images/closeup/750-DBoxPlus_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img6 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9800d94e40503053__hmac-50cea6783d82bb72be2a9798b7219d98923ff938/images/closeup/750-DBoxPlus_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img7 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-76e93dd60a47e6dd__hmac-adfbace146ef1573d97a8cbfdb21197943705296/images/items/750/2BusPlus-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img8 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-52c76e16dcd781c3__hmac-af48a11a6c7f37eb1080dce0e89548da5fc82a0b/images/closeup/750-2BusPlus_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img9 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9809ded0f3fe6e1e__hmac-51576058b418639c6aae1ec8e3d167f53e24f976/images/closeup/750-2BusPlus_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img10 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-20a3eb70e29082d3__hmac-45b3105d7849d88212705f06ddcfe6795e0e1de0/images/closeup/750-2BusPlus_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img11 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7fe48a8fe625cd9d__hmac-7875d5f6e7d6fd0a5aa388edbff6c4af59b48303/images/closeup/750-2BusPlus_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img12 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1b94cda23fb02795__hmac-9eaa070d5f0c1b6b79cbf193932a50ae54da0175/images/closeup/750-2BusPlus_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
 
-# 2BUS
-    # img7 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-76e93dd60a47e6dd__hmac-adfbace146ef1573d97a8cbfdb21197943705296/images/items/750/2BusPlus-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img8 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-52c76e16dcd781c3__hmac-af48a11a6c7f37eb1080dce0e89548da5fc82a0b/images/closeup/750-2BusPlus_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img9 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9809ded0f3fe6e1e__hmac-51576058b418639c6aae1ec8e3d167f53e24f976/images/closeup/750-2BusPlus_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img10 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-20a3eb70e29082d3__hmac-45b3105d7849d88212705f06ddcfe6795e0e1de0/images/closeup/750-2BusPlus_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img11 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7fe48a8fe625cd9d__hmac-7875d5f6e7d6fd0a5aa388edbff6c4af59b48303/images/closeup/750-2BusPlus_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img12 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1b94cda23fb02795__hmac-9eaa070d5f0c1b6b79cbf193932a50ae54da0175/images/closeup/750-2BusPlus_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-#DCOMP
-
-    # img13 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-21333c81b5f91280__hmac-4446cfb84705a825380891e6874fe66b1a78ff4d/images/items/750/DComp-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img14 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-18d3c41c2059375d__hmac-8026fb9c53d44ee5e6adbe75575952e39cb89357/images/closeup/750-DComp_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img15 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8b5273d1bbec2133__hmac-00bd0aa05f1030d0d0e3657679a1ac8442b94ad1/images/closeup/750-DComp_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img16 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-94b25483e0b2c143__hmac-7f805b329ead0593ab87f10da58151a1505b5eed/images/closeup/750-DComp_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img17 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-fa375cc206f3af0e__hmac-aa7324e69c7cac098dd302fd6f199a19b2417d49/images/closeup/750-DComp_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img18 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b71bad23d34770f0__hmac-ad4c7c4a2ebd0997071aeaac6d021b3d6a64c33f/images/closeup/750-DComp_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
+    img13 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-21333c81b5f91280__hmac-4446cfb84705a825380891e6874fe66b1a78ff4d/images/items/750/DComp-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img14 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-18d3c41c2059375d__hmac-8026fb9c53d44ee5e6adbe75575952e39cb89357/images/closeup/750-DComp_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img15 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8b5273d1bbec2133__hmac-00bd0aa05f1030d0d0e3657679a1ac8442b94ad1/images/closeup/750-DComp_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img16 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-94b25483e0b2c143__hmac-7f805b329ead0593ab87f10da58151a1505b5eed/images/closeup/750-DComp_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img17 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-fa375cc206f3af0e__hmac-aa7324e69c7cac098dd302fd6f199a19b2417d49/images/closeup/750-DComp_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img18 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b71bad23d34770f0__hmac-ad4c7c4a2ebd0997071aeaac6d021b3d6a64c33f/images/closeup/750-DComp_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
 
 # Convert AD+
-    # img19 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b71bad23d34770f0__hmac-ad4c7c4a2ebd0997071aeaac6d021b3d6a64c33f/images/closeup/750-DComp_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img20 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-544a9b8ef1d9fbf4__hmac-de2d355a754985a7cd30db29bd9b97a182f512ad/images/closeup/750-ConvertAD_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img21 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3642e15df77a848c__hmac-e7cb0f0cfee0349c007a57b0dfc93f61f3643826/images/closeup/750-ConvertAD_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img22 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-56468e1d82ad0811__hmac-64289840f3fb70a98edff84fba80b6af3dadba48/images/closeup/750-ConvertAD_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img23 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e9e70c1dad690fab__hmac-0c035044ea925e0ce093b2eac0e5d13c2087fe0f/images/closeup/750-ConvertAD_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img24 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6b8ffe9c770f0fd6__hmac-089df8966029717a352abfd0ba212c4e3adc368c/images/closeup/750-ConvertAD_detail6.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
+    img19 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b71bad23d34770f0__hmac-ad4c7c4a2ebd0997071aeaac6d021b3d6a64c33f/images/closeup/750-DComp_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img20 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-544a9b8ef1d9fbf4__hmac-de2d355a754985a7cd30db29bd9b97a182f512ad/images/closeup/750-ConvertAD_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img21 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3642e15df77a848c__hmac-e7cb0f0cfee0349c007a57b0dfc93f61f3643826/images/closeup/750-ConvertAD_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img22 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-56468e1d82ad0811__hmac-64289840f3fb70a98edff84fba80b6af3dadba48/images/closeup/750-ConvertAD_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img23 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e9e70c1dad690fab__hmac-0c035044ea925e0ce093b2eac0e5d13c2087fe0f/images/closeup/750-ConvertAD_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img24 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6b8ffe9c770f0fd6__hmac-089df8966029717a352abfd0ba212c4e3adc368c/images/closeup/750-ConvertAD_detail6.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
 # Liaison
-    # img25 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6cd9138371b3e1ed__hmac-6309554fd08d694e12c1561873af4eee9b594637/images/items/750/Liaison-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img26 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-eef64bdf3a73d8d9__hmac-a031dbc8b9c8eb2c0d34a59a317aff9ca0414530/images/closeup/750-Liaison_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img27 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-da034461f344d95d__hmac-d2aa0236ec7974790e6ebb04f685cfe652fd3953/images/closeup/750-Liaison_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img28 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-aad1d6ee144e91ed__hmac-a886d4e4d1c41f266653b6ad49b73389626ed554/images/closeup/750-Liaison_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img29 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ade7de08a7704819__hmac-7e5a5b50c6338bab45dcf3a8471ff6fa9ece3c3f/images/closeup/750-Liaison_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img30 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-25db3ccfe1e25fa9__hmac-16093eebb941ba4230e054a29687da4fd667c77b/images/closeup/750-Liaison_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
+    img25 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6cd9138371b3e1ed__hmac-6309554fd08d694e12c1561873af4eee9b594637/images/items/750/Liaison-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img26 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-eef64bdf3a73d8d9__hmac-a031dbc8b9c8eb2c0d34a59a317aff9ca0414530/images/closeup/750-Liaison_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img27 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-da034461f344d95d__hmac-d2aa0236ec7974790e6ebb04f685cfe652fd3953/images/closeup/750-Liaison_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img28 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-aad1d6ee144e91ed__hmac-a886d4e4d1c41f266653b6ad49b73389626ed554/images/closeup/750-Liaison_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img29 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ade7de08a7704819__hmac-7e5a5b50c6338bab45dcf3a8471ff6fa9ece3c3f/images/closeup/750-Liaison_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img30 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-25db3ccfe1e25fa9__hmac-16093eebb941ba4230e054a29687da4fd667c77b/images/closeup/750-Liaison_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
 
 # BAX EQ
     img31 = ProductImages(
@@ -1864,36 +1692,36 @@ def seed_product_images():
     '''
 
 
-    # db.session.add(img1)
-    # db.session.add(img2)
-    # db.session.add(img3)
-    # db.session.add(img4)
-    # db.session.add(img5)
-    # db.session.add(img6)
-    # db.session.add(img7)
-    # db.session.add(img8)
-    # db.session.add(img9)
-    # db.session.add(img10)
-    # db.session.add(img11)
-    # db.session.add(img12)
-    # db.session.add(img13)
-    # db.session.add(img14)
-    # db.session.add(img15)
-    # db.session.add(img16)
-    # db.session.add(img17)
-    # db.session.add(img18)
-    # db.session.add(img19)
-    # db.session.add(img20)
-    # db.session.add(img21)
-    # db.session.add(img22)
-    # db.session.add(img23)
-    # db.session.add(img24)
-    # db.session.add(img25)
-    # db.session.add(img26)
-    # db.session.add(img27)
-    # db.session.add(img28)
-    # db.session.add(img29)
-    # db.session.add(img30)
+    db.session.add(img1)
+    db.session.add(img2)
+    db.session.add(img3)
+    db.session.add(img4)
+    db.session.add(img5)
+    db.session.add(img6)
+    db.session.add(img7)
+    db.session.add(img8)
+    db.session.add(img9)
+    db.session.add(img10)
+    db.session.add(img11)
+    db.session.add(img12)
+    db.session.add(img13)
+    db.session.add(img14)
+    db.session.add(img15)
+    db.session.add(img16)
+    db.session.add(img17)
+    db.session.add(img18)
+    db.session.add(img19)
+    db.session.add(img20)
+    db.session.add(img21)
+    db.session.add(img22)
+    db.session.add(img23)
+    db.session.add(img24)
+    db.session.add(img25)
+    db.session.add(img26)
+    db.session.add(img27)
+    db.session.add(img28)
+    db.session.add(img29)
+    db.session.add(img30)
     db.session.add(img31)
     db.session.add(img32)
     db.session.add(img33)
@@ -2125,13 +1953,7 @@ def undo_product_images():
 
     db.session.commit()
 
-def undo_inventory_product_images():
-    if environment == "production":
-        db.session.execute(f"TRUNCATE table {SCHEMA}.inventory_product_images RESTART IDENTITY CASCADE;")
-    else:
-        db.session.execute("DELETE FROM inventory_product_images")
 
-    db.session.commit()
 # def seed_inventory_product_images():
 #   inventory_product_images.append(inventory_id=1, img_id=1)
 #   inventory_product_images.append(inventory_id=1, img_id=2)
