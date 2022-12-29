@@ -1029,6 +1029,42 @@ def seed_inventory():
         logo='https://media.sweetwater.com/api/i/f-webp__ha-5f5e3859065d0186__hmac-1b967d7967e203568fe40426ce8f8d0ca85a06bd/images/manufacturer-logos/allenandheath.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
 
+    img137 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ccc0c366f68b8e30__hmac-4c8e32373ff0aaedfddc95782777511d938b09ec/images/items/750/ME-U-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img138 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3bda8d9b195cdf97__hmac-5bb48c1a704e4d85f86c867e8a059dad28901114/images/closeup/750-ME-U_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img139 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6a28c5b017f20fff__hmac-0da9824506293a4756e291e30c4f0ec050ddf5c4/images/closeup/750-ME-U_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img140 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2658aec02536204d__hmac-4ca28de350f3ba97ccdf27586256be7f1c0c77cc/images/closeup/750-ME-U_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img141 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bd24d7e4487a87d6__hmac-c0a27800a1564e20d125f33d6d157a399e170fb3/images/closeup/750-ME-U_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img142 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d9ee563a087e1336__hmac-23be4a17bf8dcbb0a642356991b40753856b2501/images/closeup/750-ME-U_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img143 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-41827c184e934860__hmac-5677c7489db08b940cfe6e9e598ee2578e9b998f/images/closeup/750-ME-U_detail6.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item24.product_images = [img137, img138, img139, img140, img141, img142, img143]
+
+    db.session.add_all([item24, img137, img138, img139, img140, img141, img142, img143])
+    db.session.commit()
+
+#XONE96
     item25 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Allen & Heath', name='Allen & Heath Xone96 Analogue DJ Mixer with Audio Interface',
@@ -1041,6 +1077,38 @@ def seed_inventory():
         logo='https://media.sweetwater.com/api/i/f-webp__ha-5f5e3859065d0186__hmac-1b967d7967e203568fe40426ce8f8d0ca85a06bd/images/manufacturer-logos/allenandheath.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
 
+    img144 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-07701909984d036c__hmac-6a1a929d720b07c7c6c6ed85b1e9c7e19a34322e/images/items/750/Xone96-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img145 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bd4f84e52662b8f7__hmac-ad294dbc5c9b4643875b5fc3c3f2559772b8079b/images/closeup/750-Xone96_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img146 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-27bf88a5935b1fb3__hmac-72811c59ac0151c4e724c77c556857a4ecd5f468/images/closeup/750-Xone96_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img147 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2b6c34c3beff205f__hmac-ab444b29ff1503ac86dff730035be606239acc43/images/closeup/750-Xone96_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img148 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0dc100931b6db022__hmac-d6ec63115025b721556982f8d5ff8e25fe57194d/images/closeup/750-Xone96_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img149 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7446852fa9163d29__hmac-3e885259665f5e1a81bf9df838a79c15d18e95af/images/closeup/750-Xone96_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item25.product_images = [img144, img145, img146, img147, img148, img149]
+
+    db.session.add_all([item25, img144, img145, img146, img147, img148, img149])
+    db.session.commit()
+
+#ZED-428
     item26 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Allen & Heath', name='Allen & Heath ZED-428 24-channel Mixer with USB Audio Interface',
@@ -1053,6 +1121,42 @@ def seed_inventory():
         logo='https://media.sweetwater.com/api/i/f-webp__ha-5f5e3859065d0186__hmac-1b967d7967e203568fe40426ce8f8d0ca85a06bd/images/manufacturer-logos/allenandheath.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
 
+    img150 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-49cb8fbecc81c30b__hmac-41cb7ef4f8667d5e8134ddb414f78b489dc20894/images/items/750/ZED428-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img151 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ac8fc31fcc051dd5__hmac-2ec73bf2f488ca311f0c95eb10432afc70f2eb8e/images/closeup/750-ZED428_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img152 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ce3a2f36bf305fb5__hmac-6d96583dbea1137e2775bfff9c3620b7a3de8279/images/closeup/750-ZED428_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img153 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-41f78008961f46f7__hmac-8a1624e9fb8390f35bc9305bcd8716073005bb56/images/closeup/750-ZED428_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img154 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b8579cc337df3e64__hmac-4d2c79f1f5b0fbb1d77d18916b5a2c8326496b2c/images/closeup/750-ZED428_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img155 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-133095b552ddaae1__hmac-033375ed408ef07e37acbd10255348e4f1a6b6e3/images/closeup/750-ZED428_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img156 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d373e63740f4e9a6__hmac-6e93fabe39dd2a92f6a544854969a4df1a6216bf/images/closeup/750-ZED428_detail6.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item26.product_images = [img150, img151, img152, img153, img154, img155, img156]
+
+    db.session.add_all([item26, img150, img151, img152, img153, img154, img155, img156])
+    db.session.commit()
+
+#WZ416
     item27 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Allen & Heath', name='Allen & Heath MixWizard WZ4 16:2 Mixer with Effects',
@@ -1065,6 +1169,38 @@ def seed_inventory():
         logo='https://media.sweetwater.com/api/i/f-webp__ha-5f5e3859065d0186__hmac-1b967d7967e203568fe40426ce8f8d0ca85a06bd/images/manufacturer-logos/allenandheath.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
 
+    img157 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e11d98c7e02e9c5f__hmac-a9ba3508e93ae09e83f072837fed4bf5ce59bf63/images/items/750/MixWizard416-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img158 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7f1b8e316a550903__hmac-eb73bc0ec969e3dd72e30e37355d5d5e83f18e76/images/closeup/750-MixWizard416_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img159 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a6aac57db045585f__hmac-1a23e8376ec0af99834cca999dd784515043c870/images/closeup/750-MixWizard416_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img160 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f6c072c4ebd83f74__hmac-755a537cfcb27919dc1f5c4cdd9015ed6706e549/images/closeup/750-MixWizard416_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img161 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-fb811392a40b7fe1__hmac-2408b4b834fff5b6e7e6977b47f0d35002f39060/images/closeup/750-MixWizard416_detail11.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img162 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e65c3665a0bc6452__hmac-780fd49a6bd89150393a519908e4ca319e1632f1/images/closeup/750-MixWizard416_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item27.product_images = [img157, img158, img159, img160, img161, img162]
+
+    db.session.add_all([item27, img157, img158, img159, img160, img161, img162])
+    db.session.commit()
+
+#ZED420
     item28 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Allen & Heath', name='Allen & Heath ZED-420 16-channel Mixer with USB Audio Interface',
@@ -1077,6 +1213,42 @@ def seed_inventory():
         logo='https://media.sweetwater.com/api/i/f-webp__ha-5f5e3859065d0186__hmac-1b967d7967e203568fe40426ce8f8d0ca85a06bd/images/manufacturer-logos/allenandheath.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
 
+    img163 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2f8bb5ec1de647e8__hmac-f8bcdda70aa8fbe06d2b70782216d381b99ab1e1/images/items/750/ZED420-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img164 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e671d954f2a808ca__hmac-152798313f30d4330b4ef956d96c48fc748b25db/images/closeup/750-ZED420_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img165 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1fe02ce9fd51b1f8__hmac-5a1e0c54d7a60f4765822b16b71969b2b5b1b764/images/closeup/750-ZED420_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img166 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ee9c71eb04c499e2__hmac-a60b6ef36a56d9195a9f6dc66eac04f4c39c6e49/images/closeup/750-ZED420_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img167 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ccbc9d0fa249faa8__hmac-76a222060bff38da3b721cc7fb0482bbf9eb8e0f/images/closeup/750-ZED420_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img168 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a0e5ad21998cf555__hmac-d0dab8427e42a4f746f06ab6e24e58da3daaca3a/images/closeup/750-ZED420_detail6.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img169 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7ef617671df124ff__hmac-811384c3e6e004b9b4de421fa40c692378785d3a/images/closeup/750-ZED420_detail7.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item28.product_images = [img163, img164, img165, img166, img167, img168, img169]
+
+    db.session.add_all([item28, img163, img164, img165, img166, img167, img168, img169])
+    db.session.commit()
+
+#XB-14
     item29 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Allen & Heath', name='Allen & Heath XB-14-2 10-channel Broadcast Mixer',
@@ -1089,6 +1261,38 @@ def seed_inventory():
         logo='https://media.sweetwater.com/api/i/f-webp__ha-5f5e3859065d0186__hmac-1b967d7967e203568fe40426ce8f8d0ca85a06bd/images/manufacturer-logos/allenandheath.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
 
+    img170 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f0c8923d27c29e6e__hmac-7fdfc9b400a3899efce76d73cbd6df635260d296/images/items/750/XB214-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img171 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0957f975b172ebf5__hmac-63528dcc2a1919c2923a74381a37e8bd98362a2c/images/closeup/750-XB214_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img172 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-20c73b4f5b3e2ba2__hmac-a4befa76df718143ddb126eff0aa677c9e025ebc/images/closeup/750-XB214_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img173 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9a4491e5fdd51946__hmac-7aae36a28f6fb43b611ce600db061624cb7b1041/images/closeup/750-XB214_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img174 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-548ceca14263aa9a__hmac-8c73171588ec23f95f64d493777bfbbc60da791b/images/closeup/750-XB214_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img175 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0a4baa2affd66d58__hmac-4e30ac9073a96856e40f93348d1b63acfccdecc9/images/closeup/750-XB214_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item29.product_images = [img170, img171, img172, img173, img174, img175]
+
+    db.session.add_all([item29, img170, img171, img172, img173, img174, img175])
+    db.session.commit()
+
+#ZED10FX
     item30 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Allen & Heath', name='Allen & Heath ZED-10FX 10-channel Mixer with USB Audio Interface and Effects',
@@ -1100,6 +1304,41 @@ def seed_inventory():
         preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-63ea60927522ffe8__hmac-9a5b6fa9aa4d30827161baca5c52ab3dc53329e9/images/items/350/ZED10FX.jpg.auto.webp',
         logo='https://media.sweetwater.com/api/i/f-webp__ha-5f5e3859065d0186__hmac-1b967d7967e203568fe40426ce8f8d0ca85a06bd/images/manufacturer-logos/allenandheath.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img176 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d6e446b05465d7f4__hmac-efa38d9383b6bedea09939d1cfe9cd0fcf750119/images/items/750/ZED10FX-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img177 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2fcf58d03d583ca5__hmac-3cce5fe9dde12d847b171dc091c09c9c5e69f9c2/images/closeup/750-ZED10FX_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img178 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b0d53bff42331c31__hmac-c4b7c57254138bdf9a8fccf8cf53ed3a8628398d/images/closeup/750-ZED10FX_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img179 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-86f38b174817bd11__hmac-d89db97248f3905310dc34e643003babbde1436a/images/closeup/750-ZED10FX_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img180 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-cd78bce2c71bd0bb__hmac-814a3e5ad5698de1874ecbce6557e45bd8cecaf6/images/closeup/750-ZED10FX_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img181 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5cebfb88fad98198__hmac-5d53ad32efb04736f5cc1eb910f18aafb219fd67/images/closeup/750-ZED10FX_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img182 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5cebfb88fad98198__hmac-5d53ad32efb04736f5cc1eb910f18aafb219fd67/images/closeup/750-ZED10FX_detail6.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item30.product_images = [img176, img177, img178, img179, img180, img181, img182]
+
+    db.session.add_all([item30, img176, img177, img178, img179, img180, img181, img182])
+    db.session.commit()
 
 ## OBSIDIAN #######
 
@@ -1114,7 +1353,7 @@ def seed_inventory():
         preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-c8ed953241bb4472__hmac-e4f46095f078dd3a91ba3923aa8a3aa523d72451/images/items/350/NX1.jpg.auto.webp',
         logo='https://media.sweetwater.com/api/i/f-webp__ha-cc5c5fc91feeb016__hmac-74d1682e3a7e09bbad77147b9c29f3bd751e42dc/images/manufacturer-logos/obsidian.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-
+##
     item32 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Obsidian', name='Obsidian NX2 64-Universe Lighting Controller',
@@ -1126,7 +1365,7 @@ def seed_inventory():
         preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-7bd3c8f4c4d0e3d5__hmac-1d921bf1666f3de6fd7ac4b0e13b0bc6d406e27f/images/items/350/NX2.jpg.auto.webp',
         logo='https://media.sweetwater.com/api/i/f-webp__ha-cc5c5fc91feeb016__hmac-74d1682e3a7e09bbad77147b9c29f3bd751e42dc/images/manufacturer-logos/obsidian.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-
+##
     item33 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Obsidian', name='Obsidian NX Touch 512-Ch DMX Lighting Controller',
@@ -1138,7 +1377,7 @@ def seed_inventory():
         preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-74a3f203352f1b7e__hmac-b62b8f6474913c34a74de0a757349ce9cbf91e6a/images/items/350/NXTouch.jpg.auto.webp',
         logo='https://media.sweetwater.com/api/i/f-webp__ha-cc5c5fc91feeb016__hmac-74d1682e3a7e09bbad77147b9c29f3bd751e42dc/images/manufacturer-logos/obsidian.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-
+##
     item34 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Obsidian', name='Obsidian NX Wing Lighting Controller',
@@ -1150,7 +1389,7 @@ def seed_inventory():
         preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-9baf3227e5021538__hmac-065338a50489884b7f7ebc9dc78155365903b1cf/images/items/350/NXWing.jpg.auto.webp',
         logo='https://media.sweetwater.com/api/i/f-webp__ha-cc5c5fc91feeb016__hmac-74d1682e3a7e09bbad77147b9c29f3bd751e42dc/images/manufacturer-logos/obsidian.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-
+##
     item35 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Obsidian', name='Obsidian NX DMX USB 2-Port DMX Node',
@@ -1162,7 +1401,7 @@ def seed_inventory():
         preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-92e85097e4741e5b__hmac-7592ecf90c604b616b419f392383ca781cf8ed8c/images/items/350/NXDMX.jpg.auto.webp',
         logo='https://media.sweetwater.com/api/i/f-webp__ha-cc5c5fc91feeb016__hmac-74d1682e3a7e09bbad77147b9c29f3bd751e42dc/images/manufacturer-logos/obsidian.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-
+##
     item36 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Martin', name='Martin Lighting JEM Hazer Pro 120V 50/60Hz Haze Machine',
@@ -1174,7 +1413,7 @@ def seed_inventory():
         preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-bda50f494c893ebc__hmac-f0c7060b629d91a0bc253e2dc0a552d719c81f18/images/items/350/JEMHazerPro.jpg.auto.webp',
         logo='https://media.sweetwater.com/api/i/f-webp__ha-f8397c78854856f4__hmac-f7b3288627aa7318d2663b65704c0bb612043d13/images/manufacturer-logos/martinlighting.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-
+##
     item37 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Martin', name='Martin Lighting JEM C-Plus Haze Fluid - 2.5 Liters (4-pack)',
@@ -1187,7 +1426,7 @@ def seed_inventory():
         logo='https://media.sweetwater.com/api/i/f-webp__ha-f8397c78854856f4__hmac-f7b3288627aa7318d2663b65704c0bb612043d13/images/manufacturer-logos/martinlighting.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
 
-
+##
     item38 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Martin', name='Martin Lighting RUSH MH 11 Beam 250W High-intensity Moving-head Beam with Gobos',
@@ -1199,7 +1438,7 @@ def seed_inventory():
         preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-f558c45532734137__hmac-b7ef643eb93daead1b8de0caa0bee7dbf15e3462/images/items/350/RushMH11Beam.jpg.auto.webp',
         logo='https://media.sweetwater.com/api/i/f-webp__ha-f8397c78854856f4__hmac-f7b3288627aa7318d2663b65704c0bb612043d13/images/manufacturer-logos/martinlighting.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-
+##
     item39 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Martin', name='Martin Lighting RUSH MH 5 Profile 75W LED Moving-head with Gobos',
@@ -1211,7 +1450,7 @@ def seed_inventory():
         preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-fc1bfc7e7772d098__hmac-67450f3b1882557f67830e2bf2b01ac3117aa1a7/images/items/350/RushMH5Pro.jpg.auto.webp',
         logo='https://media.sweetwater.com/api/i/f-webp__ha-f8397c78854856f4__hmac-f7b3288627aa7318d2663b65704c0bb612043d13/images/manufacturer-logos/martinlighting.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-
+##
     item40 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Martin', name='Martin Lighting MAC Encore Performance CLD 468W Cold White LED Moving-head',
@@ -1223,6 +1462,7 @@ def seed_inventory():
         preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-3bc94eefea0c84b1__hmac-5229b08419635bb70410a2955c11d3c234c3514b/images/items/350/MacEncPCLD.jpg.auto.webp',
         logo='https://media.sweetwater.com/api/i/f-webp__ha-f8397c78854856f4__hmac-f7b3288627aa7318d2663b65704c0bb612043d13/images/manufacturer-logos/martinlighting.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
 # ESP
 
     item41 = Inventory(
@@ -1272,13 +1512,13 @@ def seed_inventory():
     # db.session.add(item21)
     # db.session.add(item22)
     # db.session.add(item23)
-    db.session.add(item24)
-    db.session.add(item25)
-    db.session.add(item26)
-    db.session.add(item27)
-    db.session.add(item28)
-    db.session.add(item29)
-    db.session.add(item30)
+    # db.session.add(item24)
+    # db.session.add(item25)
+    # db.session.add(item26)
+    # db.session.add(item27)
+    # db.session.add(item28)
+    # db.session.add(item29)
+    # db.session.add(item30)
     db.session.add(item31)
     db.session.add(item32)
     db.session.add(item33)
@@ -1911,202 +2151,202 @@ def seed_product_images():
     # )
 
 # POE Monitor
-    img137 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ccc0c366f68b8e30__hmac-4c8e32373ff0aaedfddc95782777511d938b09ec/images/items/750/ME-U-large.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img138 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3bda8d9b195cdf97__hmac-5bb48c1a704e4d85f86c867e8a059dad28901114/images/closeup/750-ME-U_detail1.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img139 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6a28c5b017f20fff__hmac-0da9824506293a4756e291e30c4f0ec050ddf5c4/images/closeup/750-ME-U_detail2.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img140 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2658aec02536204d__hmac-4ca28de350f3ba97ccdf27586256be7f1c0c77cc/images/closeup/750-ME-U_detail3.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img141 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bd24d7e4487a87d6__hmac-c0a27800a1564e20d125f33d6d157a399e170fb3/images/closeup/750-ME-U_detail4.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img142 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d9ee563a087e1336__hmac-23be4a17bf8dcbb0a642356991b40753856b2501/images/closeup/750-ME-U_detail5.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img143 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-41827c184e934860__hmac-5677c7489db08b940cfe6e9e598ee2578e9b998f/images/closeup/750-ME-U_detail6.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
+    # img137 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ccc0c366f68b8e30__hmac-4c8e32373ff0aaedfddc95782777511d938b09ec/images/items/750/ME-U-large.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img138 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3bda8d9b195cdf97__hmac-5bb48c1a704e4d85f86c867e8a059dad28901114/images/closeup/750-ME-U_detail1.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img139 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6a28c5b017f20fff__hmac-0da9824506293a4756e291e30c4f0ec050ddf5c4/images/closeup/750-ME-U_detail2.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img140 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2658aec02536204d__hmac-4ca28de350f3ba97ccdf27586256be7f1c0c77cc/images/closeup/750-ME-U_detail3.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img141 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bd24d7e4487a87d6__hmac-c0a27800a1564e20d125f33d6d157a399e170fb3/images/closeup/750-ME-U_detail4.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img142 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d9ee563a087e1336__hmac-23be4a17bf8dcbb0a642356991b40753856b2501/images/closeup/750-ME-U_detail5.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img143 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-41827c184e934860__hmac-5677c7489db08b940cfe6e9e598ee2578e9b998f/images/closeup/750-ME-U_detail6.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
 
 # XONE96
-    img144 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-07701909984d036c__hmac-6a1a929d720b07c7c6c6ed85b1e9c7e19a34322e/images/items/750/Xone96-large.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img145 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bd4f84e52662b8f7__hmac-ad294dbc5c9b4643875b5fc3c3f2559772b8079b/images/closeup/750-Xone96_detail1.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img146 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-27bf88a5935b1fb3__hmac-72811c59ac0151c4e724c77c556857a4ecd5f468/images/closeup/750-Xone96_detail2.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img147 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2b6c34c3beff205f__hmac-ab444b29ff1503ac86dff730035be606239acc43/images/closeup/750-Xone96_detail3.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img148 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0dc100931b6db022__hmac-d6ec63115025b721556982f8d5ff8e25fe57194d/images/closeup/750-Xone96_detail4.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img149 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7446852fa9163d29__hmac-3e885259665f5e1a81bf9df838a79c15d18e95af/images/closeup/750-Xone96_detail5.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
+    # img144 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-07701909984d036c__hmac-6a1a929d720b07c7c6c6ed85b1e9c7e19a34322e/images/items/750/Xone96-large.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img145 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bd4f84e52662b8f7__hmac-ad294dbc5c9b4643875b5fc3c3f2559772b8079b/images/closeup/750-Xone96_detail1.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img146 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-27bf88a5935b1fb3__hmac-72811c59ac0151c4e724c77c556857a4ecd5f468/images/closeup/750-Xone96_detail2.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img147 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2b6c34c3beff205f__hmac-ab444b29ff1503ac86dff730035be606239acc43/images/closeup/750-Xone96_detail3.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img148 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0dc100931b6db022__hmac-d6ec63115025b721556982f8d5ff8e25fe57194d/images/closeup/750-Xone96_detail4.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img149 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7446852fa9163d29__hmac-3e885259665f5e1a81bf9df838a79c15d18e95af/images/closeup/750-Xone96_detail5.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
 
 # ZED-428
-    img150 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-49cb8fbecc81c30b__hmac-41cb7ef4f8667d5e8134ddb414f78b489dc20894/images/items/750/ZED428-large.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img151 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ac8fc31fcc051dd5__hmac-2ec73bf2f488ca311f0c95eb10432afc70f2eb8e/images/closeup/750-ZED428_detail1.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img152 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ce3a2f36bf305fb5__hmac-6d96583dbea1137e2775bfff9c3620b7a3de8279/images/closeup/750-ZED428_detail2.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img153 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-41f78008961f46f7__hmac-8a1624e9fb8390f35bc9305bcd8716073005bb56/images/closeup/750-ZED428_detail3.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img154 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b8579cc337df3e64__hmac-4d2c79f1f5b0fbb1d77d18916b5a2c8326496b2c/images/closeup/750-ZED428_detail4.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img155 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-133095b552ddaae1__hmac-033375ed408ef07e37acbd10255348e4f1a6b6e3/images/closeup/750-ZED428_detail5.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img156 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d373e63740f4e9a6__hmac-6e93fabe39dd2a92f6a544854969a4df1a6216bf/images/closeup/750-ZED428_detail6.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
+    # img150 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-49cb8fbecc81c30b__hmac-41cb7ef4f8667d5e8134ddb414f78b489dc20894/images/items/750/ZED428-large.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img151 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ac8fc31fcc051dd5__hmac-2ec73bf2f488ca311f0c95eb10432afc70f2eb8e/images/closeup/750-ZED428_detail1.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img152 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ce3a2f36bf305fb5__hmac-6d96583dbea1137e2775bfff9c3620b7a3de8279/images/closeup/750-ZED428_detail2.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img153 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-41f78008961f46f7__hmac-8a1624e9fb8390f35bc9305bcd8716073005bb56/images/closeup/750-ZED428_detail3.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img154 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b8579cc337df3e64__hmac-4d2c79f1f5b0fbb1d77d18916b5a2c8326496b2c/images/closeup/750-ZED428_detail4.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img155 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-133095b552ddaae1__hmac-033375ed408ef07e37acbd10255348e4f1a6b6e3/images/closeup/750-ZED428_detail5.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img156 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d373e63740f4e9a6__hmac-6e93fabe39dd2a92f6a544854969a4df1a6216bf/images/closeup/750-ZED428_detail6.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
 
 # WZ416
-    img157 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e11d98c7e02e9c5f__hmac-a9ba3508e93ae09e83f072837fed4bf5ce59bf63/images/items/750/MixWizard416-large.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img158 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7f1b8e316a550903__hmac-eb73bc0ec969e3dd72e30e37355d5d5e83f18e76/images/closeup/750-MixWizard416_detail1.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img159 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a6aac57db045585f__hmac-1a23e8376ec0af99834cca999dd784515043c870/images/closeup/750-MixWizard416_detail2.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img160 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f6c072c4ebd83f74__hmac-755a537cfcb27919dc1f5c4cdd9015ed6706e549/images/closeup/750-MixWizard416_detail4.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img161 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-fb811392a40b7fe1__hmac-2408b4b834fff5b6e7e6977b47f0d35002f39060/images/closeup/750-MixWizard416_detail11.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img162 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e65c3665a0bc6452__hmac-780fd49a6bd89150393a519908e4ca319e1632f1/images/closeup/750-MixWizard416_detail3.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
+    # img157 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e11d98c7e02e9c5f__hmac-a9ba3508e93ae09e83f072837fed4bf5ce59bf63/images/items/750/MixWizard416-large.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img158 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7f1b8e316a550903__hmac-eb73bc0ec969e3dd72e30e37355d5d5e83f18e76/images/closeup/750-MixWizard416_detail1.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img159 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a6aac57db045585f__hmac-1a23e8376ec0af99834cca999dd784515043c870/images/closeup/750-MixWizard416_detail2.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img160 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f6c072c4ebd83f74__hmac-755a537cfcb27919dc1f5c4cdd9015ed6706e549/images/closeup/750-MixWizard416_detail4.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img161 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-fb811392a40b7fe1__hmac-2408b4b834fff5b6e7e6977b47f0d35002f39060/images/closeup/750-MixWizard416_detail11.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img162 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e65c3665a0bc6452__hmac-780fd49a6bd89150393a519908e4ca319e1632f1/images/closeup/750-MixWizard416_detail3.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
 
 # ZED420
-    img163 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2f8bb5ec1de647e8__hmac-f8bcdda70aa8fbe06d2b70782216d381b99ab1e1/images/items/750/ZED420-large.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img164 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e671d954f2a808ca__hmac-152798313f30d4330b4ef956d96c48fc748b25db/images/closeup/750-ZED420_detail1.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img165 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1fe02ce9fd51b1f8__hmac-5a1e0c54d7a60f4765822b16b71969b2b5b1b764/images/closeup/750-ZED420_detail2.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img166 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ee9c71eb04c499e2__hmac-a60b6ef36a56d9195a9f6dc66eac04f4c39c6e49/images/closeup/750-ZED420_detail3.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img167 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ccbc9d0fa249faa8__hmac-76a222060bff38da3b721cc7fb0482bbf9eb8e0f/images/closeup/750-ZED420_detail5.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img168 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a0e5ad21998cf555__hmac-d0dab8427e42a4f746f06ab6e24e58da3daaca3a/images/closeup/750-ZED420_detail6.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img169 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7ef617671df124ff__hmac-811384c3e6e004b9b4de421fa40c692378785d3a/images/closeup/750-ZED420_detail7.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
+    # img163 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2f8bb5ec1de647e8__hmac-f8bcdda70aa8fbe06d2b70782216d381b99ab1e1/images/items/750/ZED420-large.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img164 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e671d954f2a808ca__hmac-152798313f30d4330b4ef956d96c48fc748b25db/images/closeup/750-ZED420_detail1.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img165 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1fe02ce9fd51b1f8__hmac-5a1e0c54d7a60f4765822b16b71969b2b5b1b764/images/closeup/750-ZED420_detail2.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img166 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ee9c71eb04c499e2__hmac-a60b6ef36a56d9195a9f6dc66eac04f4c39c6e49/images/closeup/750-ZED420_detail3.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img167 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ccbc9d0fa249faa8__hmac-76a222060bff38da3b721cc7fb0482bbf9eb8e0f/images/closeup/750-ZED420_detail5.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img168 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a0e5ad21998cf555__hmac-d0dab8427e42a4f746f06ab6e24e58da3daaca3a/images/closeup/750-ZED420_detail6.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img169 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7ef617671df124ff__hmac-811384c3e6e004b9b4de421fa40c692378785d3a/images/closeup/750-ZED420_detail7.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
 
 # XB-14
-    img170 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f0c8923d27c29e6e__hmac-7fdfc9b400a3899efce76d73cbd6df635260d296/images/items/750/XB214-large.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img171 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0957f975b172ebf5__hmac-63528dcc2a1919c2923a74381a37e8bd98362a2c/images/closeup/750-XB214_detail1.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img172 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-20c73b4f5b3e2ba2__hmac-a4befa76df718143ddb126eff0aa677c9e025ebc/images/closeup/750-XB214_detail2.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img173 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9a4491e5fdd51946__hmac-7aae36a28f6fb43b611ce600db061624cb7b1041/images/closeup/750-XB214_detail3.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img174 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-548ceca14263aa9a__hmac-8c73171588ec23f95f64d493777bfbbc60da791b/images/closeup/750-XB214_detail4.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img175 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0a4baa2affd66d58__hmac-4e30ac9073a96856e40f93348d1b63acfccdecc9/images/closeup/750-XB214_detail5.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
+    # img170 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f0c8923d27c29e6e__hmac-7fdfc9b400a3899efce76d73cbd6df635260d296/images/items/750/XB214-large.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img171 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0957f975b172ebf5__hmac-63528dcc2a1919c2923a74381a37e8bd98362a2c/images/closeup/750-XB214_detail1.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img172 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-20c73b4f5b3e2ba2__hmac-a4befa76df718143ddb126eff0aa677c9e025ebc/images/closeup/750-XB214_detail2.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img173 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9a4491e5fdd51946__hmac-7aae36a28f6fb43b611ce600db061624cb7b1041/images/closeup/750-XB214_detail3.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img174 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-548ceca14263aa9a__hmac-8c73171588ec23f95f64d493777bfbbc60da791b/images/closeup/750-XB214_detail4.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img175 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0a4baa2affd66d58__hmac-4e30ac9073a96856e40f93348d1b63acfccdecc9/images/closeup/750-XB214_detail5.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
 
 # ZED10FX
-    img176 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d6e446b05465d7f4__hmac-efa38d9383b6bedea09939d1cfe9cd0fcf750119/images/items/750/ZED10FX-large.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img177 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2fcf58d03d583ca5__hmac-3cce5fe9dde12d847b171dc091c09c9c5e69f9c2/images/closeup/750-ZED10FX_detail1.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img178 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b0d53bff42331c31__hmac-c4b7c57254138bdf9a8fccf8cf53ed3a8628398d/images/closeup/750-ZED10FX_detail2.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img179 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-86f38b174817bd11__hmac-d89db97248f3905310dc34e643003babbde1436a/images/closeup/750-ZED10FX_detail3.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img180 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-cd78bce2c71bd0bb__hmac-814a3e5ad5698de1874ecbce6557e45bd8cecaf6/images/closeup/750-ZED10FX_detail4.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img181 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5cebfb88fad98198__hmac-5d53ad32efb04736f5cc1eb910f18aafb219fd67/images/closeup/750-ZED10FX_detail5.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img182 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5cebfb88fad98198__hmac-5d53ad32efb04736f5cc1eb910f18aafb219fd67/images/closeup/750-ZED10FX_detail6.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
+    # img176 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d6e446b05465d7f4__hmac-efa38d9383b6bedea09939d1cfe9cd0fcf750119/images/items/750/ZED10FX-large.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img177 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2fcf58d03d583ca5__hmac-3cce5fe9dde12d847b171dc091c09c9c5e69f9c2/images/closeup/750-ZED10FX_detail1.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img178 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b0d53bff42331c31__hmac-c4b7c57254138bdf9a8fccf8cf53ed3a8628398d/images/closeup/750-ZED10FX_detail2.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img179 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-86f38b174817bd11__hmac-d89db97248f3905310dc34e643003babbde1436a/images/closeup/750-ZED10FX_detail3.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img180 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-cd78bce2c71bd0bb__hmac-814a3e5ad5698de1874ecbce6557e45bd8cecaf6/images/closeup/750-ZED10FX_detail4.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img181 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5cebfb88fad98198__hmac-5d53ad32efb04736f5cc1eb910f18aafb219fd67/images/closeup/750-ZED10FX_detail5.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img182 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5cebfb88fad98198__hmac-5d53ad32efb04736f5cc1eb910f18aafb219fd67/images/closeup/750-ZED10FX_detail6.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
 
 ###### OBSIDIAN ################
 
@@ -2576,52 +2816,52 @@ def seed_product_images():
     # db.session.add(img134)
     # db.session.add(img135)
     # db.session.add(img136)
-    db.session.add(img137)
-    db.session.add(img138)
-    db.session.add(img139)
-    db.session.add(img140)
-    db.session.add(img141)
-    db.session.add(img142)
-    db.session.add(img143)
-    db.session.add(img144)
-    db.session.add(img145)
-    db.session.add(img146)
-    db.session.add(img147)
-    db.session.add(img148)
-    db.session.add(img149)
-    db.session.add(img150)
-    db.session.add(img151)
-    db.session.add(img152)
-    db.session.add(img153)
-    db.session.add(img154)
-    db.session.add(img155)
-    db.session.add(img156)
-    db.session.add(img157)
-    db.session.add(img158)
-    db.session.add(img159)
-    db.session.add(img160)
-    db.session.add(img161)
-    db.session.add(img162)
-    db.session.add(img163)
-    db.session.add(img164)
-    db.session.add(img165)
-    db.session.add(img166)
-    db.session.add(img167)
-    db.session.add(img168)
-    db.session.add(img169)
-    db.session.add(img170)
-    db.session.add(img171)
-    db.session.add(img172)
-    db.session.add(img173)
-    db.session.add(img174)
-    db.session.add(img175)
-    db.session.add(img176)
-    db.session.add(img177)
-    db.session.add(img178)
-    db.session.add(img179)
-    db.session.add(img180)
-    db.session.add(img181)
-    db.session.add(img182)
+    # db.session.add(img137)
+    # db.session.add(img138)
+    # db.session.add(img139)
+    # db.session.add(img140)
+    # db.session.add(img141)
+    # db.session.add(img142)
+    # db.session.add(img143)
+    # db.session.add(img144)
+    # db.session.add(img145)
+    # db.session.add(img146)
+    # db.session.add(img147)
+    # db.session.add(img148)
+    # db.session.add(img149)
+    # db.session.add(img150)
+    # db.session.add(img151)
+    # db.session.add(img152)
+    # db.session.add(img153)
+    # db.session.add(img154)
+    # db.session.add(img155)
+    # db.session.add(img156)
+    # db.session.add(img157)
+    # db.session.add(img158)
+    # db.session.add(img159)
+    # db.session.add(img160)
+    # db.session.add(img161)
+    # db.session.add(img162)
+    # db.session.add(img163)
+    # db.session.add(img164)
+    # db.session.add(img165)
+    # db.session.add(img166)
+    # db.session.add(img167)
+    # db.session.add(img168)
+    # db.session.add(img169)
+    # db.session.add(img170)
+    # db.session.add(img171)
+    # db.session.add(img172)
+    # db.session.add(img173)
+    # db.session.add(img174)
+    # db.session.add(img175)
+    # db.session.add(img176)
+    # db.session.add(img177)
+    # db.session.add(img178)
+    # db.session.add(img179)
+    # db.session.add(img180)
+    # db.session.add(img181)
+    # db.session.add(img182)
     db.session.add(img183)
     db.session.add(img184)
     db.session.add(img185)
