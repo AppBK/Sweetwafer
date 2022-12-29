@@ -923,7 +923,7 @@ def seed_inventory():
     db.session.add_all([item21, img117, img118, img119, img120, img121, img122, img123])
     db.session.commit()
 
-##
+#GX4816
     item22 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Allen & Heath', name='Allen & Heath GX4816 48x16 Portable GX Expander with DX Sockets',
@@ -936,6 +936,43 @@ def seed_inventory():
         logo='https://media.sweetwater.com/api/i/f-webp__ha-5f5e3859065d0186__hmac-1b967d7967e203568fe40426ce8f8d0ca85a06bd/images/manufacturer-logos/allenandheath.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
 
+    img124 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-66483ec2f5f8566b__hmac-4a042effc2603a14b07084fad3d55e9fc7b934ea/images/items/750/GX4816-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img125 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1d81bf63eecf37a3__hmac-21503175978398f3a7d481cdb75e99159afca843/images/closeup/750-GX4816_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img126 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1d81bf63eecf37a3__hmac-21503175978398f3a7d481cdb75e99159afca843/images/closeup/750-GX4816_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img127 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7f46daeda9636262__hmac-6372df5a408b81005eba93fc5e027501a2534f74/images/closeup/750-GX4816_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img128 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d28e749ff128a7a6__hmac-3d7303026e569f60804494664e75615f1e85f713/images/closeup/750-GX4816_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img129 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-59699f5743ccd48a__hmac-1b11d4f00dce44e017969be553964788269b0008/images/closeup/750-GX4816_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img130 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-33b3793a01de2fc2__hmac-68e169f92a3cbb7dd109a68d6562d22dbed15fa3/images/closeup/750-GX4816_detail6.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item22.product_images = [img124, img125, img126, img127, img128, img129, img130]
+
+    db.session.add_all([item22, img124, img125, img126, img127, img128, img129, img130])
+    db.session.commit()
+
+
+#ME1PM
     item23 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Allen & Heath', name='Allen & Heath ME-1 Personal Monitor Mixer',
@@ -948,6 +985,38 @@ def seed_inventory():
         logo='https://media.sweetwater.com/api/i/f-webp__ha-5f5e3859065d0186__hmac-1b967d7967e203568fe40426ce8f8d0ca85a06bd/images/manufacturer-logos/allenandheath.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
 
+    img131 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-513bfe5128d33c6f__hmac-2f09f9c0e0339ea5bc8d0dd90ee4b95f182b7a21/images/items/750/ME1PM-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img132 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-dd6e5a17ff632e58__hmac-a4a885887f4985ba514f9235c55e9c702de5ccf7/images/closeup/750-ME1PM_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img133 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0fa34c70a3fc4925__hmac-7d063bd950bb615b56e5320455af7db7e2a25c42/images/closeup/750-ME1PM_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img134 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ffc5d753286aef2d__hmac-1415bbbc3219dcbe0b2673f38ac7969a7ae56236/images/closeup/750-ME1PM_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img135 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6ed53227b5a362ba__hmac-090e351e6d10bcd194b16e44b6cefba2dc4d895d/images/closeup/750-ME1PM_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img136 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-66aab3844600ed77__hmac-bafbff8bdbd87a2809abfd1d3cbf31113f29774d/images/closeup/750-ME1PM_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item23.product_images = [img131, img132, img133, img134, img135, img136]
+
+    db.session.add_all([item23, img131, img132, img133, img134, img135, img136])
+    db.session.commit()
+
+#POE
     item24 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Allen & Heath', name='Allen & Heath ME-U Universal POE Monitor Hub',
@@ -1198,11 +1267,11 @@ def seed_inventory():
     # db.session.add(item16)
     # db.session.add(item17)
     # db.session.add(item18)
-    db.session.add(item19)
-    db.session.add(item20)
-    db.session.add(item21)
-    db.session.add(item22)
-    db.session.add(item23)
+    # db.session.add(item19)
+    # db.session.add(item20)
+    # db.session.add(item21)
+    # db.session.add(item22)
+    # db.session.add(item23)
     db.session.add(item24)
     db.session.add(item25)
     db.session.add(item26)
@@ -1785,59 +1854,61 @@ def seed_product_images():
 
 # GX4816
 
-    img124 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-66483ec2f5f8566b__hmac-4a042effc2603a14b07084fad3d55e9fc7b934ea/images/items/750/GX4816-large.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img125 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1d81bf63eecf37a3__hmac-21503175978398f3a7d481cdb75e99159afca843/images/closeup/750-GX4816_detail1.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img126 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1d81bf63eecf37a3__hmac-21503175978398f3a7d481cdb75e99159afca843/images/closeup/750-GX4816_detail1.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img127 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7f46daeda9636262__hmac-6372df5a408b81005eba93fc5e027501a2534f74/images/closeup/750-GX4816_detail3.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img128 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d28e749ff128a7a6__hmac-3d7303026e569f60804494664e75615f1e85f713/images/closeup/750-GX4816_detail4.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img129 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-59699f5743ccd48a__hmac-1b11d4f00dce44e017969be553964788269b0008/images/closeup/750-GX4816_detail5.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img130 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-33b3793a01de2fc2__hmac-68e169f92a3cbb7dd109a68d6562d22dbed15fa3/images/closeup/750-GX4816_detail6.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
+    # img124 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-66483ec2f5f8566b__hmac-4a042effc2603a14b07084fad3d55e9fc7b934ea/images/items/750/GX4816-large.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img125 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1d81bf63eecf37a3__hmac-21503175978398f3a7d481cdb75e99159afca843/images/closeup/750-GX4816_detail1.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img126 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1d81bf63eecf37a3__hmac-21503175978398f3a7d481cdb75e99159afca843/images/closeup/750-GX4816_detail1.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img127 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7f46daeda9636262__hmac-6372df5a408b81005eba93fc5e027501a2534f74/images/closeup/750-GX4816_detail3.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img128 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d28e749ff128a7a6__hmac-3d7303026e569f60804494664e75615f1e85f713/images/closeup/750-GX4816_detail4.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img129 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-59699f5743ccd48a__hmac-1b11d4f00dce44e017969be553964788269b0008/images/closeup/750-GX4816_detail5.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img130 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-33b3793a01de2fc2__hmac-68e169f92a3cbb7dd109a68d6562d22dbed15fa3/images/closeup/750-GX4816_detail6.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
 
-    img131 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-513bfe5128d33c6f__hmac-2f09f9c0e0339ea5bc8d0dd90ee4b95f182b7a21/images/items/750/ME1PM-large.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img132 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-dd6e5a17ff632e58__hmac-a4a885887f4985ba514f9235c55e9c702de5ccf7/images/closeup/750-ME1PM_detail1.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img133 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0fa34c70a3fc4925__hmac-7d063bd950bb615b56e5320455af7db7e2a25c42/images/closeup/750-ME1PM_detail2.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img134 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ffc5d753286aef2d__hmac-1415bbbc3219dcbe0b2673f38ac7969a7ae56236/images/closeup/750-ME1PM_detail3.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img135 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6ed53227b5a362ba__hmac-090e351e6d10bcd194b16e44b6cefba2dc4d895d/images/closeup/750-ME1PM_detail4.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img136 = ProductImages(
-      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-66aab3844600ed77__hmac-bafbff8bdbd87a2809abfd1d3cbf31113f29774d/images/closeup/750-ME1PM_detail5.jpg.auto.webp',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
+
+#ME1PM
+    # img131 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-513bfe5128d33c6f__hmac-2f09f9c0e0339ea5bc8d0dd90ee4b95f182b7a21/images/items/750/ME1PM-large.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img132 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-dd6e5a17ff632e58__hmac-a4a885887f4985ba514f9235c55e9c702de5ccf7/images/closeup/750-ME1PM_detail1.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img133 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0fa34c70a3fc4925__hmac-7d063bd950bb615b56e5320455af7db7e2a25c42/images/closeup/750-ME1PM_detail2.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img134 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ffc5d753286aef2d__hmac-1415bbbc3219dcbe0b2673f38ac7969a7ae56236/images/closeup/750-ME1PM_detail3.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img135 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6ed53227b5a362ba__hmac-090e351e6d10bcd194b16e44b6cefba2dc4d895d/images/closeup/750-ME1PM_detail4.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img136 = ProductImages(
+    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-66aab3844600ed77__hmac-bafbff8bdbd87a2809abfd1d3cbf31113f29774d/images/closeup/750-ME1PM_detail5.jpg.auto.webp',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
 
 # POE Monitor
     img137 = ProductImages(
@@ -2492,19 +2563,19 @@ def seed_product_images():
     # db.session.add(img121)
     # db.session.add(img122)
     # db.session.add(img123)
-    db.session.add(img124)
-    db.session.add(img125)
-    db.session.add(img126)
-    db.session.add(img127)
-    db.session.add(img128)
-    db.session.add(img129)
-    db.session.add(img130)
-    db.session.add(img131)
-    db.session.add(img132)
-    db.session.add(img133)
-    db.session.add(img134)
-    db.session.add(img135)
-    db.session.add(img136)
+    # db.session.add(img124)
+    # db.session.add(img125)
+    # db.session.add(img126)
+    # db.session.add(img127)
+    # db.session.add(img128)
+    # db.session.add(img129)
+    # db.session.add(img130)
+    # db.session.add(img131)
+    # db.session.add(img132)
+    # db.session.add(img133)
+    # db.session.add(img134)
+    # db.session.add(img135)
+    # db.session.add(img136)
     db.session.add(img137)
     db.session.add(img138)
     db.session.add(img139)
