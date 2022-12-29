@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { thunkReadInv } from '../../store/inventory.js';
 import { actionReadProduct } from '../../store/product.js';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
+import { SweetContext } from '../../context/Context.js';
 
 import './Inv.css'
 
@@ -11,9 +12,13 @@ export default function Inventory() {
   const history = useHistory();
   const inventory = useSelector(state => state.inventory);
 
+  const { vendor } = useContext(SweetContext);
+  const { cat } = useParams();
+  console.log('CATEGORY: ', cat);
+
   useEffect(() => {
-    dispatch(thunkReadInv());
-  }, []);
+    dispatch(thunkReadInv(cat ? cat : '', vendor));
+  }, [cat]);
 
   const len = (iter) => {
     let count = 0;

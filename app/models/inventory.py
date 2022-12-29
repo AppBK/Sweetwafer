@@ -26,6 +26,7 @@ class Inventory(db.Model, UserMixin):
     __table_args__ = {'schema': SCHEMA}
 
   id = db.Column(db.Integer, nullable=False, primary_key=True)
+  category = db.Column(db.String(64), nullable=False)
   vendor_name = db.Column(db.String(64), nullable=False)
   manufacturer_id = db.Column(db.String(64), nullable=False)
   name = db.Column(db.String(128), nullable=False)
@@ -35,6 +36,7 @@ class Inventory(db.Model, UserMixin):
   tech_specs = db.Column(db.String(2048), nullable=False)
   price = db.Column(db.Float, nullable=False)
   preview = db.Column(db.String(512), nullable=False)
+  logo = db.Column(db.String(512), nullable=False)
   createdAt = db.Column(db.String(64), nullable=False)
   updatedAt = db.Column(db.String(64), nullable=False)
 

@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, session, request
+from flask import Blueprint, jsonify, session, request, json
 from app.models import User, db, Inventory
 from app.forms import LoginForm
 from app.forms import SignUpForm
@@ -7,9 +7,19 @@ from flask_login import current_user, login_user, logout_user, login_required
 inv_routes = Blueprint('inventory', __name__)
 
 # GET the entire inventory
-@inv_routes.route('/')
+@inv_routes.route('/', methods=['POST'])
 def get_inv():
-  inv = Inventory.query.all()
+  body = json.loads(request.data.decode('UTF-8'))
+  print('REQUEST DATA', body)
+
+  if body['vendor']:
+    inv = Inventory.query.filter(Inventory.category == body['category']).filter(Inventory.vendor == body['vendor']).all()
+  elif body['category']:
+    inv = Inventory.query.filter(Inventory.category == body['category']).all()
+  else:
+    inv = Inventory.query.all()
+
+  # inv = Inventory.query.all()
 
   temp_images = []
   parsed_items = []
@@ -41,3 +51,7 @@ def get_product(id):
   print('FROM /<id>', product);
 
   return product;
+
+@inv_routes.route('/<cat>')
+def get_products_by_category(cat):
+  products = Inventory.query.filter(Inventory.category == cat).all()

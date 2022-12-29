@@ -10,8 +10,15 @@ export const actionReadInv = (inventory) => ({
 
 
 // THUNKS
-export const thunkReadInv = () => async (dispatch) => {
-  const response = await fetch('/api/inventory/');
+export const thunkReadInv = (category, vendor) => async (dispatch) => {
+  const response = await fetch('/api/inventory/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      category: category,
+      vendor: vendor
+    })
+  });
 
   if (response.ok) {
     const inventory = await response.json();

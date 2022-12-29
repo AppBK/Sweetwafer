@@ -5,6 +5,9 @@
 #inv-cont {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px;
   margin: 0px auto;
   /* flex-wrap: wrap; */
 }

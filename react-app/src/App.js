@@ -72,14 +72,19 @@ function App() {
           <Navigation />
           <Product />
         </Route>
-        <ProtectedRoute path='/users/:userId' exact={true} >
+        <Route path='/products/category/:cat' exact={true}>
+          <Header />
+          <Navigation />
+          <Inventory />
+        </Route>
+        <ProtectedRoute path='/users/:userId' exact={true}>
           <User />
         </ProtectedRoute>
         <Route path='/' exact={true} >
           <Header />
           <Navigation />
           {/* <div style={{ width: '100vw', height: '100vh', backgroundColor: '#d5ebf5'}}></div> */}
-          <Inventory />
+          {/* <Inventory /> */}
         </Route>
         <Route path='/Studio & Recording'>
           <div>HEY NOW!!!</div>
