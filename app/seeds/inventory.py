@@ -1342,6 +1342,7 @@ def seed_inventory():
 
 ## OBSIDIAN #######
 
+#NX1
     item31 = Inventory(
         category='Live Sound & Lighting',
         vendor_name='Obsidian', name='Obsidian NX1 8-universe Lighting Controller',
@@ -1353,1004 +1354,7 @@ def seed_inventory():
         preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-c8ed953241bb4472__hmac-e4f46095f078dd3a91ba3923aa8a3aa523d72451/images/items/350/NX1.jpg.auto.webp',
         logo='https://media.sweetwater.com/api/i/f-webp__ha-cc5c5fc91feeb016__hmac-74d1682e3a7e09bbad77147b9c29f3bd751e42dc/images/manufacturer-logos/obsidian.png.auto.webp',
         createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-##
-    item32 = Inventory(
-        category='Live Sound & Lighting',
-        vendor_name='Obsidian', name='Obsidian NX2 64-Universe Lighting Controller',
-        manufacturer_id='Obsidian',
-        description='64-universe Compact Lighting Controller with 4 DMX Ports, 2 Ethernet Gigabit RJ45 Ports, MIDI, Timecode, 2 Display Ports, 2 Touch Screens, 10 Playbacks, and 8 Encoders',
-        model='Master', serial='OB102',
-        tech_specs='Manufacturer Part Number: NX2984;',
-        price=8300.00,
-        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-7bd3c8f4c4d0e3d5__hmac-1d921bf1666f3de6fd7ac4b0e13b0bc6d406e27f/images/items/350/NX2.jpg.auto.webp',
-        logo='https://media.sweetwater.com/api/i/f-webp__ha-cc5c5fc91feeb016__hmac-74d1682e3a7e09bbad77147b9c29f3bd751e42dc/images/manufacturer-logos/obsidian.png.auto.webp',
-        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-##
-    item33 = Inventory(
-        category='Live Sound & Lighting',
-        vendor_name='Obsidian', name='Obsidian NX Touch 512-Ch DMX Lighting Controller',
-        manufacturer_id='Obsidian',
-        description='10-channel Lighting Controller with 14 Faders, 512 DMX Channels, and USB Control',
-        model='Master', serial='OB103',
-        tech_specs='Type:	Lighting Controller;DMX Modes:	1 DMX Universe, Expandable to 128;Compatibility:	DMX-512, Art-Net/sACN (ethernet required);Connectivity:	1 x 5-pin XLR (DMX out), 1 x USB Type B 2.0;Faders:	14 x Touch Strip Faders;Software:	Onyx NOVA (restrictions removed with USB connection);OS Requirements - PC:	Windows 10 or later;Power Source:	USB bus powered;Height: 1.8 inches;Width: 15.5 inches;Depth: 8.6 inches;Weight: 3.3lbs;Manufacturer Part Number: NXT100;',
-        price=599.00,
-        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-74a3f203352f1b7e__hmac-b62b8f6474913c34a74de0a757349ce9cbf91e6a/images/items/350/NXTouch.jpg.auto.webp',
-        logo='https://media.sweetwater.com/api/i/f-webp__ha-cc5c5fc91feeb016__hmac-74d1682e3a7e09bbad77147b9c29f3bd751e42dc/images/manufacturer-logos/obsidian.png.auto.webp',
-        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-##
-    item34 = Inventory(
-        category='Live Sound & Lighting',
-        vendor_name='Obsidian', name='Obsidian NX Wing Lighting Controller',
-        manufacturer_id='Obsidian',
-        description='64-universe USB ONYX Lighting Controller with (10) 60mm faders, 4 Rotary Encoders, 4x DMX Ports, SMPTE, and MIDI In/Out - PC',
-        model='Master', serial='OB104',
-        tech_specs='Type:	Lighting Controller;DMX Modes: ONYX Premier 64 Universe License;Compatibility: Art-Net/X-Net/sACN/Remote operation (ethernet required);Connectivity: 4 x DMX, SMPTE Timecode, and Midi in/out/thru, 1 x USB type B;Faders: 	10 x 60mm playback faders;Software: Obsidian ONYX;OS Requirements - PC: 	Windows 10/11-64bit, Intel Core i3, 8GB RAMM, 40GD SSD drive space;Power Source: 12V DC, power supply (included);Height: 3.9 inches;Width: 21.3 inches;Depth: 11.9 inches;Weight: 10.2lbs;Manufacturer Part Number: NXW884;',
-        price=3500.00,
-        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-9baf3227e5021538__hmac-065338a50489884b7f7ebc9dc78155365903b1cf/images/items/350/NXWing.jpg.auto.webp',
-        logo='https://media.sweetwater.com/api/i/f-webp__ha-cc5c5fc91feeb016__hmac-74d1682e3a7e09bbad77147b9c29f3bd751e42dc/images/manufacturer-logos/obsidian.png.auto.webp',
-        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-##
-    item35 = Inventory(
-        category='Live Sound & Lighting',
-        vendor_name='Obsidian', name='Obsidian NX DMX USB 2-Port DMX Node',
-        manufacturer_id='Obsidian',
-        description='2-port, Bus-powered USB DMX Interface for Windows PCs or Onyx Consoles',
-        model='Master', serial='OB105',
-        tech_specs='Manufacturer Part Number: NXD986;',
-        price=349.00,
-        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-92e85097e4741e5b__hmac-7592ecf90c604b616b419f392383ca781cf8ed8c/images/items/350/NXDMX.jpg.auto.webp',
-        logo='https://media.sweetwater.com/api/i/f-webp__ha-cc5c5fc91feeb016__hmac-74d1682e3a7e09bbad77147b9c29f3bd751e42dc/images/manufacturer-logos/obsidian.png.auto.webp',
-        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-##
-    item36 = Inventory(
-        category='Live Sound & Lighting',
-        vendor_name='Martin', name='Martin Lighting JEM Hazer Pro 120V 50/60Hz Haze Machine',
-        manufacturer_id='Martin',
-        description='Water-based Haze Machine with DMX Control and 65 Hours of Run Time',
-        model='Master', serial='MAR101',
-        tech_specs='Type:	Haze;Fog Output:	194,234 cfm;Tank Capacity:	0.66 gal;DMX:	3-pin XLR In/Out, 5-pin XLR In/Out;DMX Modes:	3 Channels;Power Consumption:	675W, 3.1A @ 120V;Power Supply:	Neutrik PowerCon;Remote:	JEM Hazer Pro Digital Remote Control (sold seperately);Height: 11.8 inches;Width: 22.3 inches;Depth: 10.7 inches;Weight:	33.1 lbs. (dry), 38.6 lbs. (filled);Manufacturer Part Number: 92225945;',
-        price=2432.00,
-        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-bda50f494c893ebc__hmac-f0c7060b629d91a0bc253e2dc0a552d719c81f18/images/items/350/JEMHazerPro.jpg.auto.webp',
-        logo='https://media.sweetwater.com/api/i/f-webp__ha-f8397c78854856f4__hmac-f7b3288627aa7318d2663b65704c0bb612043d13/images/manufacturer-logos/martinlighting.png.auto.webp',
-        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-##
-    item37 = Inventory(
-        category='Live Sound & Lighting',
-        vendor_name='Martin', name='Martin Lighting JEM C-Plus Haze Fluid - 2.5 Liters (4-pack)',
-        manufacturer_id='Martin',
-        description='Water-based Haze Fluid for the JEM Compact Hazer Pro and JEM Hazer Pro - 4 Bottles',
-        model='Master', serial='MAR102',
-        tech_specs='Type:	Haze Fluid;Material: Water-based;Compatibility:	JEM Compact Hazer Pro & JEM Hazer;Quantity:	4-pack (2.5L each);Manufacturer Part Number: 97120413;',
-        price=176.00,
-        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-bb76c57fb93debcc__hmac-fb79c00a60d22e43a39abb59442f384ce1d4be90/images/items/350/CPlusHaze4pk.jpg.auto.webp',
-        logo='https://media.sweetwater.com/api/i/f-webp__ha-f8397c78854856f4__hmac-f7b3288627aa7318d2663b65704c0bb612043d13/images/manufacturer-logos/martinlighting.png.auto.webp',
-        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
 
-##
-    item38 = Inventory(
-        category='Live Sound & Lighting',
-        vendor_name='Martin', name='Martin Lighting RUSH MH 11 Beam 250W High-intensity Moving-head Beam with Gobos',
-        manufacturer_id='Martin',
-        description='250-watt LED Moving-head Beam Lighting Fixture with Rotating Gobo Wheel, Color Wheel, 8-facet Prism, Dimmer, Shutter, and Motorized Focus',
-        model='Master', serial='MAR103',
-        tech_specs='Type:	Beam;DMX:	3-pin XLR in/out, 5-pin XLR in/out;DMX Modes:	18 Channels;Lamp:	250W Philips MSD Platinum 11R;Beam Angle:	2.6°;Pan & Tilt:	Pan - 660° ; Tilt - 250°;Power Consumption:	345W, 2.9A @ 120V;Power Supply:	Neutrik PowerCon;Height: 22.1 inches;Width: 16.1 inches;Depth: 11.9 inches;Weight: 42.5lbs;Manufacturer Part Number: 90280130;',
-        price=3716.00,
-        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-f558c45532734137__hmac-b7ef643eb93daead1b8de0caa0bee7dbf15e3462/images/items/350/RushMH11Beam.jpg.auto.webp',
-        logo='https://media.sweetwater.com/api/i/f-webp__ha-f8397c78854856f4__hmac-f7b3288627aa7318d2663b65704c0bb612043d13/images/manufacturer-logos/martinlighting.png.auto.webp',
-        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-##
-    item39 = Inventory(
-        category='Live Sound & Lighting',
-        vendor_name='Martin', name='Martin Lighting RUSH MH 5 Profile 75W LED Moving-head with Gobos',
-        manufacturer_id='Martin',
-        description='75-watt LED Moving-head Fixture with 2 Gobo Wheels, 2 Color Wheels, and 3-facet Prism',
-        model='Master', serial='MAR104',
-        tech_specs='Type:	Effect, Moving Head;DMX:	3-pin XLR in/out, 5-pin XLR in/out;DMX Modes:	16 channels;Sound Active:	Yes;LED:	75W;LED Type:	UV;Beam Angle:	16° (one-tenth peak), 14° (half-peak);Pan & Tilt:	Pan - 540° ; Tilt - 270°;Power Consumption:	155W, 1.3A @120V;Power Supply:	Neutrik PowerCon;Height: 16.4 inches;Width: 11.4 inches;Depth: 7.4 inches;Weight: 19.9lbs;Manufacturer Part Number: 90280040;',
-        price=1299.00,
-        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-fc1bfc7e7772d098__hmac-67450f3b1882557f67830e2bf2b01ac3117aa1a7/images/items/350/RushMH5Pro.jpg.auto.webp',
-        logo='https://media.sweetwater.com/api/i/f-webp__ha-f8397c78854856f4__hmac-f7b3288627aa7318d2663b65704c0bb612043d13/images/manufacturer-logos/martinlighting.png.auto.webp',
-        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-##
-    item40 = Inventory(
-        category='Live Sound & Lighting',
-        vendor_name='Martin', name='Martin Lighting MAC Encore Performance CLD 468W Cold White LED Moving-head',
-        manufacturer_id='Martin',
-        description='468W LED Lighting Fixture, 6,000K Cold White',
-        model='Master', serial='MAR105',
-        tech_specs='Type:	Moving-head Wash;DMX:	5-pin XLR in/out;DMX Modes:	38;LED:	1 x 468W;LED Type:	White;Illuminance:	11,600 lux;Beam Angle:	12-48° (zoom);Pan & Tilt:	Pan - 540° ; Tilt - 268°;Power Consumption:	596W, 5.0A @ 120V;Power Supply:	Neutrik PowerCon;Height:	29.2 inches (maximum);Width: 18.9 inches (yoke);Depth: 17.8 inches;Weight: 68.4lbs;Manufacturer Part Number: 90234000HU;',
-        price=13126.00,
-        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-3bc94eefea0c84b1__hmac-5229b08419635bb70410a2955c11d3c234c3514b/images/items/350/MacEncPCLD.jpg.auto.webp',
-        logo='https://media.sweetwater.com/api/i/f-webp__ha-f8397c78854856f4__hmac-f7b3288627aa7318d2663b65704c0bb612043d13/images/manufacturer-logos/martinlighting.png.auto.webp',
-        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-
-# ESP
-
-    item41 = Inventory(
-        category='Guitars',
-        vendor_name='ESP', name='ESP LTD MH-1000 Baritone Electric Guitar - Black Satin',
-        manufacturer_id='ESP',
-        description='Solidbody Baritone Electric Guitar with Mahogany Body, Maple Top and Neck, Ebony Fingerboard, and 2 Active Humbucking Pickups - Black Satin',
-        model='Master', serial='ESP101',
-        tech_specs='GENERAL#Number of Strings:	6;Left-/Right-handed:	Right-handed;BODY#Body Type:	Solidbody;Body Shape:	LTD MH-1000 Baritone;Body Material:	Mahogany;Top Material:	Maple cap;Body Finish:	Satin;Color:	Black;NECK#Neck Material:	3-piece Maple;Neck Shape:	Extra Thin U;Neck Joint:	Neck-through;Radius:	13.7"-15.7";Fingerboard Material:	Macassar Ebony;Fingerboard Inlay:	Offset Pearloid Blocks;Number of Frets:	24, Extra Jumbo Stainless Steel;Scale Length:	27";Nut Width:	1.653";Nut Material:	Molded Plastic;HARDWARE#Bridge/Tailpiece:	TonePros Locking Tune-O-Matic Bridge with String-through body;Tuners:	LTD Locking;ELECTRONICS#Neck Pickup:	EMG 60TW-R Brushed Black Chrome Humbucker;Bridge Pickup:	EMG-81 Humbucker;Controls:	1 x master volume, 1 x master tone (push/pull coil-split);Switching:	3-way blade pickup switch;MISCELLANEOUS#Strings:	D''Addario, .013-.062;Case/Gig Bag:	Sold Separately;Manufacturer Part Number: LMH1000BBLKS;',
-        price=1199.00,
-        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-f4e5c5a29f9f7d54__hmac-be1144bbc07474a77449e4b5da77210b89091675/images/items/350/MH1kBLBkS.jpg.auto.webp',
-        logo='https://media.sweetwater.com/api/i/f-webp__ha-3d3133efc594af0b__hmac-4b3c0b78792800b3b64982275ddeabb2d2a0b80b/images/manufacturer-logos/esp.png.auto.webp',
-        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-
-    item42 = Inventory(
-        category='Guitars',
-        vendor_name='ESP', name='ESP LTD EC-1000 Electric Guitar - See Thru Purple Sunburst',
-        manufacturer_id='ESP',
-        description='Solidbody Electric Guitar with Mahogany Body, Maple Top, Mahogany Neck, Ebony Fingerboard, and 2 Humbucking Pickups - See Thru Purple Sunburst',
-        model='Master', serial='ESP102',
-        tech_specs='GENERAL#Number of Strings	6;Left-/Right-handed:	Right-handed;BODY#Body Type:	Solidbody;Body Shape:	LTD EC-1000;Body Material:	Mahogany;Top Material: Quilted	Maple;Body Finish: Gloss;Color:	See-thru Purple Sunburst;NECK#Neck Material:	3-piece Maple;Neck Shape:	Thin U;Neck Joint: Set-through;Radius	13.7"-15.7";Fingerboard Material:	Macassar Ebony;Fingerboard Inlay:	Pearloid Blocks;Number of Frets:	24, Extra Jumbo Stainless Steel;Scale Length:	24.75";Nut Width:	1.653";Nut Material:	Molded Plastic;HARDWARE#Bridge/Tailpiece:	TonePros Locking Tune-O-Matic Bridge with Stopbar Tailpiece;Tuners:	LTD Locking;ELECTRONICS#Neck Pickup:	EMG 60TW-R Brushed Black Chrome Humbucker;Bridge Pickup:	EMG-81 Brushed Black Chrome Humbucker;Controls:	2 x volume, 1 x master tone (push/pull coil-split);Switching:	3-way blade pickup switch;MISCELLANEOUS#Strings	D''Addario, .010-.046;Case/Gig Bag:	Sold Separately;Manufacturer Part Number: LEC1000QMSTPSB;',
-        price=1199.00,
-        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-aaa7bb75766b043a__hmac-ed29460f12df08364c8273ce43f61227c93e14c1/images/items/350/EC1kLQMPS.jpg.auto.webp',
-        logo='https://media.sweetwater.com/api/i/f-webp__ha-3d3133efc594af0b__hmac-4b3c0b78792800b3b64982275ddeabb2d2a0b80b/images/manufacturer-logos/esp.png.auto.webp',
-        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
-
-    # db.session.add(item1)
-    # db.session.add(item2)
-    # db.session.add(item3)
-    # db.session.add(item4)
-    # db.session.add(item5)
-    # db.session.add(item6)
-    # db.session.add(item7)
-    # db.session.add(item8)
-    # db.session.add(item9)
-    # db.session.add(item10)
-    # db.session.add(item11)
-    # db.session.add(item12)
-    # db.session.add(item13)
-    # db.session.add(item14)
-    # db.session.add(item15)
-    # db.session.add(item16)
-    # db.session.add(item17)
-    # db.session.add(item18)
-    # db.session.add(item19)
-    # db.session.add(item20)
-    # db.session.add(item21)
-    # db.session.add(item22)
-    # db.session.add(item23)
-    # db.session.add(item24)
-    # db.session.add(item25)
-    # db.session.add(item26)
-    # db.session.add(item27)
-    # db.session.add(item28)
-    # db.session.add(item29)
-    # db.session.add(item30)
-    db.session.add(item31)
-    db.session.add(item32)
-    db.session.add(item33)
-    db.session.add(item34)
-    db.session.add(item35)
-    db.session.add(item36)
-    db.session.add(item37)
-    db.session.add(item38)
-    db.session.add(item39)
-    db.session.add(item40)
-    db.session.add(item41)
-    db.session.commit()
-
-
-# Uses a raw SQL query to TRUNCATE or DELETE the users table. SQLAlchemy doesn't
-# have a built in function to do this. With postgres in production TRUNCATE
-# removes all the data from the table, and RESET IDENTITY resets the auto
-# incrementing primary key, CASCADE deletes any dependent entities.  With
-# sqlite3 in development you need to instead use DELETE to remove all data and
-# it will reset the primary keys for you as well.
-def undo_inventory():
-    if environment == "production":
-        db.session.execute(f"TRUNCATE table {SCHEMA}.inventories RESTART IDENTITY CASCADE;")
-    else:
-        db.session.execute("DELETE FROM inventories")
-
-    db.session.commit()
-
-
-def seed_product_images():
-# DBOX+
-    # img1 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-07e4a36e23b6d98f__hmac-da4ed276700a3156441a08759e499154c009fe75/images/items/750/DBoxPlus-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img2 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-75__f-webp__ha-80e9dcd173c9846d__hmac-0d53dd34ab31a3c67c8fd2923e566ae7ad32d8cf/images/closeup/120-DBoxPlus_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img3 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-4fd0fea46eccee66__hmac-ba08b980e3895603b3da247bbb641546c28c9950/images/closeup/750-DBoxPlus_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img4 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bd60b11dc3f57191__hmac-15013265904515935468f8fbcbc9d00f71816d8e/images/closeup/750-DBoxPlus_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img5 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9800d94e40503053__hmac-50cea6783d82bb72be2a9798b7219d98923ff938/images/closeup/750-DBoxPlus_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img6 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9800d94e40503053__hmac-50cea6783d82bb72be2a9798b7219d98923ff938/images/closeup/750-DBoxPlus_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# 2BUS
-    # img7 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-76e93dd60a47e6dd__hmac-adfbace146ef1573d97a8cbfdb21197943705296/images/items/750/2BusPlus-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img8 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-52c76e16dcd781c3__hmac-af48a11a6c7f37eb1080dce0e89548da5fc82a0b/images/closeup/750-2BusPlus_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img9 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9809ded0f3fe6e1e__hmac-51576058b418639c6aae1ec8e3d167f53e24f976/images/closeup/750-2BusPlus_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img10 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-20a3eb70e29082d3__hmac-45b3105d7849d88212705f06ddcfe6795e0e1de0/images/closeup/750-2BusPlus_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img11 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7fe48a8fe625cd9d__hmac-7875d5f6e7d6fd0a5aa388edbff6c4af59b48303/images/closeup/750-2BusPlus_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img12 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1b94cda23fb02795__hmac-9eaa070d5f0c1b6b79cbf193932a50ae54da0175/images/closeup/750-2BusPlus_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-#DCOMP
-
-    # img13 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-21333c81b5f91280__hmac-4446cfb84705a825380891e6874fe66b1a78ff4d/images/items/750/DComp-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img14 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-18d3c41c2059375d__hmac-8026fb9c53d44ee5e6adbe75575952e39cb89357/images/closeup/750-DComp_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img15 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8b5273d1bbec2133__hmac-00bd0aa05f1030d0d0e3657679a1ac8442b94ad1/images/closeup/750-DComp_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img16 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-94b25483e0b2c143__hmac-7f805b329ead0593ab87f10da58151a1505b5eed/images/closeup/750-DComp_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img17 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-fa375cc206f3af0e__hmac-aa7324e69c7cac098dd302fd6f199a19b2417d49/images/closeup/750-DComp_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img18 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b71bad23d34770f0__hmac-ad4c7c4a2ebd0997071aeaac6d021b3d6a64c33f/images/closeup/750-DComp_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# Convert AD+
-    # img19 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b71bad23d34770f0__hmac-ad4c7c4a2ebd0997071aeaac6d021b3d6a64c33f/images/closeup/750-DComp_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img20 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-544a9b8ef1d9fbf4__hmac-de2d355a754985a7cd30db29bd9b97a182f512ad/images/closeup/750-ConvertAD_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img21 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3642e15df77a848c__hmac-e7cb0f0cfee0349c007a57b0dfc93f61f3643826/images/closeup/750-ConvertAD_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img22 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-56468e1d82ad0811__hmac-64289840f3fb70a98edff84fba80b6af3dadba48/images/closeup/750-ConvertAD_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img23 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e9e70c1dad690fab__hmac-0c035044ea925e0ce093b2eac0e5d13c2087fe0f/images/closeup/750-ConvertAD_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img24 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6b8ffe9c770f0fd6__hmac-089df8966029717a352abfd0ba212c4e3adc368c/images/closeup/750-ConvertAD_detail6.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-# Liaison
-    # img25 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6cd9138371b3e1ed__hmac-6309554fd08d694e12c1561873af4eee9b594637/images/items/750/Liaison-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img26 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-eef64bdf3a73d8d9__hmac-a031dbc8b9c8eb2c0d34a59a317aff9ca0414530/images/closeup/750-Liaison_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img27 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-da034461f344d95d__hmac-d2aa0236ec7974790e6ebb04f685cfe652fd3953/images/closeup/750-Liaison_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img28 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-aad1d6ee144e91ed__hmac-a886d4e4d1c41f266653b6ad49b73389626ed554/images/closeup/750-Liaison_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img29 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ade7de08a7704819__hmac-7e5a5b50c6338bab45dcf3a8471ff6fa9ece3c3f/images/closeup/750-Liaison_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img30 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-25db3ccfe1e25fa9__hmac-16093eebb941ba4230e054a29687da4fd667c77b/images/closeup/750-Liaison_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# BAX EQ
-    # img31 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7503a49174b0ce87__hmac-fb25639e01e8a5a424b348cd9e5cf02354f7c559/images/items/750/BAXEQ-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img32 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0fc1a55b022fdc7d__hmac-fc219fd408de7734ebec505b92481779b9de37e9/images/closeup/750-BAXEQ_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img33 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-aec5bd149f87d83f__hmac-ab421456fb3206f2a262d1365932b22d4756d421/images/closeup/750-BAXEQ_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img34 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3b9c0ec8d16894cc__hmac-35a21ed71d70344d6991776fc98c1be662e52b34/images/closeup/750-BAXEQ_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img35 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0f1bedf1e4aa1813__hmac-6d446544606d78f30c2995bd5d31611aff7473e1/images/closeup/750-BAXEQ_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img36 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-045053fd9252a96c__hmac-50473f76fb5371baf23f493f5a710e3322a3ce3a/images/closeup/750-BAXEQ_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# CONVERT-8
-    # img37 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7b36e79ffac216e7__hmac-3610dbf688d765722baa4383646288fdd40533d4/images/items/750/CONVERT-8-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img38 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a92a63bac8ebb6c1__hmac-4863e488784f607d88c725251dfdf39fdbdf3ef9/images/closeup/750-CONVERT-8_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img39 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-02ec774f8aef7d21__hmac-c7f6e7f72c19a10c45835588c6bfbe9a71fd782d/images/closeup/750-CONVERT-8_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img40 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5ad1ab2d553da5ac__hmac-53add3b4c8b0199c94aa694ca43f6a41e0d18154/images/closeup/750-CONVERT-8_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img41 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-98964c7d813516a3__hmac-4a0a9045d935656308e74f42d2cc399ee72fa82a/images/closeup/750-CONVERT-8_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img42 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b3dfca20aa9312b2__hmac-ebcf4805dc2775faf02ebe208866ace8fc2ab8dd/images/closeup/750-CONVERT-8_detail6.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# MASTER TRANSFER
-    # img43 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-585780021ee3e0fe__hmac-ea6cf3165dd0f7e4b38445a0793eea40a2389a54/images/items/750/Master-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img44 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-40be60baa6215ff5__hmac-263ea70423d5b1d9595a96e583ee32195688532e/images/closeup/750-Master_detail01.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img45 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-63e5185f5bdad8ea__hmac-1c83e70c2df048b567b11da4951ea743516ec67f/images/closeup/750-Master_detail02.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img46 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3076b1d2e2929d4b__hmac-432b65863124bd654b36696f32719af51d5135f5/images/closeup/750-Master_detail03.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img47 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e787b41891762a34__hmac-6c53f7faf2d1bd624b897a5e8cb22d16381299b3/images/closeup/750-Master_detail04.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img48 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a0f5ecaa19dc4482__hmac-234dc68e2879c33b3a8f31b7d9b0fe23f4ab4fda/images/closeup/750-Master_detail05.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img49 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-424da1f7af0a3548__hmac-b0522b4b56364937a13b7419c3dcdf1de8a55482/images/closeup/750-Master_detail06.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# CONVERT-2
-    # img50 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-4efb3ee759b03dbf__hmac-68740e9759951514fc0bf6255a796826c1e78fcd/images/items/750/CONVERT-2-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img51 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f9d5e1ea38d65d90__hmac-da9f25c1b50b717f0d0ffeda69d8e4fa0233e73d/images/closeup/750-CONVERT-2_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img52 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7275c75e3fc38273__hmac-b0cd0c389a4ee32e55d4623cec4a415ca1fb1090/images/closeup/750-CONVERT-2_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img53 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7275c75e3fc38273__hmac-b0cd0c389a4ee32e55d4623cec4a415ca1fb1090/images/closeup/750-CONVERT-2_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img54 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3db7b45edd7fc70f__hmac-fbe9264a52c65d581dd9902a6efc0eab6c690045/images/closeup/750-CONVERT-2_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img55 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1e569d298a0a0007__hmac-923777bc232faf798d54f23066f65ec4f83096d8/images/closeup/750-CONVERT-2_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# SOURCE
-    # img56 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-62a21eb8d4228b4f__hmac-032022ef33ad0bf8bf898550d6acdc5f032b8051/images/items/750/Source-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img57 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b230a2c8869c4a88__hmac-f309a0113da3e5565d82a3690c329bc70401be60/images/closeup/750-Source_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img58 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9c477c3d866bf286__hmac-b1067abec31244b2974b49c8c94f4a7cf1b2c254/images/closeup/750-Source_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img59 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a658fa22dc88ab9e__hmac-06eb7726ce28390a55116a72ae1306072a882c1b/images/closeup/750-Source_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img60 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d81a864fc8d6df6b__hmac-3693dcf89c29bc91dbdb7976e9b8e9df1e06fab1/images/closeup/750-Source_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img61 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1d3faa61c811da74__hmac-95f97bb43edd929c119af7d8d9945e811a546a92/images/closeup/750-Source_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# MANLEY
-
-# VOXBOX
-    # img62 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8fca404ac9a65b41__hmac-dccce393125bfc42664426dd53cd25dabd6e91c6/images/items/750/VoxBox-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img63 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-80494dee8098f105__hmac-16addba18b0fff1b52b2e4a648ad11a92d06c73b/images/closeup/750-VoxBox_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img64 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9d87046aaccaf7d8__hmac-693bf4020f8e3f3ac57f03f855600976b3c3d58b/images/closeup/750-VoxBox_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img65 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8e982af3acba2bf0__hmac-88ca9df5d8c16fbfe478533402220058f0a671fc/images/closeup/750-VoxBox_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img66 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3c9daeae0e0cb277__hmac-96d21eeaa11c9cf4e9769717dc0c9d2b644e05a7/images/closeup/750-VoxBox_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img67 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-dcdfd1aa00a4817f__hmac-76350c677bf5fee0729103f62219ae1af9581b63/images/closeup/750-VoxBox_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# MASSIVE
-    # img68 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ce0383a99673c886__hmac-141bb683026783c821309403a38442891aae2c2c/images/items/750/MPMaster-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img69 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8cb028dad04de360__hmac-03cb4d0987db183522f55699f73ef636b899317b/images/closeup/750-MPMaster_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img70 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2ffb189070fadea7__hmac-99249f5d8bfdcfb8845128f5b3f0678aa0bc8e28/images/closeup/750-MPMaster_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img71 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2cb3051e5b7eb491__hmac-18c52d17690d331339572e9318f92bff58eda576/images/closeup/750-MPMaster_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img72 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8887eff9dce51f84__hmac-755d178687a8af215f7ca995121d82c612d94c00/images/closeup/750-MPMaster_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img73 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-cb7cb23143d3b701__hmac-4962d58f5ca28514a9bf16498fbe5fc58c9d1a74/images/closeup/750-MPMaster_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# CORE
-    # img74 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e55449246b59a43a__hmac-22d0765a34cb79b889a0f6ce95b33717504ef1c1/images/items/750/Core-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img75 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2933a10127ab40b2__hmac-657ffc01f663e1520c4529d25b9e2c8cd9e04c13/images/closeup/750-Core_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img76 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f47b00c8436b6506__hmac-a37cea5424a653ed2449502feab64578526a6c5b/images/closeup/750-Core_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img77 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d05ccd8ed8d0906c__hmac-4c491c231e0507349659128b0cd065e055d9e2ad/images/closeup/750-Core_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img78 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-c34fa64086e4d91f__hmac-94059a4fb142207fe249cc61efe9b3aba90e64f8/images/closeup/750-Core_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img79 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7009109a532037e4__hmac-d2af2174cc3e9e09f3447c6e6143a4099581f660/images/closeup/750-Core_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# FORCE
-    # img80 = ProductImages(
-    #       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ffb3375445ca3a10__hmac-1be03ccb40ad2f6d486eb90e2ee8e147d4866432/images/items/750/Force-large.jpg.auto.webp',
-    #       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img81 = ProductImages(
-    #       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-29264c3f85765f33__hmac-eac1d8c9fe7444bcb03ecd600dcbfdbf22fb4dbd/images/closeup/750-Force_detail1.jpg.auto.webp',
-    #       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img82 = ProductImages(
-    #       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6e6849039b5ce94c__hmac-0ee1523774ec1187ea6a9379ecc58166cb13c552/images/closeup/750-Force_detail2.jpg.auto.webp',
-    #       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img83 = ProductImages(
-    #       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9635deb0ada72a61__hmac-feba0fd58281cc168cbeeb480b099108decd58cf/images/closeup/750-Force_detail3.jpg.auto.webp',
-    #       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img84 = ProductImages(
-    #       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-aa8d618f8327e5c2__hmac-0f7cfe3c9dc3869bcd028cdb4f63db89f7cbedd3/images/closeup/750-Force_detail4.jpg.auto.webp',
-    #       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img85 = ProductImages(
-    #       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-4cdcc2d225348a4b__hmac-f2e3188d10201ca64880771792ab95b7aae58894/images/closeup/750-Force_detail5.jpg.auto.webp',
-    #       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# VARI-MU
-    # img86 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e4c78e6fb212d843__hmac-c5809c696039b7544d1baeb1332e404f83952a17/images/items/750/VariMuTB-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img87 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-33499c878d45aa12__hmac-259cde0829e68ce7f10702d312e670ec223e33e9/images/closeup/750-VariMuTB_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img88 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9c78490d0007e68b__hmac-b846956994d85c38e78da243125ce8a5efabfebe/images/closeup/750-VariMuTB_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img89 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0c2fd88742c18efb__hmac-8674896703524db50dee53d7d9c648470c768b5c/images/closeup/750-VariMuTB_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img90 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d48132e075566723__hmac-8b0d69f83ac3565ddf8cf53f83e7af4f95ca3992/images/closeup/750-VariMuTB_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img91 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-06d6eb49df22e12c__hmac-ed6e4dbbe6c32275b5180cf554841e28317bbbfd/images/closeup/750-VariMuTB_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# NU_MU
-    # img92 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7bfe5f1d4bea7445__hmac-55ac9f11c0afa308720b14f3d2c2b1754578e463/images/items/750/NuMu-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img93 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2f700a19e50e429c__hmac-934877cb0cfb5af720d459c9659b1b0c7a6d71d5/images/closeup/750-NuMu_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img94 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-c1ff8b0c30a22e51__hmac-20ee3dd9e0fdf4023675507ed91ca1ab7c0dca84/images/closeup/750-NuMu_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img95 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-92914092395ed8f0__hmac-0d4519740df18145a25e90f9e8743c8bd8307e42/images/closeup/750-NuMu_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img96 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5988fdc82e240e9f__hmac-7e4ff02155c7735ecb507a3e4baa29be19bfa0b9/images/closeup/750-NuMu_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img97 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5988fdc82e240e9f__hmac-7e4ff02155c7735ecb507a3e4baa29be19bfa0b9/images/closeup/750-NuMu_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# SLAM!
-
-    # img98 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9298824b1eaa277d__hmac-6198e9afa06d6213a9f83a23e45780495be90192/images/items/750/SLAM-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img99 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ff6ab82399b62e03__hmac-2170abfb3617279007dadcef2e1062832039556e/images/closeup/750-SLAM_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img100 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-04d339d73187b8ec__hmac-9c1701f3608ddb649e0e871a8716e23bfc24ac0e/images/closeup/750-SLAM_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img101 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d47af337b601e4d9__hmac-d2fd81c556c9fc7557b5a827035b630d2963b190/images/closeup/750-SLAM_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img102 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-07e090dea0e1dc1d__hmac-a06dc3b26a828462bbedc84710d7b5ee6e0d8070/images/closeup/750-SLAM_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img103 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-045cbc6ff42d2bfa__hmac-cbcc2842f1b9053ad01812d35f1b58b063f42f78/images/closeup/750-SLAM_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# CHINOOK
-
-    # img104 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2439c3399bc267f8__hmac-0612ef63109294b9a9da6b045e7b3340393538f6/images/items/750/Chinook-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img105 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1c81fa6d5d921d1f__hmac-2d9f8239df10e2c4c62859e2438b09eaf78e94c1/images/closeup/750-Chinook_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img106 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b9bf25f4780e8b4e__hmac-d089207a344560e8512ee20f5338011a8bfab51c/images/closeup/750-Chinook_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img107 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9137df50be715e62__hmac-b43927b23a455ae4950a49a4c30ce7bffab8f3ba/images/closeup/750-Chinook_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img108 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-858cbd083a20e00f__hmac-58669855b13b3387646c809d0f8d54729839c938/images/closeup/750-Chinook_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img109 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-edcb0ebfafd74e1e__hmac-cf92441010254e36e2a3877fa6bc3658e9731b83/images/closeup/750-Chinook_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# ELOP
-
-    # img110 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ebd02205d3dce8c1__hmac-46944db8a7cfcc4020e819954b3709ee25ded0a5/images/items/750/ELOPplus-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img111 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a853762a66be72a4__hmac-af9ef65e878c31f48d7ec4154f73367805cbfe9f/images/closeup/750-ELOPplus_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img112 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bf485dada7701b2d__hmac-b6d77871dfe0a68c473f7d3f32f1a12ba4055364/images/closeup/750-ELOPplus_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img113 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-40ac11a75e810eb3__hmac-ef5f4b8d254077ee651245b13b005aa3a9cd0a3f/images/closeup/750-ELOPplus_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img114 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-55767e8b47a7cf99__hmac-e185454fe180bc15a577ceaec403558805ad3656/images/closeup/750-ELOPplus_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img115 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-204b16bae26caf70__hmac-f94bccffaced6d5eb76a69e15779dbeea0b8b564/images/closeup/750-ELOPplus_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# MIDEQ (Pulteq)
-
-    # img116 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-fe6f32b624f76f10__hmac-024f60968c7e60dfba573e68064c13605cfc3ee7/images/items/750/PultecMidFreq-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-### Allen & Heath ###########
-
-# SQ-7
-
-    # img117 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-24f856c4cd513149__hmac-2fbe497fd76bd92cec49f6eae9516a41c353e189/images/items/750/SQ7-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img118 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1feb45e05b503581__hmac-4555df07189ec66f711fa4fdef367c33b4b1f284/images/closeup/750-SQ7_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img119 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6931701ad3d66c46__hmac-e95beae3be55889d6a2061810f37ace6e1964fc6/images/closeup/750-SQ7_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img120 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-440bac5fade39a98__hmac-01622cd96c1dc3fc89208e930811d9f41cf0795d/images/closeup/750-SQ7_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img121 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d7e45a1a820887e0__hmac-5d78f583a796824eba6b601d52b40b09a95eb710/images/closeup/750-SQ7_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img122 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-314c1f886946257d__hmac-8dd1a6d061c7098b3d7d8d0dce169cb954c04b1c/images/closeup/750-SQ7_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img123 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-aacf04e7fa7b0e1d__hmac-577fcfc2af8d506b99d21abe050903f0b50dda1f/images/closeup/750-SQ7_detail6.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# GX4816
-
-    # img124 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-66483ec2f5f8566b__hmac-4a042effc2603a14b07084fad3d55e9fc7b934ea/images/items/750/GX4816-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img125 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1d81bf63eecf37a3__hmac-21503175978398f3a7d481cdb75e99159afca843/images/closeup/750-GX4816_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img126 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1d81bf63eecf37a3__hmac-21503175978398f3a7d481cdb75e99159afca843/images/closeup/750-GX4816_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img127 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7f46daeda9636262__hmac-6372df5a408b81005eba93fc5e027501a2534f74/images/closeup/750-GX4816_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img128 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d28e749ff128a7a6__hmac-3d7303026e569f60804494664e75615f1e85f713/images/closeup/750-GX4816_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img129 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-59699f5743ccd48a__hmac-1b11d4f00dce44e017969be553964788269b0008/images/closeup/750-GX4816_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img130 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-33b3793a01de2fc2__hmac-68e169f92a3cbb7dd109a68d6562d22dbed15fa3/images/closeup/750-GX4816_detail6.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-
-#ME1PM
-    # img131 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-513bfe5128d33c6f__hmac-2f09f9c0e0339ea5bc8d0dd90ee4b95f182b7a21/images/items/750/ME1PM-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img132 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-dd6e5a17ff632e58__hmac-a4a885887f4985ba514f9235c55e9c702de5ccf7/images/closeup/750-ME1PM_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img133 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0fa34c70a3fc4925__hmac-7d063bd950bb615b56e5320455af7db7e2a25c42/images/closeup/750-ME1PM_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img134 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ffc5d753286aef2d__hmac-1415bbbc3219dcbe0b2673f38ac7969a7ae56236/images/closeup/750-ME1PM_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img135 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6ed53227b5a362ba__hmac-090e351e6d10bcd194b16e44b6cefba2dc4d895d/images/closeup/750-ME1PM_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img136 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-66aab3844600ed77__hmac-bafbff8bdbd87a2809abfd1d3cbf31113f29774d/images/closeup/750-ME1PM_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# POE Monitor
-    # img137 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ccc0c366f68b8e30__hmac-4c8e32373ff0aaedfddc95782777511d938b09ec/images/items/750/ME-U-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img138 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3bda8d9b195cdf97__hmac-5bb48c1a704e4d85f86c867e8a059dad28901114/images/closeup/750-ME-U_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img139 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6a28c5b017f20fff__hmac-0da9824506293a4756e291e30c4f0ec050ddf5c4/images/closeup/750-ME-U_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img140 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2658aec02536204d__hmac-4ca28de350f3ba97ccdf27586256be7f1c0c77cc/images/closeup/750-ME-U_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img141 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bd24d7e4487a87d6__hmac-c0a27800a1564e20d125f33d6d157a399e170fb3/images/closeup/750-ME-U_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img142 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d9ee563a087e1336__hmac-23be4a17bf8dcbb0a642356991b40753856b2501/images/closeup/750-ME-U_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img143 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-41827c184e934860__hmac-5677c7489db08b940cfe6e9e598ee2578e9b998f/images/closeup/750-ME-U_detail6.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# XONE96
-    # img144 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-07701909984d036c__hmac-6a1a929d720b07c7c6c6ed85b1e9c7e19a34322e/images/items/750/Xone96-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img145 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bd4f84e52662b8f7__hmac-ad294dbc5c9b4643875b5fc3c3f2559772b8079b/images/closeup/750-Xone96_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img146 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-27bf88a5935b1fb3__hmac-72811c59ac0151c4e724c77c556857a4ecd5f468/images/closeup/750-Xone96_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img147 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2b6c34c3beff205f__hmac-ab444b29ff1503ac86dff730035be606239acc43/images/closeup/750-Xone96_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img148 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0dc100931b6db022__hmac-d6ec63115025b721556982f8d5ff8e25fe57194d/images/closeup/750-Xone96_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img149 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7446852fa9163d29__hmac-3e885259665f5e1a81bf9df838a79c15d18e95af/images/closeup/750-Xone96_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# ZED-428
-    # img150 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-49cb8fbecc81c30b__hmac-41cb7ef4f8667d5e8134ddb414f78b489dc20894/images/items/750/ZED428-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img151 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ac8fc31fcc051dd5__hmac-2ec73bf2f488ca311f0c95eb10432afc70f2eb8e/images/closeup/750-ZED428_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img152 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ce3a2f36bf305fb5__hmac-6d96583dbea1137e2775bfff9c3620b7a3de8279/images/closeup/750-ZED428_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img153 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-41f78008961f46f7__hmac-8a1624e9fb8390f35bc9305bcd8716073005bb56/images/closeup/750-ZED428_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img154 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b8579cc337df3e64__hmac-4d2c79f1f5b0fbb1d77d18916b5a2c8326496b2c/images/closeup/750-ZED428_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img155 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-133095b552ddaae1__hmac-033375ed408ef07e37acbd10255348e4f1a6b6e3/images/closeup/750-ZED428_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img156 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d373e63740f4e9a6__hmac-6e93fabe39dd2a92f6a544854969a4df1a6216bf/images/closeup/750-ZED428_detail6.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# WZ416
-    # img157 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e11d98c7e02e9c5f__hmac-a9ba3508e93ae09e83f072837fed4bf5ce59bf63/images/items/750/MixWizard416-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img158 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7f1b8e316a550903__hmac-eb73bc0ec969e3dd72e30e37355d5d5e83f18e76/images/closeup/750-MixWizard416_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img159 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a6aac57db045585f__hmac-1a23e8376ec0af99834cca999dd784515043c870/images/closeup/750-MixWizard416_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img160 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f6c072c4ebd83f74__hmac-755a537cfcb27919dc1f5c4cdd9015ed6706e549/images/closeup/750-MixWizard416_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img161 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-fb811392a40b7fe1__hmac-2408b4b834fff5b6e7e6977b47f0d35002f39060/images/closeup/750-MixWizard416_detail11.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img162 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e65c3665a0bc6452__hmac-780fd49a6bd89150393a519908e4ca319e1632f1/images/closeup/750-MixWizard416_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# ZED420
-    # img163 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2f8bb5ec1de647e8__hmac-f8bcdda70aa8fbe06d2b70782216d381b99ab1e1/images/items/750/ZED420-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img164 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e671d954f2a808ca__hmac-152798313f30d4330b4ef956d96c48fc748b25db/images/closeup/750-ZED420_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img165 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1fe02ce9fd51b1f8__hmac-5a1e0c54d7a60f4765822b16b71969b2b5b1b764/images/closeup/750-ZED420_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img166 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ee9c71eb04c499e2__hmac-a60b6ef36a56d9195a9f6dc66eac04f4c39c6e49/images/closeup/750-ZED420_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img167 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ccbc9d0fa249faa8__hmac-76a222060bff38da3b721cc7fb0482bbf9eb8e0f/images/closeup/750-ZED420_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img168 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a0e5ad21998cf555__hmac-d0dab8427e42a4f746f06ab6e24e58da3daaca3a/images/closeup/750-ZED420_detail6.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img169 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7ef617671df124ff__hmac-811384c3e6e004b9b4de421fa40c692378785d3a/images/closeup/750-ZED420_detail7.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# XB-14
-    # img170 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f0c8923d27c29e6e__hmac-7fdfc9b400a3899efce76d73cbd6df635260d296/images/items/750/XB214-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img171 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0957f975b172ebf5__hmac-63528dcc2a1919c2923a74381a37e8bd98362a2c/images/closeup/750-XB214_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img172 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-20c73b4f5b3e2ba2__hmac-a4befa76df718143ddb126eff0aa677c9e025ebc/images/closeup/750-XB214_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img173 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9a4491e5fdd51946__hmac-7aae36a28f6fb43b611ce600db061624cb7b1041/images/closeup/750-XB214_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img174 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-548ceca14263aa9a__hmac-8c73171588ec23f95f64d493777bfbbc60da791b/images/closeup/750-XB214_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img175 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0a4baa2affd66d58__hmac-4e30ac9073a96856e40f93348d1b63acfccdecc9/images/closeup/750-XB214_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-# ZED10FX
-    # img176 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d6e446b05465d7f4__hmac-efa38d9383b6bedea09939d1cfe9cd0fcf750119/images/items/750/ZED10FX-large.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img177 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2fcf58d03d583ca5__hmac-3cce5fe9dde12d847b171dc091c09c9c5e69f9c2/images/closeup/750-ZED10FX_detail1.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img178 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b0d53bff42331c31__hmac-c4b7c57254138bdf9a8fccf8cf53ed3a8628398d/images/closeup/750-ZED10FX_detail2.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img179 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-86f38b174817bd11__hmac-d89db97248f3905310dc34e643003babbde1436a/images/closeup/750-ZED10FX_detail3.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img180 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-cd78bce2c71bd0bb__hmac-814a3e5ad5698de1874ecbce6557e45bd8cecaf6/images/closeup/750-ZED10FX_detail4.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img181 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5cebfb88fad98198__hmac-5d53ad32efb04736f5cc1eb910f18aafb219fd67/images/closeup/750-ZED10FX_detail5.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-    # img182 = ProductImages(
-    #   url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5cebfb88fad98198__hmac-5d53ad32efb04736f5cc1eb910f18aafb219fd67/images/closeup/750-ZED10FX_detail6.jpg.auto.webp',
-    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    # )
-
-###### OBSIDIAN ################
-
-#NX1
     img183 = ProductImages(
       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ba7e20aabda4fe24__hmac-51138621845b764975870e93c99d4c7476f058b9/images/items/750/NX1-large.jpg.auto.webp',
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
@@ -2380,7 +1384,25 @@ def seed_product_images():
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
     )
 
-# NX2
+    #Add to Join table
+    item31.product_images = [img183, img184, img185, img186, img187, img188, img189]
+
+    db.session.add_all([item31, img183, img184, img185, img186, img187, img188, img189])
+    db.session.commit()
+
+#NX2
+    item32 = Inventory(
+        category='Live Sound & Lighting',
+        vendor_name='Obsidian', name='Obsidian NX2 64-Universe Lighting Controller',
+        manufacturer_id='Obsidian',
+        description='64-universe Compact Lighting Controller with 4 DMX Ports, 2 Ethernet Gigabit RJ45 Ports, MIDI, Timecode, 2 Display Ports, 2 Touch Screens, 10 Playbacks, and 8 Encoders',
+        model='Master', serial='OB102',
+        tech_specs='Manufacturer Part Number: NX2984;',
+        price=8300.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-7bd3c8f4c4d0e3d5__hmac-1d921bf1666f3de6fd7ac4b0e13b0bc6d406e27f/images/items/350/NX2.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-cc5c5fc91feeb016__hmac-74d1682e3a7e09bbad77147b9c29f3bd751e42dc/images/manufacturer-logos/obsidian.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
     img190 = ProductImages(
       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-92048055abf15793__hmac-ed59fdb28c2a78fb8d72f9a3fb55b7a25d798171/images/items/750/NX2-large.jpg.auto.webp',
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
@@ -2398,7 +1420,25 @@ def seed_product_images():
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
     )
 
-# NX Touch
+    #Add to Join table
+    item32.product_images = [img190, img191, img192, img193]
+
+    db.session.add_all([item32, img190, img191, img192, img193])
+    db.session.commit()
+
+#NX Touch
+    item33 = Inventory(
+        category='Live Sound & Lighting',
+        vendor_name='Obsidian', name='Obsidian NX Touch 512-Ch DMX Lighting Controller',
+        manufacturer_id='Obsidian',
+        description='10-channel Lighting Controller with 14 Faders, 512 DMX Channels, and USB Control',
+        model='Master', serial='OB103',
+        tech_specs='Type:	Lighting Controller;DMX Modes:	1 DMX Universe, Expandable to 128;Compatibility:	DMX-512, Art-Net/sACN (ethernet required);Connectivity:	1 x 5-pin XLR (DMX out), 1 x USB Type B 2.0;Faders:	14 x Touch Strip Faders;Software:	Onyx NOVA (restrictions removed with USB connection);OS Requirements - PC:	Windows 10 or later;Power Source:	USB bus powered;Height: 1.8 inches;Width: 15.5 inches;Depth: 8.6 inches;Weight: 3.3lbs;Manufacturer Part Number: NXT100;',
+        price=599.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-74a3f203352f1b7e__hmac-b62b8f6474913c34a74de0a757349ce9cbf91e6a/images/items/350/NXTouch.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-cc5c5fc91feeb016__hmac-74d1682e3a7e09bbad77147b9c29f3bd751e42dc/images/manufacturer-logos/obsidian.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
     img194 = ProductImages(
       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9808c96688259d8b__hmac-cd4870bf94ad02f181cd361acc3af0ed91843e16/images/items/750/NXTouch-large.jpg.auto.webp',
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
@@ -2428,7 +1468,25 @@ def seed_product_images():
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
     )
 
-# NX Wing
+    #Add to Join table
+    item33.product_images = [img194, img195, img196, img186, img197, img198, img199, img200]
+
+    db.session.add_all([item33, img194, img195, img196, img186, img197, img198, img199, img200])
+    db.session.commit()
+
+#NX Wing
+    item34 = Inventory(
+        category='Live Sound & Lighting',
+        vendor_name='Obsidian', name='Obsidian NX Wing Lighting Controller',
+        manufacturer_id='Obsidian',
+        description='64-universe USB ONYX Lighting Controller with (10) 60mm faders, 4 Rotary Encoders, 4x DMX Ports, SMPTE, and MIDI In/Out - PC',
+        model='Master', serial='OB104',
+        tech_specs='Type:	Lighting Controller;DMX Modes: ONYX Premier 64 Universe License;Compatibility: Art-Net/X-Net/sACN/Remote operation (ethernet required);Connectivity: 4 x DMX, SMPTE Timecode, and Midi in/out/thru, 1 x USB type B;Faders: 	10 x 60mm playback faders;Software: Obsidian ONYX;OS Requirements - PC: 	Windows 10/11-64bit, Intel Core i3, 8GB RAMM, 40GD SSD drive space;Power Source: 12V DC, power supply (included);Height: 3.9 inches;Width: 21.3 inches;Depth: 11.9 inches;Weight: 10.2lbs;Manufacturer Part Number: NXW884;',
+        price=3500.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-9baf3227e5021538__hmac-065338a50489884b7f7ebc9dc78155365903b1cf/images/items/350/NXWing.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-cc5c5fc91feeb016__hmac-74d1682e3a7e09bbad77147b9c29f3bd751e42dc/images/manufacturer-logos/obsidian.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
     img201 = ProductImages(
       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3053fb8ac814a404__hmac-d5384d718982d9a2db498d5434c5694f476887f0/images/items/750/NXWing-large.jpg.auto.webp',
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
@@ -2458,7 +1516,25 @@ def seed_product_images():
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
     )
 
-# NX DMX Node
+    #Add to Join table
+    item34.product_images = [img201, img202, img203, img204, img205, img206, img207]
+
+    db.session.add_all([item34, img201, img202, img203, img204, img205, img206, img207])
+    db.session.commit()
+
+#NX DMX Node
+    item35 = Inventory(
+        category='Live Sound & Lighting',
+        vendor_name='Obsidian', name='Obsidian NX DMX USB 2-Port DMX Node',
+        manufacturer_id='Obsidian',
+        description='2-port, Bus-powered USB DMX Interface for Windows PCs or Onyx Consoles',
+        model='Master', serial='OB105',
+        tech_specs='Manufacturer Part Number: NXD986;',
+        price=349.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-92e85097e4741e5b__hmac-7592ecf90c604b616b419f392383ca781cf8ed8c/images/items/350/NXDMX.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-cc5c5fc91feeb016__hmac-74d1682e3a7e09bbad77147b9c29f3bd751e42dc/images/manufacturer-logos/obsidian.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
     img208 = ProductImages(
       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2069a4ba9c73f8f9__hmac-f62b7ca1f06d000d09b3a264bd14aea0dcf36e49/images/items/750/NXDMX-large.jpg.auto.webp',
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
@@ -2488,9 +1564,25 @@ def seed_product_images():
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
     )
 
-## MARTIN ###########
+    #Add to Join table
+    item35.product_images = [img208, img209, img210, img211, img212, img213, img214]
 
-# JEM Hazer
+    db.session.add_all([item35, img208, img209, img210, img211, img212, img213, img214])
+    db.session.commit()
+
+#JEM Hazer
+    item36 = Inventory(
+        category='Live Sound & Lighting',
+        vendor_name='Martin', name='Martin Lighting JEM Hazer Pro 120V 50/60Hz Haze Machine',
+        manufacturer_id='Martin',
+        description='Water-based Haze Machine with DMX Control and 65 Hours of Run Time',
+        model='Master', serial='MAR101',
+        tech_specs='Type:	Haze;Fog Output:	194,234 cfm;Tank Capacity:	0.66 gal;DMX:	3-pin XLR In/Out, 5-pin XLR In/Out;DMX Modes:	3 Channels;Power Consumption:	675W, 3.1A @ 120V;Power Supply:	Neutrik PowerCon;Remote:	JEM Hazer Pro Digital Remote Control (sold seperately);Height: 11.8 inches;Width: 22.3 inches;Depth: 10.7 inches;Weight:	33.1 lbs. (dry), 38.6 lbs. (filled);Manufacturer Part Number: 92225945;',
+        price=2432.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-bda50f494c893ebc__hmac-f0c7060b629d91a0bc253e2dc0a552d719c81f18/images/items/350/JEMHazerPro.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-f8397c78854856f4__hmac-f7b3288627aa7318d2663b65704c0bb612043d13/images/manufacturer-logos/martinlighting.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
     img215 = ProductImages(
       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-655f39578d2594b9__hmac-61dad36eb91c7860e0135027f95cd05f0b99b63d/images/items/750/JEMHazerPro-large.jpg.auto.webp',
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
@@ -2516,6 +1608,25 @@ def seed_product_images():
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
     )
 
+    #Add to Join table
+    item36.product_images = [img215, img216, img217, img218, img219, img220]
+
+    db.session.add_all([item36, img215, img216, img217, img218, img219, img220])
+    db.session.commit()
+
+##
+    item37 = Inventory(
+        category='Live Sound & Lighting',
+        vendor_name='Martin', name='Martin Lighting JEM C-Plus Haze Fluid - 2.5 Liters (4-pack)',
+        manufacturer_id='Martin',
+        description='Water-based Haze Fluid for the JEM Compact Hazer Pro and JEM Hazer Pro - 4 Bottles',
+        model='Master', serial='MAR102',
+        tech_specs='Type:	Haze Fluid;Material: Water-based;Compatibility:	JEM Compact Hazer Pro & JEM Hazer;Quantity:	4-pack (2.5L each);Manufacturer Part Number: 97120413;',
+        price=176.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-bb76c57fb93debcc__hmac-fb79c00a60d22e43a39abb59442f384ce1d4be90/images/items/350/CPlusHaze4pk.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-f8397c78854856f4__hmac-f7b3288627aa7318d2663b65704c0bb612043d13/images/manufacturer-logos/martinlighting.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
     img221 = ProductImages(
       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ec06f9c6d18491ab__hmac-00bef97fc2cfd35bf87050db94e051e010c6596d/images/items/750/CPlusHaze4pk-large.jpg.auto.webp',
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
@@ -2533,7 +1644,25 @@ def seed_product_images():
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
     )
 
-# RUSH
+    #Add to Join table
+    item37.product_images = [img221, img222, img223, img224]
+
+    db.session.add_all([item37, img221, img222, img223, img224])
+    db.session.commit()
+
+##
+    item38 = Inventory(
+        category='Live Sound & Lighting',
+        vendor_name='Martin', name='Martin Lighting RUSH MH 11 Beam 250W High-intensity Moving-head Beam with Gobos',
+        manufacturer_id='Martin',
+        description='250-watt LED Moving-head Beam Lighting Fixture with Rotating Gobo Wheel, Color Wheel, 8-facet Prism, Dimmer, Shutter, and Motorized Focus',
+        model='Master', serial='MAR103',
+        tech_specs='Type:	Beam;DMX:	3-pin XLR in/out, 5-pin XLR in/out;DMX Modes:	18 Channels;Lamp:	250W Philips MSD Platinum 11R;Beam Angle:	2.6°;Pan & Tilt:	Pan - 660° ; Tilt - 250°;Power Consumption:	345W, 2.9A @ 120V;Power Supply:	Neutrik PowerCon;Height: 22.1 inches;Width: 16.1 inches;Depth: 11.9 inches;Weight: 42.5lbs;Manufacturer Part Number: 90280130;',
+        price=3716.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-f558c45532734137__hmac-b7ef643eb93daead1b8de0caa0bee7dbf15e3462/images/items/350/RushMH11Beam.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-f8397c78854856f4__hmac-f7b3288627aa7318d2663b65704c0bb612043d13/images/manufacturer-logos/martinlighting.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
     img225 = ProductImages(
       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-fe29f6b11dda04b8__hmac-40ac6370e97c1fb6ee7ed5143285251669667de5/images/items/750/RushMH11Beam-large.jpg.auto.webp',
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
@@ -2559,7 +1688,24 @@ def seed_product_images():
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
     )
 
-# RUSH MH 5
+    #Add to Join table
+    item38.product_images = [img225, img226, img227, img228, img229, img230]
+
+    db.session.add_all([item38, img225, img226, img227, img228, img229, img230])
+    db.session.commit()
+
+##
+    item39 = Inventory(
+        category='Live Sound & Lighting',
+        vendor_name='Martin', name='Martin Lighting RUSH MH 5 Profile 75W LED Moving-head with Gobos',
+        manufacturer_id='Martin',
+        description='75-watt LED Moving-head Fixture with 2 Gobo Wheels, 2 Color Wheels, and 3-facet Prism',
+        model='Master', serial='MAR104',
+        tech_specs='Type:	Effect, Moving Head;DMX:	3-pin XLR in/out, 5-pin XLR in/out;DMX Modes:	16 channels;Sound Active:	Yes;LED:	75W;LED Type:	UV;Beam Angle:	16° (one-tenth peak), 14° (half-peak);Pan & Tilt:	Pan - 540° ; Tilt - 270°;Power Consumption:	155W, 1.3A @120V;Power Supply:	Neutrik PowerCon;Height: 16.4 inches;Width: 11.4 inches;Depth: 7.4 inches;Weight: 19.9lbs;Manufacturer Part Number: 90280040;',
+        price=1299.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-fc1bfc7e7772d098__hmac-67450f3b1882557f67830e2bf2b01ac3117aa1a7/images/items/350/RushMH5Pro.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-f8397c78854856f4__hmac-f7b3288627aa7318d2663b65704c0bb612043d13/images/manufacturer-logos/martinlighting.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
 
     img231 = ProductImages(
       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8ed71059ce13f61e__hmac-d8cb4cc9178b2e07f513b67d0bb0e0792b3dc1e5/images/items/750/RushMH5Pro-large.jpg.auto.webp',
@@ -2586,7 +1732,25 @@ def seed_product_images():
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
     )
 
-# MAC Encore
+    #Add to Join table
+    item39.product_images = [img231, img232, img233, img234, img235, img236]
+
+    db.session.add_all([item39, img231, img232, img233, img234, img235, img236])
+    db.session.commit()
+
+##
+    item40 = Inventory(
+        category='Live Sound & Lighting',
+        vendor_name='Martin', name='Martin Lighting MAC Encore Performance CLD 468W Cold White LED Moving-head',
+        manufacturer_id='Martin',
+        description='468W LED Lighting Fixture, 6,000K Cold White',
+        model='Master', serial='MAR105',
+        tech_specs='Type:	Moving-head Wash;DMX:	5-pin XLR in/out;DMX Modes:	38;LED:	1 x 468W;LED Type:	White;Illuminance:	11,600 lux;Beam Angle:	12-48° (zoom);Pan & Tilt:	Pan - 540° ; Tilt - 268°;Power Consumption:	596W, 5.0A @ 120V;Power Supply:	Neutrik PowerCon;Height:	29.2 inches (maximum);Width: 18.9 inches (yoke);Depth: 17.8 inches;Weight: 68.4lbs;Manufacturer Part Number: 90234000HU;',
+        price=13126.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-3bc94eefea0c84b1__hmac-5229b08419635bb70410a2955c11d3c234c3514b/images/items/350/MacEncPCLD.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-f8397c78854856f4__hmac-f7b3288627aa7318d2663b65704c0bb612043d13/images/manufacturer-logos/martinlighting.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
     img237 = ProductImages(
       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-27cbd6e6544f97fd__hmac-969529547052e314f173b6a3617b95a032a3188a/images/items/750/MacEncPCLD-large.jpg.auto.webp',
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
@@ -2616,9 +1780,25 @@ def seed_product_images():
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
     )
 
-### ESP #############
+    #Add to Join table
+    item40.product_images = [img237, img238, img239, img240, img241, img242, img243]
 
-#MH-1000
+    db.session.add_all([item40, img237, img238, img239, img240, img241, img242, img243])
+    db.session.commit()
+
+# ESP
+
+    item41 = Inventory(
+        category='Guitars',
+        vendor_name='ESP', name='ESP LTD MH-1000 Baritone Electric Guitar - Black Satin',
+        manufacturer_id='ESP',
+        description='Solidbody Baritone Electric Guitar with Mahogany Body, Maple Top and Neck, Ebony Fingerboard, and 2 Active Humbucking Pickups - Black Satin',
+        model='Master', serial='ESP101',
+        tech_specs='GENERAL#Number of Strings:	6;Left-/Right-handed:	Right-handed;BODY#Body Type:	Solidbody;Body Shape:	LTD MH-1000 Baritone;Body Material:	Mahogany;Top Material:	Maple cap;Body Finish:	Satin;Color:	Black;NECK#Neck Material:	3-piece Maple;Neck Shape:	Extra Thin U;Neck Joint:	Neck-through;Radius:	13.7"-15.7";Fingerboard Material:	Macassar Ebony;Fingerboard Inlay:	Offset Pearloid Blocks;Number of Frets:	24, Extra Jumbo Stainless Steel;Scale Length:	27";Nut Width:	1.653";Nut Material:	Molded Plastic;HARDWARE#Bridge/Tailpiece:	TonePros Locking Tune-O-Matic Bridge with String-through body;Tuners:	LTD Locking;ELECTRONICS#Neck Pickup:	EMG 60TW-R Brushed Black Chrome Humbucker;Bridge Pickup:	EMG-81 Humbucker;Controls:	1 x master volume, 1 x master tone (push/pull coil-split);Switching:	3-way blade pickup switch;MISCELLANEOUS#Strings:	D''Addario, .013-.062;Case/Gig Bag:	Sold Separately;Manufacturer Part Number: LMH1000BBLKS;',
+        price=1199.00,
+        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-f4e5c5a29f9f7d54__hmac-be1144bbc07474a77449e4b5da77210b89091675/images/items/350/MH1kBLBkS.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-3d3133efc594af0b__hmac-4b3c0b78792800b3b64982275ddeabb2d2a0b80b/images/manufacturer-logos/esp.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
 
     img244 = ProductImages(
       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b3d8fb6a85abbcc2__hmac-7eb6b236ba7f2fcd7321baffafe696d27b3db6b0/images/items/750/MH1kBLBkS-large.jpg.auto.webp',
@@ -2633,7 +1813,24 @@ def seed_product_images():
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
     )
 
-#EC-1000
+    #Add to Join table
+    item41.product_images = [img244, img245, img246]
+
+    db.session.add_all([item41, img244, img245, img246])
+    db.session.commit()
+
+##
+    item42 = Inventory(
+        category='Guitars',
+        vendor_name='ESP', name='ESP LTD EC-1000 Electric Guitar - See Thru Purple Sunburst',
+        manufacturer_id='ESP',
+        description='Solidbody Electric Guitar with Mahogany Body, Maple Top, Mahogany Neck, Ebony Fingerboard, and 2 Humbucking Pickups - See Thru Purple Sunburst',
+        model='Master', serial='ESP102',
+        tech_specs='GENERAL#Number of Strings	6;Left-/Right-handed:	Right-handed;BODY#Body Type:	Solidbody;Body Shape:	LTD EC-1000;Body Material:	Mahogany;Top Material: Quilted	Maple;Body Finish: Gloss;Color:	See-thru Purple Sunburst;NECK#Neck Material:	3-piece Maple;Neck Shape:	Thin U;Neck Joint: Set-through;Radius	13.7"-15.7";Fingerboard Material:	Macassar Ebony;Fingerboard Inlay:	Pearloid Blocks;Number of Frets:	24, Extra Jumbo Stainless Steel;Scale Length:	24.75";Nut Width:	1.653";Nut Material:	Molded Plastic;HARDWARE#Bridge/Tailpiece:	TonePros Locking Tune-O-Matic Bridge with Stopbar Tailpiece;Tuners:	LTD Locking;ELECTRONICS#Neck Pickup:	EMG 60TW-R Brushed Black Chrome Humbucker;Bridge Pickup:	EMG-81 Brushed Black Chrome Humbucker;Controls:	2 x volume, 1 x master tone (push/pull coil-split);Switching:	3-way blade pickup switch;MISCELLANEOUS#Strings	D''Addario, .010-.046;Case/Gig Bag:	Sold Separately;Manufacturer Part Number: LEC1000QMSTPSB;',
+        price=1199.00,
+        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-aaa7bb75766b043a__hmac-ed29460f12df08364c8273ce43f61227c93e14c1/images/items/350/EC1kLQMPS.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-3d3133efc594af0b__hmac-4b3c0b78792800b3b64982275ddeabb2d2a0b80b/images/manufacturer-logos/esp.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
 
     img247 = ProductImages(
       url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2d7a073237720850__hmac-c4aa4dc95f6c835c32a150f611c3a876aa1890d3/images/items/750/EC1kLQMPS-large.jpg.auto.webp',
@@ -2648,289 +1845,1551 @@ def seed_product_images():
       createdAt=str(datetime.now()), updatedAt=str(datetime.now())
     )
 
-    '''
-    img = ProductImages(
-      url='',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img = ProductImages(
-      url='',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img = ProductImages(
-      url='',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img = ProductImages(
-      url='',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img = ProductImages(
-      url='',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img = ProductImages(
-      url='',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    img = ProductImages(
-      url='',
-      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
-    )
-    '''
+    #Add to Join table
+    item42.product_images = [img247, img248, img249]
 
-
-    # db.session.add(img1)
-    # db.session.add(img2)
-    # db.session.add(img3)
-    # db.session.add(img4)
-    # db.session.add(img5)
-    # db.session.add(img6)
-    # db.session.add(img7)
-    # db.session.add(img8)
-    # db.session.add(img9)
-    # db.session.add(img10)
-    # db.session.add(img11)
-    # db.session.add(img12)
-    # db.session.add(img13)
-    # db.session.add(img14)
-    # db.session.add(img15)
-    # db.session.add(img16)
-    # db.session.add(img17)
-    # db.session.add(img18)
-    # db.session.add(img19)
-    # db.session.add(img20)
-    # db.session.add(img21)
-    # db.session.add(img22)
-    # db.session.add(img23)
-    # db.session.add(img24)
-    # db.session.add(img25)
-    # db.session.add(img26)
-    # db.session.add(img27)
-    # db.session.add(img28)
-    # db.session.add(img29)
-    # db.session.add(img30)
-    # db.session.add(img31)
-    # db.session.add(img32)
-    # db.session.add(img33)
-    # db.session.add(img34)
-    # db.session.add(img35)
-    # db.session.add(img36)
-    # db.session.add(img37)
-    # db.session.add(img38)
-    # db.session.add(img39)
-    # db.session.add(img40)
-    # db.session.add(img41)
-    # db.session.add(img42)
-    # db.session.add(img43)
-    # db.session.add(img44)
-    # db.session.add(img45)
-    # db.session.add(img46)
-    # db.session.add(img47)
-    # db.session.add(img48)
-    # db.session.add(img49)
-    # db.session.add(img50)
-    # db.session.add(img51)
-    # db.session.add(img52)
-    # db.session.add(img53)
-    # db.session.add(img54)
-    # db.session.add(img55)
-    # db.session.add(img56)
-    # db.session.add(img57)
-    # db.session.add(img58)
-    # db.session.add(img59)
-    # db.session.add(img60)
-    # db.session.add(img61)
-    # db.session.add(img62)
-    # db.session.add(img63)
-    # db.session.add(img64)
-    # db.session.add(img65)
-    # db.session.add(img66)
-    # db.session.add(img67)
-    # db.session.add(img68)
-    # db.session.add(img69)
-    # db.session.add(img70)
-    # db.session.add(img71)
-    # db.session.add(img72)
-    # db.session.add(img73)
-    # db.session.add(img74)
-    # db.session.add(img75)
-    # db.session.add(img76)
-    # db.session.add(img77)
-    # db.session.add(img78)
-    # db.session.add(img79)
-    # db.session.add(img80)
-    # db.session.add(img81)
-    # db.session.add(img82)
-    # db.session.add(img83)
-    # db.session.add(img84)
-    # db.session.add(img85)
-    # db.session.add(img86)
-    # db.session.add(img87)
-    # db.session.add(img88)
-    # db.session.add(img89)
-    # db.session.add(img90)
-    # db.session.add(img91)
-    # db.session.add(img92)
-    # db.session.add(img93)
-    # db.session.add(img94)
-    # db.session.add(img95)
-    # db.session.add(img96)
-    # db.session.add(img97)
-    # db.session.add(img98)
-    # db.session.add(img99)
-    # db.session.add(img100)
-    # db.session.add(img101)
-    # db.session.add(img102)
-    # db.session.add(img103)
-    # db.session.add(img104)
-    # db.session.add(img105)
-    # db.session.add(img106)
-    # db.session.add(img107)
-    # db.session.add(img108)
-    # db.session.add(img109)
-    # db.session.add(img110)
-    # db.session.add(img111)
-    # db.session.add(img112)
-    # db.session.add(img113)
-    # db.session.add(img114)
-    # db.session.add(img115)
-    # db.session.add(img116)
-    # db.session.add(img117)
-    # db.session.add(img118)
-    # db.session.add(img119)
-    # db.session.add(img120)
-    # db.session.add(img121)
-    # db.session.add(img122)
-    # db.session.add(img123)
-    # db.session.add(img124)
-    # db.session.add(img125)
-    # db.session.add(img126)
-    # db.session.add(img127)
-    # db.session.add(img128)
-    # db.session.add(img129)
-    # db.session.add(img130)
-    # db.session.add(img131)
-    # db.session.add(img132)
-    # db.session.add(img133)
-    # db.session.add(img134)
-    # db.session.add(img135)
-    # db.session.add(img136)
-    # db.session.add(img137)
-    # db.session.add(img138)
-    # db.session.add(img139)
-    # db.session.add(img140)
-    # db.session.add(img141)
-    # db.session.add(img142)
-    # db.session.add(img143)
-    # db.session.add(img144)
-    # db.session.add(img145)
-    # db.session.add(img146)
-    # db.session.add(img147)
-    # db.session.add(img148)
-    # db.session.add(img149)
-    # db.session.add(img150)
-    # db.session.add(img151)
-    # db.session.add(img152)
-    # db.session.add(img153)
-    # db.session.add(img154)
-    # db.session.add(img155)
-    # db.session.add(img156)
-    # db.session.add(img157)
-    # db.session.add(img158)
-    # db.session.add(img159)
-    # db.session.add(img160)
-    # db.session.add(img161)
-    # db.session.add(img162)
-    # db.session.add(img163)
-    # db.session.add(img164)
-    # db.session.add(img165)
-    # db.session.add(img166)
-    # db.session.add(img167)
-    # db.session.add(img168)
-    # db.session.add(img169)
-    # db.session.add(img170)
-    # db.session.add(img171)
-    # db.session.add(img172)
-    # db.session.add(img173)
-    # db.session.add(img174)
-    # db.session.add(img175)
-    # db.session.add(img176)
-    # db.session.add(img177)
-    # db.session.add(img178)
-    # db.session.add(img179)
-    # db.session.add(img180)
-    # db.session.add(img181)
-    # db.session.add(img182)
-    db.session.add(img183)
-    db.session.add(img184)
-    db.session.add(img185)
-    db.session.add(img186)
-    db.session.add(img187)
-    db.session.add(img188)
-    db.session.add(img189)
-    db.session.add(img190)
-    db.session.add(img191)
-    db.session.add(img192)
-    db.session.add(img193)
-    db.session.add(img194)
-    db.session.add(img195)
-    db.session.add(img196)
-    db.session.add(img197)
-    db.session.add(img198)
-    db.session.add(img199)
-    db.session.add(img200)
-    db.session.add(img201)
-    db.session.add(img202)
-    db.session.add(img203)
-    db.session.add(img204)
-    db.session.add(img205)
-    db.session.add(img206)
-    db.session.add(img207)
-    db.session.add(img208)
-    db.session.add(img209)
-    db.session.add(img210)
-    db.session.add(img211)
-    db.session.add(img212)
-    db.session.add(img213)
-    db.session.add(img214)
-    db.session.add(img215)
-    db.session.add(img216)
-    db.session.add(img217)
-    db.session.add(img218)
-    db.session.add(img219)
-    db.session.add(img220)
-    db.session.add(img221)
-    db.session.add(img222)
-    db.session.add(img223)
-    db.session.add(img224)
-    db.session.add(img225)
-    db.session.add(img226)
-    db.session.add(img227)
-    db.session.add(img228)
-    db.session.add(img229)
-    db.session.add(img230)
-    db.session.add(img231)
-    db.session.add(img232)
-    db.session.add(img233)
-    db.session.add(img234)
-    db.session.add(img235)
-    db.session.add(img236)
-    db.session.add(img237)
-    db.session.add(img238)
-    db.session.add(img239)
-    db.session.add(img240)
-    db.session.add(img241)
-    db.session.add(img242)
-    db.session.add(img243)
-    db.session.add(img244)
-    db.session.add(img245)
-    db.session.add(img246)
-    db.session.add(img247)
-    db.session.add(img248)
-    db.session.add(img249)
+    db.session.add_all([item42, img247, img248, img249])
     db.session.commit()
 
+###
+    item43 = Inventory(
+        category='Guitars',
+        vendor_name='ESP', name='ESP LTD Arrow-1000NT Electric Guitar - Charcoal Metallic Satin',
+        manufacturer_id='ESP',
+        description='Solidbody Electric Guitar with Mahogany Body, Maple Neck, Ebony Fingerboard, and 2 Humbucking Pickups - Charcoal Metallic Satin',
+        model='Master', serial='ESP103',
+        tech_specs='GENERAL#Number of Strings	6;Left-/Right-handed:	Right-handed;BODY#Body Type:	Solidbody;Body Shape:	LTD Arrow-NT;Body Material:	Mahogany;Body Finish: Satin;Color: Charcoal Metallic;NECK#Neck Material:	3-piece Maple;Neck Shape:	Extra Thin U;Neck Joint: Neck-through;Radius	11.8"-15.7" compound;Fingerboard Material:	Macassar Ebony;Fingerboard Inlay:	Pearloid Triangles;Number of Frets:	24, Extra Jumbo Stainless Steel;Scale Length:	25.5";Nut Width:	1.653";Nut Material:	Molded Plastic;HARDWARE#Bridge/Tailpiece:	Recessed TonePros Locking Tune-O-Matic Bridge with String-through body;Tuners:	LTD Locking;ELECTRONICS#Neck Pickup: Fishman Fluence Modern Alnico Humbucker;Bridge Pickup:	Fishman Fluence Modern Ceramic Humbucker;Controls: 1 x master tone (push/pull coil-split);Switching:	3-way toggle pickup switch;MISCELLANEOUS#Strings	D''Addario, .009-.042;Case/Gig Bag:	Sold Separately;Manufacturer Part Number: LARROW1000NTCHMS;',
+        price=1199.00,
+        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-970526dcac40c13a__hmac-0ee217391d5f64aba1822848133914bfadcc29bf/images/items/350/ArrowNTLCMS.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-3d3133efc594af0b__hmac-4b3c0b78792800b3b64982275ddeabb2d2a0b80b/images/manufacturer-logos/esp.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img250 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d9f33da91cb0bb14__hmac-e7b7c6dc62d6fa84c978a80271dd473aae1e5068/images/items/750/ArrowNTLCMS-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img251 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-52156b2718addfdb__hmac-49ba2c50d175cf497d9f00c471721c46ce4c60ea/images/closeup/750-ArrowNTLCMS_front.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img252 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f397efc2a8b36a24__hmac-3f52857878295afa48d7672f5dc5e27f5ff12a3f/images/closeup/750-ArrowNTLCMS_back.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item43.product_images = [img250, img251, img252]
+
+    db.session.add_all([item43, img250, img251, img252])
+    db.session.commit()
+
+##
+    item44 = Inventory(
+        category='Guitars',
+        vendor_name='ESP', name='ESP LTD H3-1000FR Electric Guitar - Snow White',
+        manufacturer_id='ESP',
+        description='Solidbody Electric Guitar with Mahogany Body, Maple Neck, Ebony Fretboard, Floyd Rose Tremolo, and 2 Humbucking Pickups - Snow White',
+        model='Master', serial='ESP104',
+        tech_specs='GENERAL#Number of Strings	6;Left-/Right-handed:	Right-handed;BODY#Body Type:	Solidbody;Body Shape:	LTD H3-1000FR;Body Material:	Mahogany;Body Finish: Gloss;Color: Snow White;NECK#Neck Material:	3-piece Maple;Neck Shape:	Thin U;Neck Joint: Set-through;Radius	11.8"-15.7" compound;Fingerboard Material:	Macassar Ebony;Fingerboard Inlay:	Offset White Pearloid Blocks;Number of Frets:	24, Extra Jumbo Stainless Steel;Scale Length:	25.5";Nut Width:	1.653";Nut Material: Locking;HARDWARE#Bridge/Tailpiece:	Floyd Rose 1000SE Double Locking Tremolo;Tuners: Grover;ELECTRONICS#Neck Pickup: EMG 66TW Brushed Gold Humbucker;Bridge Pickup:		EMG F-57 Brushed Gold Humbucker;Controls: 1 x master volume, 1 x master tone (push/pull coil-split);Switching:	3-way toggle pickup switch;MISCELLANEOUS#Strings	D''Addario, .009-.042;Case/Gig Bag:	Sold Separately;Manufacturer Part Number: LH31000FRSW;',
+        price=1299.00,
+        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-25bd8616e167db3a__hmac-c9bf50aa29706006fa5c06d6b29d3c7a62764100/images/items/350/H31kFRLSW.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-3d3133efc594af0b__hmac-4b3c0b78792800b3b64982275ddeabb2d2a0b80b/images/manufacturer-logos/esp.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img253 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-552ea120ee236928__hmac-a6f3a675d11c3d40282c118ebcda220989b16c7e/images/items/750/H31kFRLSW-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img254 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e1b33b8026c97ea3__hmac-5a28753b4badc80b405e3e303af2e4d446f1b7ad/images/closeup/750-H31kFRLSW_front.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img255 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-112e8d6e0b5678de__hmac-c1e5a9facb72e9f6d82867ece11f2e4b8aa0477b/images/closeup/750-H31kFRLSW_back.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item44.product_images = [img253, img254, img255]
+
+    db.session.add_all([item44, img253, img254, img255])
+    db.session.commit()
+
+##
+
+    item45 = Inventory(
+        category='Guitars',
+        vendor_name='ESP', name='ESP LTD Mirage Deluxe ''87 Electric Guitar - Metallic Gold',
+        manufacturer_id='ESP',
+        description='Solidbody Electric Guitar with Alder Body, Maple Neck, Ebony Fingerboard, 2 Humbucking Pickups, and Floyd Rose Locking Tremolo - Metallic Gold',
+        model='Master', serial='ESP105',
+        tech_specs='GENERAL#Number of Strings	6;Left-/Right-handed:	Right-handed;BODY#Body Type:	Solidbody;Body Shape:		LTD Mirage Deluxe 87;Body Material:	Alder;Body Finish: Gloss;Color: Metallic Gold;NECK#Neck Material:	3-piece Maple;Neck Shape:	Extra Thin U;Neck Joint: Bolt-on;Radius	13.7";Fingerboard Material:	Macassar Ebony;Fingerboard Inlay:	Offset White Pearloid Blocks;Number of Frets:	24, Extra Jumbo;Scale Length:	25.5";Nut Width:	1.692";Nut Material: Locking;HARDWARE#Bridge/Tailpiece:	Floyd Rose 1000 Double Locking Tremolo;Tuners: LTD;ELECTRONICS#Neck Pickup: Seymour Duncan Hot Rail Humbucker;Bridge Pickup: Seymour Duncan Distortion Humbucker;Controls: 1 x master volume, 1 x master tone (push/pull coil-split);Switching:	3-way blade pickup switch;MISCELLANEOUS#Strings	D''Addario, .009-.042;Case/Gig Bag:	Sold Separately;Manufacturer Part Number: LMIRAGEDX87MGO;',
+        price=1199.00,
+        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-62469c8c5f8cb2d0__hmac-3c443e9dc54da0c1657d19c85f49228de5554db4/images/items/350/Mirage87LMG.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-3d3133efc594af0b__hmac-4b3c0b78792800b3b64982275ddeabb2d2a0b80b/images/manufacturer-logos/esp.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img256 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1cf7041125b40531__hmac-1affeff9579584834e0c7e7e34c6659da90a94f0/images/items/750/Mirage87LMG-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img257 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bb0fbbbda4c5fc9b__hmac-2c09c493ce32d017f037e9338f3e8a1231771a22/images/closeup/750-Mirage87LMG_front.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img258 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2531a88a9eef2d70__hmac-77a02ebbc2f559c38fa3d9eb701a5de79899966c/images/closeup/750-Mirage87LMG_back.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item45.product_images = [img256, img257, img258]
+
+    db.session.add_all([item45, img256, img257, img258])
+    db.session.commit()
+
+##
+    item46 = Inventory(
+        category='Guitars',
+        vendor_name='ESP', name='ESP LTD Mirage Deluxe ''87 Electric Guitar - Metallic Gold',
+        manufacturer_id='ESP',
+        description='Solidbody Electric Guitar with Alder Body, Maple Neck, Ebony Fingerboard, 2 Humbucking Pickups, and Floyd Rose Locking Tremolo - Metallic Gold',
+        model='Master', serial='ESP106',
+        tech_specs='GENERAL#Number of Strings	6;Left-/Right-handed:	Right-handed;BODY#Body Type:	Solidbody;Body Shape: Eclipse;Body Material: Mahogany;Body Finish: Gloss;Color: See Thru Black Cherry;NECK#Neck Material:	Mahogany;Neck Shape: Thin U;Neck Joint: Neck-throughy;Radius	13.7";Fingerboard Material:	Pau Ferro;Fingerboard Inlay: Pearloid Flags;Number of Frets:	24, Extra Jumbo, Stainless Steel;Scale Length:	24.75";Nut Width:	1.650";Nut Material: Molded;HARDWARE#Bridge/Tailpiece: TonePros Locking Tune-O-Matic Bridge with Stopbar Tailpiece;Tuners: Locking;ELECTRONICS#Neck Pickup: 	EMG 60 Humbucker;Bridge Pickup: EMG 81 Humbucker;Controls: 2 x volume, 1 x master tone;Switching:	3-way toggle pickup switch;MISCELLANEOUS#Strings	D''Addario, .010-.046;Case/Gig Bag:	Sold Separately;Manufacturer Part Number: LEC1000STBC;',
+        price=1099.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-ab885664a424fc79__hmac-db57a873411810b4f2b808e204bf398121f4a88f/images/items/350/EC1000STBC.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-3d3133efc594af0b__hmac-4b3c0b78792800b3b64982275ddeabb2d2a0b80b/images/manufacturer-logos/esp.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img259 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-dec8c0ac276d45bf__hmac-3b18d1a0bf92898e9c47161cd2a62da667abea13/images/guitars/EC1000STBC/IW22010744/IW22010744-body-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img260 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f6fe0d94e226e8dd__hmac-d85999fd5c7d440be37215ec8f07350ae02a8d7d/images/guitars/EC1000STBC/IW22010744/IW22010744-front-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img261 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-cef9a636b4f311cc__hmac-94097e09d133dd971825e203fe21ce39d3d36a1e/images/guitars/EC1000STBC/IW22010744/IW22010744-angle-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img262 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2638b46468eb0f29__hmac-aa8b3480bb065c9e3361220a3c1e8e386732902f/images/guitars/EC1000STBC/IW22010744/IW22010744-detail1-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img263 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-17571460473682fd__hmac-e82808f8a7ce79ed420fea4084098a1dcc35e9ae/images/guitars/EC1000STBC/IW22010744/IW22010744-detail2-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img264 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-c24acb3d83451565__hmac-d95064c8e7ea4b56a188e93d6768f175fe6eab1c/images/guitars/EC1000STBC/IW22010744/IW22010744-backbody-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img265 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f2172a3dc670795e__hmac-9033e5d36993ccfcef69312c234d9cfe2fb6a5ae/images/guitars/EC1000STBC/IW22010744/IW22010744-back-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img266 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-84303eb30b5cca99__hmac-eab6a974750b877221563a543945716c35611f99/images/guitars/EC1000STBC/IW22010744/IW22010744-serial-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item46.product_images = [img259, img260, img261, img262, img263, img264, img265, img266]
+
+    db.session.add_all([item45, img259, img260, img261, img262, img263, img264, img265, img266])
+    db.session.commit()
+
+##
+    item47 = Inventory(
+        category='Guitars',
+        vendor_name='ESP', name='ESP LTD Viper-1000 EverTune Electric Guitar - Charcoal Metallic Satin',
+        manufacturer_id='ESP',
+        description='Solidbody Electric Guitar, with Mahogany Body, Maple Top, 3-piece Mahogany Neck, Ebony Fretboard, 2 Humbucking Pickups, and EverTune Bridge - Charcoal Metallic Satin',
+        model='Master', serial='ESP107',
+        tech_specs='GENERAL#Number of Strings	6;Left-/Right-handed:	Right-handed;BODY#Body Type:	Solidbody;Body Shape: LTD Viper-1000 ET;Body Material: Mahogany;Body Finish: Satin;Color: 	Charcoal Metallic;NECK#Neck Material:	Mahogany;Neck Shape: Thin U;Neck Joint: Set-through;Radius	13.7";Fingerboard Material:	Macassar Ebony;Fingerboard Inlay: Pearloid Flags;Number of Frets:	24, Extra Jumbo, Stainless Steel;Scale Length:	24.75";Nut Width:	1.653";Nut Material: Molded Plastic;HARDWARE#Bridge/Tailpiece: TonePros Locking Tune-O-Matic Bridge with String-through body;Tuners: LTD Locking;ELECTRONICS#Neck Pickup: 	EMG 60TW-R Humbucker;Bridge Pickup: EMG 81 Humbucker;Controls: 	1 x master volume (push/pull coil-split), 1 x master tone (push/pull coil-split);Switching:	3-way toggle pickup switch;MISCELLANEOUS#Strings	D''Addario, .010-.046;Case/Gig Bag:	Sold Separately;Manufacturer Part Number: LVIPER1000ETCHMS;',
+        price=1299.00,
+        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-f166e25ce5d809d9__hmac-f01223cc92d3a22bbcb4c53d5b7d36b117722e1f/images/items/350/Viper1kETLCMS.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-3d3133efc594af0b__hmac-4b3c0b78792800b3b64982275ddeabb2d2a0b80b/images/manufacturer-logos/esp.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img267 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-19a53a03be1b0829__hmac-b3e41b1ca00f3cbe3310bc909782a53a894e3572/images/items/750/Viper1kETLCMS-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img268 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5f67079aba249658__hmac-b26804e5a41fe17da0f0c167d7f354a42b2ba3b2/images/closeup/750-Viper1kETLCMS_front.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img269 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0f74d686de4feb9d__hmac-0a1ea2b596d691fa595ee5fe2e28bd84cff4695c/images/closeup/750-Viper1kETLCMS_back.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item47.product_images = [img267, img268, img269]
+
+    db.session.add_all([item47, img267, img268, img269])
+    db.session.commit()
+
+##
+    item48 = Inventory(
+        category='Guitars',
+        vendor_name='ESP', name='ESP Kirk Hammett KH-3 Spider 30th Anniversary Edition Electric Guitar - Black',
+        manufacturer_id='ESP',
+        description='Solidbody Electric Guitar with Alder Body, Maple Neck, Rosewood Fingerboard, Floyd Rose Tremolo, and 2 Humbucking Pickups - Black',
+        model='Master', serial='ESP107',
+        tech_specs='GENERAL#Number of Strings	6;Left-/Right-handed:	Right-handed;BODY#Body Type:	Solidbody;Body Shape: 	Kirk Hammett KH-3 Singlecut;Body Material: Alder;Body Finish: Gloss;Color: Black with Spider Graphic;NECK#Neck Material: 3-Piece Maple;Neck Shape: Extra Thin U;Neck Joint: Neck-through;Radius	13.7";Fingerboard Material:	Ebony;Fingerboard Inlay: White Spiders/Skulls;Number of Frets:	24, Extra Jumbo, Stainless Steel;Scale Length:	24.75";Nut Width:	1.653";Nut Material: Locking;HARDWARE#Bridge/Tailpiece: Floyd Rose Double-Locking Tremolo;Tuners: Grover;ELECTRONICS#Neck Pickup: EMG BoneBreaker Humbucker;Bridge Pickup: EMG BoneBreaker Humbucker;Controls: 	1 x master volume (push/pull coil-split), 1 x master tone (push/pull coil-split);Switching:	3-way toggle pickup switch;MISCELLANEOUS#Strings	D''Addario, .009-.042;Case/Gig Bag:	Hardshell Case;Manufacturer Part Number: 	EKH3;',
+        price=5199.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-e627b81807a39520__hmac-d21e3c1f1fcef71bec15452dd5ec5f4bc4950758/images/items/350/EKH3Spider.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-3d3133efc594af0b__hmac-4b3c0b78792800b3b64982275ddeabb2d2a0b80b/images/manufacturer-logos/esp.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img270 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b320ea0c38b58ed9__hmac-fd7389b7bbafcf40bb0429849220e289cbf4e321/images/guitars/EKH3Spider/E2481212/E2481212-body-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img271 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-cbd3167d403682ad__hmac-b87301ca9d7f7432e7b36316f8da251f7bd496a5/images/guitars/EKH3Spider/E2481212/E2481212-front-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img272 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d1c88f02a11f5f80__hmac-1c8d92b207f275fce866bc84b0b6fb15a19b7071/images/guitars/EKH3Spider/E2481212/E2481212-angle-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img273 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-c138448ce6620bac__hmac-13479dec66969fa643a33339c7f1b1a04be9b741/images/guitars/EKH3Spider/E2481212/E2481212-detail1-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img274 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8c052038010a9238__hmac-2f381484c83e26e4344cc4bc6d16073556814691/images/guitars/EKH3Spider/E2481212/E2481212-detail2-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img275 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0a31023b1e594554__hmac-b494525ab506dcb133ebbb153cc1131885835ca2/images/guitars/EKH3Spider/E2481212/E2481212-backbody-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img276 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9c34f501345773ea__hmac-1aa2e651959b291c41c54e4cd35183b4e84cc803/images/guitars/EKH3Spider/E2481212/E2481212-back-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img277 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-92a9d85d67ba56ab__hmac-96bd2d91799f3ce7ee7dab804999865e01052c19/images/guitars/EKH3Spider/E2481212/E2481212-serial-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img278 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ca044bc981579455__hmac-24ee504a316bb58a728964366f60846207b26f12/images/guitars/EKH3Spider/E2481212/E2481212-case-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item48.product_images = [img270, img271, img272, img273, img274, img275, img276, img277, img278]
+
+    db.session.add_all([item48, img270, img271, img272, img273, img274, img275, img276, img277, img278])
+    db.session.commit()
+
+##
+    item49 = Inventory(
+        category='Guitars',
+        vendor_name='ESP', name='ESP E-II Horizon NT-7B Hipshot - Purple Sparkle',
+        manufacturer_id='ESP',
+        description='E-II Horizon NT-7B Hipshot- Purple Sparkle',
+        model='Master', serial='ESP107',
+        tech_specs='GENERAL#Number of Strings	7;Left-/Right-handed:	Right-handed;BODY#Body Type:	Solidbody;Body Shape: E-II Horizon;Body Material: Alder;Body Finish: Gloss;Color: Purple Sparkle;NECK#Neck Material: 3-Piece Maple;Neck Shape: Thin U;Neck Joint: Neck-through;Radius	12";Fingerboard Material:	Ebony;Fingerboard Inlay: Small Offset Blocks;Number of Frets:	24, Extra Jumbo;Scale Length:	27";Nut Width:	1.889";Nut Material: Bone;HARDWARE#Bridge/Tailpiece: Hipshot Hardtail;Tuners: Gotoh Locking;ELECTRONICS#Neck Pickup: Fishman Fluence Modern Alnico Humbucker;Bridge Pickup: 	Fishman Fluence Modern Ceramic Humbucker;Controls: 	1 x master volume (push/pull coil-split), 1 x master tone (push/pull coil-split);Switching:	3-way toggle pickup switch;MISCELLANEOUS#Strings	D''Addario, .010-.059;Case/Gig Bag:	Hardshell Case;Manufacturer Part Number: EIIHORNT7BHSPSPF;',
+        price=2499.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-7346a7ce556c302d__hmac-737aa204e8e36120fe949a6f79c0bcc480c2d9e7/images/items/350/EIIHNT7BHSPS.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-3d3133efc594af0b__hmac-4b3c0b78792800b3b64982275ddeabb2d2a0b80b/images/manufacturer-logos/esp.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img279 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-814a649ded9d687b__hmac-d688bc780f331dc9f17b74045d80994d4118cb05/images/guitars/EIIHNT7BHSPS/ES8530223/ES8530223-body-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img280 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9ad881fe21b75c9d__hmac-ae4a8fa2ddb1414bb82c2d39d1eaf711830da917/images/guitars/EIIHNT7BHSPS/ES8530223/ES8530223-front-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img281 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-78e6ae898633b513__hmac-676259396dce30241010b6dd35ba168da0da10bc/images/guitars/EIIHNT7BHSPS/ES8530223/ES8530223-angle-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img282 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-da4d43cbedbb6d2b__hmac-c0ab1f8103ba82b1b373117e561ecf4a22a2bc56/images/guitars/EIIHNT7BHSPS/ES8530223/ES8530223-detail1-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img283 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2aafb39267b75cc9__hmac-060731a07c2d24231025e3e815ccf29222e79636/images/guitars/EIIHNT7BHSPS/ES8530223/ES8530223-detail2-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img284 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b280d92fd5afbc66__hmac-3394bbf6328018b354827cdc44c445afd566e656/images/guitars/EIIHNT7BHSPS/ES8530223/ES8530223-backbody-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img285 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3ff6141221077cfc__hmac-d8b62cf017956d2bd8857591587dd733a3bc2f3e/images/guitars/EIIHNT7BHSPS/ES8530223/ES8530223-back-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img286 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-cf31f159a7c648f4__hmac-d0804a880061f8c8e2453acfbe651e1aa19d0bd5/images/guitars/EIIHNT7BHSPS/ES8530223/ES8530223-serial-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img287 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bc4b395c08dc7eb0__hmac-5a9b6bcc2e24b074771fad0649b00a56299e5488/images/guitars/EIIHNT7BHSPS/ES8530223/ES8530223-case-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item49.product_images = [img279, img280, img281, img282, img283, img284, img285, img286, img287]
+
+    db.session.add_all([item49, img279, img280, img281, img282, img283, img284, img285, img286, img287])
+    db.session.commit()
+
+
+##
+    item50 = Inventory(
+        category='Guitars',
+        vendor_name='ESP', name='ESP LTD Xtone PS-1000 - Vintage Black',
+        manufacturer_id='ESP',
+        description='Semi-hollowbody Electric Guitar, with Mahogany Body, 3-piece Maple Neck, Ebony Fretboard, and 2 Single-coil Pickups - Vintage Black',
+        model='Master', serial='ESP107',
+        tech_specs='GENERAL#Number of Strings	6;Left-/Right-handed:	Right-handed;BODY#Body Type:	Semi-hollowbody;Body Shape: LTD Xtone PS-1000;Body Material: Mahogany;Body Finish: Gloss;Color: Vintage Black;NECK#Neck Material: 3-Piece Maple;Neck Shape: Thin U;Neck Joint: Set-through;Radius	13.7";Fingerboard Material:	Macassar Ebony;Fingerboard Inlay: Pearloid/Abalone Split Blocks;Number of Frets:	22, Extra Jumbo, Stainless Steel;Scale Length:	24.75";Nut Width:	1.653";Nut Material: Molded;HARDWARE#Bridge/Tailpiece: TonePros Locking Tune-O-Matic Bridge with Stopbar Tailpiece;Tuners: LTD Locking;ELECTRONICS#Neck Pickup: 	Seymour Duncan Phat Cat Neck Single-coil;Bridge Pickup: 	Seymour Duncan Phat Cat Neck Single-coil;Controls: 	1 x master volume (push/pull coil-split), 1 x master tone (push/pull coil-split);Switching:	3-way toggle pickup switch;MISCELLANEOUS#Strings	D''Addario, .010-.046;Case/Gig Bag:	Sold Separately;Manufacturer Part Number: XPS1000VB;',
+        price=1149.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-f714e44c0e83a809__hmac-782af970c61a480efe07704f1b623aabee5b5d6f/images/items/350/XPS1000VB.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-3d3133efc594af0b__hmac-4b3c0b78792800b3b64982275ddeabb2d2a0b80b/images/manufacturer-logos/esp.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img288 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d6c4cf3057e9cacd__hmac-747a08e7dd7270d71ca6b7be8cbb5bc06b6d4496/images/guitars/XPS1000VB/IW21112882/IW21112882-body-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img289 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-28c2f477dd03797a__hmac-41b9fb774b9f9b958a5c1c8eb2f513d60676efc9/images/guitars/XPS1000VB/IW21112882/IW21112882-front-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img290 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-89ef7925a008791d__hmac-11b5656ee52f287ce29d761b824bea17f7eef128/images/guitars/XPS1000VB/IW21112882/IW21112882-angle-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img291 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9937539f044fb18a__hmac-01d8ee11bc098948b25bf7cfb72ebdeb55cbc707/images/guitars/XPS1000VB/IW21112882/IW21112882-detail1-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img292 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-c3df4fbe8d5fe9c0__hmac-cd85de1cc6ff80a607c882623e705fc4b5a382a4/images/guitars/XPS1000VB/IW21112882/IW21112882-detail2-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img293 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-18804a52463f0134__hmac-c90078659165e751e5cdc5f820c9aa631d73cabf/images/guitars/XPS1000VB/IW21112882/IW21112882-backbody-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img294 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a59f96d2217d01b4__hmac-0d75c9e6276ae40c75b94036b8917bae232d70b8/images/guitars/XPS1000VB/IW21112882/IW21112882-back-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img295 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6ac55da14187fa0e__hmac-775ee2cdd608741b80016880adea3c1c233532eb/images/guitars/XPS1000VB/IW21112882/IW21112882-serial-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+
+    #Add to Join table
+    item50.product_images = [img288, img289, img290, img291, img292, img293, img294, img295]
+
+    db.session.add_all([item50, img288, img289, img290, img291, img292, img293, img294, img295])
+    db.session.commit()
+
+
+########## MARSHALL #########################################################################
+
+#DSL40CR
+
+    item51 = Inventory(
+        category='Guitars',
+        vendor_name='Marshall', name='Marshall DSL40CR 1x12" 40-watt Tube Combo Amp',
+        manufacturer_id='Marshall',
+        description='40-watt, 1x12" Tube Guitar Combo Amplifier with 2 Channels (Each with 2 Modes), High/Low Power Modes, Speaker-emulated Line Output, Digital Reverb, Effects Loop, and 2-button Footswitch',
+        model='Master', serial='MARSH101',
+        tech_specs='Type: Tube;Number of Channels:	2-channel (2 modes each);Total Power:	40W (20W power setting);Speaker Size:	1 x 12" Celestion V-Type speaker;Preamp Tubes:	4 x ECC83;Power Tubes:	2 x EL34;Reverb:	Classic, Ultra;EQ:	3-band EQ, Tone Shift, Resonance;Inputs:	1 x 1/4" (instrument), 1 x 1/8" (aux in);Outputs:	2 x 1/4" (4 ohm), 2 x 1/4" (8 ohm), 1 x 1/4" (internal 16 ohm speaker), 1 x 1/4" (Softube emulated out);Effects Loop:	Yes;MIDI I/O:	In;Footswitch I/O:	1 x 1/4" (channel, effects loop);Footswitch Included:	Yes, 2-button footswitch (optional 6-way sold separately);Construction Material:	Black Tolex;Power Source:	Standard IEC AC cable;Height:	19.29";Width:	24.4";Depth:	9.9";Weight:	50.4 lbs;Manufacturer Part Number:	M-DSL40CR-U;',
+        price=1032.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-bb9aa4cdbd336418__hmac-338915f17490a5d36d22fa793ea914025d723755/images/items/350/DSL40CR.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-b00c56f5091e2056__hmac-d0b890d8eb7efbe59ff1f63ccd254d6a41e74a28/images/manufacturer-logos/marshall.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img296 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d83494b94cb476eb__hmac-78ed9ffc7c3f7653717214dc1f45315de4a145f1/images/items/750/DSL40CR-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img297 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ca3d2c09e42cfd83__hmac-ecd55dcb91e49d288f61b9c181cb5706e7651fe3/images/closeup/750-DSL40CR_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img298 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5420fdff9aae7652__hmac-6de21c159649ae6c711ebe1cdfc5eb0a80e31435/images/closeup/750-DSL40CR_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img299 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d4fd5c2288f024ed__hmac-b9f548696d3c7e28399e5176b642f0cea2b3251c/images/closeup/750-DSL40CR_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img300 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-36e676520e638dcb__hmac-3f88b1e73ccd624d4d2db41838ad465010b21e8e/images/closeup/750-DSL40CR_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img301 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1e8020967e2261f2__hmac-b67fb0556cb82606b8c2d4a93120b00910c2ea0d/images/closeup/750-DSL40CR_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+
+    #Add to Join table
+    item51.product_images = [img296, img297, img298, img299, img300, img301]
+
+    db.session.add_all([item51, img296, img297, img298, img299, img300, img301])
+    db.session.commit()
+
+
+#DSL20HR
+
+    item52 = Inventory(
+        category='Guitars',
+        vendor_name='Marshall', name='Marshall DSL100HR 100-watt Tube Head',
+        manufacturer_id='Marshall',
+        description='100-watt Tube Guitar Amp Head with 2 Channels (Each with 2 Modes), High/Low Power Modes, Speaker-emulated Line Output, Digital Reverb, Effects Loop, and 2-button Footswitch',
+        model='Master', serial='MARSH103',
+        tech_specs='Type: Tube;Number of Channels:	2-channel (2 modes each);Total Power:	Total Power:	100W (50W power setting);Preamp Tubes:	4 x ECC83;Power Tubes:	4 x EL34;Reverb:	Classic, Ultra;EQ:	3-band EQ, Tone Shift, Resonance;Inputs:	1 x 1/4" (instrument), 1 x 1/8" (aux in);Outputs:	2 x 1/4" (4 ohm), 2 x 1/4" (8 ohm), 1 x 1/4" (16 ohm), 1 x 1/4" (Softube emulated out);Effects Loop:	Yes;MIDI I/O:	In;Footswitch I/O:	1 x 1/4" (channel, effects loop);Footswitch Included:	Yes, 2-button footswitch (optional 6-way sold separately);Power Source:	Standard IEC AC cable;Height:	10.7";Width:	29.1";Depth:	9.5";Weight:	53.3 lbs;Manufacturer Part Number:	M-DSL100HR-U;',
+        price=1199.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-a336985f030a8591__hmac-c45905268b7226fe113577b536470a527c72c9e6/images/items/350/DSL100HR.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-b00c56f5091e2056__hmac-d0b890d8eb7efbe59ff1f63ccd254d6a41e74a28/images/manufacturer-logos/marshall.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img302 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-634ee6d646d6a19a__hmac-33e2664aca9ecf79ff53a2b73b78eee51d0b8e22/images/items/750/DSL100HR-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img303 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e634fb1258a256a6__hmac-216017e18941098321987bef612f8acd6d9eb758/images/closeup/750-DSL100HR_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img304 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-574963ea601ab9fa__hmac-f893d2e1ec8f9f3cfca7b18e67076abe08ecd674/images/closeup/750-DSL100HR_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img305 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-595a3ca33cfa855b__hmac-87034807dc4634b66fc7ae9372f531f80e729c9f/images/closeup/750-DSL100HR_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img306 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5cc581e2dd210f17__hmac-6aef2fffee7c14fea91554d9049b2c25c19fea29/images/closeup/750-DSL100HR_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img307 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bee10747e8661bea__hmac-e89d9377593b15e6cc92b2e8050c06b4984580e8/images/closeup/750-DSL100HR_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item52.product_images = [img302, img303, img304, img305, img306, img307]
+
+    db.session.add_all([item52, img302, img303, img304, img305, img306, img307])
+    db.session.commit()
+
+#DSL100HR
+
+    item53 = Inventory(
+        category='Guitars',
+        vendor_name='Marshall', name='Marshall DSL100HR Bundle - Head and MX412AR Cabinet Bundle',
+        manufacturer_id='Marshall',
+        description='Bundle with DSL100HR Guitar Amp Head and MX412AR 4x12" Cabinet',
+        model='Master', serial='MARSH102',
+        tech_specs='NOPE',
+        price=1849.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-03420a62e49d4100__hmac-06e8ca1a6146a367275a59d5f5450ecd9f9aa915/images/items/350/DSL100HRSTK.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-b00c56f5091e2056__hmac-d0b890d8eb7efbe59ff1f63ccd254d6a41e74a28/images/manufacturer-logos/marshall.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img308 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-202a36eb14f55638__hmac-371dbf633d5ae13dccccbc8911d149aa1cb78656/images/items/750/DSL100HRSTK-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img309 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-456974aea391decf__hmac-9f418a4c6f52c16244fda61db1fbe6b60c35a311/images/closeup/750-DSL100HRSTK_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img310 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-c550bf8f22d2aab7__hmac-1c671840b6fb9753ac72c0bfe01e28de555ba391/images/closeup/750-DSL100HRSTK_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img311 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-85616edb3b05240c__hmac-972012b7075216b104edbe346776bc82627fd31b/images/closeup/750-DSL100HRSTK_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img312 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-beae3c4858ec80b0__hmac-d564ac255263f2b6d76e991199ccea0cdee06250/images/closeup/750-DSL100HRSTK_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img313 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-46377b0827581669__hmac-4e27592ccd59710cfa88cd3728988ce613274784/images/closeup/750-DSL100HRSTK_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img314 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f544735d3745ac1a__hmac-ac4a88563065b2eda91ed4f7e6c943ea83d2573d/images/closeup/750-DSL100HRSTK_detail6.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item53.product_images = [img308, img309, img310, img311, img312, img313, img314]
+
+    db.session.add_all([item53, img308, img309, img310, img311, img312, img313, img314])
+    db.session.commit()
+
+
+#DSL100HR
+
+    item54 = Inventory(
+        category='Guitars',
+        vendor_name='Marshall', name='Marshall SV212 Studio Vintage 140-watt 2x12" Vertical Extension Cabinet',
+        manufacturer_id='Marshall',
+        description='140-watt, 8-ohm, 2x12" Closed-back Extension Cabinet with Celestion G12 V-Type Speaker',
+        model='Master', serial='MARSH104',
+        tech_specs='Configuration:	2 x 12";Speakers:	Celestion G12 V-Type;Power Handling:	140W;Impedance:	8 ohms;Mono/Stereo:	Mono;Cabinet Type:	Slant;Open/Closed Back:	Closed;Inputs:	1 x 1/4";Construction Material:	Tolex covered plywood;Height:	29.5";Width:	20.9";Depth:	12.2";Weight:	52.6 lbs;Manufacturer Part Number:	M-SV212-U;',
+        price=1199.00,
+        preview='https://media.sweetwater.com/api/i/b-bonusbucks__w-300__h-300__bg-ffffff__q-85__f-webp__ha-f06a819d367029d2__hmac-04cf89060ee3d2380eb6423e790891a1a8ae02fe/images/items/350/SV212.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-b00c56f5091e2056__hmac-d0b890d8eb7efbe59ff1f63ccd254d6a41e74a28/images/manufacturer-logos/marshall.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img315 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-cc3eb2987db79dfc__hmac-6ec7063ee0c23320d926e728e1268de07ae107fc/images/items/750/SV212-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img316 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3bd2bca2d21af1cd__hmac-6afb6bf4bd9a1a1d92c5061d8b0f3c96efe1c06a/images/closeup/750-SV212_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img317 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-90a56faef4b3ca37__hmac-c1e9b0f8fb0680c4f2dfe4dc37312ab640d57d59/images/closeup/750-SV212_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img318 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f7e4904732159e8f__hmac-aed22a03f4a7712ea9692b747a404915baea7aaa/images/closeup/750-SV212_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img319 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a35255a92491e156__hmac-23d1dca811af2ca517702e412dd9614d5383baf1/images/closeup/750-SV212_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img320 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-23df2819ab109dba__hmac-e1c7b3963f1d0d8ad7f724f6c0b13476be3ec30d/images/closeup/750-SV212_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img321 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9d5473fe2bec37bd__hmac-e7b6f349ab5a4dc34f5bbf49e02bd5ebe764af45/images/closeup/750-SV212_detail6.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item54.product_images = [img315, img316, img317, img318, img319, img320, img321]
+
+    db.session.add_all([item54, img315, img316, img317, img318, img319, img320, img321])
+    db.session.commit()
+
+
+#DSL100HR
+
+    item55 = Inventory(
+        category='Guitars',
+        vendor_name='Marshall', name='Marshall JVM205H 50-watt 2-channel Tube Head',
+        manufacturer_id='Marshall',
+        description='50-watt All-tube Guitar Amp Head with 2 Channels, 3 Modes, Reverb, Effects Loops, MIDI switching, Line Out, and Programmable Footswitch',
+        model='Master', serial='MARSH105',
+        tech_specs='Type:	Tube;Number of Channels:	2;Total Power:	50W;Preamp Tubes:	4 x ECC83;Power Tubes:	1 x ECC83, 2 x EL34;Reverb:	Yes;EQ:	3-band EQ, Resonance, Presence;Inputs:	1 x 1/4" (instrument), 1 x 1/4" (power amp in);Outputs:	2 x 1/4" (4/8 ohms), 2 x 1/4" (8/16 ohms), 1 x 1/4" (16 ohms), 1 x 1/4" (preamp out), 1 x XLR (line out);Effects Loop:	Yes;MIDI I/O:	In/Thru;Footswitch I/O:	1 x 1/4" (clean/crunch, overdrive, master, reverb);Footswitch Included:	Yes, 4-button footswitch;Construction Material:	Black Tolex;Power Source:	Standard IEC AC cable;Height:	12.2";Width:	29.53";Depth:	8.46";Weight:	38.5 lbs;Manufacturer Part Number:	M-JVM205H-U;',
+        price=2349.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-95b83ec221502b38__hmac-fffda114f71c0de80c3fde1cbabc2f7f98372b45/images/items/350/JVM205H.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-b00c56f5091e2056__hmac-d0b890d8eb7efbe59ff1f63ccd254d6a41e74a28/images/manufacturer-logos/marshall.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img321 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-648ec0e4785ffb13__hmac-29026e6d142d10d8802f04ec0f7411b6bfa0864c/images/items/750/JVM205H-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img322 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f8d97065cdddd93a__hmac-1aaa9aec54d9345229a51ea27fdbb8722dd5daa9/images/closeup/750-JVM205H_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img323 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d213e390a68e65f4__hmac-41ec0b06df662307b5debd79e4c11a7c616966f9/images/closeup/750-JVM205H_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img324 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-01c0162e5f637df8__hmac-7a1d7e803ffd35c048477f7d8dfb80d6faf6169d/images/closeup/750-JVM205H_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img325 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9d6b5caffb9ca2a2__hmac-c152595cd4938dbb9cec160fafc5db82c1fbdfd9/images/closeup/750-JVM205H_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img326 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d5f3c8c4d2384394__hmac-f8f59c52a3662f5a78a82177fa1b1dd79327ca10/images/closeup/750-JVM205H_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item55.product_images = [img321, img322, img323, img324, img325, img326]
+
+    db.session.add_all([item55, img321, img322, img323, img324, img325, img326])
+    db.session.commit()
+
+
+#2555X Silver
+
+    item56 = Inventory(
+        category='Guitars',
+        vendor_name='Marshall', name='Marshall 2555X Silver Jubilee and 2551AV 4x12" Cab Half Stack Bundle',
+        manufacturer_id='Marshall',
+        description='Half-stack Bundle with 2555X Silver Jubilee Guitar Amp Head and 2551AV 4x12" Cabinet',
+        model='Master', serial='MARSH106',
+        tech_specs='NOPE',
+        price=3999.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-5a3c0ce5a9c6eb84__hmac-049d5366b6d392e92a58c9c9f6e5384fa5079f79/images/items/350/2555XAStack.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-b00c56f5091e2056__hmac-d0b890d8eb7efbe59ff1f63ccd254d6a41e74a28/images/manufacturer-logos/marshall.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img327 = ProductImages(
+      url='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-5a3c0ce5a9c6eb84__hmac-049d5366b6d392e92a58c9c9f6e5384fa5079f79/images/items/350/2555XAStack.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img328 = ProductImages(
+      url='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-5a3c0ce5a9c6eb84__hmac-049d5366b6d392e92a58c9c9f6e5384fa5079f79/images/items/350/2555XAStack.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img329 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-01274d45eb0c9196__hmac-3c410c0baddedbebb6f4d32b2348da3e471d47ee/images/items/750/2551AV-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img330 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-cb95bd7ff97c9378__hmac-ecb315589c117ca946b0814c41a93febf3d856d2/images/closeup/750-2555X_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img331 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-30f5a9337e610f97__hmac-a97bc884d3326404af8955f6e7effb464ea2c327/images/closeup/750-2551AV_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+
+    #Add to Join table
+    item56.product_images = [img327, img328, img329, img330, img331]
+
+    db.session.add_all([item56, img327, img328, img329, img330, img331])
+    db.session.commit()
+
+
+#ORI412B
+
+    item57 = Inventory(
+        category='Guitars',
+        vendor_name='Marshall', name='Marshall ORI412B Origin 240-watt 4x12" Straight Extension Cabinet',
+        manufacturer_id='Marshall',
+        description='240-watt, 4x12" Straight Closed-back Cabinet with Celestion Speakers',
+        model='Master', serial='MARSH107',
+        tech_specs='Configuration:	4 x 12";Speakers:	Celestion G12E-60;Power Handling:	240W;Impedance:	16 ohms;Mono/Stereo:	Mono;Cabinet Type:	Straight;Open/Closed Back:	Closed;Inputs:	1 x 1/4";Construction Material:	Black Tolex covered MDF;Height:	29.5";Width:	29.9";Depth:	14.1";Weight:	68.1 lbs;Manufacturer Part Number:	M-ORI412B-U;',
+        price=649.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-af097bd0f4bd535e__hmac-21280a3f70e3e32b0df668286dadacce03fd3577/images/items/350/ORI412B.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-b00c56f5091e2056__hmac-d0b890d8eb7efbe59ff1f63ccd254d6a41e74a28/images/manufacturer-logos/marshall.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img332 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-c34922b04c18ef39__hmac-c563317f24db407b52640054cd9a5c56f7651b56/images/items/750/ORI412B-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img333 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-69b6f85da16fb208__hmac-5e1a64a9cbc8d5a7c6d99f827ee606e14dc52a95/images/closeup/750-ORI412B_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img334 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-cb0fe93c0c0c6dff__hmac-ac74dd4d9d76e093c9a692784d24113af32bfb52/images/closeup/750-ORI412B_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img335 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a810ed93053318c4__hmac-5037a8cbac33a579458da632ba66fc683769e8c7/images/closeup/750-ORI412B_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img336 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0fdc731b3c89da11__hmac-e3755e43a9b2e66f6eb448d207aaab24dd3f9e77/images/closeup/750-ORI412B_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img337 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-01331b1f6645024c__hmac-ed7e1a88d1b88cc06a24847578cf68a9adff7d08/images/closeup/750-ORI412B_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item57.product_images = [img332, img333, img334, img335, img336, img337]
+
+    db.session.add_all([item57, img332, img333, img334, img335, img336, img337])
+    db.session.commit()
+
+
+#MX212R
+
+    item58 = Inventory(
+        category='Guitars',
+        vendor_name='Marshall', name='Marshall MX212R 160-watt 2x12" Horizontal Extension Cabinet',
+        manufacturer_id='Marshall',
+        description='160-watt 2x12" Extension Cabinet with Celestion Seventy 80 Speakers - 8 ohms',
+        model='Master', serial='MARSH108',
+        tech_specs='Configuration:	2 x 12";Speakers:	Celestion Seventy 80;Power Handling:	160W;Impedance:	8 ohms;Mono/Stereo:	Mono;Cabinet Type:	Straight;Open/Closed Back:	Closed;Inputs:	1 x 1/4";Construction Material:	MDF with Black Tolex;Height:	21.4";Width:	29.5";Depth:	12.5";Weight:	52 lbs;Manufacturer Part Number:	M-MX212R-U;',
+        price=539.00,
+        preview='https://media.sweetwater.com/api/i/b-pricedrop__w-300__h-300__bg-ffffff__q-85__f-webp__ha-76f30ca609b2b13a__hmac-9edbf886bb1eaccf76e36c7b2f4c8ce2b2d943df/images/items/350/MX212R.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-b00c56f5091e2056__hmac-d0b890d8eb7efbe59ff1f63ccd254d6a41e74a28/images/manufacturer-logos/marshall.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img338 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6ccdb9063dc3e575__hmac-bc355eba6c836b011d24fee089eb64a53bf5ae4b/images/items/750/MX212R-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img339 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-04d2638661a22634__hmac-99e70e27afa7d091d138305a2f11e6cbbcac27c2/images/closeup/750-MX212R_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img340 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bbed268f47d8b618__hmac-24bac6a4dfd762f8ffa6ae3894874f6375d0ae1d/images/closeup/750-MX212R_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img341 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-865c33807d738685__hmac-ff8230adaff9e31679440fa56b8260d9aa8f5e4d/images/closeup/750-MX212R_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img342 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-07dc45ee346382a6__hmac-cb79a025cc5562589c881e3526a91944fd1c812f/images/closeup/750-MX212R_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img343 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-78a61b04574e049c__hmac-8a3edf552ce0269b7611f95afcbe7dedaf7c1a89/images/closeup/750-MX212R_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img344 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-cbd00d21df012293__hmac-3f2e255e155d91f4a724126fa4d20c1653f704c8/images/closeup/750-MX212R_detail6.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item58.product_images = [img338, img339, img340, img341, img342, img343, img344]
+
+    db.session.add_all([item58, img338, img339, img340, img341, img342, img343, img344])
+    db.session.commit()
+
+
+#Blues Breaker
+
+    item59 = Inventory(
+        category='Guitars',
+        vendor_name='Marshall', name='Marshall 1962 Bluesbreaker 30-watt 2x12" Tube Combo Amp',
+        manufacturer_id='Marshall',
+        description='30-watt 1-channel 2x12" All-tube Guitar Combo Amplifier with Celestion G12M Greenback Speakers, and Footswitchable Tremolo - Black',
+        model='Master', serial='MARSH109',
+        tech_specs='Type:	Tube;Number of Channels:	1;Total Power:	30W;Speaker Size:	2 x 12" Celestion G12M Greenback;Preamp Tubes:	4 x ECC83;Power Tubes:	2 x 5881 (power), 1 x GZ34 (rectifier);Effects:	Tube-driven Tremolo;EQ:	3-band EQ;Inputs:	2 x 1/4" (high), 2 x 1/4" (low);Outputs:	2 x 1/4" (internal, 4/8/16 ohms);Footswitch I/O:	1 x 1/4" (tremolo);Footswitch Included:	Yes, 1-button footswitch;Construction Material:	Black Tolex;Power Source:	Standard IEC AC cable;Height:	24.02";Width:	29.13";Depth:	10.43";Weight:	66.58 lbs;Manufacturer Part Number:	M-1962-01-U;',
+        price=3949.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-94e5589300168bf3__hmac-ec7ace13694a08399a5f02c1780a31e00ea958a0/images/items/350/1962.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-b00c56f5091e2056__hmac-d0b890d8eb7efbe59ff1f63ccd254d6a41e74a28/images/manufacturer-logos/marshall.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img345 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f785336ba70fb61c__hmac-64969d7a451a64cb63c8de8b64d9e9cd6aceb113/images/items/750/1962-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img346 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-47562c42745bf364__hmac-a7517c93207ca1fcfaa742d92a78d476ee5226dd/images/closeup/750-1962_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img347 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b24554932dc90160__hmac-9a6f65b177a0fd30e6b25764dfc588321cef6bde/images/closeup/750-1962_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img348 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-953493a1a193854b__hmac-7a79ddbe1c8561a318739128707dd86830454895/images/closeup/750-1962_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img349 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f8bb560ee4d0ce51__hmac-53d6a9d09c5586bafccffbd7ade6b62b1cf38af0/images/closeup/750-1962_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img350 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-332f0c31c743664e__hmac-ad6c007be10e81caa02606421dca45cbbc02f34d/images/closeup/750-1962_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img351 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a95b1037f4b30346__hmac-a325d4d8606db7cdb35b76b6cc02f949bc36afc1/images/closeup/750-1962_detail6.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item59.product_images = [img345, img346, img347, img348, img349, img350, img351]
+
+    db.session.add_all([item59, img345, img346, img347, img348, img349, img350, img351])
+    db.session.commit()
+
+
+#ORI20H
+
+    item60 = Inventory(
+        category='Guitars',
+        vendor_name='Marshall', name='Marshall ORI20H Origin 20-watt Tube Head - Cream',
+        manufacturer_id='Marshall',
+        description='20-watt, 1-channel Guitar Amp Head with 3-band EQ, Tilt Control, Switchable Low/Mid/High Power Output, FX Loop, Gain Boost, and Footswitch - Cream',
+        model='Master', serial='MARSH110',
+        tech_specs='Type:	Tube;Number of Channels:	Single;Total Power:	20W Class AB (3W, 0.5W power settings);Preamp Tubes:	3 x ECC83;Power Tubes:	2 x EL34;EQ:	3-band EQ, Tilt control;Inputs:	1 x 1/4";Outputs:	1 x 1/4" (16 ohm), 2 x 1/4" (2 x 16 ohm / single 8 ohm), 1 x 1/4" (DI out);Effects Loop:	Yes;Footswitch I/O:	1 x 1/4" (gain boost, effects loop);Footswitch Included:	Yes, 2-button footswitch;Construction Material:	Cream Tolex;Power Source:	Standard IEC AC cable;Height:	8.8";Width:	20.4";Depth:	8.6";Weight:	20.7 lbs;Manufacturer Part Number:	M-ORI20HC-U;',
+        price=649.00,
+        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-0d7a9a1df8108a7e__hmac-f685845d3c7b20a357b1154ac5458dbbe990d93e/images/items/350/ORI20HC.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-b00c56f5091e2056__hmac-d0b890d8eb7efbe59ff1f63ccd254d6a41e74a28/images/manufacturer-logos/marshall.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img352 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-90784265f077fba6__hmac-1c63bb8fc121b087861de7a8cf3d7fd306419133/images/items/750/ORI20HC-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img353 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5a7e3deb9fb3c714__hmac-ee04a0655369ffa1f79ceaede45c34746b2e78ef/images/closeup/750-ORI20HC_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img354 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ee76961dab27a8e1__hmac-12b2c5446627c7a25e83201bfe3e24f1ebada542/images/closeup/750-ORI20HC_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img355 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e8bed435ffdd7cd2__hmac-584a00fac70995c17636360ed65ab07f577e99e8/images/closeup/750-ORI20HC_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img356 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-c2d0c80ee261027c__hmac-9473d3a21204f71d99a94ee3ce7dce0f01a5bd8e/images/closeup/750-ORI20HC_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img357 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b2d981ddfaa00d5a__hmac-afa1191c46dc4729950106428155bb879b98239a/images/closeup/750-ORI20HC_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item60.product_images = [img352, img353, img354, img355, img356, img357]
+
+    db.session.add_all([item60, img352, img353, img354, img355, img356, img357])
+    db.session.commit()
+
+
+############# BASS ############################################
+
+### Ernie Ball ################
+
+#KAIZEN-7
+
+    item61 = Inventory(
+        category='Bass',
+        vendor_name='Ernie Ball', name='Ernie Ball Music Man Kaizen 7-string Solidbody Bass Guitar - Apollo Black',
+        manufacturer_id='Ernie Ball',
+        description='7-string Solidbody Bass Guitar with Alder Body, Maple Neck, Ebony Fingerboard 2 Humbucking Pickups, and Multi-scale Tremolo Bridge - Apollo Black',
+        model='Master', serial='EBALL101',
+        tech_specs='GENERAL#Number of Strings: 7;Left-/Right-handed: Right-handed;BODY#Body Type: Solidbody;Body Shape: Kaizen;Body Material: Alder;Body Finish: Satin;Color: Apollo Black;NECK#Neck Material: Roasted Figured Maple;Neck Shape: Kaizen;Neck Joint: Bolt-on;Radius: Kaizen "Infinity Radius";Fingerboard Material: Ebony;Fingerboard Inlay: White Dots;Number of Frets: 24, Medium Jumbo, Stainless Steel;Scale Length: 24.75"-25.65" Multi-scale;Nut Width: 1.968";Nut Material: Melamine;HARDWARE#Bridge/Tailpiece: Music Man Custom multi-scale tremolo with cover;Tuners: Steinberger Locking Gearless;ELECTRONICS#Neck Pickup: Music Man Offset Mini Humbucker;Bridge Pickup: Music Man HT Humbucker;Controls: 1 x volume, 1 x tone;Switching: 3-way toggle pickup switch;MISCELLANEOUS#Strings: Ernie Ball Slinky, .010-.056;Case/Gig Bag: Mono Vertigo Bag;Manufacturer Part Number:	730-66-52-00-VB-BM;',
+        price=3999.00,
+        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-a95650686f76fdab__hmac-13a4a29732ff0758e44e2a0a7dfdaeb533191461/images/items/350/KaizenBk.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-234667cd8f50da38__hmac-5d9fceb353b8204895c0b6deb2c730fd5e480e43/images/manufacturer-logos/ernieballmusicman.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img358 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8db0db1de17b5179__hmac-b2eb9eb5f3dc93e00dc3bdf74333b2add90b1e3d/images/items/750/KaizenBk-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img359 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a21d6e46bccb9a17__hmac-ef4226f74795f2149b661f94c811fb3cd3a24684/images/closeup/750-KaizenBk_front.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img360 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-c6e0c80ef117e27a__hmac-85a1b9ae54e9ef28aca8254550c0f862751ee2dc/images/closeup/750-KaizenBk_angle.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img361 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0cb6e164bfa00186__hmac-3d5fe6e8629bf35b16189e719c010a29d803035b/images/closeup/750-KaizenBk_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img362 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8a04e4aba4211c32__hmac-42312f50f45f2818ccef8434772d7bedf4fd70fa/images/closeup/750-KaizenBk_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img363 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0a6914e232927fc0__hmac-a877a3943cdad69c17a719445a55cbb407fa3911/images/closeup/750-KaizenBk_backbody.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img364 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-97573f13a9d04f9d__hmac-de4c1634133dfbfdfa689818d4481cce216d8fdd/images/closeup/750-KaizenBk_back.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item61.product_images = [img358, img359, img360, img361, img362, img363, img364]
+
+    db.session.add_all([item61, img358, img359, img360, img361, img362, img363, img364])
+    db.session.commit()
+
+
+#JP15
+
+    item62 = Inventory(
+        category='Bass',
+        vendor_name='Ernie Ball', name='Ernie Ball Music Man JP15 Bass Guitar - Purple Nebula Flame',
+        manufacturer_id='Ernie Ball',
+        description='Solidbody Bass Guitar with Okoume Body, Maple Top, Maple Neck and Fingerboard, 2 Humbucking Pickups, and Vibrato Piezo Bridge - Purple Nebula Flame',
+        model='Master', serial='EBALL102',
+        tech_specs='GENERAL#Number of Strings: 6;Left-/Right-handed: Right-handed;BODY#Body Type: Solidbody;Body Shape: JP15;Body Material: Okoume;Top Material: Flamed Maple;Body Finish: High Gloss Polyester;Color: Purple Nebula Flame;NECK#Neck Material: Roasted Figured Maple;Neck Shape: 	Super Thin/Flat;Neck Joint: 5-way Bolt-on;Radius: 17";Fingerboard Material: Roasted Figured Maple;Fingerboard Inlay: JP Shields;Number of Frets: 24, Medium Jumbo, Stainless Steel;Scale Length: 25.5" Multi-scale;Nut Width: 1.6875";Nut Material: Melamine;HARDWARE#Bridge/Tailpiece: Music Man Custom Piezzo Floating Tremolo;Tuners: Schaller M6-IND Locking;ELECTRONICS#Neck Pickup: DiMarzio Illuminator Humbucker;Bridge Pickup: DiMarzio Illuminator Humbucker, Piezo Pickup;Controls: 	1 x volume (push/push gain boost), 1 x tone (push/push pickup config), 1 x Piezo volume, 2 x 1/4" (mono/stereo);Switching: 3-way toggle pickup switch, 3-way piezo/magnet toggle switch;MISCELLANEOUS#Strings: Ernie Ball Slinky, .010-.046;Case/Gig Bag: Softshell Case;Manufacturer Part Number: 661-JJF-10-00-MB-CR;',
+        price=3599.00,
+        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-550c6d92f868b7bd__hmac-b941e8b9d446d794e732980225e9c1924d0d6819/images/items/350/JP15PNF.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-234667cd8f50da38__hmac-5d9fceb353b8204895c0b6deb2c730fd5e480e43/images/manufacturer-logos/ernieballmusicman.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img365 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-610c8e0858353290__hmac-f2b6a57445cdde37d2867eaf8766f0c6a983ca08/images/items/750/JP15PNF-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img366 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9a9a9447ae8965fa__hmac-b9a34dfdd6d803843cdc04d843e0c4fbcbccc928/images/closeup/750-JP15PNF_front.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img367 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5e6743b9826b5da3__hmac-912e1a4beee02b2a536a02e5b7b47115c3163a3b/images/closeup/750-JP15PNF_back.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item62.product_images = [img365, img366, img367]
+
+    db.session.add_all([item62, img365, img366, img367])
+    db.session.commit()
+
+
+#DarkRay
+
+    item63 = Inventory(
+        category='Bass',
+        vendor_name='Ernie Ball', name='Ernie Ball Music Man DarkRay Bass Guitar - Starry Night with Ebony Fingerboard',
+        manufacturer_id='Ernie Ball',
+        description='4-string Electric Bass with Select Hardwood Body, Maple Neck, Ebony Fingerboard, 1 Humbucking Pickup, and Custom Darkglass Electronics - Starry Night',
+        model='Master', serial='EBALL103',
+        tech_specs='Number of Strings: 4;Left-/Right-handed: Right-handed;Body Shape:	DarkRay;Body Material: Select Hardwood;Body Finish:	High Gloss Polyester;Color:	Starry Night;Neck Material:	Roasted Maple;Neck Shape:	C;Neck Joint:	5-way Bolt-on;Radius:	11";Fingerboard Material:	Ebony;Fingerboard Inlay: Dots;Number of Frets: 22, High Wide Stainless Steel;Scale Length: 34";Nut Width:	1.6875";Nut Material:	Black Melamine;Bridge/Tailpiece: Vintage Music Man Top Load Steel Bridge with Vintage Black Plated Steel Saddles;Tuners: Custom Music Man with Clover buttons;Bridge Pickup: Single Neodymium Humbucker;Controls:	1 x volume, 1 x gain, 1 x blend, 2-band Active EQ;Switching: 3-way blade pickup switch;Strings:	Super Slinky Bass, .045-.100;Case/Gig Bag: Softshell Case;Manufacturer Part Number:	128-SN-50-01-MB-BM;',
+        price=2699.00,
+        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-37025c334ec945d8__hmac-abe3ce81de389b98e5f479bbd81641400f506cf4/images/items/350/DkRay4HStN.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-234667cd8f50da38__hmac-5d9fceb353b8204895c0b6deb2c730fd5e480e43/images/manufacturer-logos/ernieballmusicman.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img368 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3f9f780b6bc6108b__hmac-af55d3f14888318c583a29309bcda5ef4c283f68/images/items/750/DkRay4HStN-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img369 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8c65e420e6c38a71__hmac-5aa54bbd291e5e873b37a88552b8982ebefa28c8/images/closeup/750-DkRay4HStN_front.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img370 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f92080be456a5357__hmac-d1d10911e373446a0b8003f36b9cc4caf645cdf5/images/closeup/750-DkRay4HStN_angle.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img371 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bb5eda75f13f9b0a__hmac-5c681eafa79339c983ca710b08be7c067c9fbdf8/images/closeup/750-DkRay4HStN_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img372 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-360d789e2bfceeb1__hmac-76ccd44df7ccfe8e187ecba572b7dc48ca68ea70/images/closeup/750-DkRay4HStN_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img373 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8f14d74ea31112de__hmac-8c6b8e3b53ae7d86506d0026865d52276548346c/images/closeup/750-DkRay4HStN_backbody.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img374 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-c557305ebf00647b__hmac-902b9f15d6d53e209ba73355561a53de2fd00cbc/images/closeup/750-DkRay4HStN_back.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item63.product_images = [img368, img369, img370, img371, img372, img373, img374]
+
+    db.session.add_all([item63, img368, img369, img370, img371, img372, img373, img374])
+    db.session.commit()
+
+#StingRay
+
+    item64 = Inventory(
+        category='Bass',
+        vendor_name='Ernie Ball', name='Ernie Ball Music Man Ball Family Reserve StingRay Bass Guitar - Plum Crazy',
+        manufacturer_id='Ernie Ball',
+        description='Solidbody Bass Guitar with Alder Body, Maple Neck, Ebony Fingerboard, and Two Humbucking Pickups - Plum Crazy',
+        model='Master', serial='EBALL104',
+        tech_specs='Number of Strings: 4;Left-/Right-handed: Right-handed;Body Shape:	DarkRay;Body Material: Select Hardwood;Body Finish:	High Gloss Polyester;Color:	Starry Night;Neck Material:	Roasted Maple;Neck Shape:	C;Neck Joint:	5-way Bolt-on;Radius:	11";Fingerboard Material:	Ebony;Fingerboard Inlay: Dots;Number of Frets: 22, High Wide Stainless Steel;Scale Length: 34";Nut Width:	1.6875";Nut Material:	Black Melamine;Bridge/Tailpiece: Vintage Music Man Top Load Steel Bridge with Vintage Black Plated Steel Saddles;Tuners: Custom Music Man with Clover buttons;Bridge Pickup: Single Neodymium Humbucker;Controls:	1 x volume, 1 x gain, 1 x blend, 2-band Active EQ;Switching: 3-way blade pickup switch;Strings:	Super Slinky Bass, .045-.100;Case/Gig Bag: Softshell Case;Manufacturer Part Number:	128-SN-50-01-MB-BM;',
+        price=3299.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-62769b0c333ba23b__hmac-0e53eff2f80fd90a344fa9762db3ca1f02034658/images/items/350/StRayHTBFRPC.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-234667cd8f50da38__hmac-5d9fceb353b8204895c0b6deb2c730fd5e480e43/images/manufacturer-logos/ernieballmusicman.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img375 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-872d9b6fc122fded__hmac-81c9846d00428f1126ab66da0cfcd5044ebca363/images/items/750/StRayHTBFRPC-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img376 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b5925cebc27032b8__hmac-fbf9592fb905e7d0c784e277d0764c3407450ca8/images/closeup/750-StRayHTBFRPC_front.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img377 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8638afd7f8758c73__hmac-fe484fe88601bed77fc3b60c2a1c403fd35121dc/images/closeup/750-StRayHTBFRPC_angle.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img378 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2fd957fa68221dd8__hmac-90db0cb513f7ea8b433d970cd9fb94b9946fd3b8/images/closeup/750-StRayHTBFRPC_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img379 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b376da5aeef6ac80__hmac-3b8826fdc52b4456f31f90e82dcc0be27b9bcb82/images/closeup/750-StRayHTBFRPC_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img380 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8336cdc485bb693a__hmac-75fb9d058e57e5cb0b8084e3b5e68eb5b9033d6a/images/closeup/750-StRayHTBFRPC_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img381 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-dee76541095b4b87__hmac-5b4f21a779a91c7041b93b6ab256e71cffa0489a/images/closeup/750-StRayHTBFRPC_backbody.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item64.product_images = [img375, img376, img377, img378, img379, img380, img381]
+
+    db.session.add_all([item64, img375, img376, img377, img378, img379, img380, img381])
+    db.session.commit()
+
+
+#StingRay Special
+
+    item65 = Inventory(
+        category='Bass',
+        vendor_name='Ernie Ball', name='Ernie Ball Music Man StingRay Special HH Bass Guitar - Speed Blue with Rosewood Fingerboard',
+        manufacturer_id='Ernie Ball',
+        description='4-string Electric Bass with Select Hardwood Body, Maple Neck, Rosewood Fingerboard, and 2 Humbucking Pickups - Speed Blue',
+        model='Master', serial='EBALL105',
+        tech_specs='Number of Strings: 4;Left-/Right-handed: Right-handed;Body Shape:	StingRay Special;Body Material: Select Hardwood;Body Finish: Gloss;Color: Speed Blue;Neck Material:	Select Roasted Maple;Neck Joint:	5-way Bolt-on;Radius:	11";Fingerboard Material:	Rosewood;Fingerboard Inlay: White Dots;Number of Frets: 22, High Wide;Scale Length: 34";Nut Width:	1.6875";Nut Material:	Melamine;Bridge/Tailpiece: Vintage Music Man Top Load Steel Bridge with Vintage Black Plated Steel Saddles;Tuners: Custom Music Man;Neck Pickup: Music Man Neodymium Humbucker;Bridge Pickup:	Music Man Neodymium Humbucker;Controls: 1 x master volume, 3-band Active EQ;Switching: 3-way blade pickup switch;Strings:	Super Slinky Bass, .045-.100;Case/Gig Bag: Softshell Case;Manufacturer Part Number:	108-DS-20-05-MB-BM;',
+        price=2499.00,
+        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-04ae2166877653c1__hmac-d21b52f6a9a06deeac98619c6fe941d02e8be3a4/images/items/350/SRaySp4HHSB.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-234667cd8f50da38__hmac-5d9fceb353b8204895c0b6deb2c730fd5e480e43/images/manufacturer-logos/ernieballmusicman.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img382 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5c38058d816377c5__hmac-e2b027b4b4c778a0d32904914c6806c2aa0fb2fa/images/items/750/SRaySp4HHSB-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img383 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-57abda40aa26ca3a__hmac-6c529d996aad54506a750ff9d9d09d435e162a41/images/closeup/750-SRaySp4HHSB_front.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img384 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2921fc84d2cab37a__hmac-800a2653be9f460901f1751ba1e5ccbdfce032f0/images/closeup/750-SRaySp4HHSB_angle.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img385 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ca02fb2cd8361303__hmac-a666191dc6068c83ba6937d549a80efb949604f7/images/closeup/750-SRaySp4HHSB_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img386 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7152fc8af2ba1c30__hmac-598849a04c5b4dafe9426b17a90216a15ec47e76/images/closeup/750-SRaySp4HHSB_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img387 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ee271b15de8b05b3__hmac-a5c26e1fee9f03159c2ffcab8c7031a27bb0e151/images/closeup/750-SRaySp4HHSB_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img388 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-15239b29e464d60a__hmac-9057fe0404494d1ddcd580c640256af7c66b5ce6/images/closeup/750-SRaySp4HHSB_backbody.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item65.product_images = [img382, img383, img384, img385, img386, img387, img388]
+
+    db.session.add_all([item65, img382, img383, img384, img385, img386, img387, img388])
+    db.session.commit()
+
+
+
+#Bongo 5
+
+    item66 = Inventory(
+        category='Bass',
+        vendor_name='Ernie Ball', name='Ernie Ball Music Man Bongo 5 Bass Guitar - Pacific Blue Sparkle, Sweetwater Exclusive',
+        manufacturer_id='Ernie Ball',
+        description='5-string Electric Bass with Basswood Body, Maple Neck, Ebony Fingerboard, and 2 Humbucking Pickups - Pacific Blue Sparkle',
+        model='Master', serial='EBALL106',
+        tech_specs='Number of Strings: 5;Left-/Right-handed: Right-handed;Body Shape:	Bongo 5;Body Material: Basswood;Body Finish: High Gloss Polyester;Color: Pacific Blue Sparkle;Neck Material: Select Maple;Neck Joint:	5-way Bolt-on;Radius:	11";Fingerboard Material:	Ebony;Fingerboard Inlay: Custom Half Moons;Number of Frets:	24, High Wide;Scale Length:	34";Nut Width: 1.75";Nut Material: Melamine;Bridge/Tailpiece:	Music Man Hardened Steel;Tuners: Custom Music Man Open Gear;Neck Pickup: Music Man Neodymium Humbucker;Bridge Pickup:	Music Man Neodymium Humbucker;Controls:	1 x master volume, 1 x pickup balancer, 1 x stacked bass/treble, 1 x stacked low-mid/high-mid;Strings: Super Slinky Bass, .045-.130;Case/Gig Bag:	Softshell Case;Manufacturer Part Number: 162-S01-24-01-MB-CR;',
+        price=2999.00,
+        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-0984880112d074c0__hmac-0c50320861d835f666b7ef5af91906c5fb3ffafe/images/items/350/Bongo5HHPBSp.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-234667cd8f50da38__hmac-5d9fceb353b8204895c0b6deb2c730fd5e480e43/images/manufacturer-logos/ernieballmusicman.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img388 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5f7a6f01a02faef7__hmac-064d8b1b6cc70bbc80d19fb012d442402dce38e1/images/items/750/Bongo5HHPBSp-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img389 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-aa19126275fdcd5c__hmac-55fd9c08acfdb0d86e32de2aa7a57da59d1249b8/images/closeup/750-Bongo5HHPBSp_front.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img390 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e08f2aed097a6fc3__hmac-2dd52debb3b1c69bfbe548cab6dbf38bb55e4631/images/closeup/750-Bongo5HHPBSp_angle.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img391 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-49f24e21a4987cac__hmac-083755c1c09f0a0ea56e7ea88d45cd701f85142a/images/closeup/750-Bongo5HHPBSp_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img392 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bda9a1b312d467af__hmac-80578eeb92a0a1d7f784149b55038582a98a21a1/images/closeup/750-Bongo5HHPBSp_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img393 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d534a8252be1faf0__hmac-bc23de05eb2cfb9d46cbdad5d462012b3d8914c3/images/closeup/750-Bongo5HHPBSp_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img394 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5e721d8b33551bc2__hmac-d71e88c516a3121bd61a04f57a32ca5137c288c0/images/closeup/750-Bongo5HHPBSp_backbody.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item66.product_images = [img388, img389, img390, img391, img392, img393, img394]
+
+    db.session.add_all([item66, img388, img389, img390, img391, img392, img393, img394])
+    db.session.commit()
+
+
+#StingRay Special Bass Black Maple
+
+    item67 = Inventory(
+        category='Bass',
+        vendor_name='Ernie Ball', name='Ernie Ball Music Man StingRay Special 5 Bass Guitar - Black with Maple Fingerboard',
+        manufacturer_id='Ernie Ball',
+        description='5-string Electric Bass with Select Hardwood Body, Maple Neck and Fingerboard, and 1 Humbucking Pickup - Black',
+        model='Master', serial='EBALL107',
+        tech_specs='Number of Strings: 5;Left-/Right-handed: Right-handed;Body Shape:	StingRay Special;Body Material:	Select Hardwoods;Body Finish:	Gloss;Color: Black;Neck Material:	Select Roasted Maple;Neck Joint: 5-way Bolt-on;Radius: 11";Fingerboard Material: Maple;Fingerboard Inlay:	Black Dots;Number of Frets:	22, High Wide;Scale Length:	34";Nut Width: 1.75";Nut Material: Melamine;Bridge/Tailpiece:	Vintage Music Man Topload Steel Bridge with Vintage Nickel Plated Steel Saddles;Tuners:	Custom Music Man;Bridge Pickup:	Music Man Neodymium Humbucker;Controls:	1 x master volume, 3-band Active EQ;Switching: 3-way blade pickup switch;Strings:	Super Slinky Bass, .045-.130;Case/Gig Bag: Softshell Case;Manufacturer Part Number:	207-01-10-01-MB-BM;',
+        price=2499.00,
+        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-d5ea8dc0c406de2e__hmac-fdfc427a81e34b62850f63f59217a1125f1d0dd3/images/items/350/SRaySp5HBk.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-234667cd8f50da38__hmac-5d9fceb353b8204895c0b6deb2c730fd5e480e43/images/manufacturer-logos/ernieballmusicman.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img396 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-97974f052cb9eabf__hmac-89975136babdec50bc7c981c1af450f858444a95/images/items/750/SRaySp5HBk-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img397 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6d5f4d3cc66f4682__hmac-fb639e0720a334e8044d57b43c53d5f3e983def6/images/closeup/750-SRaySp5HBk_front.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img398 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-c53066ed08123b96__hmac-6b32933b7160ad604b75c485f927004ea648e211/images/closeup/750-SRaySp5HBk_angle.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img399 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e0b897b52df3271e__hmac-9f863c95dacdc2bdaca0b4f7291d38b60a913adb/images/closeup/750-SRaySp5HBk_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img400 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-541c375d14ef6304__hmac-28ec87975409145bda5570fe119fa933d5b51ecf/images/closeup/750-SRaySp5HBk_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img401 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-bb11296193919629__hmac-ece3940d603ad98ee9bd950844984513e8a2b1c8/images/closeup/750-SRaySp5HBk_backbody.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img402 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2f57e06ac6249462__hmac-f28ce4b9a5c3c2547106d4d002f5550c3862a531/images/closeup/750-SRaySp5HBk_back.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item67.product_images = [img396, img397, img398, img399, img400, img401, img402]
+
+    db.session.add_all([item67, img396, img397, img398, img399, img400, img401, img402])
+    db.session.commit()
+
+
+#Bongo 4
+
+    item68 = Inventory(
+        category='Bass',
+        vendor_name='Ernie Ball', name='Ernie Ball Music Man Bongo 4 Bass Guitar - Harvest Orange',
+        manufacturer_id='Ernie Ball',
+        description='4-string Electric Bass with Basswood Body, Maple Neck, Ebony Fretboard, and 2 Humbucking Pickups - Harvest Orange',
+        model='Master', serial='EBALL108',
+        tech_specs='Number of Strings: 5;Left-/Right-handed: Right-handed;Body Shape:	Bongo;Body Material: Basswood;Body Finish: High Gloss Polyester;Color: Harest Orange;Neck Material:	Maple;Neck Joint: 5-way Bolt-on;Radius: 11";Fingerboard Material: Ebony;Fingerboard Inlay: Custom Half-moons;Number of Frets:	24, High Wide;Scale Length:	34";Nut Width: 1.65";Nut Material: Melamine;Bridge/Tailpiece: Standard Music Man Chrome Steel Bridge plate with Stainless Steel Saddles;Tuners:	Custom Music Man;Bridge Pickup:	Music Man Neodymium Humbucker;Controls:	1 x master volulme, 1 x balance, 4-band Stacked Active EQ;Switching: 3-way blade pickup switch;Strings:	Super Slinky Bass, .045-.100;Case/Gig Bag: Softshell Case;Manufacturer Part Number:	142-HW-52-01-MB-BM;',
+        price=2799.00,
+        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-b06820a6a762f71e__hmac-ca10156f5e33d01f47136af58308618dfcb75114/images/items/350/Bongo4HHHO.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-234667cd8f50da38__hmac-5d9fceb353b8204895c0b6deb2c730fd5e480e43/images/manufacturer-logos/ernieballmusicman.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img403 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-c27dc0b312dd37ee__hmac-e3d0ea57d90fb2c35f31a755ce0663806beed40c/images/items/750/Bongo4HHHO-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img404 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-627f7ea14a9f1978__hmac-8d8437388bd74d1e367ea5bc85acecefb0b864c7/images/closeup/750-Bongo4HHHO_front.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img405 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f676209d6a7a4410__hmac-a535e8022178804a493544ddd97fb1bad19ca3a6/images/closeup/750-Bongo4HHHO_angle.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img406 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2e40017c5075ae4f__hmac-2efe5988b09cdb28a4067c347598324ed35c6757/images/closeup/750-Bongo4HHHO_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img407 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-58b660d64cc456dd__hmac-277d1409f318f5c4e1552980cc672e12a903cbfd/images/closeup/750-Bongo4HHHO_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img408 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2ded9b95b7cf706a__hmac-31b8e9fda4571fa93957c2254cb379d53ca12df7/images/closeup/750-Bongo4HHHO_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img409 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-885d034468d8a86a__hmac-fb2af887defc62d79051488ec9b9b998ba55355b/images/closeup/750-Bongo4HHHO_backbody.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item68.product_images = [img403, img404, img405, img406, img407, img408, img409]
+
+    db.session.add_all([item68, img403, img404, img405, img406, img407, img408, img409])
+    db.session.commit()
+
+
+#Special 5 Snowy Night
+
+    item69 = Inventory(
+        category='Bass',
+        vendor_name='Ernie Ball', name='Ernie Ball Music Man StingRay Special 5 Bass Guitar - Snowy Night with Maple Fingerboard',
+        manufacturer_id='Ernie Ball',
+        description='5-string Electric Bass with Select Hardwood Body, Maple Neck and Fingerboard, and 1 Humbucking Pickup - Snowy Night',
+        model='Master', serial='EBALL109',
+        tech_specs='Number of Strings: 5;Left-/Right-handed: Right-handed;Body Shape:	StingRay Special;Body Material: Select Hardwoods;Body Finish: Gloss;Color: Snowy Night;Neck Material:	Select Roasted Maple;Neck Joint: 5-way Bolt-on;Radius: 11";Fingerboard Material: Maple;Fingerboard Inlay: Black Dots;Number of Frets:	22, High Wide;Scale Length:	34";Nut Width: 1.75";Nut Material: Melamine;Bridge/Tailpiece: Vintage Music Man Topload Steel Bridge with Vintage Nickel Plated Steel Saddles;Tuners:	Custom Music Man;Bridge Pickup:	Music Man Neodymium Humbucker;Controls:	1 x master volulme, 1 x balance, 4-band Stacked Active EQ;Switching: 3-way blade pickup switch;Strings:	Super Slinky Bass, .045-.130;Case/Gig Bag: Softshell Case;Manufacturer Part Number:	207-WT-11-W2-MB-CR;',
+        price=2699.00,
+        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-8ca90ebdcf1c7bed__hmac-dabdf050d315722de55909c1fc1d1152bda79462/images/items/350/SRaySp5HSN.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-234667cd8f50da38__hmac-5d9fceb353b8204895c0b6deb2c730fd5e480e43/images/manufacturer-logos/ernieballmusicman.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img410 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-71e68522441ca191__hmac-9e4148a263b146bb7ed74a77a9ae6e6fdfedf7a2/images/guitars/SRaySp5HSN/F82445/F82445-body-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img411 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b2984b49d71cb0bd__hmac-9a70b9fdfb97fd73ec98b45e929ad7e241db57df/images/guitars/SRaySp5HSN/F82445/F82445-front-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img412 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-fef1e63b0aeaf6fc__hmac-629ec19c78716ba481d93555adb922c06f5d319d/images/guitars/SRaySp5HSN/F82445/F82445-angle-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img413 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5b10e2177e294b33__hmac-03eba92a81265b2b97cdf36c626808863de5dc06/images/guitars/SRaySp5HSN/F82445/F82445-detail1-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img414 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-28c27ea793e2db0b__hmac-773a4ed35c63079957e67559c138b211038c91ee/images/guitars/SRaySp5HSN/F82445/F82445-detail2-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img415 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7bf463bcb04b54db__hmac-56f25a7f9d063240d0839ac2a15470bdc3286df6/images/guitars/SRaySp5HSN/F82445/F82445-detail3-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img416 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d4068338771c98d0__hmac-39a863e01784cc8511e1815bd2c6bddc6a90d41e/images/guitars/SRaySp5HSN/F82445/F82445-backbody-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img417 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3c6352e8f908339f__hmac-8470339872d1e69f767f4f6fb0dfb3dc32f53fd8/images/guitars/SRaySp5HSN/F82445/F82445-back-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img418 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-77afd892c8618e74__hmac-6de36b9f8035352ff2999f91e72f9d0947d1d60b/images/guitars/SRaySp5HSN/F82445/F82445-serial-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img419 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8c99f70781773860__hmac-3ff08046e01282261e85747140ff88d8b662a632/images/guitars/SRaySp5HSN/F82445/F82445-case-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item69.product_images = [img411, img412, img413, img406, img414, img415, img416, img417, img418, img419]
+
+    db.session.add_all([item69, img411, img412, img413, img406, img414, img415, img416, img417, img418, img419])
+    db.session.commit()
+
+
+#Special 5 Burnt Ends
+
+    item70 = Inventory(
+        category='Bass',
+        vendor_name='Ernie Ball', name='Ernie Ball Music Man StingRay Special 5 HH Bass Guitar - Burnt Ends with Rosewood Fingerboard',
+        manufacturer_id='Ernie Ball',
+        description='5-string Electric Bass with Select Hardwood Body, Maple Neck, Rosewood Fingerboard, and 2 Humbucking Pickups - Burnt Ends',
+        model='Master', serial='EBALL110',
+        tech_specs='Number of Strings: 5;Left-/Right-handed: Right-handed;Body Shape:	StingRay Special;Body Material: Select Hardwoods;Body Finish: Gloss;Color: Burnt Ends;Neck Material:	Select Roasted Maple;Neck Joint: 5-way Bolt-on;Radius: 11";Fingerboard Material: Rosewood;Fingerboard Inlay: White Dots;Number of Frets:	22, High Wide;Scale Length:	34";Nut Width: 1.75";Nut Material: Melamine;Bridge/Tailpiece: Vintage Music Man Topload Steel Bridge with Vintage Nickel Plated Steel Saddles;Tuners:	Custom Music Man;Neck Pickup:	Music Man Neodymium Humbucker;Bridge Pickup:	Music Man Neodymium Humbucker;Controls:	1 x master volulme, 1 x balance, 4-band Stacked Active EQ;Switching: 5-way blade pickup switch;Strings:	Super Slinky Bass, .045-.130;Case/Gig Bag: Softshell Case;Manufacturer Part Number:	208-HA-20-03-MB-CR;',
+        price=2599.00,
+        preview='https://media.sweetwater.com/api/i/b-new__w-300__h-300__bg-ffffff__q-85__f-webp__ha-231a3775bcdbf8f5__hmac-84cf0ddd65e9db61b7957e707b85190f75f41fee/images/items/350/SRaySp5HHBE.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-234667cd8f50da38__hmac-5d9fceb353b8204895c0b6deb2c730fd5e480e43/images/manufacturer-logos/ernieballmusicman.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img420 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-edcd4eaf7a6583a7__hmac-f21988cb6e04ecedf3cba3e4789d190b11e734a5/images/items/750/SRaySp5HHBE-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img421 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3b8c6b45f9f72519__hmac-39dd1f304cbdcc10a5b4941952cfeafbde30d7ee/images/closeup/750-SRaySp5HHBE_front.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img422 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6352fa2e7e62216a__hmac-7565877d020ef6e79957455d14c3648a2fb87685/images/closeup/750-SRaySp5HHBE_angle.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img423 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1e7ba468137a53c6__hmac-db2d86ee2f78f34546886e82c51103e16ee04800/images/closeup/750-SRaySp5HHBE_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img424 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9092f242f2f7e8de__hmac-2fdf8d64f2f2ed3dad2000e261f11731de306fd3/images/closeup/750-SRaySp5HHBE_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img425 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-95ee9ee012cf5cd4__hmac-b9e2fead3753158e7229f7fc236e79a22cb685eb/images/closeup/750-SRaySp5HHBE_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img426 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-95e9ccff21ecf628__hmac-df402dc7250080b35e9be8cdb9495cd5462310a1/images/closeup/750-SRaySp5HHBE_backbody.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item70.product_images = [img420, img421, img422, img423, img424, img425, img426]
+
+    db.session.add_all([item70, img420, img421, img422, img423, img424, img425, img426])
+    db.session.commit()
+
+
+##### AMPEG ##########
+
+#SVT300
+
+    item71 = Inventory(
+        category='Bass',
+        vendor_name='Ampeg', name='Ampeg Heritage 50th Anniversary SVT 300-watt Tube Bass Head',
+        manufacturer_id='Ampeg',
+        description='Special Edition 300-watt Tube Bass Head with 6550 Output Tubes, XLR DI out, SpeakOn Outputs, User Biasing, and Spring-loaded Side Handles',
+        model='Master', serial='AMP101',
+        tech_specs='Type:	Tube;Number of Channels: 2;Total Power:	300W;EQ:	3-band EQ, 2-band EQ, Ultra Lo/Hi Boosts;Preamp Tubes: 6 x 12AX7, 2 x 12AU7;Power Tubes:	6 x 6550;Inputs: 2 x 1/4" (bright), 2 x 1/4" (normal), 1 x 1/4" (power amp in);Outputs:	1 x SpeakON, 1 x XLR (direct out), 2 x 1/4" (speaker), 1 x 1/4" (slave);Effects Loop:	Yes;Cooling System:	Internal Fan, Rear Air Vent;Power Source:	Standard IEC AC cable;Height:	11.5";Width: 24";Depth:	12.75";Weight: 85 lbs;Manufacturer Part Number:	99-026-1205;',
+        price=2999.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-ef233c20cb1f2ef0__hmac-abe73cb7bf774157b9cd2e97e742b3760a883be8/images/items/350/SVTH50thAnn.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-4462d561c66e980b__hmac-401c927164efb5d878382056360a1c509e0ae58c/images/manufacturer-logos/ampeg.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img427 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ea1575425fac1cdf__hmac-8dac64a9ec8059d6d6177f62fece70804fe9cd4c/images/items/750/SVTH50thAnn-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img428 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-574284d52799c1a7__hmac-45cca406afc891f3f2f4ebbb5f095d6e4b258dc5/images/closeup/750-SVTH50thAnn_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img429 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d3173b84556722a4__hmac-d701ca04614480303cbbfd32ab4dd7c1e6dc4619/images/closeup/750-SVTH50thAnn_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img430 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-feebac76cf4b40df__hmac-79b6e5f1b01741c89be39286cd48c9f05ced25f9/images/closeup/750-SVTH50thAnn_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img431 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e528f9ce78bdbd26__hmac-26ab9aa4a0376f4b9e6f9c62491e50d3743ff3a8/images/closeup/750-SVTH50thAnn_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img432 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3cc97bed681a8fe0__hmac-7139dc362316c7c1395da965b63b91396abfec51/images/closeup/750-SVTH50thAnn_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img433 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-35a6602328c4a4b5__hmac-d865a778cb76b79f27863a74a7bb33b96e3ddae4/images/closeup/750-SVTH50thAnn_detail6.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item71.product_images = [img427, img428, img429, img430, img431, img432, img433]
+
+    db.session.add_all([item71, img427, img428, img429, img430, img431, img432, img433])
+    db.session.commit()
+
+#RB-210
+
+    item72 = Inventory(
+        category='Bass',
+        vendor_name='Ampeg', name='Ampeg Rocket Bass RB-210 2x10" 500-watt Bass Combo Amp',
+        manufacturer_id='Ampeg',
+        description='500W 2 x 10" Bass Combo Amp with High-frequency Horn, 3-band EQ, 1/8" Aux Input, 1/8" Headphone Output, 0dB and -15dB 1/4" Inputs, XLR Balanced Output, and 1/4" External Speaker Output',
+        model='Master', serial='AMP102',
+        tech_specs='Type:	Solid State;Number of Channels:	Single;Total Power:	500W;Speakers: 2 x 10", 1 x HF horn (defeatable);EQ: 3-band EQ;Inputs: 2 x 1/4" (-15dB/dB), 1 x 1/8" (aux);Outputs:	1 x 1/4" (speaker), 1 x XLR;Headphones:	1 x 1/8";Effects Loop: Yes;Footswitch I/O: 1 x 1/4" (SGT);Footswitch Included: No;Power Source:	Standard IEC AC cable;Height:	20.2";Width: 25.8";Depth:	13.9";Weight:	39 lbs;Manufacturer Part Number: 99-015-1945;',
+        price=629.00,
+        preview='https://media.sweetwater.com/api/i/b-pricedrop__w-300__h-300__bg-ffffff__q-85__f-webp__ha-07f9c2e9d1d24764__hmac-2b34d5f97547c24135b967dc63efa2ff238193fc/images/items/350/RocketB210.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-4462d561c66e980b__hmac-401c927164efb5d878382056360a1c509e0ae58c/images/manufacturer-logos/ampeg.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img427 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-97de3cb4856a195c__hmac-f77c1091cbf7c716e44fe0743acac8e7d10c4213/images/items/750/RocketB210-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img428 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-116692618633d1a3__hmac-22048d1131f9e5b57dd97d0d97fb5627b0f5ff2e/images/closeup/750-RocketB210_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img429 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1582c88c4772a0f6__hmac-8e1733568e98ea35c4fb8289ffcf7233f87482b2/images/closeup/750-RocketB210_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img430 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a617aada6619fbe3__hmac-7387d8658d6e1fba3647a9828fd429fe627254a4/images/closeup/750-RocketB210_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img431 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3473d1f9e1df0012__hmac-886f1e17bf58c76036dc3ac29588359f09334696/images/closeup/750-RocketB210_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img432 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-21cbe4b0e826eb98__hmac-8c6546fa06d4a59ce3d82818f4bf30bc681b2b8e/images/closeup/750-RocketB210_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img433 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-df76abb8ce842733__hmac-f55cafbbd4c872c1774273fbab76a69474c9ed24/images/closeup/750-RocketB210_detail5_iso.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item72.product_images = [img427, img428, img429, img430, img431, img432, img433]
+
+    db.session.add_all([item72, img427, img428, img429, img430, img431, img432, img433])
+    db.session.commit()
+
+
+
+#PF-500
+
+    item73 = Inventory(
+        category='Bass',
+        vendor_name='Ampeg', name='Ampeg PF-500 500-watt Portaflex Bass Head',
+        manufacturer_id='Ampeg',
+        description='Compact 500W Bass Amplifier Head, 3-band EQ, Mid-tone Presets, Lo/Hi Boosts, Compressor',
+        model='Master', serial='AMP101',
+        tech_specs='Type:	Solid State;Number of Channels:	1;Total Power:	500W, 4 ohms, Class D;Compression: Yes;EQ:	3-band (5-position Midrange), Ultra Lo/Hi Boosts;Inputs: 2 x 1/4" (instrument, power amp), 1 x 1/8" (aux);Outputs: 2 x 1/4" (pre amp, tuner), 1 x Speakon, 1 x XLR (DI);Headphones:	1 x 1/8";Effects Loop: Yes;Footswitch I/O: 1 x 1/4" (FX loop);Footswitch Included: No;Cooling System:	Heatsink, Rear/Side Air Vents;Power Source:	Standard IEC AC cable;Height:	3";Width:	14";Depth: 11";Weight: 11 lbs;Manufacturer Part Number:	99-025-0605;',
+        price=479.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-b31c81531de054d5__hmac-d1062f79890b49d1fa6b5e2854527eb11190cc1d/images/items/350/PF500BH.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-4462d561c66e980b__hmac-401c927164efb5d878382056360a1c509e0ae58c/images/manufacturer-logos/ampeg.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img434 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ce740293e0e62014__hmac-a0efc6a4d79ec103d7bf9bf4183531a4e4b923ad/images/items/750/PF500BH-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img435 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e8643ba927efbcbc__hmac-8305543743fff203cb1df290c37ce8df8120c3be/images/closeup/750-PF500BH_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img436 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e3d20ed97e1fd246__hmac-ec5c7acc403e8d032d7897c2617c42b44715d5d1/images/closeup/750-PF500BH_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img437 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-daa94e0362e2b4ee__hmac-a9e447acab5e9216d26cf7444a958130629be3fe/images/closeup/750-PF500BH_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img438 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f5d2d289657ddcf3__hmac-bb51203c80605fac270560992828f2163ccae147/images/closeup/750-PF500BH_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img439 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f829c20cbf5d616b__hmac-f53a1f60bb106ba306cd7cf44f07c3a47c165ab4/images/closeup/750-PF500BH_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item73.product_images = [img434, img435, img436, img437, img438, img439]
+
+    db.session.add_all([item73, img434, img435, img436, img437, img438, img439])
+    db.session.commit()
+
+
+
+#Special 5 Burnt Ends
+
+    # item70 = Inventory(
+    #     category='Bass',
+    #     vendor_name='Ampeg', name='',
+    #     manufacturer_id='Ampeg',
+    #     description='',
+    #     model='Master', serial='AMP101',
+    #     tech_specs='Number of Strings: 5;Left-/Right-handed: Right-handed;Body Shape:	StingRay Special;Body Material: Select Hardwoods;Body Finish: Gloss;Color: Burnt Ends;Neck Material:	Select Roasted Maple;Neck Joint: 5-way Bolt-on;Radius: 11";Fingerboard Material: Rosewood;Fingerboard Inlay: White Dots;Number of Frets:	22, High Wide;Scale Length:	34";Nut Width: 1.75";Nut Material: Melamine;Bridge/Tailpiece: Vintage Music Man Topload Steel Bridge with Vintage Nickel Plated Steel Saddles;Tuners:	Custom Music Man;Neck Pickup:	Music Man Neodymium Humbucker;Bridge Pickup:	Music Man Neodymium Humbucker;Controls:	1 x master volulme, 1 x balance, 4-band Stacked Active EQ;Switching: 5-way blade pickup switch;Strings:	Super Slinky Bass, .045-.130;Case/Gig Bag: Softshell Case;Manufacturer Part Number:	208-HA-20-03-MB-CR;',
+    #     price=2599.00,
+    #     preview='',
+    #     logo='https://media.sweetwater.com/api/i/f-webp__ha-4462d561c66e980b__hmac-401c927164efb5d878382056360a1c509e0ae58c/images/manufacturer-logos/ampeg.png.auto.webp',
+    #     createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    # img420 = ProductImages(
+    #   url='',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img421 = ProductImages(
+    #   url='',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img422 = ProductImages(
+    #   url='',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img423 = ProductImages(
+    #   url='',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img424 = ProductImages(
+    #   url='',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img425 = ProductImages(
+    #   url='',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+    # img426 = ProductImages(
+    #   url='',
+    #   createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    # )
+
+    # #Add to Join table
+    # item70.product_images = [img420, img421, img422, img423, img424, img425, img426]
+
+    # db.session.add_all([item70, img420, img421, img422, img423, img424, img425, img426])
+    # db.session.commit()
+
+
+
+
+
+# Uses a raw SQL query to TRUNCATE or DELETE the users table. SQLAlchemy doesn't
+# have a built in function to do this. With postgres in production TRUNCATE
+# removes all the data from the table, and RESET IDENTITY resets the auto
+# incrementing primary key, CASCADE deletes any dependent entities.  With
+# sqlite3 in development you need to instead use DELETE to remove all data and
+# it will reset the primary keys for you as well.
+
+def undo_inventory():
+    if environment == "production":
+        db.session.execute(f"TRUNCATE table {SCHEMA}.inventories RESTART IDENTITY CASCADE;")
+    else:
+        db.session.execute("DELETE FROM inventories")
+
+    db.session.commit()
 
 
 def undo_product_images():
@@ -2948,6 +3407,3 @@ def undo_inventory_product_images():
         db.session.execute("DELETE FROM inventory_product_images")
 
     db.session.commit()
-# def seed_inventory_product_images():
-#   inventory_product_images.append(inventory_id=1, img_id=1)
-#   inventory_product_images.append(inventory_id=1, img_id=2)

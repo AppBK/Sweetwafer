@@ -6,7 +6,9 @@ import './Navigation.css'
 const categories = ['Studio & Recording', 'Live Sound & Lighting', 'Guitars', 'Bass', 'Keyboards and Synthesizers', 'Microphones', 'DJ Equipment']
 const vendors = {
   'Studio & Recording': ['Dangerous', 'Manley'],
-  'Live Sound & Lighting': ['Allen & Heath', 'Obsidian', 'Martin']
+  'Live Sound & Lighting': ['Allen & Heath', 'Obsidian', 'Martin'],
+  'Guitars': ['ESP', 'Marshall'],
+  'Bass': ['Ernie Ball', 'Ampeg'],
 }
 
 export default function Navigation() {
