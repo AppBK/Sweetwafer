@@ -7,18 +7,30 @@ import { SweetContext } from '../../context/Context.js';
 
 import './Inv.css'
 
+const categories = ['Studio & Recording', 'Live Sound & Lighting', 'Guitars', 'Bass'];
+const vendors = {
+  'Studio & Recording': ['Dangerous', 'Manley'],
+  'Live Sound & Lighting': ['Allen & Heath', 'Obsidian', 'Martin'],
+  'Guitars': ['ESP', 'Marshall'],
+  'Bass': ['Ernie Ball', 'Ampeg'],
+}
+
+
 export default function Inventory() {
   const dispatch = useDispatch();
   const history = useHistory();
   const inventory = useSelector(state => state.inventory);
 
-  const { vendor } = useContext(SweetContext);
+  const { vendor, setVendor } = useContext(SweetContext);
   const { cat } = useParams();
   console.log('CATEGORY: ', cat);
 
+  const [downArrow, setDownArrow] = useState(true);
+
+
   useEffect(() => {
     dispatch(thunkReadInv(cat ? cat : '', vendor));
-  }, [cat]);
+  }, [cat, vendor]);
 
   const len = (iter) => {
     let count = 0;
@@ -55,33 +67,74 @@ export default function Inventory() {
         count++;
       }
     }
+    
     final_str = '$' + final_str + '.00';
 
     return final_str;
   }
+
+  const dropItDown = () => {
+    setDownArrow(!downArrow);
+  }
+
+  const vendorChange = (e) => {
+    e.preventDefault();
+    setVendor(e.target.id);
+  }
+
 
   const toProductPage = (e) => {
     e.preventDefault()
     history.push(`/products/${e.target.id}`);
   }
 
+
+
   if (!inventory) return null;
 
+  let catMap = vendors[cat];
+
   return (
-    <div id="inv-cont" style={{ width: '80%', height: '100vh', backgroundColor: '#ffffff' }}>
-      {inventory.map(item => (
-        <button className="inventory-buttons" key={item.id} id={item.id} onClick={(e) => toProductPage(e)}>
-        <div className="item-thumbs" id={item.id}>
-          {instantiateProductStore(item)}
-            <div className="preview-div" id={item.id}>
-              <img className="img-preview" src={item.preview} id={item.id}></img>
-          </div>
-            <div id={item.id} className="item-name">{item.name}</div>
-            <div id={item.id} className="item-description">{item.description}</div>
-            <div id={item.id} className="price-div">{toPrice(item.price)}</div>
+    <div id="outermost">
+      <div id="make-left-cols">
+        <div id="refine-search">
+          <div id="refined">Refine Your Search</div>
         </div>
-      </button>
-      ))}
+        <button id="vendor-drop" onClick={dropItDown}>
+          <div id="push-apart">
+            <div id="vendor-title">Vendor</div>
+            <div id="svg-tamer">
+              {downArrow ? (<img src="/svg/gobbled-svgs/arrow-down.svg" style={{ height: '16px', width: '17.60px' }}></img>) : (<img src="/svg/gobbled-svgs/arrow-up.svg" style={{ height: '16px', width: '17.60px' }}></img>)}
+            </div>
+          </div>
+          {!downArrow && (<div id="options-drop">
+            <ul id="unordered">
+              {catMap.map(categ => (<li id={categ} className="lists" onClick={vendorChange}>{categ}</li>))}
+            </ul>
+          </div>)}
+        </button>
+      </div>
+      <div id="left-border">
+        <div id="current-category"><span className="side-lines-left"></span><div id="cat-title">Shop {vendor ? vendor : cat}</div><span className="side-lines-right"></span></div>
+        <div id="inv-cont" style={{ width: 'fit-content', height: 'fit-content', backgroundColor: '#ffffff' }}>
+          {inventory.map(item => (
+            <>
+              <button className="inventory-buttons" key={item.id} id={item.id} onClick={(e) => toProductPage(e)}>
+              <div className="item-thumbs" id={item.id}>
+                {instantiateProductStore(item)}
+                  <div className="preview-div" id={item.id}>
+                    <img className="img-preview" src={item.preview} id={item.id}></img>
+                </div>
+                  <div id={item.id} className="item-name">{item.name}</div>
+                  <div id={item.id} className="item-description">{item.description}</div>
+                  <div id={item.id} className="price-div">{toPrice(item.price)}</div>
+              </div>
+            </button>
+            {/* <div className="spacer"></div> */}
+          </>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

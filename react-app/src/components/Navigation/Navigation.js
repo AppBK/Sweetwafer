@@ -3,7 +3,9 @@ import { useContext } from 'react'
 import { SweetContext } from '../../context/Context'
 import './Navigation.css'
 
-const categories = ['Studio & Recording', 'Live Sound & Lighting', 'Guitars', 'Bass', 'Keyboards and Synthesizers', 'Microphones', 'DJ Equipment']
+// const categories = ['Studio & Recording', 'Live Sound & Lighting', 'Guitars', 'Bass', 'Keyboards and Synthesizers', 'Microphones', 'DJ Equipment']
+
+const categories = ['Studio & Recording', 'Live Sound & Lighting', 'Guitars', 'Bass'];
 const vendors = {
   'Studio & Recording': ['Dangerous', 'Manley'],
   'Live Sound & Lighting': ['Allen & Heath', 'Obsidian', 'Martin'],
@@ -28,6 +30,7 @@ export default function Navigation() {
         }
       }
     } else {
+      setVendor('');
       destination = e.target.id;
     }
 
@@ -48,6 +51,10 @@ export default function Navigation() {
                 <div id={cat} className="cat-title">{cat}</div>
                 <div id={cat} className="right-arrow-container">
                   <img id={cat} className="class-right-arrow" src="/svg/gobbled-svgs/svg-11.svg"></img>
+                </div>
+                <div className="floaters">
+                  <div>{cat}</div>
+                  {}
                 </div>
               </button>
             ))}

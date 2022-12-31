@@ -13,7 +13,7 @@ def get_inv():
   print('REQUEST DATA', body)
 
   if body['vendor']:
-    inv = Inventory.query.filter(Inventory.category == body['category']).filter(Inventory.vendor == body['vendor']).all()
+    inv = Inventory.query.filter(Inventory.category == body['category']).filter(Inventory.vendor_name == body['vendor']).all()
   elif body['category']:
     inv = Inventory.query.filter(Inventory.category == body['category']).all()
   else:

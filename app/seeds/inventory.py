@@ -3325,6 +3325,348 @@ def seed_inventory():
 
 #Special 5 Burnt Ends
 
+    item74 = Inventory(
+        category='Bass',
+        vendor_name='Ampeg', name='Ampeg Micro-CL 2 x 10-inch 100-watt Bass Stack',
+        manufacturer_id='Ampeg',
+        description='100-watt Solid-state Bass Amplifier Head with Dual Inputs, Effects Loop, Headphone Output, Stereo Line Input, and 2 x 10" Speaker Cabinet',
+        model='Master', serial='AMP104',
+        tech_specs='Type:	Solid State;Number of Channels:	1;Total Power: 100W;EQ: 3-band;Inputs: 2 x 1/4";Outputs: 1 x 1/4" Speaker (8 ohms), 1 x 1/4" (Line);Effects Loop:	Yes;Power Source:	Standard IEC AC cable;Height:	7" (Head), 13" (Cab);Width:	12.2" (Head), 24" (Cab);Depth: 10" (Head), 11" (Cab);Weight: 13.8 lbs. (Head), 33.2 lbs. (Cab);Manufacturer Part Number: 99-015-1205;',
+        price=429.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-0a74c4a2bb33f63d__hmac-307123c5b3744214b5964fca3addc45c0c072f1c/images/items/350/MicroCL.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-4462d561c66e980b__hmac-401c927164efb5d878382056360a1c509e0ae58c/images/manufacturer-logos/ampeg.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img440 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-4c87a21e0c48c8c8__hmac-75c58ba60a8f91be647283fff035e3fa8d92a840/images/items/750/MicroCL-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img441 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0ba6bf7302778bd7__hmac-7ce6381b0e7ee7d5f8ce86a4c48d99461693f767/images/closeup/750-MicroCL_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img442 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-04eeedfaef3a14c2__hmac-58e535d7207fd5b40586c947b32a66d8facbc987/images/closeup/750-MicroCL_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img443 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8a742b6b2a2d4e6e__hmac-86c70b45e0a0c5df919f898b0996009cb0cd7fc3/images/closeup/750-MicroCL_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img444 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-e046c3e563281166__hmac-e9625676cf192dabc40b3f258ed2c8b7a9cde346/images/closeup/750-MicroCL_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img445 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1eaa7b3bb91195a9__hmac-88fd4decde624cb44d5ad4a3a8ad9d65dcbc465e/images/closeup/750-MicroCL_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item74.product_images = [img440, img441, img442, img443, img444, img445]
+
+    db.session.add_all([item74, img440, img441, img442, img443, img444, img445])
+    db.session.commit()
+
+
+#SVT-410
+
+    item75 = Inventory(
+        category='Bass',
+        vendor_name='Ampeg', name='Ampeg Heritage SVT-410HLF 4x10" 500-watt Bass Cabinet with Horn',
+        manufacturer_id='Ampeg',
+        description='500W, 4 x 10" Bass Cabinet with 1/4" and Speakon Inputs',
+        model='Master', serial='AMP105',
+        tech_specs='Type:	Bass Cabinet;Configuration:	4 x 10";Speakers:	10" Eminence-designed;Horn:	Yes, Variable;Power Handling:	500W;Impedance:	4 ohms;Frequency Response: 48Hz-18kHz (±3dB), Usable Low Frequency 28Hz (-10dB);Inputs:	2 x speakON, 2 x 1/4";Cabinet Type:	Straight;Open/Closed Back: Closed;Construction Materials:	15mm Poplar Ply enclosure with black tolex;Height: 30";Width:	24";Depth: 19";Weight: 76 lbs.;Manufacturer Part Number: 99-030-2401;',
+        price=1099.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-026df5dceb06478c__hmac-eca5553d9bdababe4647ba59e8dd7acdb0ac61cd/images/items/350/HSVT410HLF.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-4462d561c66e980b__hmac-401c927164efb5d878382056360a1c509e0ae58c/images/manufacturer-logos/ampeg.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img446 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-ad9dab751ab2940c__hmac-40956590ceae8fdaa5dc4d3d8763d3e8a734d5c9/images/items/750/HSVT410HLF-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img447 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-90a8cf74f83b1140__hmac-cdfa7ab7f2b19e20dca22ab07d6d349be097fedf/images/closeup/750-HSVT410HLF_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img448 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8c685d9d7d1c0dfd__hmac-16490501f7555010e18f88d73a749222ef116fec/images/closeup/750-HSVT410HLF_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img449 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f501708c84c357ee__hmac-4a361d24e8eac623f919ca0ddd2ad30c090a1a74/images/closeup/750-HSVT410HLF_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img450 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-5e3520dcd08a7df9__hmac-5ac55ee6aa07d604e95bc3f0a297be859d78976a/images/closeup/750-HSVT410HLF_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img451 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6a098b74e035533e__hmac-4afde84b6814d04b755346636342025eaba709d5/images/closeup/750-HSVT410HLF_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img452 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-fa4324973a25277a__hmac-7a15d06d2436def12cb8b1f16a413045529b04cf/images/closeup/750-HSVT410HLF_detail6.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item75.product_images = [img446, img447, img448, img449, img450, img451, img452]
+
+    db.session.add_all([item75, img446, img447, img448, img449, img450, img451, img452])
+    db.session.commit()
+
+
+#SCR-DI
+
+    item76 = Inventory(
+        category='Bass',
+        vendor_name='Ampeg', name='Ampeg SCR-DI Bass Preamp with Scrambler Overdrive Pedal',
+        manufacturer_id='Ampeg',
+        description='Bass Preamp Pedal and Direct Box with Overdrive, EQ, and Tone Controls',
+        model='Master', serial='AMP106',
+        tech_specs='Type:	Preamp;Form Factor:	Pedal;Inputs:	2 x 1/4", 1 x 1/8";Outputs:	1 x XLR, 1 x 1/4" (Line), 1 x 1/4" (Thru), 1 x 1/8" (Headphones);Batteries:	1 x 9V;Height: 2.2";Width: 7.6";Depth: 4.3";Weight:	2.6 lbs;Manufacturer Part Number:	99-040-4031;',
+        price=279.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-802e5c67a4cb6fb8__hmac-e0d1e53dc3a3c84ba4679ba3c1cd6bf92d5a6848/images/items/350/SCR-DI.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-4462d561c66e980b__hmac-401c927164efb5d878382056360a1c509e0ae58c/images/manufacturer-logos/ampeg.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img453 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-2da55255c5da453f__hmac-be14926735c471b46a0e684294d7bbf696a86c4c/images/items/750/SCR-DI-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img454 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-4e27e0ba52a089cb__hmac-231430cdc9c746f575aa1a9038c64848143a8d8b/images/closeup/750-SCR-DI_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img455 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-d8b12cb1b65457f3__hmac-62a0044f152b128650018324b81503b6ecfe4fce/images/closeup/750-SCR-DI_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img456 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b99ed3033f770d93__hmac-7230714b043be57caac45031f0b51cc49fc26b80/images/closeup/750-SCR-DI_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img457 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-961eb48dd76e36c0__hmac-42ec051b78e4ade9c9d71c59f2784924217696b9/images/closeup/750-SCR-DI_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img458 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7d55f16dcb07285b__hmac-61d470d3b096aee6b9e250ea957c4866bbbc3191/images/closeup/750-SCR-DI_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item76.product_images = [img453, img454, img455, img456, img457, img458]
+
+    db.session.add_all([item76, img453, img454, img455, img456, img457, img458])
+    db.session.commit()
+
+
+
+#SVT-810
+
+    item77 = Inventory(
+        category='Bass',
+        vendor_name='Ampeg', name='Ampeg Heritage SVT-810AV 8x10" 800-watt Bass Cabinet',
+        manufacturer_id='Ampeg',
+        description='800-watt 8x10" Bass Cabinet',
+        model='Master', serial='AMP107',
+        tech_specs='Type:	Bass Vertical Cabinet;Configuration: 8 x 10";Horn: No;Power Handling:	800W @ 4 ohms, 400W @ 8 ohms;Impedance:	4 ohms, 8 ohms;Frequency Response: 40Hz-5kHz;Inputs:	2 x 1/4" (top/bottom), 1 x speakON (botom);Outputs:	1 x 11/4 (thru), 1 x speakon (thru);Cabinet Type:	Straight;Open/Closed Back: Closed;Construction Materials:	15mm Poplar plywood with Blue/Silver Grille Cloth;Height:	48";Width: 26";Depth:	16";Weight:	137 lbs;Manufacturer Part Number:	99-030-3201;',
+        price=1649.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-4d6a558a8f35efea__hmac-51052a23e9c355eeb95edf22542dea4a21333a40/images/items/350/HSVT810AV.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-4462d561c66e980b__hmac-401c927164efb5d878382056360a1c509e0ae58c/images/manufacturer-logos/ampeg.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img459 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-0d481f1b7ad024cb__hmac-b1182e7bdd675fd3091dd53dc3ac70be4487de65/images/items/750/HSVT810AV-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img460 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f76c091bfcf011c7__hmac-2f74908a307e91fd37fbf52e0a16ff5dc668bb20/images/closeup/750-HSVT810AV_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img461 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-98c5d650a4d31c12__hmac-c6658929771400d3a863b5ab72b698f73b2297a2/images/closeup/750-HSVT810AV_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img462 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-24e6513bf7193155__hmac-a82738593b83402ff55019a354a77ad824cf0268/images/closeup/750-HSVT810AV_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img463 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f57c1be281a66711__hmac-e42f5e67568901ffe737f54e1ca5d4ed3638ff65/images/closeup/750-HSVT810AV_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img464 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-fe76b3524f68aac1__hmac-5109a39cb6d0b3da9e2606fda88c53ace5f7555e/images/closeup/750-HSVT810AV_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img465 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-21c49444e18ec0ea__hmac-85eda7316bc4bf7ddc9539479e089054286a2d95/images/closeup/750-HSVT810AV_detail6.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item77.product_images = [img459, img460, img461, img462, img463, img464, img465]
+
+    db.session.add_all([item77, img459, img460, img461, img462, img463, img464, img465])
+    db.session.commit()
+
+
+#PF-800
+
+    item78 = Inventory(
+        category='Bass',
+        vendor_name='Ampeg', name='Ampeg PF-800 800-watt Portaflex Bass Head',
+        manufacturer_id='Ampeg',
+        description='Compact 800W Bass Amplifier Head, 3-band EQ, Mid-tone Presets, Lo/Hi Boosts, Compressor',
+        model='Master', serial='AMP108',
+        tech_specs='Type:	Solid State;Number of Channels:	1;Total Power: 800W, 4 ohms, Class D;Compression:	Yes;EQ:	3-band, Mid-tone Control, Ultra Hi/Lo Boosts;Inputs: 1 x 1/4" (instrument), 1 x 1/8" (aux), 1 x 1/4" (power amp);Outputs:	1 x speakON, 3 x 1/4" (speaker, preamp, tuner);Headphones: 1 x 1/8";Effects Loop:	Yes;Footswitch I/O:	1 x 1/4" (FX loop);Footswitch Included:	No;Cooling System: Heatsink, Rear/Side Air Vents;Power Source: Standard IEC AC cable;Height: 3";Width: 15";Depth:	11";Weight:	11.8 lbs;Manufacturer Part Number: 99-025-0705;',
+        price=749.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-d5dac7e704fab4a2__hmac-6312ab83ddadd87e4c2eee42ef1b8ad692f59389/images/items/350/PF800BH.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-4462d561c66e980b__hmac-401c927164efb5d878382056360a1c509e0ae58c/images/manufacturer-logos/ampeg.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img466 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-376853972236d305__hmac-abd6a1683c6e6aa748c055c2a2ba9f4d0fe4ab00/images/items/750/PF800BH-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img467 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-891de26423dda572__hmac-d7de5bbb5129e0ec76a736178bd82d08d9c10739/images/closeup/750-PF800BH_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img468 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-48617e8f278c4956__hmac-e14fd4c9ff6ee1cfef2383e4ef950da3f183ea74/images/closeup/750-PF800BH_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img469 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-b59d9a27eba12f31__hmac-6b7ddb2dfc03f20ca99d70b61aadb4b222ae2ae5/images/closeup/750-PF800BH_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img470 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-8b9bba583092fa83__hmac-7f991350617227114d7ee995712f1a318fe23da6/images/closeup/750-PF800BH_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img471 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-4f55524836c5529a__hmac-9d4e43e37261f7a0a5fc2691c7af4600b7a6ed28/images/closeup/750-PF800BH_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img472 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-237ca6a40af00c4e__hmac-26f892093ea94d0c3c57dde9bd46649744e07750/images/closeup/750-PF800BH_detail6.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item78.product_images = [img466, img467, img468, img469, img470, img471, img472]
+
+    db.session.add_all([item78, img466, img467, img468, img469, img470, img471, img472])
+    db.session.commit()
+
+
+
+#PF-115LF
+
+    item79 = Inventory(
+        category='Bass',
+        vendor_name='Ampeg', name='Ampeg PF-115LF 1x15" 400-watt Portaflex Bass Cabinet',
+        manufacturer_id='Ampeg',
+        description='400W RMS 1 x 15" Bass Cab, with Ported Design, 15mm Poplar Ply Construction, Integrated Side Handles, and Removeable Casters',
+        model='Master', serial='AMP109',
+        tech_specs='Type:	Bass Cabinet;Configuration:	1 x 15";Speakers:	15" Ceramic Eminence;Horn: No;Power Handling:	400W;Impedance:	8 ohms;Inputs: 2 x 1/4";Outputs: 1 x 1/4";Cabinet Type:	Ported;Construction Materials: Poplar;Height:	23.5";Width: 22.75";Depth: 17.5";Weight: 55.8 lbs;Manufacturer Part Number:	99-030-2221;',
+        price=429.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-aefc7826ad618736__hmac-0f26c98edad5fceb754ed336a83f36b4def230fb/images/items/350/PF115LF.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-4462d561c66e980b__hmac-401c927164efb5d878382056360a1c509e0ae58c/images/manufacturer-logos/ampeg.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img473 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-fa75ac450815dd55__hmac-6a4627c5c9931bb4409b8bd18c822f9f92713569/images/items/750/PF115LF-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img474 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-a02d79b2cc4e117a__hmac-59f4aec535002c57d1351f79c3214caba32255da/images/closeup/750-PF115LF_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img475 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-7d7cde33e6d0d0ea__hmac-cc5957383f40329e031e3d181df31e0da6b8cb0c/images/closeup/750-PF115LF_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img476 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-f90070d92a6d2482__hmac-c0a8780fd4f560aaedcc2b0962b4ac3327317a8b/images/closeup/750-PF115LF_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img477 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-06c2b13aa29f630e__hmac-8089cf2a76206fa114938b578c9cddbcbfc9d728/images/closeup/750-PF115LF_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img478 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-59e3fd044423672a__hmac-a05422a84aaf89bc18ebf93e7d5c57ff283ed488/images/closeup/750-PF115LF_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img479 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-6a8a5b79be423dd9__hmac-34128722a9b696dad77e45f0b89ca084d920b3a3/images/closeup/750-PF115LF_detail6.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item79.product_images = [img473, img474, img475, img476, img477, img478, img479]
+
+    db.session.add_all([item79, img473, img474, img475, img476, img477, img478, img479])
+    db.session.commit()
+
+
+
+#PN-210HLF
+
+    item80 = Inventory(
+        category='Bass',
+        vendor_name='Ampeg', name='Ampeg PN-210HLF 2x10" 550-watt Neodymium Bass Cabinet with Horn',
+        manufacturer_id='Ampeg',
+        description='550-watt 2 x 10" Bass Cabinet',
+        model='Master', serial='AMP110',
+        tech_specs='Type:	Bass Cabinet;Configuration:	2 x 10";Speakers:	10" Neodymium Eminence speaker;Horn: Yes, Variable;Power Handling: 550W;Impedance: 8 ohms;Frequency Response:	40Hz-10kHz;Inputs: 1 x speakON, 1 x 1/4";Outputs:	1 x speakON, 1 x 1/4";Cabinet Type:	Straight;Open/Closed Back: Closed, Ported;Construction Materials:	Poplar Plywood;Height: 18";Width:	22.8";Depth: 17.3";Weight: 44 lbs;Manufacturer Part Number:	99-030-2001;',
+        price=999.00,
+        preview='https://media.sweetwater.com/api/i/b-original__w-300__h-300__bg-ffffff__q-85__f-webp__ha-86d117e57b4f8ffa__hmac-e0d678db57754b06ced84549128d6db4a556c7c8/images/items/350/PN210HLF.jpg.auto.webp',
+        logo='https://media.sweetwater.com/api/i/f-webp__ha-4462d561c66e980b__hmac-401c927164efb5d878382056360a1c509e0ae58c/images/manufacturer-logos/ampeg.png.auto.webp',
+        createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+
+    img480 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-47b889a041b194c3__hmac-544052cf287e03dc9d3552091435fae550c9f789/images/items/750/PN210HLF-large.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img481 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-1be286ac91490033__hmac-e163ea1bf111e94d3d41c1454bb7cda7a864a013/images/closeup/750-PN210HLF_detail1.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img482 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-89430ea2dd880405__hmac-a635b8f08a6f2fdea9b4e7a58c7fd809dbb682b4/images/closeup/750-PN210HLF_detail2.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img483 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-3cab03e0e8fc3c76__hmac-acac615907d94b4fa4d850068c0b3872470e7e84/images/closeup/750-PN210HLF_detail3.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img484 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-cc7843ed4c55d151__hmac-b3de41902db7a28fc2211a3635fbed63a19dd841/images/closeup/750-PN210HLF_detail4.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+    img485 = ProductImages(
+      url='https://media.sweetwater.com/api/i/q-82__f-webp__ha-9e5a2beedba8f392__hmac-0f0395f7cf39bdf7ed7ffbf607a88f25a95e6d44/images/closeup/750-PN210HLF_detail5.jpg.auto.webp',
+      createdAt=str(datetime.now()), updatedAt=str(datetime.now())
+    )
+
+    #Add to Join table
+    item80.product_images = [img480, img481, img482, img483, img484, img485]
+
+    db.session.add_all([item80, img480, img481, img482, img483, img484, img485])
+    db.session.commit()
+
+
+
+#Special 5 Burnt Ends
+
     # item70 = Inventory(
     #     category='Bass',
     #     vendor_name='Ampeg', name='',
