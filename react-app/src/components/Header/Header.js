@@ -43,6 +43,9 @@ export default function Header() {
       <button id="sweet-logo" onClick={goHome}>
         <img id="img-logo" src="/png/sweetwafer-logo-trans.png"></img>
       </button>
+      <div id="search-bar-cont">
+        <input id="search-bar" type="search" placeholder="Search feature coming soon!"></input>
+      </div>
       <div id="contact">
         <div>
           <h2 id="sweet-phone-number">(800) 222-4700</h2>
@@ -62,9 +65,8 @@ export default function Header() {
           {renderLogout && (<button id="logout-button" onClick={onLogout}>Logout</button>)}
         </div>
       </div>
-      {renderCart && (<button id="cart-button">
-        <img id="cart-img" src="/svg/cart-0.svg" onClick={viewCart}></img>
-      </button>)}
+      {renderCart ? (<button id="cart-button"><img id="cart-img" src="/svg/cart-0.svg" onClick={viewCart}></img></button>) : (<div id="placeholder-cart"></div>)}
+    {/* {<div id="placeholder-cart"></div>} */}
     </div>
   )
 }

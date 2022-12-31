@@ -67,7 +67,7 @@ export default function Inventory() {
         count++;
       }
     }
-    
+
     final_str = '$' + final_str + '.00';
 
     return final_str;

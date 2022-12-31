@@ -2,11 +2,13 @@
   width: 100%;
   height: 72px;
   display: flex;
+  /* position: relative; */
   align-items: center;
   justify-content: space-evenly;
   background: url(https://media.sweetwater.com/m/include/holiday/images/snow-transparent.gif?height=300&width=400), linear-gradient(#d5ebf5, #ffffff);
   /* border: 1px solid red; */
-  border-bottom: 1px solid #f2f1f0;
+  /* border-bottom: 1px solid #f2f1f0; */
+  border-bottom: 1px solid #d1cfce;
 }
 
 #sweet-logo {
@@ -14,6 +16,8 @@
   background: transparent;
   padding: 0px;
   margin: 0px;
+  /* position: absolute;
+  left: 16px; */
 }
 
 #sweet-logo:hover {
@@ -107,7 +111,7 @@
   height: 50px;
   border-radius: 3px;
   margin-top: 16px;
-  margin-bottom: 16px;;
+  margin-bottom: 16px;
   cursor: pointer;
 }
 
@@ -122,11 +126,13 @@
 
 #contact {
   color:#0072ba;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 #call {
   color: black;
+  font-size: 12px;
+  text-align: center;
 }
 
 h2 {
@@ -152,4 +158,23 @@ h2 {
   display: block;
   color: #0072ba;
   font-size: 12px;
+}
+
+#search-bar-cont {
+  /* position: absolute; */
+  left: 252px;
+}
+
+#search-bar {
+  width: 590px;
+  height: 38px;
+  padding-left: 8px;
+  background-color: #f7f5f3;
+  border: none;
+}
+
+#placeholder-cart {
+  width: 47px;
+  height: 72px;
+  background-color: transparent;
 }

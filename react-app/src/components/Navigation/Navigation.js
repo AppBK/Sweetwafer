@@ -18,6 +18,12 @@ export default function Navigation() {
 
   const { vendor, setVendor } = useContext(SweetContext);
 
+  const vendorChangeNav = (e) => {
+    e.preventDefault();
+    setVendor(e.target.id);
+  }
+
+
   const routeToSubCategory = (e) => {
     e.preventDefault();
     let destination;
@@ -53,8 +59,10 @@ export default function Navigation() {
                   <img id={cat} className="class-right-arrow" src="/svg/gobbled-svgs/svg-11.svg"></img>
                 </div>
                 <div className="floaters">
-                  <div>{cat}</div>
-                  {}
+                  <div className="left-hidden-cat" id={cat} onClick={(e) => routeToSubCategory(e)}>{cat}</div>
+                  <div className="vendor-conts">
+                    {vendors[cat].map(vendor => (<div className="vendor-div" id={vendor} onClick={vendorChangeNav}>{vendor}</div>))}
+                  </div>
                 </div>
               </button>
             ))}
