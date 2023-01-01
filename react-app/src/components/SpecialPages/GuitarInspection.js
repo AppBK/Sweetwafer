@@ -5,7 +5,7 @@ export default function GuitarInspection() {
   return (
     <div id="inspection-outer">
       <div id="video-div">
-        <iframe width="1019" height="612" src="https://www.youtube.com/embed/4iWfqakaV0Y" title="Take a Tour of Sweetwater's Guitar Gallery" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="1019" height="612" src="https://www.youtube.com/embed/4iWfqakaV0Y" title="Take a Tour of Sweetwater's Guitar Gallery" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>
       <div id="doshite">
         <div>Why would you buy your</div>
@@ -26,22 +26,91 @@ export default function GuitarInspection() {
         <div className="tan-p-one">You can count on the fact that they have looked at every aspect of that guitar or bass, from the input jack to the headstock, the same way you would in a store. And each instrument ships with its own individually signed certificate of inspection, giving it our personal seal of approval that the instrument meets or exceeds factory standards.</div>
       </div>
       <div id="checklist">
-        <div id="checklist-title"></div>
+        <div id="checklist-title">The 55-point Inspection* Checklist:</div>
         <div className="border-one"></div>
         <div id="checklist-div">
           <div id="col-one">
             <h3 id="handling-h3">Handling</h3>
-            <ul>
+            <ul className="checklists">
               <li className="checklist-items">24-hour climate acclimation & professional handling</li>
               <li className="checklist-items">Inspect case/gig bag interior & exterior</li>
               <li className="checklist-items">Verify contents & accessories</li>
             </ul>
+            <h3 id="cosmetic-h3">Cosmetic and Construction Inspection</h3>
+            <ul className="checklists">
+              <li className="checklist-items">Inspect & polish body</li>
+              <li className="checklist-items">Fingerboard surface</li>
+              <li className="checklist-items">Neck & neck joint</li>
+              <li className="checklist-items">Strings</li>
+              <li className="checklist-items">Plastic Parts</li>
+              <li className="checklist-items">Hardware</li>
+              <li className="checklist-items">Inlays</li>
+              <li className="checklist-items">Binding</li>
+              <li className="checklist-items">Nut</li>
+              <li className="checklist-items">Headstock</li>
+            </ul>
+            <h3 id="hardware-h3">Hardware Check</h3>
+            <ul className="checklists">
+              <li className="checklist-items">Motion/vibration test</li>
+              <li className="checklist-items">Bridge</li>
+              <li className="checklist-items">Tuning machines</li>
+              <li className="checklist-items">Strap buttons</li>
+              <li className="checklist-items">Truss rod cover</li>
+              <li className="checklist-items">Pickguard</li>
+              <li className="checklist-items">Output jack</li>
+              <li className="checklist-items">Switches</li>
+              <li className="checklist-items">Potentiometers</li>
+              <li className="checklist-items">Pickup screws & rings</li>
+              <li className="checklist-items">Neck joint screws/bolts</li>
+              <li className="checklist-items">String trees</li>
+              <li className="checklist-items">Battery compartment</li>
+              <li className="checklist-items">Locking nut</li>
+            </ul>
           </div>
           <div id="col-two">
-
+            <h3 id="electronic-h3">Electronics Testing</h3>
+            <ul className="checklists">
+              <li className="checklist-items">Output jack & plug fit</li>
+              <li className="checklist-items">Pickup switching</li>
+              <li className="checklist-items">Potentiometers</li>
+              <li className="checklist-items">Pickup splitting/tapping</li>
+              <li className="checklist-items">Onboard tuner & battery</li>
+              <li className="checklist-items">Electric pickups</li>
+              <li className="checklist-items">Acoustic pickups</li>
+              <li className="checklist-items">Onboard preamp</li>
+              <li className="checklist-items">Onboard effects</li>
+              <li className="checklist-items">13-pin pickup</li>
+            </ul>
+            <h3 id="playability-h3">Playability Check</h3>
+            <ul className="checklists">
+              <li className="checklist-items">Check tuning machines & tune to pitch</li>
+              <li className="checklist-items">Stretch strings & tune to pitch</li>
+              <li className="checklist-items">String & saddle position</li>
+              <li className="checklist-items">Neck relief</li>
+              <li className="checklist-items">Frets</li>
+              <li className="checklist-items">Action height</li>
+              <li className="checklist-items">Intonation</li>
+              <li className="checklist-items">Pickup height</li>
+              <li className="checklist-items">Tremolo system</li>
+              <li className="checklist-items">Play test all notes on the fretboard</li>
+              <li className="checklist-items">Play test a variety of half- & whole-step bends</li>
+              <li className="checklist-items">Play test a variety of chords & styles</li>
+            </ul>
+            <h3 id="tuning-h3">Tune and Polish</h3>
+            <ul className="checklists">
+              <li className="checklist-items">Tune to pitch</li>
+              <li className="checklist-items">Polish instrument</li>
+            </ul>
+            <ul className="checklists">
+              <h3 id="packing-h3">Packing</h3>
+              <li className="checklist-items">Inspect/refresh packing material, as needed</li>
+              <li className="checklist-items">Professional repack</li>
+              <li className="checklist-items">Store in climate-controlled warehouse</li>
+              <li className="checklist-items">Double-box for shipping</li>
+            </ul>
           </div>
         </div>
-
+        <div>* Applies to guitars valued $299 and above only.</div>
       </div>
       <div id="tan-boy-two">
         <div id="guitar-img-2"></div>
@@ -53,3 +122,11 @@ export default function GuitarInspection() {
     </div>
   )
 }
+
+/* <ul className="checklists">
+              <li className="checklist-items"></li>
+              <li className="checklist-items"></li>
+              <li className="checklist-items"></li>
+              <li className="checklist-items"></li>
+              <li className="checklist-items"></li>
+            </ul> */

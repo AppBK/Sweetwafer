@@ -94,6 +94,25 @@
   background-image: url('https://media.sweetwater.com/m/about/guitars/inspect.jpg?optimize=medium&ha=91ad637aeada4f1b');
 }
 
+#checklist {
+  display: flex;
+    align-items: center;
+      flex-direction: column;
+    width: 1200px;
+    height: fit-content;
+    background-color: white;
+    padding: 50px;
+}
+
+#checklist-div {
+  display: flex;
+  justify-content: center;
+}
+
+#checklist-title {
+  margin-bottom: 16px;
+}
+
 .como-doshite {
   line-height: 1.15;
   font-weight: bold;
@@ -118,19 +137,102 @@
   vertical-align: -27%;
 }
 
+#cosmetic-h3::before {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+  content: '';
+  background: url('https://media.sweetwater.com/about/guitars/icon-inspection.svg') no-repeat 0 0;
+  background-size: 32px;
+  vertical-align: -27%;
+}
+
+#hardware-h3::before {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+  content: '';
+  background: url('https://media.sweetwater.com/about/guitars/icon-hardware.svg') no-repeat 0 0;
+  background-size: 32px;
+  vertical-align: -27%;
+}
+
+#electronic-h3::before {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+  content: '';
+  background: url('https://media.sweetwater.com/about/guitars/icon-electronics.svg') no-repeat 0 0;
+  background-size: 32px;
+  vertical-align: -27%;
+}
+
+#electronic-h3::before {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+  content: '';
+  background: url('https://media.sweetwater.com/about/guitars/icon-playability.svg') no-repeat 0 0;
+  background-size: 32px;
+  vertical-align: -27%;
+}
+
+#tuning-h3::before {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+  content: '';
+  background: url('https://media.sweetwater.com/about/guitars/icon-polish.svg') no-repeat 0 0;
+  background-size: 32px;
+  vertical-align: -27%;
+}
+
+#packing-h3::before {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 4px;
+  content: '';
+  background: url('https://media.sweetwater.com/about/guitars/icon-packing.svg') no-repeat 0 0;
+  background-size: 32px;
+  vertical-align: -27%;
+}
+
+
 .checklist-items {
   list-style-type: none;
+  margin-top: 4px;
 }
 
 .checklist-items::before {
   display: inline-block;
   width: 16px;
   height: 16px;
-  margin-right: 4px;
+  margin-right: 8px;
   content: '';
   background: url('https://media.sweetwater.com/about/guitars/check-circle-stroke.svg') no-repeat 0 0;
   background-size: 16px;
   vertical-align: -10%;
+}
+
+.checklists {
+  margin-left: -24px;
+  margin-top: -12px;
+  margin-bottom: 28px;
+}
+
+#checklist-title {
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+#col-one {
+  margin-right: 160px;
 }
 
 /*
@@ -139,4 +241,9 @@
     justify-content: center;
     align-items: center;
 
+*/
+
+
+/*
+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
 */
