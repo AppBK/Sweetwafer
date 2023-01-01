@@ -1,6 +1,8 @@
 import { useSelector, useDispatch } from "react-redux"
 import { useHistory } from "react-router-dom";
 import { login, logout } from "../../store/session";
+import { useContext } from "react";
+import { SweetContext } from "../../context/Context";
 import './Header.css'
 
 export default function Header() {
@@ -13,6 +15,8 @@ export default function Header() {
 
   const history = useHistory();
   const dispatch = useDispatch();
+
+  const { numInCart } = useContext(SweetContext);
 
   const toLogin = () => {
     history.push('/login_page');
@@ -65,7 +69,7 @@ export default function Header() {
           {renderLogout && (<button id="logout-button" onClick={onLogout}>Logout</button>)}
         </div>
       </div>
-      {renderCart ? (<button id="cart-button"><img id="cart-img" src="/svg/cart-0.svg" onClick={viewCart}></img></button>) : (<div id="placeholder-cart"></div>)}
+      {renderCart ? (<button id="cart-button"><div id="num-in-cart">{numInCart}</div><img id="cart-img" src="/svg/cart-0.svg" onClick={viewCart}></img></button>) : (<div id="placeholder-cart"></div>)}
     {/* {<div id="placeholder-cart"></div>} */}
     </div>
   )

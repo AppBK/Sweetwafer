@@ -15,6 +15,10 @@ import Inventory from './components/Temp/Inv';
 import Cart from './components/Cart/Cart';
 import Product from './components/Product/Product';
 import Navigation from './components/Navigation/Navigation';
+import Home from './components/Home/Home';
+import Footer from './components/Footer/Footer';
+import NewGear from './components/SpecialPages/NewGear';
+import NewGearFooter from './components/NewGearFooter/NewGearFooter';
 import { authenticate, login } from './store/session';
 
 
@@ -66,16 +70,22 @@ function App() {
           <Header />
           <Navigation />
           <Cart />
+          <NewGearFooter />
+          <Footer />
         </Route>
         <Route path='/products/:id' exact={true}>
           <Header />
           <Navigation />
           <Product />
+          <NewGearFooter />
+          <Footer />
         </Route>
         <Route path='/products/category/:cat' exact={true}>
           <Header />
           <Navigation />
           <Inventory />
+          <NewGearFooter />
+          <Footer />
         </Route>
         <ProtectedRoute path='/users/:userId' exact={true}>
           <User />
@@ -83,11 +93,17 @@ function App() {
         <Route path='/' exact={true} >
           <Header />
           <Navigation />
+          <Home />
+          <NewGearFooter />
+          <Footer />
           {/* <div style={{ width: '100vw', height: '100vh', backgroundColor: '#d5ebf5'}}></div> */}
           {/* <Inventory /> */}
         </Route>
-        <Route path='/Studio & Recording'>
-          <div>HEY NOW!!!</div>
+        <Route path='/newgearday' exact={true}>
+          <Header />
+          <Navigation />
+          <NewGear />
+          <Footer />
         </Route>
       </Switch>
     </BrowserRouter>
