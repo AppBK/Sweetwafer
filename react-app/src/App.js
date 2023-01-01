@@ -19,6 +19,7 @@ import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import NewGear from './components/SpecialPages/NewGear';
 import NewGearFooter from './components/NewGearFooter/NewGearFooter';
+import GuitarInspection from './components/SpecialPages/GuitarInspection';
 import { authenticate, login } from './store/session';
 
 
@@ -103,6 +104,13 @@ function App() {
           <Header />
           <Navigation />
           <NewGear />
+          <Footer />
+        </Route>
+        <Route path='/inspection' exact={true}>
+          <Header />
+          <Navigation />
+          <GuitarInspection />
+          <NewGearFooter />
           <Footer />
         </Route>
       </Switch>

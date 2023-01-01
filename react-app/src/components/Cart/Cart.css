@@ -1,3 +1,11 @@
+* {
+  box-sizing: content-box;
+}
+
+#cart-page {
+  box-sizing: content-box;
+}
+
 #top-o-page {
   top: 74px;
   width: 100vw;
@@ -13,13 +21,14 @@
 }
 
 #guitar-img {
-  width: 404px;
-  height: 270px;
+  width: 100%;
+  height: 100%;
   display: block;
 }
 
 #cart-empty-flex {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -36,4 +45,10 @@
 
 #margin-empty {
   margin-left: 24px;
+}
+
+#spacer {
+  height: 426px;
+  width: 100%;
+  background-color: white;
 }

@@ -125,7 +125,6 @@
 
 #cart-button:hover {
   cursor: pointer;
-  background-color: rgba(242, 241, 240, 0.5);
 }
 
 #num-in-cart {

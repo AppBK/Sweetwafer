@@ -1,6 +1,9 @@
 import { useContext } from 'react';
 import { SweetContext } from '../../context/Context';
 import { useHistory } from 'react-router-dom';
+import Footer from '../Footer/Footer';
+import NewGearFooter from '../NewGearFooter/NewGearFooter';
+
 import './Home.css'
 
 const categories = ['Studio & Recording', 'Live Sound & Lighting', 'Guitars', 'Bass'];
@@ -48,12 +51,53 @@ export default function Home() {
     return output;
   }
 
+  const goInspection = () => {
+    history.push('/inspection');
+  }
+
 
   return (
+    <>
     <div id="home-outer">
       <div id="page-top-adds">
         <div><img id="img-yearend" src="/png/year-end.png"></img></div>
         <div><img id="img-financing" src="/png/financing.png"></img></div>
+      </div>
+      <div id="getmore-title">Get More at Sweetwafer</div>
+      <div id="getmore">
+        <div className="getmore-tiles" onClick={goInspection}>
+          <div className="floating-circle">
+            <div className="thumb-constraint">
+              <img className="circle-thum" src="/svg/get-more/guitar-55.svg"></img>
+            </div>
+          </div>
+          <div className="bottom-box">
+            <div className="blue-title">55-point Guitar Inspection</div>
+            <div className="tiny-text">Guitar perfection right out of the box.</div>
+          </div>
+        </div>
+        <div className="getmore-tiles">
+          <div className="floating-circle">
+            <div id="shipping-thumb" className="thumb-constraint">
+              <img className="circle-thum" src="/svg/get-more/shipping.svg"></img>
+            </div>
+          </div>
+          <div className="bottom-box">
+            <div className="blue-title">Fast, FREE Shipping</div>
+            <div className="tiny-text">Even the small stuff.</div>
+          </div>
+        </div>
+        <div className="getmore-tiles">
+          <div className="floating-circle">
+            <div id="warranty-thumb" className="thumb-constraint">
+              <img className="circle-thum" src="/svg/get-more/warranty.svg"></img>
+            </div>
+          </div>
+          <div className="bottom-box">
+            <div className="blue-title">FREE 2-year Warranty</div>
+            <div className="tiny-text">Buy with confidence.</div>
+          </div>
+        </div>
       </div>
       <div id="popular-cont">
         <div id="popular-title">Popular Categories</div>
@@ -62,5 +106,8 @@ export default function Home() {
         </div>
       </div>
     </div>
+    {/* <NewGearFooter />
+    <Footer /> */}
+    </>
   )
 }
