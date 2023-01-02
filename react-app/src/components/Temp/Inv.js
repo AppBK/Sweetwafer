@@ -118,8 +118,8 @@ export default function Inventory() {
         <div id="current-category"><span className="side-lines-left"></span><div id="cat-title">Shop {vendor ? vendor : cat}</div><span className="side-lines-right"></span></div>
         <div id="inv-cont" style={{ width: 'fit-content', height: 'fit-content', backgroundColor: '#ffffff' }}>
           {inventory.map(item => (
-            <>
-              <button className="inventory-buttons" key={item.id} id={item.id} onClick={(e) => toProductPage(e)}>
+            <div key={item.id}>
+              <button className="inventory-buttons" id={item.id} onClick={(e) => toProductPage(e)}>
               <div className="item-thumbs" id={item.id}>
                 {instantiateProductStore(item)}
                   <div className="preview-div" id={item.id}>
@@ -131,7 +131,7 @@ export default function Inventory() {
               </div>
             </button>
             {/* <div className="spacer"></div> */}
-          </>
+          </div>
           ))}
         </div>
       </div>

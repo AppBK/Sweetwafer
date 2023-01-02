@@ -7,6 +7,7 @@
 }
 
 #top-o-page {
+  box-sizing: content-box;
   top: 74px;
   width: 100vw;
   height: 316px;
@@ -55,3 +56,217 @@
   width: 100%;
   background-color: white;
 }
+
+#cart-full-outer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#doshite-sweet {
+  width: 970px;
+  height: 210px;
+  background-image: url('https://media.sweetwater.com/about/include/img/sweetwater.jpg'), linear-gradient(to right, rgb(12, 109, 183), rgba(18, 118, 167, .62), rgb(28, 89, 137));
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 0px auto;
+  margin-bottom: 48px;
+  /* background: linear-gradient(to right, rgb(12, 109, 183), rgba(18, 118, 167, .62), rgb(28, 89, 137)); */
+}
+
+#why-title {
+  font-size: 1.7em;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+#cart-jitai {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 970px;
+  height: fit-content;
+  box-shadow: 0 0 0 1px #e6e6e6, 0 5px 30px #eaeaea;
+}
+
+#cart-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 34px;
+}
+
+#cart-icon {
+  width: 48px;
+  height: 34px;
+  background-color: #015c96;
+  border-top-left-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#cart-title {
+  background-color: #0072ba;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  flex-grow: 1;
+  height: 100%;
+  padding-top: 2px;
+  padding-left: 12px;
+  border-top-right-radius: 6px;
+}
+
+#icon-img {
+  width: 28px;
+  height: 22px;
+  margin-left: -2px;
+}
+
+#col-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 22px;
+  background-color: #edf1f9;
+  color: #0c3c5a;
+  font-size: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#grey-bar-right {
+  display: flex;
+  align-items: center;
+  width: 140px;
+  justify-content: space-between;
+}
+
+.item-div {
+  display: flex;
+  width: 970px;
+  height: fit-content;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #d1cfce;
+  padding-left: 8px;
+}
+
+.item-thumb {
+  width: 205px;
+  background-size: 205px;
+  height: 205px;
+  background-position: top;
+}
+
+.item-link {
+  text-decoration: underline;
+  color: #0c3c5a;
+  margin-bottom: 8px;
+}
+
+.mid-div {
+  width: 560px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description {
+  color: black;
+  font-size: 10px;
+}
+
+.qty {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.qty-input {
+  display: block;
+  width: 62px;
+  height: 22px;
+  text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  opacity: 1
+}
+
+.remove-item {
+  color: #0c3c5a;
+  text-decoration: underline;
+  font-size: 10px;
+  text-align: right;
+}
+
+.far-div {
+  display: flex;
+}
+
+.price-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100px;
+  padding: 16px;
+  padding-right: 4px;
+  flex-grow: 1;
+}
+
+.price {
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+  padding-bottom: 16px;
+  padding-right: 4px;
+}
+
+#cart-bottom-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-buttons {
+  display: block;
+  border: none;
+  width: 270px;
+  height: 52px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #306915;
+  border-radius: 4px;
+  margin: 16px;
+  margin-bottom: 32px;
+}
+
+#clear {
+  background-color: black;
+}
+/*
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+        015c96
+
+
+                003db8
+*/

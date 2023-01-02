@@ -54,6 +54,7 @@ class Inventory(db.Model, UserMixin):
       'tech_specs': self.tech_specs,
       'price': self.price,
       'preview': self.preview,
+      'logo': self.logo,
       'createdAt': self.createdAt,
       'updatedAt': self.updatedAt
     }
