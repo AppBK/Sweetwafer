@@ -211,6 +211,10 @@ input[type=number]::-webkit-inner-spin-button {
   text-align: right;
 }
 
+.remove-item {
+  cursor: pointer;
+}
+
 .far-div {
   display: flex;
 }
@@ -257,6 +261,28 @@ input[type=number]::-webkit-inner-spin-button {
 #clear {
   background-color: black;
 }
+
+#clear:hover {
+  cursor: pointer;
+}
+
+
+#already {
+  display: block;
+  border: none;
+  width: 270px;
+  height: 52px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #0072ba;
+  border-radius: 4px;
+  margin: 16px;
+  margin-bottom: 32px;
+}
+
+
+
 /*
 
     display: flex;

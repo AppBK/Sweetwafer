@@ -1,12 +1,19 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { SweetContext } from '../../context/Context'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './Cart.css'
+import { thunkDeleteSingle, thunkClearCart, thunkUpdateCart } from '../../store/cart';
 
 export default function Cart() {
   const { numInCart, setNumInCart } = useContext(SweetContext);
   const cart = useSelector(state => state.cart);
+  const dispatch = useDispatch();
 
+  const [qty, setQty] = useState(true);
+
+  useEffect(() => {
+    setNumInCart(cart.length);
+  }, [])
 
   const toPriceCart = (floater) => {
     let temp_str = floater.toString();
@@ -31,8 +38,32 @@ export default function Cart() {
     return final_str;
   }
 
+  const clearCart = () => {
+    dispatch(thunkClearCart());
+  }
 
+  const removeItem = (e) => {
+    e.preventDefault();
 
+    let temp = JSON.parse(e.target.id);
+    console.log('Target ID:', temp);
+    dispatch(thunkDeleteSingle(temp[0]));
+    setNumInCart(numInCart - temp[1]);
+  }
+
+  const updateQty = (e) => {
+    e.preventDefault();
+    // console.log('CURRENT Y: ', e.nativeEvent.offsetY);
+    const offset = e.nativeEvent.offsetY;
+
+    if (offset < 10) {
+      dispatch(thunkUpdateCart(e.target.id, 1));
+      setQty(!qty);
+    } else {
+      dispatch(thunkUpdateCart(e.target.id, -1));
+      setQty(!qty);
+    }
+  }
 
   let isEmpty;
   if (numInCart === 0) isEmpty = true;
@@ -67,26 +98,26 @@ export default function Cart() {
               <div>PRICE</div>
             </div>
           </div>
-          {cart.map(item => (
-            <div key={item.id} className="item-div">
-              <div className="item-thumb" style={{ backgroundImage: `url(${item.actual_item.preview})`}}></div>
+          {cart.map((item, idx) => (
+            <div key={item.item_id} className="item-div">
+              <div className="item-thumb" style={{ backgroundImage: `url(${item.preview})`}}></div>
               <div className="mid-div">
-                <div className="item-link">{item.actual_item.name}</div>
-                <div className="description">{item.actual_item.description}</div>
+                <div className="item-link">{item.name}</div>
+                <div className="description">{item.description}</div>
               </div>
               <div className="far-div">
                 <div className="qty">
-                  <input className="qty-input" type="number" placeholder={item.quantity}></input>
-                  <div className="remove-item">Remove</div>
+                  <input className="qty-input" type="number" placeholder={item.quantity} onClick={(e) => updateQty(e)}></input>
+                  <div id={JSON.stringify([item.id, item.quantity])} className="remove-item" onClick={(e) => removeItem(e)} >Remove</div>
                 </div>
                 <div className="price-div">
-                  <div className="price">{toPriceCart(item.actual_item.price)}</div>
+                  <div className="price">{toPriceCart(item.price)}</div>
                 </div>
               </div>
             </div>
           ))}
           <div id="cart-bottom-buttons">
-            <button id="clear" className="cart-buttons">Clear Cart</button>
+            <button id="clear" className="cart-buttons" onClick={clearCart}>Clear Cart</button>
             <button className="cart-buttons">Checkout</button>
           </div>
         </div>

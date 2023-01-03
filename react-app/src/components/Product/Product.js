@@ -14,6 +14,7 @@ export default function Product() {
   const cart = useSelector(state => state.cart);
   const product = useSelector(state => state.products[id]);
 
+
   const { numInCart, setNumInCart } = useContext(SweetContext);
 
   const [selectedThumb, setSelectedThumb] = useState('');
@@ -26,7 +27,15 @@ export default function Product() {
     dispatch(thunkReadProduct(id))
   }, [])
 
-
+  let alreadyInCart;
+  if (product && cart) {
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].item_id === product.id) {
+        alreadyInCart = true;
+        break;
+      }
+    }
+  }
 
   const toPriceMain = (floater) => {
     let temp_str = floater.toString();
@@ -180,7 +189,8 @@ export default function Product() {
           <div id="sidebar-right">
             <div id="main-price">{toPriceMain(product.price)}</div>
             <div id="button-wrap">
-              <button id="add-to-cart" onClick={addToCart}>Add to Cart</button>
+              {!alreadyInCart && (<button id="add-to-cart" onClick={addToCart}>Add to Cart</button>)}
+              {alreadyInCart && (<button id="already">Already in Your Cart</button>)}
             </div>
           </div>
         </div>

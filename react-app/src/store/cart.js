@@ -1,4 +1,4 @@
-// 
+//
 const ADD_CART = 'cart/ADD_CART'
 const READ_CART = 'cart/READ_CART'
 const UPDATE_CART = 'cart/UPDATE_CART'
@@ -76,6 +76,7 @@ export const thunkClearCart = () => async (dispatch) => {
   })
 
   if (response.ok) {
+    dispatch(actionClearCart())
     console.log('DELETED CART')
   } else {
     const data = await response.json()
@@ -86,6 +87,46 @@ export const thunkClearCart = () => async (dispatch) => {
     }
   }
 }
+
+export const thunkDeleteSingle = (id) => async (dispatch) => {
+  const response = await fetch(`/api/cart/delete/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+  })
+
+  if (response.ok) {
+    console.log('DELETED FROM DB!!')
+    dispatch(actionDeleteCart(id));
+  } else {
+    const data = await response.json()
+    if (data.errors) {
+      return data;
+    } else {
+      return ['Could Not Remove Item']
+    }
+  }
+}
+
+export const thunkUpdateCart = (id, val) => async (dispatch) => {
+  const response = await fetch('/api/cart/quantity', {
+    method: "PUT",
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    // body: JSON.stringify({
+    //   id,
+    //   val
+    // }),
+  })
+
+  if (response.ok) {
+    const data = await response.json();
+    dispatch(actionUpdateCart(data));
+  }
+}
+
 
 // REDUCER
 export default function cartReducer(state = [], action) {
@@ -112,6 +153,17 @@ export default function cartReducer(state = [], action) {
     }
     case CLEAR_CART: {
       return [];
+    }
+    case DELETE_CART: {
+      console.log('INSIDE ACTION')
+      const newState = [...state];
+      for (let i = 0; i < newState.length; i++) {
+        if (newState[i].id === parseInt(action.payload)) {
+          newState.splice(i, 1);
+          break;
+        }
+      }
+      return newState;
     }
     default: return state;
   }
