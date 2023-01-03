@@ -112,7 +112,7 @@ export const thunkDeleteSingle = (id) => async (dispatch) => {
 export const thunkUpdateCart = (id, val) => async (dispatch) => {
   console.log('SENDING ID: ', id, 'AND VAL: ', val)
   const response = await fetch('/api/cart/quantity', {
-    method: 'POST',
+    method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
     },
@@ -145,7 +145,7 @@ export default function cartReducer(state = [], action) {
     case UPDATE_CART: {
       const newState = [...state]
       for (let i = 0; i < newState.length; i++) {
-        if (newState[i].id === action.payload.id) {
+        if (newState[i].id === String(action.payload.id)) {
           newState[i] = action.payload;
           break
         }

@@ -39,11 +39,23 @@ def add_to_cart():
 
 
 
-@cart_routes.route('/quantity', methods=['POST'])
+@cart_routes.route('/quantity', methods=['PUT'])
 @login_required
 def update_quantity():
   body = json.loads(request.data.decode('UTF-8'))
   print('REQUEST DATA', body)
+
+  item_to_update = Cart.query.filter(Cart.item_id == body['id']).first()
+  # item_to_update = item_to_update.to_dict()
+  item_to_update.quantity += body['val']
+  item_to_update.updatedat = str(datetime.now())
+  print(item_to_update)
+
+  db.session.add(item_to_update)
+  db.session.commit()
+
+  item_to_update = item_to_update.to_dict()
+  return item_to_update
 
 
 
