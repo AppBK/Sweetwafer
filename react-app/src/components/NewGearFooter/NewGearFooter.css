@@ -1,0 +1,105 @@
+#footer {
+  background-color: #dddbd6;
+  width: 100%;
+  /* position: fixed;
+  bottom: 0px; */
+}
+
+#happy-new-gears {
+  height: 218px;
+  width: 100%;
+  background-image: url('https://media.sweetwater.com/m/include/footer/images/new-gear-day/background-image.jpg');
+  background-size: 100% 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: fixed;
+  bottom: 80px; */
+}
+
+#trademark-cont {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #d1cfce;
+}
+
+#sweetwafer-sound {
+  font-size: 14px;
+  margin: 8px;
+}
+
+#sweetwafer-trademark {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.photo-tile {
+  border-radius: 50%;
+  border: 5px solid #b7cbdb;
+  width: 131px;
+  height: 126px;
+  background-size: 100%;
+  margin: 5px;
+  transition-property: width, height;
+  transition-duration: 0.1s;
+}
+
+.photo-tile:hover {
+  cursor: pointer;
+  width: 138px;
+  height: 133px;
+}
+
+#new-gears-center {
+  color: white;
+  width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 24px;
+}
+
+#new-gears-center:hover {
+  cursor: pointer;
+}
+
+#new-gear-img {
+  background-image: url('https://media.sweetwater.com/m/newgearday/logo.png');
+  background-size: 100% 47px;
+  height: 47px;
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+#happy {
+  font-size: 2em;
+}
+
+.center-text {
+  padding-top: 4px;
+}
+
+#link-to-new-gear {
+  text-decoration: underline;
+}
+
+#link-to-new-gear:hover {
+  color: rgba(249, 249, 116, 0.8);
+}
+
+.resizing {
+  width: 150px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}

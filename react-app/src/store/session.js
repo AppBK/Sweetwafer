@@ -1,4 +1,4 @@
-import { actionGetCart } from "./cart";
+import { actionGetCart, actionClearCart } from "./cart";
 
 // constants
 const SET_USER = 'session/SET_USER';
@@ -21,13 +21,32 @@ export const authenticate = () => async (dispatch) => {
       'Content-Type': 'application/json'
     }
   });
+  // if (response.ok) {
+  //   const data = await response.json();
+  //   if (data.errors) {
+  //     return;
+  //   }
+
+  //   dispatch(setUser(data));
+  // }
   if (response.ok) {
     const data = await response.json();
-    if (data.errors) {
-      return;
-    }
+    console.log('RETURN FROM LOGIN: ', data.cart)
+    dispatch(setUser(data))
 
-    dispatch(setUser(data));
+    if (data.cart) {
+      if (data.cart.length > 0) {
+        dispatch(actionGetCart(data.cart))
+      }
+    }
+    return null;
+  } else if (response.status < 500) {
+    const data = await response.json();
+    if (data.errors) {
+      return data.errors;
+    }
+  } else {
+    return ['An error occurred. Please try again.']
   }
 }
 
@@ -70,6 +89,7 @@ export const logout = () => async (dispatch) => {
 
   if (response.ok) {
     dispatch(removeUser());
+    dispatch(actionClearCart());
   }
 };
 
