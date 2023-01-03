@@ -16,6 +16,8 @@ inventory_product_images = db.Table(
     primary_key=True
   )
 )
+if environment == "production":
+  inventory_product_images.schema = SCHEMA
 
 
 class Inventory(db.Model, UserMixin):

@@ -56,6 +56,8 @@ export default function Cart() {
     // console.log('CURRENT Y: ', e.nativeEvent.offsetY);
     const offset = e.nativeEvent.offsetY;
 
+    console.log('SENDING ID: ', e.target.id);
+
     if (offset < 10) {
       dispatch(thunkUpdateCart(e.target.id, 1));
       setQty(!qty);
@@ -112,7 +114,7 @@ export default function Cart() {
               </div>
               <div className="far-div">
                 <div className="qty">
-                  <input className="qty-input" type="number" placeholder={item.quantity} onClick={(e) => updateQty(e)}></input>
+                  <input id={item.id} className="qty-input" type="number" placeholder={item.quantity} onClick={(e) => updateQty(e)}></input>
                   <div id={JSON.stringify([item.id, item.quantity])} className="remove-item" onClick={(e) => removeItem(e)} >Remove</div>
                 </div>
                 <div className="price-div">
