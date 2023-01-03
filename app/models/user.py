@@ -13,8 +13,8 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(128), nullable=False, unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(256), nullable=False)
-    createdAt = db.Column(db.String(64), nullable=False)
-    updatedAt = db.Column(db.String(64), nullable=False)
+    createdat = db.Column(db.String(64), nullable=False)
+    updatedat = db.Column(db.String(64), nullable=False)
 
     shippings = db.relationship('Shipping', back_populates='user', cascade='all, delete-orphan')
     cart = db.relationship('Cart', back_populates='users', cascade='all, delete-orphan')
@@ -35,6 +35,6 @@ class User(db.Model, UserMixin):
             'id': self.id,
             'username': self.username,
             'email': self.email,
-            'createdAt': self.createdAt,
-            'updatedAt': self.updatedAt
+            'createdat': self.createdat,
+            'updatedat': self.updatedat
         }
