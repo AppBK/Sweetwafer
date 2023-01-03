@@ -37,8 +37,8 @@ class Inventory(db.Model, UserMixin):
   price = db.Column(db.Float, nullable=False)
   preview = db.Column(db.String(512), nullable=False)
   logo = db.Column(db.String(512), nullable=False)
-  createdAt = db.Column(db.String(64), nullable=False)
-  updatedAt = db.Column(db.String(64), nullable=False)
+  createdat = db.Column(db.String(64), nullable=False)
+  updatedat = db.Column(db.String(64), nullable=False)
 
   product_images = db.relationship("ProductImages", secondary=inventory_product_images, back_populates="inventories")
 
@@ -55,8 +55,8 @@ class Inventory(db.Model, UserMixin):
       'price': self.price,
       'preview': self.preview,
       'logo': self.logo,
-      'createdAt': self.createdAt,
-      'updatedAt': self.updatedAt
+      'createdat': self.createdat,
+      'updatedat': self.updatedat
     }
 
     return inventory
@@ -70,8 +70,8 @@ class ProductImages(db.Model, UserMixin):
 
   id = db.Column(db.Integer, nullable=False, primary_key=True)
   url = db.Column(db.String(1024), nullable=False)
-  createdAt = db.Column(db.String(64), nullable=False)
-  updatedAt = db.Column(db.String(64), nullable=False)
+  createdat = db.Column(db.String(64), nullable=False)
+  updatedat = db.Column(db.String(64), nullable=False)
 
   inventories = db.relationship("Inventory", secondary=inventory_product_images, back_populates="product_images")
 
@@ -79,6 +79,6 @@ class ProductImages(db.Model, UserMixin):
     return {
       'id': self.id,
       'url': self.url,
-      'createdAt': self.createdAt,
-      'updatedAt': self.updatedAt
+      'createdat': self.createdat,
+      'updatedat': self.updatedat
     }

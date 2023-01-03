@@ -5,11 +5,11 @@ from datetime import datetime
 # Adds a demo user, you can add other users here if you want
 def seed_users():
     demo = User(
-        username='Demo', email='demo@aa.io', password='password', createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+        username='Demo', email='demo@aa.io', password='password', createdat=str(datetime.now()), updatedat=str(datetime.now()))
     marnie = User(
-        username='marnie', email='marnie@aa.io', password='password', createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+        username='marnie', email='marnie@aa.io', password='password', createdat=str(datetime.now()), updatedat=str(datetime.now()))
     bobbie = User(
-        username='bobbie', email='bobbie@aa.io', password='password', createdAt=str(datetime.now()), updatedAt=str(datetime.now()))
+        username='bobbie', email='bobbie@aa.io', password='password', createdat=str(datetime.now()), updatedat=str(datetime.now()))
 
     db.session.add(demo)
     db.session.add(marnie)
@@ -32,5 +32,5 @@ def undo_users():
     db.session.commit()
 
 
-#   createdAt = db.Column(db.String(64), nullable=False)
-#    updatedAt = db.Column(db.String(64), nullable=False)
+#   createdat = db.Column(db.String(64), nullable=False)
+#    updatedat = db.Column(db.String(64), nullable=False)

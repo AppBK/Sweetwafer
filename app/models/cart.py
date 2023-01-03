@@ -12,8 +12,8 @@ class Cart(db.Model, UserMixin):
   user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
   item_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('inventories.id')), nullable=False)
   quantity = db.Column(db.Integer, default=1) # Is nullable
-  createdAt = db.Column(db.String(64), nullable=False)
-  updatedAt = db.Column(db.String(64), nullable=False)
+  createdat = db.Column(db.String(64), nullable=False)
+  updatedat = db.Column(db.String(64), nullable=False)
   # a 'users' relationship should be created here by the user relationship...
   users = db.relationship('User', back_populates='cart')
 
@@ -23,8 +23,8 @@ class Cart(db.Model, UserMixin):
       'user_id': self.user_id,
       'item_id': self.item_id,
       'quantity': self.quantity,
-      'createdAt': self.createdAt,
-      'updatedAt': self.updatedAt
+      'createdat': self.createdat,
+      'updatedat': self.updatedat
     }
 
     return cart

@@ -19,8 +19,8 @@ INFO  [alembic.autogenerate.compare] Detected added table 'product_images'
 INFO  [alembic.autogenerate.compare] Detected added table 'carts'
 INFO  [alembic.autogenerate.compare] Detected added table 'inventory_product_images'
 INFO  [alembic.autogenerate.compare] Detected added table 'shippings'
-INFO  [alembic.autogenerate.compare] Detected added column 'users.createdAt'
-INFO  [alembic.autogenerate.compare] Detected added column 'users.updatedAt'
+INFO  [alembic.autogenerate.compare] Detected added column 'users.createdat'
+INFO  [alembic.autogenerate.compare] Detected added column 'users.updatedat'
   Generating /Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Cap
   stone/sweetwafer/project/migrations/versions/20221221_121143_create_migrations_f
   or_user_shipping_.py ...  done

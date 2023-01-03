@@ -1,7 +1,7 @@
 """create all
 
 Revision ID: 5bee446bd31a
-Revises: 
+Revises:
 Create Date: 2023-01-02 18:15:34.030833
 
 """
@@ -31,15 +31,15 @@ def upgrade():
     sa.Column('price', sa.Float(), nullable=False),
     sa.Column('preview', sa.String(length=512), nullable=False),
     sa.Column('logo', sa.String(length=512), nullable=False),
-    sa.Column('createdAt', sa.String(length=64), nullable=False),
-    sa.Column('updatedAt', sa.String(length=64), nullable=False),
+    sa.Column('createdat', sa.String(length=64), nullable=False),
+    sa.Column('updatedat', sa.String(length=64), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('product_images',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('url', sa.String(length=1024), nullable=False),
-    sa.Column('createdAt', sa.String(length=64), nullable=False),
-    sa.Column('updatedAt', sa.String(length=64), nullable=False),
+    sa.Column('createdat', sa.String(length=64), nullable=False),
+    sa.Column('updatedat', sa.String(length=64), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('users',
@@ -47,8 +47,8 @@ def upgrade():
     sa.Column('username', sa.String(length=128), nullable=False),
     sa.Column('email', sa.String(length=255), nullable=False),
     sa.Column('hashed_password', sa.String(length=256), nullable=False),
-    sa.Column('createdAt', sa.String(length=64), nullable=False),
-    sa.Column('updatedAt', sa.String(length=64), nullable=False),
+    sa.Column('createdat', sa.String(length=64), nullable=False),
+    sa.Column('updatedat', sa.String(length=64), nullable=False),
     sa.PrimaryKeyConstraint('id'),
     sa.UniqueConstraint('email'),
     sa.UniqueConstraint('username')
@@ -58,8 +58,8 @@ def upgrade():
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.Column('item_id', sa.Integer(), nullable=False),
     sa.Column('quantity', sa.Integer(), nullable=True),
-    sa.Column('createdAt', sa.String(length=64), nullable=False),
-    sa.Column('updatedAt', sa.String(length=64), nullable=False),
+    sa.Column('createdat', sa.String(length=64), nullable=False),
+    sa.Column('updatedat', sa.String(length=64), nullable=False),
     sa.ForeignKeyConstraint(['item_id'], ['inventories.id'], ),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
@@ -82,8 +82,8 @@ def upgrade():
     sa.Column('state', sa.String(length=64), nullable=False),
     sa.Column('zip', sa.String(length=16), nullable=False),
     sa.Column('country', sa.String(length=128), nullable=False),
-    sa.Column('createdAt', sa.String(length=64), nullable=False),
-    sa.Column('updatedAt', sa.String(length=64), nullable=False),
+    sa.Column('createdat', sa.String(length=64), nullable=False),
+    sa.Column('updatedat', sa.String(length=64), nullable=False),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
     sa.PrimaryKeyConstraint('id')
     )

@@ -17,7 +17,7 @@ def add_to_cart():
 
   item_info = Inventory.query.filter(Inventory.id == body['item_id']).first()
 
-  new_item = Cart(user_id=body['user_id'], item_id=body['item_id'], createdAt=str(datetime.now()), updatedAt=str(datetime.now()), quantity=1)
+  new_item = Cart(user_id=body['user_id'], item_id=body['item_id'], createdat=str(datetime.now()), updatedat=str(datetime.now()), quantity=1)
 
   db.session.add(new_item)
   db.session.commit()

@@ -18,8 +18,8 @@ class Shipping(db.Model, UserMixin):
   state = db.Column(db.String(64), nullable=False)
   zip = db.Column(db.String(16), nullable=False)
   country = db.Column(db.String(128), nullable=False)
-  createdAt = db.Column(db.String(64), nullable=False)
-  updatedAt = db.Column(db.String(64), nullable=False)
+  createdat = db.Column(db.String(64), nullable=False)
+  updatedat = db.Column(db.String(64), nullable=False)
 
   user = db.relationship('User', back_populates='shippings')
 
@@ -35,8 +35,8 @@ class Shipping(db.Model, UserMixin):
       'state': self.state,
       'zip': self.zip,
       'country': self.country,
-      'createdAt': self.createdAt,
-      'updatedAt': self.updatedAt
+      'createdat': self.createdat,
+      'updatedat': self.updatedat
     }
 
     return shipping_info
