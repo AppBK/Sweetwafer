@@ -11,7 +11,11 @@ export default function Header() {
   const user = useSelector(state => state.session.user);
   const cart = useSelector(state => state.cart);
 
-  setNumInCart(cart.length);
+  let sum = 0;
+  cart.forEach(element => {
+    sum += element.quantity;
+  });
+  setNumInCart(sum);
 
   console.log('CART: ', cart);
   let renderCart = user ? true : false;

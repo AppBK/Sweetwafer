@@ -55,6 +55,15 @@ def update_quantity():
   db.session.commit()
 
   item_to_update = item_to_update.to_dict()
+  item_info = Inventory.query.filter(Inventory.id == body['id']).first()
+  item_info = item_info.to_dict()
+
+  for key in item_info:
+    if key == 'id':
+      pass
+    else:
+      item_to_update[key] = item_info[key]
+
   return item_to_update
 
 

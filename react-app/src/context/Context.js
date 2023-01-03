@@ -8,6 +8,7 @@ export const SweetProvider = props => {
   const [signUpPass, setSignUpPass] = useState('');
   const [vendor, setVendor] = useState('');
   const [numInCart, setNumInCart] = useState(0);
+  const [qty, setQty] = useState(true);
 
 
   return (
@@ -16,6 +17,7 @@ export const SweetProvider = props => {
       signUpPass, setSignUpPass,
       vendor, setVendor,
       numInCart, setNumInCart,
+      qty, setQty,
     }}>
       {props.children}
     </SweetContext.Provider>

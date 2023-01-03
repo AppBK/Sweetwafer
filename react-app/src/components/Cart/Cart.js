@@ -5,17 +5,20 @@ import './Cart.css'
 import { thunkDeleteSingle, thunkClearCart, thunkUpdateCart } from '../../store/cart';
 
 export default function Cart() {
-  const { numInCart, setNumInCart } = useContext(SweetContext);
+  const { numInCart, setNumInCart, qty, setQty } = useContext(SweetContext);
   const cart = useSelector(state => state.cart);
   const dispatch = useDispatch();
 
-  const [qty, setQty] = useState(true);
-
   useEffect(() => {
-    setNumInCart(cart.length);
-  }, [])
+    let sum = 0;
+    cart.forEach(element => {
+      sum += element.quantity;
+    });
+    setNumInCart(sum);
+  }, [numInCart])
 
   const toPriceCart = (floater) => {
+    if (!floater) return null;
     let temp_str = floater.toString();
     let char;
     let count = 0;
@@ -51,7 +54,7 @@ export default function Cart() {
     setNumInCart(numInCart - temp[1]);
   }
 
-  const updateQty = (e) => {
+  const updateQty = async (e) => {
     e.preventDefault();
     // console.log('CURRENT Y: ', e.nativeEvent.offsetY);
     const offset = e.nativeEvent.offsetY;
@@ -59,16 +62,18 @@ export default function Cart() {
     console.log('SENDING ID: ', e.target.id);
 
     if (offset < 10) {
-      dispatch(thunkUpdateCart(e.target.id, 1));
+      await dispatch(thunkUpdateCart(e.target.id, 1));
       setQty(!qty);
+      setNumInCart(cart.length + 1)
     } else {
-      dispatch(thunkUpdateCart(e.target.id, -1));
+      await dispatch(thunkUpdateCart(e.target.id, -1));
       setQty(!qty);
+      setNumInCart(numInCart - 1)
     }
   }
 
   let lessThanTwo;
-  if (numInCart < 2) {
+  if (cart.length < 2) {
     lessThanTwo = true;
   }
 
@@ -114,7 +119,7 @@ export default function Cart() {
               </div>
               <div className="far-div">
                 <div className="qty">
-                  <input id={item.id} className="qty-input" type="number" placeholder={item.quantity} onClick={(e) => updateQty(e)}></input>
+                  <input id={item.item_id} className="qty-input" type="number" value={item.quantity} placeholder={item.quantity} onClick={(e) => updateQty(e)}></input>
                   <div id={JSON.stringify([item.id, item.quantity])} className="remove-item" onClick={(e) => removeItem(e)} >Remove</div>
                 </div>
                 <div className="price-div">
