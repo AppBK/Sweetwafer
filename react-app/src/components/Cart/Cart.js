@@ -65,6 +65,11 @@ export default function Cart() {
     }
   }
 
+  let lessThanTwo;
+  if (numInCart < 2) {
+    lessThanTwo = true;
+  }
+
   let isEmpty;
   if (numInCart === 0) isEmpty = true;
 
@@ -121,6 +126,7 @@ export default function Cart() {
             <button className="cart-buttons">Checkout</button>
           </div>
         </div>
+        {lessThanTwo && (<div id="spacer"></div>)}
         <div id="doshite-sweet">
             <div id="why-title">Why Choose Sweetwater?</div>
             <div><b>At Sweetwater, we have one single goal in mind: to make you a satisfied customer.</b></div>
