@@ -39,12 +39,13 @@ def add_to_cart():
 
 
 
-@cart_routes.route('/quantity', methods=['PUT'])
+@cart_routes.route('/quantity', methods=['POST'])
 @login_required
 def update_quantity():
-  print('HEY NOW!!!')
-  # body = json.loads(request.data.decode('UTF-8'))
-  # print('REQUEST DATA', body)
+  body = json.loads(request.data.decode('UTF-8'))
+  print('REQUEST DATA', body)
+
+
 
 
 @cart_routes.route('/delete/<int:id>', methods=['DELETE'])

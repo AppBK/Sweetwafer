@@ -110,15 +110,16 @@ export const thunkDeleteSingle = (id) => async (dispatch) => {
 }
 
 export const thunkUpdateCart = (id, val) => async (dispatch) => {
+  console.log('SENDING ID: ', id, 'AND VAL: ', val)
   const response = await fetch('/api/cart/quantity', {
-    method: "PUT",
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    // body: JSON.stringify({
-    //   id,
-    //   val
-    // }),
+    body: JSON.stringify({
+      id: id,
+      val: val
+    }),
   })
 
   if (response.ok) {
