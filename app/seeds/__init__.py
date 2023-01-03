@@ -22,6 +22,7 @@ def seed():
         undo_users()
         undo_inventory()
         undo_product_images()
+        undo_inventory_product_images()
     seed_users()
     seed_shipping()
     seed_inventory()

@@ -56,3 +56,9 @@ BUILD STUFF:
 Jan 2 05:56:36 PM  (Background on this error at: http://sqlalche.me/e/14/gkpj)
 
 sqlalchemy.exc.IntegrityError: (psycopg2.errors.NotNullViolation) column "preview" of relation "inventories" contains null values
+
+
+
+
+# http://sqlalche.me/e/14/f405
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedColumn) column "createdat" of relation "users" does not exist
