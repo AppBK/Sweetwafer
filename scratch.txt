@@ -41,3 +41,15 @@ Git Key (?): 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
 
 
 FETCHED USER:  {'id': 1, 'username': 'Demo', 'email': 'demo@aa.io', 'createdAt': '2022-12-21 13:16:27.120060', 'updatedAt': '2022-12-21 13:16:27.120075', 'cart': [{'id': 1, 'vendor_name': 'Dangerous', 'manufacturer_id': 'Dangerous', 'name': 'Dangerous Music D-BOX+ Monitor Controller & Summing Mixer', 'description': 'Summing and Monitoring System with 8-channel Analog Summing Mixer, 5 Analog Inputs, 5 Digital Inputs, Bluetooth Wireless Streaming, Talkback, Dual Headphone Amplifiers, 3 Speaker Outputs, Programmable Speaker Selector, and Remote Operation', 'model': 'DBox+', 'serial': 'DAN100', 'tech_specs': 'Output Channels:3 x Independent Speaker Out, 1 x Stereo Sum Out;Analog Inputs:2 x XLR-1/4 inch combo, 1 x DB-25 (8 ch Tascam format);Analog Outputs:\t2 x 1/4 inch (sum out), 2 x 1/4 inch (line out), 6 x 1/4 inch (3 x speaker out), 2 x 1/4 inch (control room);Digital Inputs:\t1 x XLR (AES,S/PDIF);Digital Outputs:\t1 x XLR (AES,S/PDIF thru);Headphones:\t2 x 1/4 inch;USB:\t1 x Type B;Computer Connectivity:\tUSB, Bluetooth;Talkback:\tYes;Software:\tD-Box+ App (current iOS/Android);OS Requirements - Mac:\tOS X 10.8.6 or later, iOS 10.2 or later;OS Requirements - PC:\tWindows 7 SP1 or later, Android 5.0 or later;Form Factor:\tRackmount;Power Supply:\tStandard IEC AC cable;Height:\t1.7 inch;Width:\t19 inch;Depth:\t13.5 inch;Weight:\t11.6 lbs.;Manufacturer Part Number:\tDBox+;', 'price': 2499.0, 'createdAt': '2022-12-21 13:16:27.574548', 'updatedAt': '2022-12-21 13:16:27.574585', 'product_images': [{'id': 1, 'url': 'https://media.sweetwater.com/api/i/q-82__f-webp__ha-07e4a36e23b6d98f__hmac-da4ed276700a3156441a08759e499154c009fe75/images/items/750/DBoxPlus-large.jpg.auto.webp', 'createdAt': '2022-12-21 13:16:27.565215', 'updatedAt': '2022-12-21 13:16:27.565226'}, {'id': 2, 'url': 'https://media.sweetwater.com/api/i/q-75__f-webp__ha-80e9dcd173c9846d__hmac-0d53dd34ab31a3c67c8fd2923e566ae7ad32d8cf/images/closeup/120-DBoxPlus_detail1.jpg.auto.webp', 'createdAt': '2022-12-21 13:16:27.565277', 'updatedAt': '2022-12-21 13:16:27.565280'}]}, {'id': 2, 'vendor_name': 'Dangerous', 'manufacturer_id': 'Dangerous', 'name': 'Dangerous Music 2-BUS+ Analog Summing Mixer', 'description': '16 x 2 Analog Summing Mixer with Harmonic Distortion Generator, FET Limiter, Variable Stereo Transformers, and Stereo Insert', 'model': '2Bus+', 'serial': 'DAN101', 'tech_specs': 'Type:\tAnalog;Channels:\t16 x 2;Inputs - Line:\t2 x DB-25;Inputs - Other:\t2 x XLR (Exp);Outputs - Main:\t2 x XLR;Outputs - Other:\t2 x XLR (Monitor);Send/Return I/O:\t2 x XLR (Send), 2 x XLR (Return);Rackmountable:\tYes;Height:\t3.5 inch;Width:\t19 inch;Manufacturer Part Number:\t2Bus+;', 'price': 2999.0, 'createdAt': '2022-12-21 13:16:27.574693', 'updatedAt': '2022-12-21 13:16:27.574696', 'product_images': []}]}
+
+
+
+
+
+
+BUILD STUFF:
+
+[SQL: ALTER TABLE inventories ADD COLUMN preview VARCHAR(512) NOT NULL]
+Jan 2 05:56:36 PM  (Background on this error at: http://sqlalche.me/e/14/gkpj)
+
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.NotNullViolation) column "preview" of relation "inventories" contains null values
