@@ -92,6 +92,10 @@
   width: 970px;
   height: fit-content;
   box-shadow: 0 0 0 1px #e6e6e6, 0 5px 30px #eaeaea;
+  border-bottom: 1px solid #d1cfce;
+  margin-bottom: 24px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 #cart-header {
