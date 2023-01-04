@@ -84,7 +84,8 @@ export default function Product() {
 
   const addToCart = async () => {
     await dispatch(thunkAddCart(user.id, product.id));
-    setNumInCart(cart.length + 1);
+
+    setNumInCart(numInCart + 1);
   }
 
 
@@ -189,8 +190,9 @@ export default function Product() {
           <div id="sidebar-right">
             <div id="main-price">{toPriceMain(product.price)}</div>
             <div id="button-wrap">
-              {!alreadyInCart && (<button id="add-to-cart" onClick={addToCart}>Add to Cart</button>)}
-              {alreadyInCart && (<button id="already">Already in Your Cart</button>)}
+              {!alreadyInCart && user && (<button id="add-to-cart" onClick={addToCart}>Add to Cart</button>)}
+              {alreadyInCart && user && (<button id="already">Already in Your Cart</button>)}
+              {!user && (<button id="not-logged">Login to Shop!</button>)}
             </div>
           </div>
         </div>

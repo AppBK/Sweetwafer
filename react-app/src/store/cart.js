@@ -123,6 +123,7 @@ export const thunkUpdateCart = (id, val) => async (dispatch) => {
   })
 
   if (response.ok) {
+    console.log('RESPONSE OK FOR UPDATE')
     const data = await response.json();
     dispatch(actionUpdateCart(data));
   }
@@ -144,8 +145,9 @@ export default function cartReducer(state = [], action) {
     }
     case UPDATE_CART: {
       const newState = [...state]
+      console.log('INSIDE ACTION: ', action.payload.id)
       for (let i = 0; i < newState.length; i++) {
-        if (newState[i].id === String(action.payload.id)) {
+        if (newState[i].id === parseInt(action.payload.id)) {
           newState[i] = action.payload;
           break
         }

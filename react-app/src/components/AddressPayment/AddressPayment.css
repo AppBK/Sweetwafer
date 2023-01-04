@@ -1,0 +1,16 @@
+#address-jitai {
+  border-bottom: 2px solid #d9d9d9;
+}
+
+#address-title {
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: -14px;
+}
+
+#address-description {
+  font-size: 13px;
+  margin-bottom: 24px;
+}

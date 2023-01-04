@@ -11,7 +11,11 @@ export default function Header() {
   const user = useSelector(state => state.session.user);
   const cart = useSelector(state => state.cart);
 
-  setNumInCart(cart.length);
+  let sum = 0;
+  cart.forEach(element => {
+    sum += element.quantity;
+  });
+  setNumInCart(sum);
 
   console.log('CART: ', cart);
   let renderCart = user ? true : false;
@@ -19,6 +23,7 @@ export default function Header() {
   let renderDemo = user ? false : true;
   let renderLogin = user ? false : true;
   let renderSignUp = user ? false : true;
+  let renderAccount = user ? true : false;
 
   const history = useHistory();
   const dispatch = useDispatch();
@@ -48,6 +53,10 @@ export default function Header() {
     await dispatch(logout());
   };
 
+  const toAccount = () => {
+    history.push('/account');
+  }
+
   return (
     <div id="flex-header">
       <button id="sweet-logo" onClick={goHome}>
@@ -72,6 +81,7 @@ export default function Header() {
             <a id="signup-link" href="/signup-one">Create&nbsp;&nbsp;your account</a>
           </div>)}
           {renderDemo && (<button id="demo-button" onClick={loginDemo}>Demo user</button>)}
+          {renderAccount && (<div id="your-account" onClick={toAccount}>Your Account</div>)}
           {renderLogout && (<button id="logout-button" onClick={onLogout}>Logout</button>)}
         </div>
       </div>

@@ -301,6 +301,17 @@
   background-color: #2c660f;
 }
 
+#not-logged {
+  width: 300px;
+  height: 52px;
+  background-color: #3B7D1A;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  margin-top: 16px;
+  font-size: 18px;
+}
+
 /*
 
   display: flex;

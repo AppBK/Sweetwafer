@@ -18,7 +18,7 @@ inventory_product_images = db.Table(
 )
 if environment == "production":
   inventory_product_images.schema = SCHEMA
-
+# Note that this declaration FOR the join table goes right beneath it NOT inside of it!!!
 
 class Inventory(db.Model, UserMixin):
   __tablename__ = 'inventories'
