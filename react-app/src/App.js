@@ -20,6 +20,7 @@ import Footer from './components/Footer/Footer';
 import NewGear from './components/SpecialPages/NewGear';
 import NewGearFooter from './components/NewGearFooter/NewGearFooter';
 import GuitarInspection from './components/SpecialPages/GuitarInspection';
+import Account from './components/Account/Account';
 import { authenticate, login } from './store/session';
 
 
@@ -110,6 +111,13 @@ function App() {
           <Header />
           <Navigation />
           <GuitarInspection />
+          <NewGearFooter />
+          <Footer />
+        </Route>
+        <Route path='/account'>
+          <Header />
+          <Navigation />
+          <Account />
           <NewGearFooter />
           <Footer />
         </Route>

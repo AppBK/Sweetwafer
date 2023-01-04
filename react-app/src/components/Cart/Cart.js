@@ -5,7 +5,7 @@ import './Cart.css'
 import { thunkDeleteSingle, thunkClearCart, thunkUpdateCart } from '../../store/cart';
 
 export default function Cart() {
-  const { numInCart, setNumInCart, qty, setQty } = useContext(SweetContext);
+  const { numInCart, setNumInCart } = useContext(SweetContext);
   const cart = useSelector(state => state.cart);
   const dispatch = useDispatch();
 
@@ -63,11 +63,9 @@ export default function Cart() {
 
     if (offset < 10) {
       await dispatch(thunkUpdateCart(e.target.id, 1));
-      setQty(!qty);
       setNumInCart(cart.length + 1)
     } else {
       await dispatch(thunkUpdateCart(e.target.id, -1));
-      setQty(!qty);
       setNumInCart(numInCart - 1)
     }
   }

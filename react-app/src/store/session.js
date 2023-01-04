@@ -31,15 +31,19 @@ export const authenticate = () => async (dispatch) => {
   // }
   if (response.ok) {
     const data = await response.json();
-    console.log('RETURN FROM LOGIN: ', data.cart)
-    dispatch(setUser(data))
+    console.log('RETURN FROM LOGIN: ', data)
+
+    if (data.errors) {
+      return null;
+    } else {
+      dispatch(setUser(data))
+    }
 
     if (data.cart) {
       if (data.cart.length > 0) {
         dispatch(actionGetCart(data.cart))
       }
     }
-    return null;
   } else if (response.status < 500) {
     const data = await response.json();
     if (data.errors) {

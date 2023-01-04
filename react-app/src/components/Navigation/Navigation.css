@@ -159,7 +159,7 @@
 .vendor-div:hover {
   color: #0072ba;
   cursor: pointer;
-  background-color: rgba(242, 241, 240, 0.5);
+  background-color: rgba(242, 241, 240, 1);
 }
 
 .left-hidden-cat {
@@ -173,5 +173,5 @@
 .left-hidden-cat:hover {
   color: #0072ba;
   cursor: pointer;
-  background-color: rgba(242, 241, 240, 0.5);
+  background-color: rgba(242, 241, 240, 1);
 }
