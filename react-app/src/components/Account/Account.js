@@ -7,6 +7,9 @@ import './Account.css'
 
 export default function Account() {
   const user = useSelector(state => state.session.user);
+
+  // if (!user) return null;
+
   const userName = user.username.toUpperCase();
 
   const [currentRender, setCurrentRender] = useState('home');
@@ -15,8 +18,8 @@ export default function Account() {
   const dispatch = useDispatch();
 
   const onLogoutAcc = async (e) => {
-    await dispatch(logout());
     history.push('/');
+    dispatch(logout());
   };
 
   return (
