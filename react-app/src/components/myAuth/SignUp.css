@@ -17,15 +17,19 @@
   height: 100%;
 }
 
-.signup-inputs {
+#signup-form {
+  width: 320px;
+}
+
+.signupone-inputs {
   display: block;
-  width: 93.1%;
+  width: 100%;
   height: 52px;
   padding-left: 16px;
   margin-bottom: 8px;
 }
 
-.signup-inputs:active {
+.signupone-inputs:active {
   border: 1px solid #0072ba;
 }
 
@@ -37,8 +41,8 @@
 
 #form-container {
   background-color: white;
-  width: 324px;
-  height: 540px;
+  width: 400px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */

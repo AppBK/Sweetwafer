@@ -40,7 +40,6 @@ export const thunkCreateShipping = (info) => async (dispatch) => {
 
   if (response.ok) {
     const info = await response.json();
-    console.log('RETURNED INFO: ', info)
     dispatch(actionReadShipping(info));
     return info;
   } else {
@@ -59,7 +58,6 @@ export const thunkReadShipping = (user_id) => async (dispatch) => {
 
   if (response.ok) {
     const info = await response.json();
-    console.log('RETURNED INFO: ', info)
     dispatch(actionReadShipping(info));
     return info;
   } else {
@@ -106,11 +104,11 @@ export const thunkDeleteShipping = (id) => async (dispatch) => {
   });
 
   if (response.ok) {
-    const updated = await response.json();
-    dispatch(actionUpdateShipping(updated));
-    return updated;
+    const info = await response.json();
+    dispatch(actionReadShipping(info));
+    return info;
   } else {
-    const data = await response.json();
+    const data = await response.json()
     if (data.errors) {
       return data;
     } else {

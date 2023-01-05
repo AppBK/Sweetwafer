@@ -17,15 +17,15 @@
   height: 100%;
 }
 
-.signup-inputs {
+.signuptwo-inputs {
   display: block;
-  width: 93.1%;
+  width: 244px;
   height: 44px;
   padding-left: 16px;
   margin-bottom: 8px;
 }
 
-.signup-inputs:active {
+.signuptwo-inputs:active {
   border: 1px solid #0072ba;
 }
 

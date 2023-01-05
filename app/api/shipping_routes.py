@@ -14,7 +14,24 @@ def delete_from_shipping():
     body = json.loads(request.data.decode('UTF-8'))
     print('HOT BODY: ', body)
 
-    shipping_info_to_delete = Shipping.get(body['id']);
+    shipping_info_to_delete = Shipping.query.get(body['id']);
+
+    if shipping_info_to_delete:
+      db.session.delete(shipping_info_to_delete)
+      db.session.commit();
+
+      all_shipping = Shipping.query.filter(Shipping.user_id == body['id']).all();
+
+      if all_shipping:
+        shipping_list = [info.to_dict() for info in all_shipping]
+
+        jsonified_list = json.dumps(shipping_list)
+        return jsonified_list
+      else:
+        return {}
+
+    else:
+      return "Error: Could not find info"
 
 # READ
 @shipping_routes.route('/<int:id>', methods=['GET'])
