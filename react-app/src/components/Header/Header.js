@@ -50,6 +50,7 @@ export default function Header() {
   }
 
   const onLogout = async (e) => {
+    history.push('/');
     await dispatch(logout());
   };
 

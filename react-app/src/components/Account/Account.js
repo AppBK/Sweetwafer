@@ -8,7 +8,6 @@ import './Account.css'
 export default function Account() {
   const user = useSelector(state => state.session.user);
 
-  // if (!user) return null;
 
   const userName = user.username.toUpperCase();
 
@@ -21,6 +20,8 @@ export default function Account() {
     history.push('/');
     await dispatch(logout());
   };
+
+  if (!user) return null;
 
   return (
     <div id="outer-account">
