@@ -1,4 +1,4 @@
-import Shipping from '../Shipping/Shipping'
+import Shipping from '../Shipping/Shipping.js'
 import './AddressPayment.css'
 
 export default function AddressPayment() {

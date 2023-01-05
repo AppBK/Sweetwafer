@@ -61,7 +61,7 @@ export default function Navigation() {
                 <div className="floaters">
                   <div className="left-hidden-cat" id={cat} onClick={(e) => routeToSubCategory(e)}>{cat}</div>
                   <div className="vendor-conts">
-                    {vendors[cat].map(vendor => (<div className="vendor-div" id={vendor} onClick={vendorChangeNav}>{vendor}</div>))}
+                    {vendors[cat].map(vendor => (<div key={vendor} className="vendor-div" id={vendor} onClick={vendorChangeNav}>{vendor}</div>))}
                   </div>
                 </div>
               </button>

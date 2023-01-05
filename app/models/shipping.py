@@ -18,6 +18,7 @@ class Shipping(db.Model, UserMixin):
   state = db.Column(db.String(64), nullable=False)
   zip = db.Column(db.String(16), nullable=False)
   country = db.Column(db.String(128), nullable=False)
+  primary = db.Column(db.Boolean, nullable=False)
   createdat = db.Column(db.String(64), nullable=False)
   updatedat = db.Column(db.String(64), nullable=False)
 
@@ -35,6 +36,7 @@ class Shipping(db.Model, UserMixin):
       'state': self.state,
       'zip': self.zip,
       'country': self.country,
+      'primary': self.primary,
       'createdat': self.createdat,
       'updatedat': self.updatedat
     }

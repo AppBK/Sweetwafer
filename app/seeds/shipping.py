@@ -6,14 +6,17 @@ def seed_shipping():
     item1 = Shipping(
         user_id=1, shipping_name='Demo', company='AppAcademy', street='333 App Wy.',
         apt_number=None, city='San Francisco', state='CA', zip='94000', country='United States',
+        primary=True,
         createdat=str(datetime.now()), updatedat=str(datetime.now()))
     item2 = Shipping(
         user_id=2, shipping_name='Marnie', company='AppAcademy', street='2244 Apple Dr.',
         apt_number=None, city='Cupertino', state='CA', zip='94001', country='United States',
+        primary=True,
         createdat=str(datetime.now()), updatedat=str(datetime.now()))
     item3 = Shipping(
         user_id=3, shipping_name='Bobbie', company='AppAcademy', street='1613 Jarvis St.',
         apt_number=None, city='San Clemente', state='CA', zip='94002', country='United States',
+        primary=True,
         createdat=str(datetime.now()), updatedat=str(datetime.now()))
 
 
