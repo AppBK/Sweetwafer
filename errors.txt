@@ -101,3 +101,30 @@ Traceback (most recent call last):
   File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/.venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
     raise exception
 sqlalchemy.exc.InvalidRequestError: Mapper 'mapped class Cart->carts' has no property 'users'
+
+
+
+
+
+# DELETE Shipping Errors:
+
+127.0.0.1 - - [05/Jan/2023 08:44:34] "DELETE /api/shipping/delete HTTP/1.1" 200 -
+2023-01-05 08:44:34,930 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2023-01-05 08:44:34,931 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.hashed_password AS users_hashed_password, users.createdat AS users_createdat, users.updatedat AS users_updatedat
+FROM users
+WHERE users.id = ?
+2023-01-05 08:44:34,931 INFO sqlalchemy.engine.Engine [cached since 99.28s ago] (1,)
+CURRENT_USER:  1
+2023-01-05 08:44:34,933 INFO sqlalchemy.engine.Engine SELECT users.id AS users_id, users.username AS users_username, users.email AS users_email, users.hashed_password AS users_hashed_password, users.createdat AS users_createdat, users.updatedat AS users_updatedat
+FROM users
+WHERE users.id = ?
+ LIMIT ? OFFSET ?
+2023-01-05 08:44:34,933 INFO sqlalchemy.engine.Engine [generated in 0.00027s] ('1', 1, 0)
+2023-01-05 08:44:34,934 INFO sqlalchemy.engine.Engine SELECT carts.id AS carts_id, carts.user_id AS carts_user_id, carts.item_id AS carts_item_id, carts.quantity AS carts_quantity, carts.createdat AS carts_createdat, carts.updatedat AS carts_updatedat
+FROM carts
+WHERE ? = carts.user_id
+2023-01-05 08:44:34,934 INFO sqlalchemy.engine.Engine [cached since 104s ago] (1,)
+TEMP PRODUCT IMAGES:  []
+FETCHED USER:  {'id': 1, 'username': 'Demo', 'email': 'demo@aa.io', 'createdat': '2023-01-05 08:42:41.846929', 'updatedat': '2023-01-05 08:42:41.846943', 'cart': []}
+2023-01-05 08:44:34,936 INFO sqlalchemy.engine.Engine ROLLBACK
+127.0.0.1 - - [05/Jan/2023 08:44:34] "GET /api/auth/ HTTP/1.1" 200 -

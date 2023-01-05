@@ -156,6 +156,7 @@ export default function Shipping() {
   }
 
   const deleteShipping = async () => {
+    console.log('SHIPPING ID TO DELETE: ', shippingId);
     await dispatch(thunkDeleteShipping(shippingId));
   }
 
@@ -227,8 +228,8 @@ export default function Shipping() {
             <div id="checkbox-label">Make this my primary shipping address</div>
           </div>
           <div id="button-box-bottom">
-            <button id="cancel-shipping-button" type="submit"><div id="cancel-label" onClick={closeAddForm}>Cancel</div></button>
-            <button id="confirm-shipping-button"><div id="save-label">Save This Shipping Address</div></button>
+            <button id="cancel-shipping-button"><div id="cancel-label" onClick={closeAddForm}>Cancel</div></button>
+              <button id="confirm-shipping-button" type="submit"><div id="save-label">Save This Shipping Address</div></button>
           </div>
         </div>
       </form>
@@ -236,7 +237,7 @@ export default function Shipping() {
       {renderUpdate && (<div id="inset-shadow-box">
         {/* {console.log('OPENED!', editObj)} */}
         <div id="update-address">Update Shipping Address</div>
-        <form onSubmit={createShippingInfo}>
+        <form onSubmit="">
           <div id="shipping-edit-label">Shipping Name</div>
           <div id="shipping-name-flex">
             <input id="first-name" className="shipping-input" type="text" placeholder="First" value={firstName} onChange={(e) => setFirstName(e.target.value)} required></input>
@@ -278,8 +279,8 @@ export default function Shipping() {
                 <button id="delete-shipping-button" onClick={deleteShipping}>Remove This Address</button>
               </div>
               <div>
-                <button id="cancel-shipping-button" type="submit"><div id="cancel-label" onClick={closeEditForm}>Cancel</div></button>
-                <button id="confirm-shipping-button"><div id="save-label">Save This Shipping Address</div></button>
+                <button id="cancel-shipping-button"><div id="cancel-label" onClick={closeEditForm}>Cancel</div></button>
+                <button id="confirm-shipping-button" type="submit"><div id="save-label">Save This Shipping Address</div></button>
               </div>
             </div>
           </div>
