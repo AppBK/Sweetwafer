@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { thunkReadShipping, thunkCreateShipping, thunkDeleteShipping } from '../../store/shipping'
+import { thunkReadShipping, thunkCreateShipping, thunkDeleteShipping, thunkUpdateShipping } from '../../store/shipping'
 import './Shipping.css'
 
 export default function Shipping() {
@@ -160,6 +160,29 @@ export default function Shipping() {
     await dispatch(thunkDeleteShipping(shippingId));
   }
 
+  const updateShipping = async (e) => {
+    e.preventDefault();
+
+    const update = {
+      apt_number: addressTwo,
+      city: cityName,
+      company: companyName,
+      country: countryName,
+      primary: primary,
+      shipping_name: firstName + ' ' + lastName,
+      state: stateCodeParser(stateName),
+      street: addressOne,
+      user_id: user.id,
+      zip: zip,
+    }
+
+    setRenderUpdate(false);
+    await dispatch(thunkUpdateShipping(shippingId, update));
+
+    console.log('CURRENT VALUE OF RENDER: ', renderUpdate)
+  }
+
+
   return (
     <div id="shipping-outer">
       <div id="veil" style={{opacity: renderAdd ? '0.4' : '1'}}>
@@ -237,7 +260,7 @@ export default function Shipping() {
       {renderUpdate && (<div id="inset-shadow-box">
         {/* {console.log('OPENED!', editObj)} */}
         <div id="update-address">Update Shipping Address</div>
-        <form onSubmit="">
+        <form onSubmit={updateShipping}>
           <div id="shipping-edit-label">Shipping Name</div>
           <div id="shipping-name-flex">
             <input id="first-name" className="shipping-input" type="text" placeholder="First" value={firstName} onChange={(e) => setFirstName(e.target.value)} required></input>
@@ -280,7 +303,7 @@ export default function Shipping() {
               </div>
               <div>
                 <button id="cancel-shipping-button"><div id="cancel-label" onClick={closeEditForm}>Cancel</div></button>
-                <button id="confirm-shipping-button" type="submit"><div id="save-label">Save This Shipping Address</div></button>
+                <button id="confirm-shipping-button" type="submit"><div id="save-label">Update This Shipping Address</div></button>
               </div>
             </div>
           </div>

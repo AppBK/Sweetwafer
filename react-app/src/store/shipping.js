@@ -72,7 +72,7 @@ export const thunkReadShipping = (user_id) => async (dispatch) => {
 
 // Update
 export const thunkUpdateShipping = (id, new_info) => async (dispatch) => {
-  const response = await fetch(`/api/shipping/${id}`, {
+  const response = await fetch(`/api/shipping/update/${id}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -82,7 +82,7 @@ export const thunkUpdateShipping = (id, new_info) => async (dispatch) => {
 
   if (response.ok) {
     const updated = await response.json();
-    dispatch(actionUpdateShipping(updated));
+    dispatch(actionReadShipping(updated));
     return updated;
   } else {
     const data = await response.json();

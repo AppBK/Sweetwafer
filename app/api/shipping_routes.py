@@ -84,9 +84,73 @@ def create_new_shipping():
     db.session.add(new_shipping)
     db.session.commit()
 
-  # Return the all shipping addresses for user
+  # Return all shipping addresses for user
   user_shipping = Shipping.query.filter(Shipping.user_id == body['user_id']).all()
   user_shipping = [shipping.to_dict() for shipping in user_shipping]
   jsonified_list = json.dumps(user_shipping)
 
   return jsonified_list
+
+
+
+@shipping_routes.route('/update/<int:id>', methods=['PUT'])
+@login_required
+def update_shipping_info(id):
+  info_to_update = Shipping.query.filter(Shipping.id == id).first()
+  body = json.loads(request.data.decode('UTF-8'))
+
+  print('FOUND SHIPPING TO UPDATE: ', info_to_update.id)
+
+  if body['primary'] == True:
+    primary_shipping = Shipping.query.filter(Shipping.primary == True).first()
+
+    if primary_shipping:
+      primary_shipping.primary = False
+      primary_shipping.updatedat = str(datetime.now())
+      db.session.add(primary_shipping)
+      print('Changed PRIMARY: ', primary_shipping.to_dict())
+
+    info_to_update.apt_number = body['apt_number']
+    info_to_update.city = body['city']
+    info_to_update.company = body['company']
+    info_to_update.country = body['country']
+    info_to_update.primary = body['primary']
+    info_to_update.shipping_name = body['shipping_name']
+    info_to_update.state = body['state']
+    info_to_update.street = body['street']
+    info_to_update.user_id = body['user_id']
+    info_to_update.zip = body['zip']
+    info_to_update.updatedat = str(datetime.now())
+
+    db.session.add(info_to_update)
+    db.session.commit()
+
+    user_shipping_all = Shipping.query.filter(Shipping.user_id == body['user_id']).all();
+    user_shipping_all = [shipping.to_dict() for shipping in user_shipping_all]
+    jsonified_list = json.dumps(user_shipping_all)
+
+    return jsonified_list
+
+  else:
+    info_to_update.apt_number = body['apt_number']
+    info_to_update.city = body['city']
+    info_to_update.company = body['company']
+    info_to_update.country = body['country']
+    info_to_update.primary = body['primary']
+    info_to_update.shipping_name = body['shipping_name']
+    info_to_update.state = body['state']
+    info_to_update.street = body['street']
+    info_to_update.user_id = body['user_id']
+    info_to_update.zip = body['zip']
+    info_to_update.updatedat = str(datetime.now())
+
+    print('UPDATED: ', info_to_update.to_dict())
+
+    db.session.add(info_to_update)
+    db.session.commit()
+
+    user_shipping_all = Shipping.query.filter(Shipping.user_id == body['user_id']).all();
+    user_shipping_all = [shipping.to_dict() for shipping in user_shipping_all]
+    jsonified_list = json.dumps(user_shipping_all)
+
+    return jsonified_list
