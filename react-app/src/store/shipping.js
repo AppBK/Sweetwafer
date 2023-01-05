@@ -105,6 +105,7 @@ export const thunkDeleteShipping = (id) => async (dispatch) => {
 
   if (response.ok) {
     const info = await response.json();
+    console.log('RECIEVED FROM DELETE ROUTE: ', info)
     dispatch(actionReadShipping(info));
     return info;
   } else {
@@ -129,6 +130,9 @@ export default function shippingReducer(state = [], action) {
       return newState;
     }
     case READ_SHIPPING: {
+      console.log('INSIDE READ: ', action.payload);
+
+      if (Object.keys(action.payload) === 0) return [];
       const newState = [...action.payload];
 
       return newState;
