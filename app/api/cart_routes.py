@@ -95,7 +95,7 @@ def clear_cart():
   return 'Cart Emptied'
 
 
-@cart_routes.route('/')
-@login_required
-def view_cart():
-  print('CURRENT_USER', current_user)
+# @cart_routes.route('/')
+# @login_required
+# def view_cart():
+#   print('CURRENT_USER', current_user)

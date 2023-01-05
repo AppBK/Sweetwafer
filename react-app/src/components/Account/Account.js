@@ -19,7 +19,7 @@ export default function Account() {
 
   const onLogoutAcc = async (e) => {
     history.push('/');
-    dispatch(logout());
+    await dispatch(logout());
   };
 
   return (
@@ -50,14 +50,15 @@ export default function Account() {
               </div>
               <div>Address & Payment Info</div>
             </div>
-            <div id="fill-left"></div>
           </div>
+          <div id="fill-left"></div>
           <div id="right-render-comps">
             {currentRender === 'home' && (<div id="hey-now">hello {userName}.</div>)}
             {currentRender === 'address' && (<AddressPayment />)}
           </div>
         </div>
       </div>
+      {currentRender === 'home' && (<div id="filler"></div>)}
     </div>
   )
 }

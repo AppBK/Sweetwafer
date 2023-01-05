@@ -31,8 +31,8 @@ export default function SignUpOne() {
         </div>
         <div id="lower-portion">
           <form id="signup-form">
-            <input type="email" className="signup-inputs" placeholder="Email address" value={email} onChange={(e) => setEmail(e.target.value)}></input>
-            <input type="password" className="signup-inputs" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+            <input type="email" className="signupone-inputs" placeholder="Email address" value={email} onChange={(e) => setEmail(e.target.value)}></input>
+            <input type="password" className="signupone-inputs" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
           </form>
           <button id="login-button-form" onClick={toNextForm}>Continue</button>
           <div id="no-account">Already have an account?</div>

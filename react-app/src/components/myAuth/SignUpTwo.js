@@ -29,8 +29,8 @@ export default function SignUpTwo() {
         </div>
         <div id="lower-portion">
           <form id="signup-form">
-            <input type="text" className="signup-inputs" placeholder="First Name" value={first} onChange={(e) => setFirst(e.target.value)} required></input>
-            <input type="text" className="signup-inputs" placeholder="Last Name" value={last} onChange={(e) => setLast(e.target.value)} required></input>
+            <input type="text" className="signuptwo-inputs" placeholder="First Name" value={first} onChange={(e) => setFirst(e.target.value)} required></input>
+            <input type="text" className="signuptwo-inputs" placeholder="Last Name" value={last} onChange={(e) => setLast(e.target.value)} required></input>
           </form>
           <button id="login-button-form" onClick={finalizeSignup}>Complete Signup</button>
         </div>
