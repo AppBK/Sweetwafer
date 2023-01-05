@@ -21,6 +21,7 @@ import NewGear from './components/SpecialPages/NewGear';
 import NewGearFooter from './components/NewGearFooter/NewGearFooter';
 import GuitarInspection from './components/SpecialPages/GuitarInspection';
 import Account from './components/Account/Account';
+import FourOFour from './components/SpecialPages/FourOFour';
 import { authenticate, login } from './store/session';
 
 
@@ -120,6 +121,9 @@ function App() {
           <Account />
           <NewGearFooter />
           <Footer />
+        </Route>
+        <Route path="*">
+          <FourOFour />
         </Route>
       </Switch>
     </BrowserRouter>
