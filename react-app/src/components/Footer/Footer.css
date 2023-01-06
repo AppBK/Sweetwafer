@@ -3,6 +3,9 @@
   width: 100%;
   /* position: fixed;
   bottom: 0px; */
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px 10%;
 }
 
 #happy-new-gears {
@@ -100,4 +103,22 @@
   align-items: center;
   padding: 0px;
   margin: 0px;
+}
+
+#about-me-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-me-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-links:link {
+  color: black;
 }
