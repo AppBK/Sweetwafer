@@ -170,17 +170,6 @@ export default function Shipping() {
     }
   }
 
-  const onLogin = async (e) => {
-    e.preventDefault();
-    const data = await dispatch(login(email, password));
-    if (data) {
-      console.log('ERRORS: ', data);
-      setErrors(data);
-    } else {
-      history.push('/account');
-    }
-  };
-
 
   const deleteShipping = async (e) => {
     e.preventDefault();
