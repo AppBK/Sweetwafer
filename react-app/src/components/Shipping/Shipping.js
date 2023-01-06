@@ -19,10 +19,10 @@ export default function Shipping() {
   const [cityName, setCityName] = useState('');
   const [stateName, setStateName] = useState('');
   const [zip, setZip] = useState('');
-  const [countryName, setCountryName] = useState('USA');
+  const [countryName, setCountryName] = useState('United States');
   const [primary, setPrimary] = useState(false);
   const [shippingId, setShippingId] = useState('');
-  const [editObj, setEditObj] = useState({});
+  const [errors, setErrors] = useState([]);
 
   const dispatch = useDispatch();
 
@@ -152,7 +152,7 @@ export default function Shipping() {
       apt_number: addressTwo,
       city: cityName,
       company: companyName,
-      country: countryName,
+      country: countryName ? countryName : 'United States',
       primary: primary,
       shipping_name: firstName + ' ' + lastName,
       state: stateCodeParser(stateName),
@@ -161,14 +161,33 @@ export default function Shipping() {
       zip: zip,
     }
 
-    await dispatch(thunkCreateShipping(info));
-
-    closeAddForm();
+    const data = await dispatch(thunkCreateShipping(info));
+    if (data) {
+      console.log('ERRORS: ', data);
+      setErrors(data);
+    } else {
+      closeAddForm();
+    }
   }
 
-  const deleteShipping = async () => {
+  const onLogin = async (e) => {
+    e.preventDefault();
+    const data = await dispatch(login(email, password));
+    if (data) {
+      console.log('ERRORS: ', data);
+      setErrors(data);
+    } else {
+      history.push('/account');
+    }
+  };
+
+
+  const deleteShipping = async (e) => {
+    e.preventDefault();
     console.log('SHIPPING ID TO DELETE: ', shippingId);
-    await dispatch(thunkDeleteShipping(shippingId));
+    await dispatch(thunkDeleteShipping(shippingId, user.id));
+
+    setRenderUpdate(false);
   }
 
   const updateShipping = async (e) => {
@@ -187,10 +206,13 @@ export default function Shipping() {
       zip: zip,
     }
 
-    setRenderUpdate(false);
-    await dispatch(thunkUpdateShipping(shippingId, update));
-
-    console.log('CURRENT VALUE OF RENDER: ', renderUpdate)
+    const data = await dispatch(thunkUpdateShipping(shippingId, update));
+    if (data) {
+      console.log('ERRORS: ', data);
+      setErrors(data);
+    } else {
+      closeEditForm();
+    }
   }
 
 
@@ -224,6 +246,11 @@ export default function Shipping() {
       </div>)}
       {renderAdd && (<>
       <div id="add-new">Add A New Shipping Address</div>
+      {errors?.length ? (<div id="have-arrow-add-ship">
+        {errors.map((error) => (
+          <div className="error-add-ship">{error}</div>
+        ))}
+      </div>) : null }
         <form onSubmit={createShippingInfo}>
         <div id="shipping-name-label">Shipping Name</div>
         <div id="shipping-name-flex">
@@ -251,7 +278,7 @@ export default function Shipping() {
               <input className="shipping-input" type="text" placeholder="ZIP/PostalCode" value={zip} onChange={(e) => setZip(e.target.value)} required></input>
           </div>
           <select id="select-country" value={countryName} onChange={(e) => setCountryName(e.target.value)} required>
-            <option selected>USA</option>
+            <option selected>United States</option>
             <option >Mexico</option>
             <option >Canada</option>
             <option >China</option>
@@ -269,13 +296,17 @@ export default function Shipping() {
       </form>
       </>)}
       {renderUpdate && (<div id="inset-shadow-box">
-        {/* {console.log('OPENED!', editObj)} */}
+        {errors?.length ? (<div id="have-arrow-add-ship">
+          {errors.map((error) => (
+            <div className="error-add-ship">{error}</div>
+          ))}
+        </div>) : null}
         <div id="update-address">Update Shipping Address</div>
         <form onSubmit={updateShipping}>
           <div id="shipping-edit-label">Shipping Name</div>
           <div id="shipping-name-flex">
             <input id="first-name" className="shipping-input" type="text" placeholder="First" value={firstName} onChange={(e) => setFirstName(e.target.value)} required></input>
-            <input className="shipping-input" type="text" placeholder="Last" value={lastName} onChange={(e) => setLastName(e.target.value)} required></input>
+            <input className="shipping-input" type="text" placeholder="Last" value={lastName} onChange={(e) => setLastName(e.target.value)}></input>
           </div>
           <div id="company-div">
             <div id="company-title"><div>Company&nbsp;</div><div className="tiny-option">(optional)</div></div>

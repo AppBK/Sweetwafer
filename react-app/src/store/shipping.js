@@ -4,6 +4,16 @@ const READ_SHIPPING = 'shipping/READ_SHIPPING';
 const UPDATE_SHIPPING = 'shipping/UPDATE_SHIPPING';
 const DELETE_SHIPPING = 'shipping/DELETE_SHIPPING';
 
+const parseErrors = (errs) => {
+  let output = [];
+  for (let i = 0; i < errs.length; i++) {
+    if (errs[i] !== 'This field is required.') {
+      output.push(errs[i]);
+    }
+  }
+  return output;
+}
+
 // ACTIONS
 export const actionCreateShipping = (data) => ({
   type: CREATE_SHIPPING,
@@ -41,11 +51,12 @@ export const thunkCreateShipping = (info) => async (dispatch) => {
   if (response.ok) {
     const info = await response.json();
     dispatch(actionReadShipping(info));
-    return info;
+    return null;
   } else {
     const data = await response.json()
     if (data.errors) {
-      return data;
+      const filteredErrs = parseErrors([...data.errors])
+      return filteredErrs;
     } else {
       return ['Could Not Read Info'];
     }
@@ -83,23 +94,25 @@ export const thunkUpdateShipping = (id, new_info) => async (dispatch) => {
   if (response.ok) {
     const updated = await response.json();
     dispatch(actionReadShipping(updated));
-    return updated;
+    return null;
   } else {
     const data = await response.json();
     if (data.errors) {
-      return data;
+      const filteredErrs = parseErrors([...data.errors])
+      return filteredErrs;
     } else {
       return ['Could Not Read Info'];
     }
   }
 }
 
-export const thunkDeleteShipping = (id) => async (dispatch) => {
+export const thunkDeleteShipping = (id, user_id) => async (dispatch) => {
   const response = await fetch('/api/shipping/delete', {
     method: 'DELETE',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       id: id,
+      user_id: user_id,
     })
   });
 
@@ -132,7 +145,7 @@ export default function shippingReducer(state = [], action) {
     case READ_SHIPPING: {
       console.log('INSIDE READ: ', action.payload);
 
-      if (Object.keys(action.payload) === 0) return [];
+      if (Object.keys(action.payload).length === 0) return [];
       const newState = [...action.payload];
 
       return newState;
