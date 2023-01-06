@@ -25,8 +25,8 @@ def add_to_cart():
 
   item_info = item_info.to_dict()
 
+
   for key in item_info:
-    # print('KEY: ', key, ' VAL: ', item_info[key])
     if key == 'id':
       pass
     else:
@@ -48,6 +48,10 @@ def update_quantity():
   item_to_update = Cart.query.filter(Cart.item_id == body['id']).first()
   # item_to_update = item_to_update.to_dict()
   item_to_update.quantity += body['val']
+
+  # The minimum value is 1
+  if item_to_update.quantity < 1:
+    item_to_update.quantity = 1
   item_to_update.updatedat = str(datetime.now())
   print(item_to_update)
 

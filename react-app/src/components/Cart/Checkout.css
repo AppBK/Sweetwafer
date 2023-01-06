@@ -1,0 +1,19 @@
+#checkout-outermost {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#thank-you {
+  font-size: 48px;
+  color: #0072ba;
+}
+
+#shortly {
+  font-size: 14px;
+  font-style: italic;
+  color: black;
+}

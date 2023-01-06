@@ -12,11 +12,23 @@ export default function SignUpTwo() {
 
   const [first, setFirst] = useState('');
   const [last, setLast] = useState('');
+  const [errors, setErrors] = useState([]);
 
-  const finalizeSignup = () => {
+  const finalizeSignup = async (e) => {
+    e.preventDefault();
+
     const username = first + ' ' + last;
-    dispatch(signUp(username, signUpEmail, signUpPass));
-    history.push('/');
+    const data = await dispatch(signUp(username, signUpEmail, signUpPass));
+    if (data) {
+      console.log('ERRORS: ', data);
+      setErrors(data);
+    } else {
+      history.push('/account');
+    }
+  }
+
+  const returnTo = () => {
+    history.push('/signup-one');
   }
 
   return (
@@ -28,11 +40,17 @@ export default function SignUpTwo() {
           <div id="the-most" >Let's get to know each other.</div>
         </div>
         <div id="lower-portion">
-          <form id="signup-form">
+          {errors?.length ? (<div id="barely-necessary-error-div">
+            {errors.map((error) => (
+              <div>{error}</div>
+            ))}
+            <div id="return-to-signup-one" onClick={returnTo}>Return to previous page</div>
+          </div>) : null }
+          <form id="signup-form" onSubmit={finalizeSignup}>
             <input type="text" className="signuptwo-inputs" placeholder="First Name" value={first} onChange={(e) => setFirst(e.target.value)} required></input>
             <input type="text" className="signuptwo-inputs" placeholder="Last Name" value={last} onChange={(e) => setLast(e.target.value)} required></input>
+            <button id="login-button-form-two" type="submit">Complete Signup</button>
           </form>
-          <button id="login-button-form" onClick={finalizeSignup}>Complete Signup</button>
         </div>
       </div>
     </div>

@@ -38,7 +38,7 @@
 #form-container-next {
   background-color: white;
   width: 324px;
-  height: 430px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -97,17 +97,17 @@
   margin-bottom: 12px;
 }
 
-#login-button-form {
+#login-button-form-two {
   background-color: #0072ba;
   height: 52px;
   border: none;
   border-radius: 3px;
   color: white;
   display: block;
-  width: 100%;
+  width: 244px;
 }
 
-#login-button-form:hover {
+#login-button-form-two:hover {
   cursor: pointer;
   background-color: #0069ab;
 }
@@ -116,3 +116,45 @@
   opacity: 0.7;
   font-size: 14px;
 }
+
+#barely-necessary-error-div {
+  background-color: #D00E17;
+  color: white;
+  padding: 14px 16px;
+  font-size: 14px;
+  border-radius: 3px;
+  margin-bottom: -8px;
+}
+
+#return-to-signup-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid white;
+}
+
+#return-to-signup-one::before {
+    display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      /* content: "✓"; */
+      content: '';
+      background: url("https://cdn-icons-png.flaticon.com/512/556/556232.png") no-repeat 0 0;
+      background-color: white;
+      background-size: 16px;
+      vertical-align: -2%;
+      border-radius: 16px;
+}
+
+#return-to-signup-one:hover {
+  cursor: pointer;
+  color: rgb(175, 175, 175);
+}
+
+
+/*
+https://cdn-icons-png.flaticon.com/512/556/556232.png
+*/

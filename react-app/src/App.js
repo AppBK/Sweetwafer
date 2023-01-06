@@ -22,6 +22,7 @@ import NewGearFooter from './components/NewGearFooter/NewGearFooter';
 import GuitarInspection from './components/SpecialPages/GuitarInspection';
 import Account from './components/Account/Account';
 import FourOFour from './components/SpecialPages/FourOFour';
+import Checkout from './components/Cart/Checkout';
 import { authenticate, login } from './store/session';
 
 
@@ -121,6 +122,9 @@ function App() {
           <Account />
           <NewGearFooter />
           <Footer />
+        </Route>
+        <Route path='/checkedout'>
+          <Checkout />
         </Route>
         <Route path="*">
           <FourOFour />
