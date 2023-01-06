@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react'
 import { SweetContext } from '../../context/Context'
 import { useSelector, useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import './Cart.css'
 import { thunkDeleteSingle, thunkClearCart, thunkUpdateCart } from '../../store/cart';
 
@@ -8,6 +9,7 @@ export default function Cart() {
   const { numInCart, setNumInCart } = useContext(SweetContext);
   const cart = useSelector(state => state.cart);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   useEffect(() => {
     let sum = 0;
@@ -75,6 +77,14 @@ export default function Cart() {
     lessThanTwo = true;
   }
 
+  const checkoutCart = async () => {
+    history.push('/checkedout');
+    setTimeout(history.push, 2000, '/');
+    await dispatch(thunkClearCart());
+  }
+
+
+
   let isEmpty;
   if (numInCart === 0) isEmpty = true;
 
@@ -117,23 +127,23 @@ export default function Cart() {
               </div>
               <div className="far-div">
                 <div className="qty">
-                  <input id={item.item_id} className="qty-input" type="number" value={item.quantity} placeholder={item.quantity} onClick={(e) => updateQty(e)}></input>
+                  <input id={item.item_id} className="qty-input" type="number" min="1" value={item.quantity} placeholder={item.quantity} onClick={(e) => updateQty(e)}></input>
                   <div id={JSON.stringify([item.id, item.quantity])} className="remove-item" onClick={(e) => removeItem(e)} >Remove</div>
                 </div>
                 <div className="price-div">
-                  <div className="price">{toPriceCart(item.price)}</div>
+                  <div className="price">{toPriceCart(item.price * item.quantity)}</div>
                 </div>
               </div>
             </div>
           ))}
           <div id="cart-bottom-buttons">
             <button id="clear" className="cart-buttons" onClick={clearCart}>Clear Cart</button>
-            <button className="cart-buttons">Checkout</button>
+              <button className="cart-buttons" onClick={checkoutCart}>Checkout</button>
           </div>
         </div>
         {lessThanTwo && (<div id="spacer"></div>)}
         <div id="doshite-sweet">
-            <div id="why-title">Why Choose Sweetwater?</div>
+            <div id="why-title">Why Choose Sweetwafer?</div>
             <div><b>At Sweetwater, we have one single goal in mind: to make you a satisfied customer.</b></div>
             <div id="text-wrap-why">We want you to be 100% satisfied with not only the gear you purchase, but also with the service you receive. The Sweetwater difference goes far beyond this, including extras you simply won't find anywhere else—all designed to ensure that you are a happy customer.</div>
         </div>

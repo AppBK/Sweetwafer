@@ -46,6 +46,8 @@ export default function Header() {
     const data = await dispatch(login('demo@aa.io', 'password'))
     if (data) {
       console.log('Invalid Login!')
+    } else {
+      history.push('/account');
     }
   }
 

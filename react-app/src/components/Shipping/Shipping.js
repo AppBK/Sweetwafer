@@ -97,6 +97,17 @@ export default function Shipping() {
   // console.log('CURRENT STATE NAME: ', stateCodeParser(stateName));
 
   const addShippingAddress = () => {
+    setAddressOne('');
+    setAddressTwo('');
+    setCityName('');
+    setCompanyName('');
+    setCountryName('');
+    setFirstName('');
+    setLastName('');
+    setStateName('');
+    setZip('');
+    setPrimary(false);
+
     setRenderAdd(true);
   }
 

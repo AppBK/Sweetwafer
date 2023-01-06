@@ -8,6 +8,8 @@ export default function SignUpOne() {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState([]);
+  const [passwordLengthPassed, setPasswordLengthPassed] = useState(false);
 
   const history = useHistory();
 
@@ -29,12 +31,21 @@ export default function SignUpOne() {
           <div id="inspire" >Create an Account</div>
           <div id="creating">Creating an account is fast, easy, and free! Plus,<br></br>it gives you access to some great website<br></br>features that allow you to view your order history online, and checkout quickly and easily.</div>
         </div>
+        <div id="signup-one-error-div">
+
+        </div>
         <div id="lower-portion">
-          <form id="signup-form">
-            <input type="email" className="signupone-inputs" placeholder="Email address" value={email} onChange={(e) => setEmail(e.target.value)}></input>
-            <input type="password" className="signupone-inputs" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}></input>
+          <form id="signup-form" onSubmit={toNextForm}>
+            <input type="email" className="signupone-inputs" placeholder="Email address" value={email} onChange={(e) => setEmail(e.target.value)} required></input>
+            <input type="password" className="signupone-inputs" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required></input>
+            {password?.length ? (<div id="password-criteria-div">
+              <div id="must-contain">Your password must contain:</div>
+              <ul>
+                <li className={password?.length >= 8 ? "password-criteria-passed" : "password-criteria-list"}>At least 8 characters</li>
+              </ul>
+            </div>) : null}
+            <button id="login-button-form" type="submit">Continue</button>
           </form>
-          <button id="login-button-form" onClick={toNextForm}>Continue</button>
           <div id="no-account">Already have an account?</div>
           <button id="sign-up-from-login" onClick={backToLogin}>Sign in</button>
         </div>
