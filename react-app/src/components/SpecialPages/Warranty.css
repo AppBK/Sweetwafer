@@ -1,0 +1,78 @@
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10%;
+}
+
+.warranty-head {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://media.sweetwater.com/m/about/warranty/images/warranty-header-bg.png?width=1280&quality=70&ha=5a37df3eadf3cb6d);
+  color: white;
+}
+
+.warranty-head__logo {
+  display: block;
+  width: 320px;
+  height: 156px;
+}
+
+.warranty-intro {
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+}
+
+.p-warranty {
+  margin: 6px;
+}
+
+.warranty-content__centering {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 128px;
+}
+
+#final-word {
+  font-size: 28px;
+  color: #2E2D2B;
+  margin-bottom: 24px;
+}
+
+#final-word-text {
+  width: 875px;
+  color: #2E2D2B;
+  text-align: center;
+}
+
+.warranty-questions {
+  color: #6B6B6a;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+#blue-question {
+  height: 3px;
+  width: 80px;
+  background-color: #0072ba;
+  margin-bottom: 16px;
+}
+
+/* #content-warranty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
