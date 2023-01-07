@@ -40,34 +40,38 @@ export default function Warranty() {
               <p className="p-warranty">Fix it the first time with our award-winning, factory-certifed Service Department</p>
             </div>
 
-            <div className="warranty-split">
-              <div className="warranty-split__text">
-                <h2>We've got your back</h2>
-                <p>At most music stores, customers have to spend an extra 10% to 30% of an item's cost to make sure their gear is covered beyond the manufacturer's warranty.</p>
+            <div>
+              <div className="warranty-split">
+                <div className="warranty-split__text">
+                  <h2>We've got your back</h2>
+                  <p>At most music stores, customers have to spend an extra 10% to 30% of an item's cost to make sure their gear is covered beyond the manufacturer's warranty.</p>
 
-                <p>You don't have to pay hundreds of dollars - or even more - for extra gear protection at Sweetwater! </p>
+                  <p>You don't have to pay hundreds of dollars - or even more - for extra gear protection at Sweetwater! </p>
 
-                <p>Our Total Confidence Coverage Warranty gives you 24 months of coverage backed by our team of Sales Engineers, Support Specialists, and our factory-certified Service Team at no extra cost.</p>
+                  <p>Our Total Confidence Coverage Warranty gives you 24 months of coverage backed by our team of Sales Engineers, Support Specialists, and our factory-certified Service Team at no extra cost.</p>
 
+                </div>
+                <div className="warranty-split__img" style={{backgroundImage: 'url(https://media.sweetwater.com/m/about/warranty/images/player.jpg?width=1200&amp;ha=dbf7742cac450b55)'}}>
+                </div>
               </div>
-              <div className="warranty-split__img" style={{backgroundImage: 'url("https://media.sweetwater.com/m/about/warranty/images/player.jpg?width=1200&amp;ha=dbf7742cac450b55")'}}>
-              </div>
-            </div>
 
-            <div className="warranty-split">
-              <div className="warranty-split__img" style={{backgroundImage: 'url("https://media.sweetwater.com/m/about/warranty/images/tech.jpg?width=720&amp;optimize=medium&amp;ha=a651e670634575e6")'}}>
-              </div>
-              <div className="warranty-split__text">
-                <h2>Sweetwater's Award-Winning Service Department</h2>
-                <p>Treat your gear right with warranty service provided by our on-site, award-winning, and factory-certified Service Department, authorized to repair virtually every piece of gear we sell.</p>
+              <div className="warranty-split">
+                <div className="warranty-split__img" style={{backgroundImage: 'url(https://media.sweetwater.com/m/about/warranty/images/tech.jpg?width=720&amp;optimize=medium&amp;ha=a651e670634575e6)'}}>
+                </div>
+                <div className="warranty-split__text">
+                  <h2>Sweetwater's Award-Winning Service Department</h2>
+                  <p>Treat your gear right with warranty service provided by our on-site, award-winning, and factory-certified Service Department, authorized to repair virtually every piece of gear we sell.</p>
 
-                <p>If we're not authorized to service a piece of gear, we will work directly with the manufacturer for service so you don't have to worry about it!</p>
+                  <p>If we're not authorized to service a piece of gear, we will work directly with the manufacturer for service so you don't have to worry about it!</p>
 
+                </div>
               </div>
             </div>
 
             <div className="warranty-faqs">
-              <h2>Terms and Conditions</h2>
+              <div id="terms-flex">
+                <h2>Terms and Conditions</h2>
+              </div>
               <div className="warranty-faq">
                 <summary className="warranty-faq__question">Is this the same as the manufacturer warranty?</summary>
                 <div className="warranty-faq__answer">The Total Confidence Coverage™ 2-year warranty is exclusive to Sweetwater and should not be confused with a cooperative warranty from any manufacturer. We stand behind the products we sell to you and we want you to be completely confident in the products you purchase from Sweetwater. Please note, your purchase constitutes acceptance of these Terms and Conditions.</div>
@@ -82,7 +86,7 @@ export default function Warranty() {
               </div>
               <div className="warranty-faq">
                 <summary className="warranty-faq__question">What is covered under warranty?</summary>
-                <div className="warranty-faq__answer">The Sweetwater Total Confidence Coverage™ Warranty is NOT a “no-fault” warranty. We're going to do our best to take care of you, but coverage applies only if your product malfunctions under normal operating conditions. Normal wear and tear or abuse to our products is not covered under this warranty. “Consumable” parts, components, and accessories are not covered under this warranty. Some examples of “consumables” are strings, lamps and light bulbs, printer cartridges, drum heads, tape heads, regular and rechargeable batteries, amplifier tubes, etc. Cymbals are not covered under this warranty. The Solid State Logic AWS 948 is not covered by this warranty, but SSL offers an optional extended warranty. Call for details. <a href="#exclusions">Click here</a> for a complete list of items not covered under the Sweetwater Total Confidence Coverage™ Warranty.</div>
+                <div className="warranty-faq__answer">The Sweetwater Total Confidence Coverage™ Warranty is NOT a “no-fault” warranty. We're going to do our best to take care of you, but coverage applies only if your product malfunctions under normal operating conditions. Normal wear and tear or abuse to our products is not covered under this warranty. “Consumable” parts, components, and accessories are not covered under this warranty. Some examples of “consumables” are strings, lamps and light bulbs, printer cartridges, drum heads, tape heads, regular and rechargeable batteries, amplifier tubes, etc. Cymbals are not covered under this warranty. The Solid State Logic AWS 948 is not covered by this warranty, but SSL offers an optional extended warranty. Call for details.</div>
               </div>
               <div className="warranty-faq">
                 <summary className="warranty-faq__question">What isn't covered?</summary>
@@ -96,10 +100,10 @@ export default function Warranty() {
                     <li>Software, in any form, is not covered.</li>
                     <li>Data recovery from faulty hard drives, solid state drives, USB keys, and flash drives is not a service covered by this warranty.</li>
                     <li>This warranty does not apply to Apple products; however, Apple does offer its own great warranty programs — check with your Sales Engineer to learn more about AppleCare+.</li>
-                    <li>Products identified as “Used” are not covered by this warranty. See our exclusive <a href="https://www.sweetwater.com/help/returns-exchanges.php#90-day-guarantee">90-day Used Gear Guarantee</a>.</li>
+                    <li>Products identified as “Used” are not covered by this warranty. See our exclusive 90-day Used Gear Guarantee.</li>
                     <li id="exclusions">Power conditioners, surge protectors, and power regulators are covered under our warranty and will be repaired should they become defective, but this warranty does not cover the repair or replacement of equipment connected to these products or offer any kind of cash value.</li>
                   </ul>
-                  <div>
+                  <div id="warranty-constraint">
                     Detailed Warranty Exclusion List
                     <div className="warranty-exclusion-list" id="warranty-excluded-details">
                       <p>AppleCare</p><p>All Apple products</p><p>All Groove Tubes products</p><p>Batteries</p><p>Banjo heads</p><p>Bows</p><p>Brass care</p><p>Brass mutes</p><p>Brass practice aids</p><p>Brushes</p><p>CD audio</p><p>CD audio consignment</p><p>CD blanks</p><p>Clothing</p><p>Crotales</p><p>Cymbals</p><p>Cymbal accessories</p><p>Cymbal boom stands</p><p>Cymbal cases</p><p>Cymbal stands</p><p>Drumheads</p><p>Drumhead accessories</p><p>Drumsticks</p><p>Drumstick accessories</p><p>Drumstick rods</p><p>DVD blanks</p><p>Gong</p><p>Guitar picks</p><p>Harmonicas</p><p>Harmonica accessories</p><p>iLok 3</p><p>Instructional books</p><p>Instructional videos</p><p>Ligatures: clarinet</p><p>Ligatures: saxophone</p><p>Mallets</p><p>Marching cymbals</p><p>MIDI loop</p><p>Mouthpieces</p><p>Orchestral string accessories</p><p>Orchestral string pickups</p><p>Plug-ins: Avid DSP</p><p>Plug-ins: d8b</p><p>Plug-ins: Native</p><p>Plug-ins: PowerCore</p><p>Plug-ins: VS</p><p>Printer ink</p><p>Processor plug-ins</p><p>Reeds</p><p>Reeds care</p><p>Rosin</p><p>Service parts</p><p>Sheet music</p><p>Snare wires</p><p>Software</p><p>Sound samples</p><p>Strings</p><p>Tape cassette</p><p>Tape DAT</p><p>Tape reel</p><p>Tape video/digital</p><p>Tubes</p><p>Vocal care</p><p>Woodwind care</p>                </div>
@@ -118,8 +122,8 @@ export default function Warranty() {
                 <div className="warranty-content__centering">
                   <div id="blue-question"></div>
                   <div className="warranty-questions">WARRANTY QUESTIONS?</div>
-                  <h2 >Call a friendly Sales Engineer!</h2>
-                  <p>They know gear inside and out, and they're musicians just like you. Your Sweetwater Sales Engineer can help with warranty questions or help you find the perfect piece of gear.</p>
+                  <h2 id="call-friendly">Call a friendly Sales Engineer!</h2>
+                  <p id="inside-out">They know gear inside and out, and they're musicians just like you. Your Sweetwater Sales Engineer can help with warranty questions or help you find the perfect piece of gear.</p>
                   <h2>(800) 222-4700</h2>
                 </div>
               </div>

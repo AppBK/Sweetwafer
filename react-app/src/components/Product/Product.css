@@ -192,6 +192,11 @@
   text-decoration: underline;
 }
 
+#link-learn-more:hover {
+  cursor: pointer;
+  color: #59a2cf;
+}
+
 .product-tiny-thumbs {
   width: 64px;
   height: 64px;

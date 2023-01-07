@@ -6,3 +6,17 @@
 
 
 #3. add commas to number: number.toLocaleString([locale [, options]]);
+
+
+
+
+
+
+
+
+
+
+
+####### POSSIBLY #############
+
+1. height: calc(100vh - 16px); // can this fix issue with fixed position footer?!!
