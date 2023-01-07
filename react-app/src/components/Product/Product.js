@@ -1,6 +1,6 @@
 import { thunkReadProduct } from "../../store/product"
 import { useSelector, useDispatch } from "react-redux"
-import { useParams } from "react-router-dom"
+import { useParams, useHistory } from "react-router-dom"
 import { useState, useEffect, useContext } from "react";
 import { SweetContext } from "../../context/Context";
 import { thunkAddCart } from "../../store/cart";
@@ -9,6 +9,7 @@ import './Product.css'
 export default function Product() {
 
   const { id } = useParams();
+  const history = useHistory();
   const dispatch = useDispatch();
   const user = useSelector(state => state.session.user);
   const cart = useSelector(state => state.cart);
@@ -162,6 +163,12 @@ export default function Product() {
     specValues = tester[0];
   }
 
+  const goWarranty = (e) => {
+    e.preventDefault();
+    history.push('/warranty');
+  }
+
+
 
   return (
     <div id="product-page">
@@ -206,7 +213,7 @@ export default function Product() {
               <li className="warranty-li">Get back to making music with the industry's fastest turnaround time</li>
               <li className="warranty-li">Fix it the first time with our award-winning, factory-certified Service Department</li>
             </ul>
-            <div id="link-learn-more">Learn More</div>
+            <div id="link-learn-more" onClick={goWarranty}>Learn More</div>
           </div>
           <div id="warranty-logo">
             <div id="place-badge">

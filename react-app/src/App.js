@@ -23,6 +23,7 @@ import GuitarInspection from './components/SpecialPages/GuitarInspection';
 import Account from './components/Account/Account';
 import FourOFour from './components/SpecialPages/FourOFour';
 import Checkout from './components/Cart/Checkout';
+import Warranty from './components/SpecialPages/Warranty';
 import { authenticate, login } from './store/session';
 
 
@@ -125,6 +126,13 @@ function App() {
         </Route>
         <Route path='/checkedout'>
           <Checkout />
+        </Route>
+        <Route path='/warranty' exact={true}>
+          <Header />
+          <Navigation />
+          <Warranty />
+          <NewGearFooter />
+          <Footer />
         </Route>
         <Route path="*">
           <FourOFour />

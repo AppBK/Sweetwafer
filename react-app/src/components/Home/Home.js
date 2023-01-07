@@ -55,6 +55,10 @@ export default function Home() {
     history.push('/inspection');
   }
 
+  const goWarranty = () => {
+    history.push('/warranty');
+  }
+
 
   return (
     <>
@@ -87,7 +91,7 @@ export default function Home() {
             <div className="tiny-text">Even the small stuff.</div>
           </div>
         </div>
-        <div className="getmore-tiles">
+        <div className="getmore-tiles" onClick={goWarranty}>
           <div className="floating-circle">
             <div id="warranty-thumb" className="thumb-constraint">
               <img className="circle-thum" src="/svg/get-more/warranty.svg"></img>
