@@ -211,7 +211,7 @@ export default function Shipping() {
         <div id="shipping-title">Your Shipping Info</div>
         {!renderUpdate && (<div id="shipping-list">
           {shipping.map((address, idx) => (
-            <div className="edit-flex-pusher">
+            <div key={idx} className="edit-flex-pusher">
               <div key={idx} className="subete-no-shipping">
                 <div id="shipping-info-name-box">
                   <div className="shipping-info-name">{address.shipping_name}</div>

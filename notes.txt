@@ -7,11 +7,26 @@
 
 #3. add commas to number: number.toLocaleString([locale [, options]]);
 
+#4.columns WITHOUT a flexbox!!!!
+.content-box {
+  column-count: 3;
+}
 
+#5. Change text color of an <a> tag: a:link {...}
 
+#6. Remove blinking-cursor from input box:
 
+.qty-input {
+  display: block;
+  color: transparent;
+  text-shadow: 0 0 0 black;
+}
 
+.qty-input:focus {
+  outline: none;
+}
 
+#7.
 
 
 

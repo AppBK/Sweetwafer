@@ -51,19 +51,20 @@ export default function Cart() {
     e.preventDefault();
 
     let temp = JSON.parse(e.target.id);
-    console.log('Target ID:', temp);
     dispatch(thunkDeleteSingle(temp[0]));
     setNumInCart(numInCart - temp[1]);
   }
 
   const updateQty = async (e) => {
     e.preventDefault();
-    // console.log('CURRENT Y: ', e.nativeEvent.offsetY);
-    const offset = e.nativeEvent.offsetY;
+    const offsetY = e.nativeEvent.offsetY;
+    const offsetX = e.nativeEvent.offsetX;
 
-    console.log('SENDING ID: ', e.target.id);
+    if (offsetX <= 40) return null;
 
-    if (offset < 10) {
+
+
+    if (offsetY < 10) {
       await dispatch(thunkUpdateCart(e.target.id, 1));
       setNumInCart(cart.length + 1)
     } else {
