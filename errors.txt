@@ -140,3 +140,8 @@ Warning: Cannot update a component (`SweetProvider`) while rendering a different
 
 BELOW triggers when clicking the down QTY button when the qty is already 1...
 index.js:1 Warning: You provided a `value` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultValue`. Otherwise, set either `onChange` or `readOnly`.
+
+
+
+# AN interesting React hook rule...:
+Line 215:3:  React Hook "useEffect" is called conditionally. React Hooks must be called in the exact same order in every component render  react-hooks/rules-of-hooks
