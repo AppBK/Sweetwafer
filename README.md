@@ -26,6 +26,13 @@ https://sweetwafer.onrender.com
 * Logged in users can edit and delete these shipping addresses
 
 
-## Landing Page
+# Landing Page
 
  <img width="1323" alt="Screen Shot 2023-01-07 at 8 51 35 PM" src="https://user-images.githubusercontent.com/107947798/211181120-b48723f5-8f62-4708-a01a-f04a43066944.png">
+ 
+ 
+ # Product Page
+ 
+ <img width="1569" alt="Screen Shot 2023-01-07 at 8 52 25 PM" src="https://user-images.githubusercontent.com/107947798/211181149-0bad7f89-9f89-4120-966a-94d50e20cc6b.png">
+
+ 
