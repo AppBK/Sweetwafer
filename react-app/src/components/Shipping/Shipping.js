@@ -204,12 +204,7 @@ export default function Shipping() {
     }
   }
 
-  const getSpacerHeight = () => {
-    const wrapperDiv = document.getElementById('shipping-outer');
-    console.log('WRAPPER DIV: ', wrapperDiv)
-    const currentHeight = wrapperDiv.offsetHeight;
-    setSpacerHeight(currentHeight);
-  }
+
 
 
 
@@ -349,7 +344,7 @@ export default function Shipping() {
           </div>
         </form>
       </div>)}
-      {/* {getSpacerHeight()} */}
+
     </div>
     </>
   )
