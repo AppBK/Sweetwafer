@@ -9,7 +9,6 @@ export default function Shipping() {
   const shipping = useSelector(state => state.shipping);
 
   // States:
-  const [spacerHeight, setSpacerHeight] = useState(0);
   const [renderAdd, setRenderAdd] = useState(false);
   const [renderUpdate, setRenderUpdate] = useState(false);
   const [firstName, setFirstName] = useState('');
@@ -212,10 +211,6 @@ export default function Shipping() {
     setSpacerHeight(currentHeight);
   }
 
-  useEffect(() => {
-    getSpacerHeight();
-    console.log('SPACER HEIGHT: ', spacerHeight);
-  }, [spacerHeight])
 
 
   return (
@@ -356,7 +351,6 @@ export default function Shipping() {
       </div>)}
       {/* {getSpacerHeight()} */}
     </div>
-    <div id="shipping-spacer" style={{ height: `${spacerHeight}` }}></div>
     </>
   )
 }
