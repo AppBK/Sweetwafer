@@ -17,7 +17,6 @@ export default function Header() {
   });
   setNumInCart(sum);
 
-  console.log('CART: ', cart);
   let renderCart = user ? true : false;
   let renderLogout = user ? true : false;
   let renderDemo = user ? false : true;

@@ -9,6 +9,7 @@ export default function Shipping() {
   const shipping = useSelector(state => state.shipping);
 
   // States:
+  const [spacerHeight, setSpacerHeight] = useState(0);
   const [renderAdd, setRenderAdd] = useState(false);
   const [renderUpdate, setRenderUpdate] = useState(false);
   const [firstName, setFirstName] = useState('');
@@ -204,14 +205,27 @@ export default function Shipping() {
     }
   }
 
+  const getSpacerHeight = () => {
+    const wrapperDiv = document.getElementById('shipping-outer');
+    console.log('WRAPPER DIV: ', wrapperDiv)
+    const currentHeight = wrapperDiv.offsetHeight;
+    setSpacerHeight(currentHeight);
+  }
+
+  useEffect(() => {
+    getSpacerHeight();
+    console.log('SPACER HEIGHT: ', spacerHeight);
+  }, [spacerHeight])
+
 
   return (
+    <>
     <div id="shipping-outer">
       <div id="veil" style={{opacity: renderAdd ? '0.4' : '1'}}>
         <div id="shipping-title">Your Shipping Info</div>
         {!renderUpdate && (<div id="shipping-list">
           {shipping.map((address, idx) => (
-            <div className="edit-flex-pusher">
+            <div key={idx} className="edit-flex-pusher">
               <div key={idx} className="subete-no-shipping">
                 <div id="shipping-info-name-box">
                   <div className="shipping-info-name">{address.shipping_name}</div>
@@ -340,6 +354,9 @@ export default function Shipping() {
           </div>
         </form>
       </div>)}
+      {/* {getSpacerHeight()} */}
     </div>
+    <div id="shipping-spacer" style={{ height: `${spacerHeight}` }}></div>
+    </>
   )
 }
