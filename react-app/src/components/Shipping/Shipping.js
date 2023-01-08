@@ -9,6 +9,7 @@ export default function Shipping() {
   const shipping = useSelector(state => state.shipping);
 
   // States:
+  const [spacerHeight, setSpacerHeight] = useState(0);
   const [renderAdd, setRenderAdd] = useState(false);
   const [renderUpdate, setRenderUpdate] = useState(false);
   const [firstName, setFirstName] = useState('');
@@ -204,8 +205,21 @@ export default function Shipping() {
     }
   }
 
+  const getSpacerHeight = () => {
+    const wrapperDiv = document.getElementById('shipping-outer');
+    console.log('WRAPPER DIV: ', wrapperDiv)
+    const currentHeight = wrapperDiv.offsetHeight;
+    setSpacerHeight(currentHeight);
+  }
+
+  useEffect(() => {
+    getSpacerHeight();
+    console.log('SPACER HEIGHT: ', spacerHeight);
+  }, [spacerHeight])
+
 
   return (
+    <>
     <div id="shipping-outer">
       <div id="veil" style={{opacity: renderAdd ? '0.4' : '1'}}>
         <div id="shipping-title">Your Shipping Info</div>
@@ -340,6 +354,9 @@ export default function Shipping() {
           </div>
         </form>
       </div>)}
+      {/* {getSpacerHeight()} */}
     </div>
+    <div id="shipping-spacer" style={{ height: `${spacerHeight}` }}></div>
+    </>
   )
 }

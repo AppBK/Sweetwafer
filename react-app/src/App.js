@@ -24,6 +24,7 @@ import Account from './components/Account/Account';
 import FourOFour from './components/SpecialPages/FourOFour';
 import Checkout from './components/Cart/Checkout';
 import Warranty from './components/SpecialPages/Warranty';
+import FreeShipping from './components/SpecialPages/FreeShipping';
 import { authenticate, login } from './store/session';
 
 
@@ -131,6 +132,13 @@ function App() {
           <Header />
           <Navigation />
           <Warranty />
+          <NewGearFooter />
+          <Footer />
+        </Route>
+        <Route path='/free-shipping' exact={true}>
+          <Header />
+          <Navigation />
+          <FreeShipping />
           <NewGearFooter />
           <Footer />
         </Route>

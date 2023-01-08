@@ -59,6 +59,9 @@ export default function Home() {
     history.push('/warranty');
   }
 
+  const goShipping = () => {
+    history.push('/free-shipping');
+  }
 
   return (
     <>
@@ -80,7 +83,7 @@ export default function Home() {
             <div className="tiny-text">Guitar perfection right out of the box.</div>
           </div>
         </div>
-        <div className="getmore-tiles">
+        <div className="getmore-tiles" onClick={goShipping}>
           <div className="floating-circle">
             <div id="shipping-thumb" className="thumb-constraint">
               <img className="circle-thum" src="/svg/get-more/shipping.svg"></img>
@@ -109,6 +112,7 @@ export default function Home() {
           {categories.map(cat => <div key={cat} id={cat} className="columnar" onClick={routeToSubCategory}><div id={cat} className="category-circles"><img id={cat} className="img-cat" src={`/jpg/categories/${encodeString(cat)}.webp`}></img></div><div id={cat} className="cat-circle-label">{cat}</div></div>)}
         </div>
       </div>
+      <div id="spacer"></div>
     </div>
     {/* <NewGearFooter />
     <Footer /> */}

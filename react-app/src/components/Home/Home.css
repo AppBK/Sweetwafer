@@ -1,6 +1,10 @@
 #home-outer {
   width: 100%;
-  height: 100%;
+  /* height: calc(100% - 298px); */
+  height: 100vh;
+  /* max-height: 100%; */
+  /* padding-bottom: 600px;
+  margin-bottom: 298px; */
 }
 
 #page-top-adds {
@@ -198,6 +202,13 @@
   margin-bottom: -12px;
   margin-left: 4px;
 }
+
+/* #spacer {
+  width: 100%;
+  height: 298px;
+  background-color: white;
+  padding-bottom: 298px;
+} */
 
 /* #spacer {
   width: 100%;
