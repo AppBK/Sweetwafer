@@ -185,6 +185,7 @@ export default function Product() {
           <div id="product-pics">
             <div id="main-img-div">
               <img src={selectedThumb}></img>
+              <div id="zoomed-in-baby"></div>
             </div>
             <div id="thumbs-div">
               {product.product_images.map(img => (

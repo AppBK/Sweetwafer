@@ -79,6 +79,15 @@
   justify-content: center;
   min-height: 400px;
   margin: 0px 40px 20px;
+  position: relative;
+}
+
+#main-img-div:hover {
+  cursor: zoom-in;
+}
+
+#main-img-div:hover #zoomed-in-baby {
+  visibility: visible;
 }
 
 #main-price {
@@ -89,6 +98,7 @@
   border-bottom: 1px solid #d1cfce;
   padding-bottom: 16px;
 }
+
 
 #bitchin-warranty {
   display: flex;
@@ -315,6 +325,19 @@
   color: white;
   margin-top: 16px;
   font-size: 18px;
+}
+
+#zoomed-in-baby {
+  width: 560px;
+  height: 847px;
+  background: url('https://media.sweetwater.com/api/i/q-85__f-webp__ha-a99e157e830c8689__hmac-aac7085c41fb8034777d55ed9b6185cecc1c3452/images/items/1800/EC1kLQMPS-xlarge.jpg.auto.webp') no-repeat 0 0;
+  background-size: 900px;
+  position: absolute;
+  top: -8px;
+  left: 646px;
+  visibility: hidden;
+  border: 1px solid #d1cfce;
+  border-top: none;
 }
 
 /*
