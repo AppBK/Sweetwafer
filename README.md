@@ -14,3 +14,13 @@ https://sweetwafer.onrender.com
   
  ### Hosting:
  ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
+
+
+# MVP Core Features
+
+## 1. Shopping Cart
+* Logged in users should be able to add to, edit, and delete the content of their shopping carts. Checkout when finished.
+
+## 2. Shipping Info
+* Logged in users can add addresses to their info to have products shipped to different locations.
+* Logged in users can edit and delete these shipping addresses
