@@ -13,7 +13,7 @@ class Shipping(db.Model, UserMixin):
   shipping_name = db.Column(db.String(64), nullable=False)
   company = db.Column(db.String(64)) # Is nullable
   street = db.Column(db.String(64), nullable=False)
-  apt_number = db.Column(db.Integer) # Is nullable
+  apt_number = db.Column(db.String(24)) # Is nullable
   city = db.Column(db.String(64), nullable=False)
   state = db.Column(db.String(64), nullable=False)
   zip = db.Column(db.String(16), nullable=False)
