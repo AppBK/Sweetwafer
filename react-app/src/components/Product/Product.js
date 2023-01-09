@@ -22,8 +22,8 @@ export default function Product() {
   const [keepBorder, setKeepBorder] = useState('');
   const [mousePosition, setMousePosition] = useState(0);
   const [gridPosition, setGridPosition] = useState('0px');
-  const [trackImgY, setTrackImgY] = useState('-300px');
-  const [trackImgX, setTrackImgX] = useState('-20px');
+  const [trackImgY, setTrackImgY] = useState('0px');
+  const [trackImgX, setTrackImgX] = useState('50px');
 
   console.log(user);
 
@@ -65,28 +65,6 @@ export default function Product() {
     return final_str;
   }
 
-  // const selectMainImage = (e) => {
-  //   // e.preventDefault();
-
-  //   if (e) setSelectedThumb(e.target.id);
-
-  //   let nextImg;
-  //   if (keepBorder) {
-  //     console.log('KEPT: ', keepBorder);
-  //     let current = document.getElementById(keepBorder);
-  //     current.classList.remove('selected-thumb');
-  //     console.log('CLASS: ', current);
-
-  //     let next = document.getElementById(selectedThumb);
-  //     next.classList.add('selected-thumb');
-  //     setKeepBorder(selectedThumb)
-  //   } else {
-  //     setKeepBorder(selectedThumb);
-  //     let next = document.getElementById(selectedThumb);
-  //     next.classList.add('selected-thumb');
-  //   }
-  // }
-
   const addToCart = async () => {
     await dispatch(thunkAddCart(user.id, product.id));
 
@@ -107,20 +85,22 @@ export default function Product() {
   }
 
 
+// 'GENERAL#Number of Strings: 6;Left-/Right-handed: Right-handed;BODY#Body Type: Solidbody;Body Shape: JP15;Body Material: Okoume;Top Material: Flamed Maple;Body Finish: High Gloss Polyester;Color: Purple Nebula Flame;NECK#Neck Material: Roasted Figured Maple;Neck Shape: 	Super Thin/Flat;Neck Joint: 5-way Bolt-on;Radius: 17";Fingerboard Material: Roasted Figured Maple;Fingerboard Inlay: JP Shields;Number of Frets: 24, Medium Jumbo, Stainless Steel;Scale Length: 25.5" Multi-scale;Nut Width: 1.6875";Nut Material: Melamine;HARDWARE#Bridge/Tailpiece: Music Man Custom Piezzo Floating Tremolo;Tuners: Schaller M6-IND Locking;ELECTRONICS#Neck Pickup: DiMarzio Illuminator Humbucker;Bridge Pickup: DiMarzio Illuminator Humbucker, Piezo Pickup;Controls: 	1 x volume (push/push gain boost), 1 x tone (push/push pickup config), 1 x Piezo volume, 2 x 1/4" (mono/stereo);Switching: 3-way toggle pickup switch, 3-way piezo/magnet toggle switch;MISCELLANEOUS#Strings: Ernie Ball Slinky, .010-.046;Case/Gig Bag: Softshell Case;Manufacturer Part Number: 661-JJF-10-00-MB-CR;'
+
   function parseTechSpecs(string) {
-    let temp = removeTabs(string)
+    let temp = removeTabs(string);
     let pairs = temp.split(';');
 
     let output = [];
 
     for (let i = 0; i < pairs.length; i++) {
-      output.push(pairs[i].split(':'))
+      output.push(pairs[i].split(':'));
     }
 
     let temp1;
     let temp2;
     let temp3;
-    let temp4;
+    // let temp4;
     const outputObject = {};
 
     if (output[0][0].split('#').length > 1) {
@@ -142,12 +122,22 @@ export default function Product() {
           }
         }
       }
+      
+      // REMOVE the empty '' at the end of array caused by splitting on the semi-colon
       outputObject['MISCELLANEOUS'].pop();
       return [outputObject, true];
     }
+
+    // console.log(' before pop OUTPUT: ', output);
+
+    // REMOVE the empty '' at the end of array caused by splitting on the semi-colon
     output.pop();
+    // console.log(' after pop OUTPUT: ', output);
     return [output, false];
   }
+
+
+
 
   if (!product) return null;
 
@@ -189,8 +179,8 @@ export default function Product() {
     let tempY = e.nativeEvent.offsetY * 2.4;
 
 
-    setTrackImgX((e.nativeEvent.offsetX * -2.4) + 'px');
-    setTrackImgY((e.nativeEvent.offsetY * -2.4) + 'px');
+    // setTrackImgX((e.nativeEvent.offsetX * -2.4) + 'px');
+    // setTrackImgY((e.nativeEvent.offsetY * -2.4) + 'px');
   }
 
   return (
