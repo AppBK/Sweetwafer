@@ -20,6 +20,10 @@ export default function Product() {
 
   const [selectedThumb, setSelectedThumb] = useState('');
   const [keepBorder, setKeepBorder] = useState('');
+  const [mousePosition, setMousePosition] = useState(0);
+  const [gridPosition, setGridPosition] = useState('0px');
+  const [trackImgY, setTrackImgY] = useState('-300px');
+  const [trackImgX, setTrackImgX] = useState('-20px');
 
   console.log(user);
 
@@ -169,6 +173,25 @@ export default function Product() {
   }
 
 
+  // ZOOM
+  const stripText = (text) => {
+    const currentValue = text.split('px')[0];
+    return parseInt(currentValue);
+  }
+
+  const trackImgPosition = (e) => {
+    e.preventDefault();
+
+    console.log('X POS: ', e.nativeEvent.offsetX);
+    console.log('Y POS: ', e.nativeEvent.offsetY);
+
+    let tempX = e.nativeEvent.offsetX * 2.4;
+    let tempY = e.nativeEvent.offsetY * 2.4;
+
+
+    setTrackImgX((e.nativeEvent.offsetX * -2.4) + 'px');
+    setTrackImgY((e.nativeEvent.offsetY * -2.4) + 'px');
+  }
 
   return (
     <div id="product-page">
@@ -184,8 +207,9 @@ export default function Product() {
         <div id="main-event">
           <div id="product-pics">
             <div id="main-img-div">
-              <img src={selectedThumb}></img>
-              <div id="zoomed-in-baby"></div>
+              <img src={selectedThumb} onMouseMove={trackImgPosition}></img>
+              <div id="zoomed-in-baby" style={{backgroundPosition: `${trackImgX} ${trackImgY}`}}></div>
+              {/* <div id="zoomed-in-baby" style={{ backgroundPosition: '-200px -300px' }}></div> */}
             </div>
             <div id="thumbs-div">
               {product.product_images.map(img => (
