@@ -1,7 +1,7 @@
 import { thunkReadProduct } from "../../store/product"
 import { useSelector, useDispatch } from "react-redux"
 import { useParams, useHistory } from "react-router-dom"
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useRef } from "react";
 import { SweetContext } from "../../context/Context";
 import { thunkAddCart } from "../../store/cart";
 import './Product.css'
@@ -24,6 +24,9 @@ export default function Product() {
   const [gridPosition, setGridPosition] = useState('0px');
   const [trackImgY, setTrackImgY] = useState('0px');
   const [trackImgX, setTrackImgX] = useState('50px');
+  const [bgSize, setBgSize] = useState('');
+
+  const hoveredImgRef = useRef();
 
   console.log(user);
 
@@ -122,7 +125,7 @@ export default function Product() {
           }
         }
       }
-      
+
       // REMOVE the empty '' at the end of array caused by splitting on the semi-colon
       outputObject['MISCELLANEOUS'].pop();
       return [outputObject, true];
@@ -172,15 +175,32 @@ export default function Product() {
   const trackImgPosition = (e) => {
     e.preventDefault();
 
+    const hoveredImgWidth = hoveredImgRef.current.clientWidth;
+    const hoveredImgHeight = hoveredImgRef.current.clientHeight;
+
+    setBgSize(hoveredImgWidth * 3.5 + 'px');
+
+    const halfWidth = Math.floor(hoveredImgWidth / 2);
+    const halfHeight = Math.floor(hoveredImgHeight / 2);
+
+
     console.log('X POS: ', e.nativeEvent.offsetX);
     console.log('Y POS: ', e.nativeEvent.offsetY);
 
-    let tempX = e.nativeEvent.offsetX * 2.4;
-    let tempY = e.nativeEvent.offsetY * 2.4;
+    // let tempX = e.nativeEvent.offsetX * 2.4;
+    // let tempY = e.nativeEvent.offsetY * 2.4;
 
+    if (e.nativeEvent.offsetX > halfWidth) {
+      setTrackImgX((e.nativeEvent.offsetX * -2.4 - (128)) + 'px');
+    } else {
+      setTrackImgX((e.nativeEvent.offsetX * -2.4 + (120)) + 'px');
+    }
 
-    // setTrackImgX((e.nativeEvent.offsetX * -2.4) + 'px');
-    // setTrackImgY((e.nativeEvent.offsetY * -2.4) + 'px');
+    if (e.nativeEvent.offsetY > halfHeight) {
+      setTrackImgY((e.nativeEvent.offsetY * -2.4) - (128) + 'px');
+    } else {
+       setTrackImgY((e.nativeEvent.offsetY * -2.4) + (16) + 'px');
+    }
   }
 
   return (
@@ -197,8 +217,8 @@ export default function Product() {
         <div id="main-event">
           <div id="product-pics">
             <div id="main-img-div">
-              <img src={selectedThumb} onMouseMove={trackImgPosition}></img>
-              <div id="zoomed-in-baby" style={{backgroundPosition: `${trackImgX} ${trackImgY}`}}></div>
+              <img src={selectedThumb} onMouseMove={trackImgPosition} ref={hoveredImgRef}></img>
+              <div id="zoomed-in-baby" style={{backgroundPosition: `${trackImgX} ${trackImgY}`, backgroundSize: `${bgSize}`}}></div>
               {/* <div id="zoomed-in-baby" style={{ backgroundPosition: '-200px -300px' }}></div> */}
             </div>
             <div id="thumbs-div">

@@ -145,3 +145,142 @@ index.js:1 Warning: You provided a `value` prop to a form field without an `onCh
 
 # AN interesting React hook rule...:
 Line 215:3:  React Hook "useEffect" is called conditionally. React Hooks must be called in the exact same order in every component render  react-hooks/rules-of-hooks
+
+# Unseeding error:
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/bin/flask", line 10, in <module>
+    sys.exit(main())
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask/cli.py", line 990, in main
+    cli.main(args=sys.argv[1:])
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask/cli.py", line 596, in main
+    return super().main(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask/cli.py", line 440, in decorator
+    return __ctx.invoke(f, *args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/seeds/__init__.py", line 37, in undo
+    undo_inventory()
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/seeds/inventory.py", line 3732, in undo_inventory
+    db.session.execute("DELETE FROM inventories")
+  File "<string>", line 2, in execute
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1689, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.ForeignKeyViolation) update or delete on table "inventories" violates foreign key constraint "inventory_product_images_inventory_id_fkey" on table "inventory_product_images"
+DETAIL:  Key (id)=(1) is still referenced from table "inventory_product_images".
+
+[SQL: DELETE FROM inventories]
+(Background on this error at: http://sqlalche.me/e/14/gkpj)
+
+# SOLUTION: Needed to DROP the join table before the tables that referenced it!!
+
+
+
+# Re-Seeding Error:
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/bin/flask", line 10, in <module>
+    sys.exit(main())
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask/cli.py", line 990, in main
+    cli.main(args=sys.argv[1:])
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask/cli.py", line 596, in main
+    return super().main(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask/cli.py", line 440, in decorator
+    return __ctx.invoke(f, *args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/seeds/__init__.py", line 27, in seed
+    seed_shipping()
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/seeds/shipping.py", line 26, in seed_shipping
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1428, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3298, in flush
+    self._flush(objects)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3438, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3398, in _flush
+    flush_context.execute()
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 242, in save_obj
+    _emit_insert_statements(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 1153, in _emit_insert_statements
+    c = connection._execute_20(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1750, in _execute_context
+    self.dialect.do_executemany(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py", line 962, in do_executemany
+    context._psycopg2_fetched_rows = xtras.execute_values(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/psycopg2/extras.py", line 1299, in execute_values
+    cur.execute(b''.join(parts))
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.ForeignKeyViolation) insert or update on table "shippings" violates foreign key constraint "shippings_user_id_fkey"
+DETAIL:  Key (user_id)=(1) is not present in table "users".
+
+[SQL: INSERT INTO shippings (user_id, shipping_name, company, street, apt_number, city, state, zip, country, "primary", createdat, updatedat) VALUES (%(user_id)s, %(shipping_name)s, %(company)s, %(street)s, %(apt_number)s, %(city)s, %(state)s, %(zip)s, %(country)s, %(primary)s, %(createdat)s, %(updatedat)s) RETURNING shippings.id]
+[parameters: ({'user_id': 1, 'shipping_name': 'Demo', 'company': 'AppAcademy', 'street': '333 App Wy.', 'apt_number': None, 'city': 'San Francisco', 'state': 'CA', 'zip': '94000', 'country': 'United States', 'primary': True, 'createdat': '2023-01-23 09:44:16.617052', 'updatedat': '2023-01-23 09:44:16.617077'}, {'user_id': 2, 'shipping_name': 'Marnie', 'company': 'AppAcademy', 'street': '2244 Apple Dr.', 'apt_number': None, 'city': 'Cupertino', 'state': 'CA', 'zip': '94001', 'country': 'United States', 'primary': True, 'createdat': '2023-01-23 09:44:16.617156', 'updatedat': '2023-01-23 09:44:16.617160'}, {'user_id': 3, 'shipping_name': 'Bobbie', 'company': 'AppAcademy', 'street': '1613 Jarvis St.', 'apt_number': None, 'city': 'San Clemente', 'state': 'CA', 'zip': '94002', 'country': 'United States', 'primary': True, 'createdat': '2023-01-23 09:44:16.617199', 'updatedat': '2023-01-23 09:44:16.617202'})]
+(Background on this error at: http://sqlalche.me/e/14/gkpj)
