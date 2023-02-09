@@ -8,6 +8,7 @@ class Cart(db.Model, UserMixin):
   if environment == "production":
     __table_args__ = {'schema': SCHEMA}
 
+
   id = db.Column(db.Integer, nullable=False, primary_key=True)
   user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
   item_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('inventories.id')), nullable=False)

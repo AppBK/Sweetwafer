@@ -1,8 +1,8 @@
 """create all
 
-Revision ID: e5a249a59ad6
-Revises: 
-Create Date: 2023-01-23 09:43:32.462745
+Revision ID: bf5bb6978d01
+Revises:
+Create Date: 2023-01-23 16:08:41.465782
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'e5a249a59ad6'
+revision = 'bf5bb6978d01'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -100,3 +100,12 @@ def downgrade():
     op.drop_table('product_images')
     op.drop_table('inventories')
     # ### end Alembic commands ###
+
+
+# Order of creation:
+inventories
+product_images
+users
+carts
+inventory_product_images
+shippings

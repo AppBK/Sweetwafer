@@ -17,6 +17,7 @@ class User(db.Model, UserMixin):
     updatedat = db.Column(db.String(64), nullable=False)
 
     shippings = db.relationship('Shipping', back_populates='user', cascade='all, delete-orphan')
+    billings = db.relationship('Billing', back_populates='user_billing', cascade='all, delete-orphan')
     cart = db.relationship('Cart', back_populates='users', cascade='all, delete-orphan')
 
     @property

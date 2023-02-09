@@ -3727,7 +3727,7 @@ def seed_inventory():
 
 def undo_inventory():
     if environment == "production":
-        db.session.execute(f"TRUNCATE table {SCHEMA}.inventories RESTART IDENTITY CASCADE;")
+      db.session.execute(f"TRUNCATE table {SCHEMA}.inventories RESTART IDENTITY CASCADE;")
     else:
         db.session.execute("DELETE FROM inventories")
 
@@ -3736,7 +3736,7 @@ def undo_inventory():
 
 def undo_product_images():
     if environment == "production":
-        db.session.execute(f"TRUNCATE table {SCHEMA}.product_images RESTART IDENTITY CASCADE;")
+      db.session.execute(f"TRUNCATE table {SCHEMA}.product_images RESTART IDENTITY CASCADE;")
     else:
         db.session.execute("DELETE FROM product_images")
 

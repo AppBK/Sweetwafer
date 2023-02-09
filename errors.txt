@@ -284,3 +284,185 @@ DETAIL:  Key (user_id)=(1) is not present in table "users".
 [SQL: INSERT INTO shippings (user_id, shipping_name, company, street, apt_number, city, state, zip, country, "primary", createdat, updatedat) VALUES (%(user_id)s, %(shipping_name)s, %(company)s, %(street)s, %(apt_number)s, %(city)s, %(state)s, %(zip)s, %(country)s, %(primary)s, %(createdat)s, %(updatedat)s) RETURNING shippings.id]
 [parameters: ({'user_id': 1, 'shipping_name': 'Demo', 'company': 'AppAcademy', 'street': '333 App Wy.', 'apt_number': None, 'city': 'San Francisco', 'state': 'CA', 'zip': '94000', 'country': 'United States', 'primary': True, 'createdat': '2023-01-23 09:44:16.617052', 'updatedat': '2023-01-23 09:44:16.617077'}, {'user_id': 2, 'shipping_name': 'Marnie', 'company': 'AppAcademy', 'street': '2244 Apple Dr.', 'apt_number': None, 'city': 'Cupertino', 'state': 'CA', 'zip': '94001', 'country': 'United States', 'primary': True, 'createdat': '2023-01-23 09:44:16.617156', 'updatedat': '2023-01-23 09:44:16.617160'}, {'user_id': 3, 'shipping_name': 'Bobbie', 'company': 'AppAcademy', 'street': '1613 Jarvis St.', 'apt_number': None, 'city': 'San Clemente', 'state': 'CA', 'zip': '94002', 'country': 'United States', 'primary': True, 'createdat': '2023-01-23 09:44:16.617199', 'updatedat': '2023-01-23 09:44:16.617202'})]
 (Background on this error at: http://sqlalche.me/e/14/gkpj)
+
+SOLUTION: needed to add the schema name to all foreign key definitions!!
+
+
+
+# Migration Error:
+(app) bash-3.2$ flask db migrate -m 'create all'
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+Traceback (most recent call last):
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/bin/flask", line 10, in <module>
+    sys.exit(main())
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask/cli.py", line 990, in main
+    cli.main(args=sys.argv[1:])
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask/cli.py", line 596, in main
+    return super().main(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask/cli.py", line 440, in decorator
+    return __ctx.invoke(f, *args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask_migrate/cli.py", line 91, in migrate
+    _migrate(directory, message, sql, head, splice, branch_label, version_path,
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask_migrate/__init__.py", line 92, in wrapped
+    f(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask_migrate/__init__.py", line 132, in migrate
+    command.revision(config, message, autogenerate=True, sql=sql,
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/command.py", line 212, in revision
+    script_directory.run_env()
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/script/base.py", line 490, in run_env
+    util.load_python_file(self.dir, "env.py")
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/util/pyfiles.py", line 97, in load_python_file
+    module = load_module_py(module_id, path)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/util/compat.py", line 184, in load_module_py
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "migrations/env.py", line 99, in <module>
+    run_migrations_online()
+  File "migrations/env.py", line 94, in run_migrations_online
+    context.run_migrations()
+  File "<string>", line 8, in run_migrations
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/runtime/environment.py", line 813, in run_migrations
+    self.get_context().run_migrations(**kw)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/runtime/migration.py", line 549, in run_migrations
+    for step in self._migrations_fn(heads, self):
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/command.py", line 188, in retrieve_migrations
+    revision_context.run_autogenerate(rev, context)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/autogenerate/api.py", line 462, in run_autogenerate
+    self._run_environment(rev, migration_context, True)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/autogenerate/api.py", line 501, in _run_environment
+    compare._populate_migration_script(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/autogenerate/compare.py", line 25, in _populate_migration_script
+    _produce_net_changes(autogen_context, upgrade_ops)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/autogenerate/compare.py", line 54, in _produce_net_changes
+    comparators.dispatch("schema", autogen_context.dialect.name)(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/util/langhelpers.py", line 307, in go
+    fn(*arg, **kw)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/autogenerate/compare.py", line 86, in _autogen_for_tables
+    [(table.schema, table.name) for table in autogen_context.sorted_tables]
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/util/langhelpers.py", line 234, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/autogenerate/api.py", line 382, in sorted_tables
+    result.extend(m.sorted_tables)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/sql/schema.py", line 4548, in sorted_tables
+    return ddl.sort_tables(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/sql/ddl.py", line 1208, in sort_tables
+    for (t, fkcs) in sort_tables_and_constraints(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/sql/ddl.py", line 1286, in sort_tables_and_constraints
+    dependent_on = fkc.referred_table
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/sql/schema.py", line 3671, in referred_table
+    return self.elements[0].column.table
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 1113, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/sqlalchemy/sql/schema.py", line 2376, in column
+    raise exc.NoReferencedTableError(
+sqlalchemy.exc.NoReferencedTableError: Foreign key associated with column 'carts.item_id' could not find table 'inventories' with which to generate a foreign key to target column 'id'
+(app) bash-3.2$ flask db init
+  Creating directory /Users/satori/iCloud Drive
+  (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/migrations
+  ...  done
+  Creating directory /Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Co
+  hort/Capstone/sweetwafer/project/migrations/versions ...  done
+  Generating /Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Cap
+  stone/sweetwafer/project/migrations/README ...  done
+  Generating /Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Cap
+  stone/sweetwafer/project/migrations/script.py.mako ...  done
+  Generating /Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Cap
+  stone/sweetwafer/project/migrations/env.py ...  done
+  Generating /Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Cap
+  stone/sweetwafer/project/migrations/alembic.ini ...  done
+  Please edit configuration/connection/logging settings in '/Users/satori/iCloud
+  Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/migrati
+  ons/alembic.ini' before proceeding.
+(app) bash-3.2$ flask db migrate -m 'create all'
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+Traceback (most recent call last):
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/bin/flask", line 10, in <module>
+    sys.exit(main())
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask/cli.py", line 990, in main
+    cli.main(args=sys.argv[1:])
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask/cli.py", line 596, in main
+    return super().main(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 1259, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask/cli.py", line 440, in decorator
+    return __ctx.invoke(f, *args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask_migrate/cli.py", line 91, in migrate
+    _migrate(directory, message, sql, head, splice, branch_label, version_path,
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask_migrate/__init__.py", line 92, in wrapped
+    f(*args, **kwargs)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/flask_migrate/__init__.py", line 132, in migrate
+    command.revision(config, message, autogenerate=True, sql=sql,
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/command.py", line 212, in revision
+    script_directory.run_env()
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/script/base.py", line 490, in run_env
+    util.load_python_file(self.dir, "env.py")
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/util/pyfiles.py", line 97, in load_python_file
+    module = load_module_py(module_id, path)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/util/compat.py", line 184, in load_module_py
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "migrations/env.py", line 99, in <module>
+    run_migrations_online()
+  File "migrations/env.py", line 94, in run_migrations_online
+    context.run_migrations()
+  File "<string>", line 8, in run_migrations
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/runtime/environment.py", line 813, in run_migrations
+    self.get_context().run_migrations(**kw)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/runtime/migration.py", line 549, in run_migrations
+    for step in self._migrations_fn(heads, self):
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/command.py", line 188, in retrieve_migrations
+    revision_context.run_autogenerate(rev, context)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/autogenerate/api.py", line 462, in run_autogenerate
+    self._run_environment(rev, migration_context, True)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/autogenerate/api.py", line 501, in _run_environment
+    compare._populate_migration_script(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/autogenerate/compare.py", line 25, in _populate_migration_script
+    _produce_net_changes(autogen_context, upgrade_ops)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/autogenerate/compare.py", line 54, in _produce_net_changes
+    comparators.dispatch("schema", autogen_context.dialect.name)(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/util/langhelpers.py", line 307, in go
+    fn(*arg, **kw)
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/autogenerate/compare.py", line 89, in _autogen_for_tables
+    _compare_tables(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/autogenerate/compare.py", line 123, in _compare_tables
+    tname_to_table = dict(
+  File "/Users/satori/iCloud Drive (Archive)/Desktop/AppAcademy/My_Cohort/Capstone/sweetwafer/project/app/.venv/lib/python3.9/site-packages/alembic/autogenerate/compare.py", line 126, in <genexpr>
+    autogen_context.table_key_to_table[
+KeyError: 'sweetwafer_schema.inventory_product_images'
+
+GOT SCHEMA?  {'public', 'information_schema', 'sweetwafer_schema'}
+
+GOT TABLES?  {'alembic_version'} FOR SCHEMA:  sweetwafer_schema
+GOT TABLES?  set() FOR SCHEMA:  None
+DEFAULT SCHEMA NAME:  public
+SCHEMAS:  {'sweetwafer_schema', None}
