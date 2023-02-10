@@ -219,7 +219,7 @@ export default function Billing() {
               <div key={idx} className="edit-flex-pusher">
                 <div key={idx} className="subete-no-shipping">
                   <div id="shipping-info-name-box">
-                    <div className="shipping-info-name">{address.shipping_name}</div>
+                    <div className="shipping-info-name">{address.billing_name}</div>
                     {address.primary && (<div className="primary"><div className="primary-nudge">PRIMARY</div></div>)}
                   </div>
                   {address.company && (<div className="shipping-info-company">{address.company}</div>)}

@@ -37,6 +37,22 @@ export const actionDeleteBilling = (billingId) => {
 }
 
 // Thunks
+export const thunkCreateBilling = () => async (dispatch) => {
+  const response = await fetch(`/api/billing/${user_id}`);
+
+  if (response.ok) {
+    const info = await response.json();
+    dispatch(actionReadBilling(info));
+    return info;
+  } else {
+    const data = await response.json();
+    if (data.errors) {
+      return data;
+    } else {
+      return ['Could Not Read Info'];
+    }
+  }
+}
 
 export const thunkReadBilling = (user_id) => async (dispatch) => {
   const response = await fetch(`/api/billing/${user_id}`);
@@ -46,7 +62,7 @@ export const thunkReadBilling = (user_id) => async (dispatch) => {
     dispatch(actionReadBilling(info));
     return info;
   } else {
-    const data = await response.json()
+    const data = await response.json();
     if (data.errors) {
       return data;
     } else {

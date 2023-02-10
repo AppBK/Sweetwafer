@@ -36,6 +36,6 @@ def undo_billing():
     if environment == "production":
         db.session.execute(f"TRUNCATE table {SCHEMA}.billings RESTART IDENTITY CASCADE;")
     else:
-        db.session.execute("DELETE FROM billings")
+        db.session.execute("TRUNCATE table billings RESTART IDENTITY CASCADE;") 
 
     db.session.commit()

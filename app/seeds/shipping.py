@@ -36,6 +36,6 @@ def undo_shipping():
     if environment == "production":
         db.session.execute(f"TRUNCATE table {SCHEMA}.shippings RESTART IDENTITY CASCADE;")
     else:
-        db.session.execute("DELETE FROM shippings")
+        db.session.execute("TRUNCATE table shippings RESTART IDENTITY CASCADE;")
 
     db.session.commit()
