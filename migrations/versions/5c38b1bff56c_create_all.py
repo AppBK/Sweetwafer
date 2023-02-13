@@ -1,8 +1,8 @@
 """create all
 
-Revision ID: 482ddcbc6361
+Revision ID: 5c38b1bff56c
 Revises: 
-Create Date: 2023-01-09 18:00:50.628202
+Create Date: 2023-02-13 14:19:52.236228
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '482ddcbc6361'
+revision = '5c38b1bff56c'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -53,6 +53,24 @@ def upgrade():
     sa.UniqueConstraint('email'),
     sa.UniqueConstraint('username')
     )
+    op.create_table('billings',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('user_id', sa.Integer(), nullable=False),
+    sa.Column('phone', sa.String(length=24), nullable=False),
+    sa.Column('billing_name', sa.String(length=64), nullable=False),
+    sa.Column('company', sa.String(length=64), nullable=True),
+    sa.Column('street', sa.String(length=64), nullable=False),
+    sa.Column('apt_number', sa.String(length=64), nullable=True),
+    sa.Column('city', sa.String(length=64), nullable=False),
+    sa.Column('state', sa.String(length=64), nullable=False),
+    sa.Column('zip', sa.String(length=16), nullable=False),
+    sa.Column('country', sa.String(length=128), nullable=False),
+    sa.Column('primary', sa.Boolean(), nullable=False),
+    sa.Column('createdat', sa.String(length=64), nullable=False),
+    sa.Column('updatedat', sa.String(length=64), nullable=False),
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
     op.create_table('carts',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=False),
@@ -77,7 +95,7 @@ def upgrade():
     sa.Column('shipping_name', sa.String(length=64), nullable=False),
     sa.Column('company', sa.String(length=64), nullable=True),
     sa.Column('street', sa.String(length=64), nullable=False),
-    sa.Column('apt_number', sa.String(length=24), nullable=True),
+    sa.Column('apt_number', sa.String(length=64), nullable=True),
     sa.Column('city', sa.String(length=64), nullable=False),
     sa.Column('state', sa.String(length=64), nullable=False),
     sa.Column('zip', sa.String(length=16), nullable=False),
@@ -96,6 +114,7 @@ def downgrade():
     op.drop_table('shippings')
     op.drop_table('inventory_product_images')
     op.drop_table('carts')
+    op.drop_table('billings')
     op.drop_table('users')
     op.drop_table('product_images')
     op.drop_table('inventories')

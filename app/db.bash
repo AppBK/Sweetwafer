@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+
 # Delete the current database
 psql -c "DROP DATABASE dev"
 
@@ -13,7 +15,7 @@ psql -c "CREATE DATABASE dev"
 flask db init
 
 # Overwrite the default env.py
-cat ../env.py.example >| ./migrations/env.py
+cat ../env.py.example >| ../migrations/env.py
 
 # Create new migrations file in ./migrations/versions
 flask db migrate -m 'create all'
