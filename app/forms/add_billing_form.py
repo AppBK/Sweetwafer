@@ -11,8 +11,10 @@ def billing_sixty_four_char_length(form, field):
 def company_sixty_four_char_length(form, field):
   # verify that shipping name is equal to or below the maximum 64 chars!
   string = field.data
+
   if len(string) > 64:
     raise ValidationError('Company name must be 64 chars or less.')
+
 
 def street_sixty_four_char_length(form, field):
   # verify that shipping name is equal to or below the maximum 64 chars!
@@ -59,7 +61,7 @@ def is_phone_number(form, field):
 
 class AddBillingForm(FlaskForm):
     apt_number = StringField('apt_number')
-    user_id = StringField('user_id', validators=[DataRequired()])
+    user_id = IntegerField('user_id', validators=[DataRequired()])
     phone = StringField('phone', validators=[DataRequired(), is_phone_number])
     billing_name = StringField('billing_name', validators=[DataRequired(), billing_sixty_four_char_length])
     company = StringField('company', validators=[company_sixty_four_char_length])

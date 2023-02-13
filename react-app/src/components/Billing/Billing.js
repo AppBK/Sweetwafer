@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { thunkReadBilling } from '../../store/billing';
+import { thunkReadBilling, thunkCreateBilling, thunkDeleteBilling } from '../../store/billing';
 import './Billing.css'
 
 export default function Billing() {
   // Get from Store
   const user = useSelector(state => state.session.user);
-  const billing = useSelector(state => state.billing);
+  const billing = Object.values(useSelector(state => state.billing));
 
   // States:
   const [renderAdd, setRenderAdd] = useState(false);
@@ -28,8 +28,10 @@ export default function Billing() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(thunkReadBilling(user.id));
-  }, [])
+      if (billing.length === 0) {
+        dispatch(thunkReadBilling(user.id));
+      }
+  }, []);
 
   if (!billing) return null;
 
@@ -121,7 +123,9 @@ export default function Billing() {
     e.preventDefault();
 
     const tempObj = JSON.parse(e.target.id);
-    const tempNames = tempObj.shipping_name.split(' ');
+    let tempNames = tempObj.billing_name.split(' ');
+
+
     // setEditObj(tempObj)
     setAddressOne(tempObj.street);
     setAddressTwo(tempObj.apt_number);
@@ -134,6 +138,7 @@ export default function Billing() {
     setZip(tempObj.zip);
     setPrimary(tempObj.primary);
     setShippingId(tempObj.id);
+    setPhone(tempObj.phone);
 
 
 
@@ -145,8 +150,9 @@ export default function Billing() {
     setRenderUpdate(false);
   }
 
-  const createShippingInfo = async (e) => {
+  const createBillingInfo = async (e) => {
     e.preventDefault();
+    console.log('FROM CREATE: ', companyName);
 
     const info = {
       apt_number: addressTwo,
@@ -162,7 +168,7 @@ export default function Billing() {
       zip: zip,
     }
 
-    const data = await dispatch(thunkCreateShipping(info));
+    const data = await dispatch(thunkCreateBilling(info));
     if (data) {
       console.log('ERRORS: ', data);
       setErrors(data);
@@ -172,10 +178,10 @@ export default function Billing() {
   }
 
 
-  const deleteShipping = async (e) => {
+  const deleteBilling = async (e) => {
     e.preventDefault();
     console.log('SHIPPING ID TO DELETE: ', shippingId);
-    await dispatch(thunkDeleteShipping(shippingId, user.id));
+    await dispatch(thunkDeleteBilling(shippingId, user.id));
 
     setRenderUpdate(false);
   }
@@ -196,7 +202,7 @@ export default function Billing() {
       zip: zip,
     }
 
-    const data = await dispatch(thunkUpdateShipping(shippingId, update));
+    const data = await dispatch(thunkDeleteBilling(shippingId, update));
     if (data) {
       console.log('ERRORS: ', data);
       setErrors(data);
@@ -246,7 +252,7 @@ export default function Billing() {
               <div className="error-add-ship">{error}</div>
             ))}
           </div>) : null}
-          <form onSubmit={createShippingInfo}>
+          <form onSubmit={createBillingInfo}>
             <div id="shipping-name-label">Phone Number</div>
             <div id="billing-phone-div">
               <input id="phone" className="shipping-input" type="text" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required></input>
@@ -277,7 +283,7 @@ export default function Billing() {
                 <input className="shipping-input" type="text" placeholder="ZIP/PostalCode" value={zip} onChange={(e) => setZip(e.target.value)} required></input>
               </div>
               <select id="select-country" value={countryName} onChange={(e) => setCountryName(e.target.value)} required>
-                <option selected>United States</option>
+                <option >United States</option>
                 <option >Mexico</option>
                 <option >Canada</option>
                 <option >China</option>
@@ -344,7 +350,7 @@ export default function Billing() {
               </div>)}
               <div id="button-box-bottom-edit">
                 <div id="delete-shipping-button-div">
-                  <button id="delete-shipping-button" onClick={deleteShipping}>Remove This Address</button>
+                  <button id="delete-shipping-button" onClick={deleteBilling}>Remove This Address</button>
                 </div>
                 <div>
                   <button id="cancel-shipping-button"><div id="cancel-label" onClick={closeEditForm}>Cancel</div></button>

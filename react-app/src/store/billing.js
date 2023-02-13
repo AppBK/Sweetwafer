@@ -8,10 +8,10 @@ const DELETE_BILLING = 'bookings/DELETE_BOOKING';
 
 
 // Action Creators
-export const actionCreateBilling = (billing) => {
+export const actionCreateBilling = (newbilling) => {
   return {
     type: CREATE_BILLING,
-    billing
+    newbilling
   }
 }
 
@@ -37,13 +37,19 @@ export const actionDeleteBilling = (billingId) => {
 }
 
 // Thunks
-export const thunkCreateBilling = () => async (dispatch) => {
-  const response = await fetch(`/api/billing/${user_id}`);
+export const thunkCreateBilling = (info) => async (dispatch) => {
+  const response = await fetch(`/api/billing/add`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      ...info
+  })
+  });
 
   if (response.ok) {
-    const info = await response.json();
-    dispatch(actionReadBilling(info));
-    return info;
+    const newInfo = await response.json();
+    dispatch(actionCreateBilling(newInfo));
+    return null;
   } else {
     const data = await response.json();
     if (data.errors) {
@@ -72,14 +78,48 @@ export const thunkReadBilling = (user_id) => async (dispatch) => {
 }
 
 
+export const thunkDeleteBilling = (id, user_id) => async (dispatch) => {
+  const response = await fetch('/api/billing/delete', {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      id: id,
+      user_id: user_id,
+    })
+  });
+
+  if (response.ok) {
+    const info = await response.json();
+    dispatch(actionDeleteBilling(id));
+    return null;
+  } else {
+    const data = await response.json()
+    if (data.errors) {
+      return data;
+    } else {
+      return ['Could Not Read Info'];
+    }
+  }
+}
 // Reducer
 
-export default function billingReducer(state = [], action) {
+export default function billingReducer(state = {}, action) {
   switch(action.type) {
+    case CREATE_BILLING: {
+      const newState = {...state}
+      newState[action.newbilling.id] = action.newbilling;
+      return newState;
+    }
     case READ_BILLING: {
-      if (Object.keys(action.billings).length === 0) return [];
-      const newState = [...action.billings];
+      // if (Object.keys(action.billings).length === 0) return [];
+      const newState = {...action.billings};
 
+      return newState;
+    }
+    case DELETE_BILLING: {
+      const newState = {...state};
+
+      delete newState[action.billingId];
       return newState;
     }
     default: {

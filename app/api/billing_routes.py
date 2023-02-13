@@ -28,8 +28,9 @@ def get_billing_info(id):
   print('USER INFO: ', user_billing_info)
 
   billing_list = [info.to_dict() for info in user_billing_info]
+  billing_obj = {info['id'] : info for info in billing_list}
 
-  jsonified_list = json.dumps(billing_list)
+  jsonified_list = json.dumps(billing_obj)
 
 
   print('BILLING LIST: ', jsonified_list)
@@ -56,7 +57,7 @@ def create_billing_info():
     # If new address has been set to primary, we must UNSET the previous primary!
     if body['primary'] == True:
         # Get the current primary billing address if exists
-        primary_billing = Billing.query.filter(Billing.primary == True).first()
+        primary_billing = Billing.query.filter(Billing.primary == True and Billing.user_id == body['user_id']).first()
 
         if primary_billing:
           primary_billing.primary = False # Set the 'previous' current to False
@@ -68,7 +69,7 @@ def create_billing_info():
         db.session.add(new_billing)
         db.session.commit()
     else:
-      user_addresses = Shipping.query.filter(Shipping.user_id == body['user_id']).all()
+      user_addresses = Billing.query.filter(Billing.user_id == body['user_id']).all()
 
       # If current user has no shipping addresses, default this first entry to Primary!
       if not user_addresses:
@@ -77,12 +78,28 @@ def create_billing_info():
       db.session.add(new_billing)
       db.session.commit()
 
-    # Return all shipping addresses for user
-    user_billing = Billing.query.filter(Billing.user_id == body['user_id']).all()
-    user_billing = [billing.to_dict() for billing in user_billing]
-    jsonified_list = json.dumps(user_billing)
+    new_billing = new_billing.to_dict()
+    jsonified_list = json.dumps(new_billing)
 
     return jsonified_list
 
   print('VALIDATION ERRORS: ', form.errors)
   return {'errors': validation_errors_to_error_messages(form.errors)}, 401
+
+
+@billing_routes.route('/delete', methods=['DELETE'])
+@login_required
+def delete_from_shipping():
+    body = json.loads(request.data.decode('UTF-8'))
+    print('HOT BODY: ', body)
+
+    billing_info_to_delete = Billing.query.get(body['id']);
+
+    if billing_info_to_delete:
+      db.session.delete(billing_info_to_delete)
+      db.session.commit();
+
+      return json.dumps({"message": "Success!"})
+
+    else:
+      return "Error: Could not find info"
