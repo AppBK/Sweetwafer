@@ -4,7 +4,7 @@ const READ_SHIPPING = 'shipping/READ_SHIPPING';
 const UPDATE_SHIPPING = 'shipping/UPDATE_SHIPPING';
 const DELETE_SHIPPING = 'shipping/DELETE_SHIPPING';
 
-const parseErrors = (errs) => {
+export const parseErrors = (errs) => {
   let output = [];
   for (let i = 0; i < errs.length; i++) {
     if (errs[i] !== 'This field is required.') {
