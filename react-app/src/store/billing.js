@@ -1,4 +1,4 @@
-
+import { parseErrors } from "./shipping";
 
 // Actions
 const CREATE_BILLING = 'billing/CREATE_BILLING';
