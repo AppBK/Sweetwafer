@@ -218,7 +218,6 @@
 .subete-no-shipping {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #dedede;
   padding-bottom: 12px;
 }
 
@@ -353,6 +352,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #dedede;
 }
 
 #have-arrow-add-ship {

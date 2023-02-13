@@ -69,6 +69,7 @@ class ProductImages(db.Model, UserMixin):
   # ALL models should have this!!!
   if environment == "production":
     __table_args__ = {'schema': SCHEMA}
+  
 
   id = db.Column(db.Integer, nullable=False, primary_key=True)
   url = db.Column(db.String(1024), nullable=False)

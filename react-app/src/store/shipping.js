@@ -143,8 +143,6 @@ export default function shippingReducer(state = [], action) {
       return newState;
     }
     case READ_SHIPPING: {
-      console.log('INSIDE READ: ', action.payload);
-
       if (Object.keys(action.payload).length === 0) return [];
       const newState = [...action.payload];
 

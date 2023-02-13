@@ -5,6 +5,7 @@ import cartReducer from './cart';
 import inventoryReducer from './inventory';
 import productReducer from './product';
 import shippingReducer from './shipping';
+import billingReducer from './billing';
 
 const rootReducer = combineReducers({
   session,
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   inventory: inventoryReducer,
   products: productReducer,
   shipping: shippingReducer,
+  billing: billingReducer,
 });
 
 

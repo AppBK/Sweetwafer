@@ -344,7 +344,6 @@ export default function Shipping() {
           </div>
         </form>
       </div>)}
-
     </div>
     </>
   )

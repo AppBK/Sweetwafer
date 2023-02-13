@@ -1,8 +1,8 @@
 from . import db, environment, SCHEMA, add_prefix_for_prod
 from flask_login import UserMixin
 
-class Shipping(db.Model, UserMixin):
-  __tablename__ = 'shippings'
+class Billing(db.Model, UserMixin):
+  __tablename__ = 'billings'
 
   # ALL models should have this!!!
   if environment == "production":
@@ -10,7 +10,8 @@ class Shipping(db.Model, UserMixin):
 
   id = db.Column(db.Integer, nullable=False, primary_key=True)
   user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
-  shipping_name = db.Column(db.String(64), nullable=False)
+  phone = db.Column(db.String(24), nullable=False)
+  billing_name = db.Column(db.String(64), nullable=False)
   company = db.Column(db.String(64)) # Is nullable
   street = db.Column(db.String(64), nullable=False)
   apt_number = db.Column(db.String(64)) # Is nullable
@@ -22,13 +23,14 @@ class Shipping(db.Model, UserMixin):
   createdat = db.Column(db.String(64), nullable=False)
   updatedat = db.Column(db.String(64), nullable=False)
 
-  user = db.relationship('User', back_populates='shippings')
+  user_billing = db.relationship('User', back_populates='billings')
 
   def to_dict(self):
-    shipping_info = {
+    billing_info = {
       'id': self.id,
       'user_id': self.user_id,
-      'shipping_name': self.shipping_name,
+      'phone': self.phone,
+      'billing_name': self.billing_name,
       'company': self.company,
       'street': self.street,
       'apt_number': self.apt_number,
@@ -41,4 +43,4 @@ class Shipping(db.Model, UserMixin):
       'updatedat': self.updatedat
     }
 
-    return shipping_info
+    return billing_info
