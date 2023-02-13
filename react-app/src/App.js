@@ -122,8 +122,10 @@ function App() {
           <Header />
           <Navigation />
           <Account />
-          <NewGearFooter />
-          <Footer />
+          <div style={{}}>
+            <NewGearFooter />
+            <Footer />
+          </div>
         </Route>
         <Route path='/checkedout'>
           <Checkout />

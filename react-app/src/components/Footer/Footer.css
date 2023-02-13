@@ -6,6 +6,8 @@
   display: flex;
   justify-content: space-evenly;
   padding: 0px 10%;
+  /* position: relative;
+  z-index: 10; */
 }
 
 #happy-new-gears {

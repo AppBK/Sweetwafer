@@ -24,6 +24,7 @@ export default function Account() {
   if (!user) return null;
 
   return (
+    <>
     <div id="outer-account">
       <div id="account-menu">
         <div id="top-bar-blue">
@@ -61,5 +62,7 @@ export default function Account() {
       </div>
       {currentRender === 'home' && (<div id="filler"></div>)}
     </div>
+    {/* <div>Hey Now</div> */}
+    </>
   )
 }
