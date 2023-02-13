@@ -103,3 +103,71 @@ def delete_from_shipping():
 
     else:
       return "Error: Could not find info"
+
+
+@billing_routes.route('/update/<int:id>', methods=['PUT'])
+@login_required
+def update_billing_info(id):
+  info_to_update = Billing.query.filter(Billing.id == id).first()
+  body = json.loads(request.data.decode('UTF-8'))
+
+  print('FOUND BILLING TO UPDATE: ', info_to_update.id)
+
+  form = AddBillingForm()
+  form['csrf_token'].data = request.cookies['csrf_token']
+  if form.validate_on_submit():
+    if body['primary'] == True:
+      primary_billing = Billing.query.filter(Billing.primary == True and Billing.user_id == id).first()
+
+      if primary_billing:
+        primary_billing.primary = False
+        primary_billing.updatedat = str(datetime.now())
+        db.session.add(primary_billing)
+        print('Changed PRIMARY: ', primary_billing.to_dict())
+
+      info_to_update.apt_number = body['apt_number']
+      info_to_update.city = body['city']
+      info_to_update.company = body['company']
+      info_to_update.country = body['country']
+      info_to_update.primary = body['primary']
+      info_to_update.billing_name = body['billing_name']
+      info_to_update.state = body['state']
+      info_to_update.street = body['street']
+      info_to_update.user_id = body['user_id']
+      info_to_update.zip = body['zip']
+      info_to_update.phone = body['phone']
+      info_to_update.updatedat = str(datetime.now())
+
+      db.session.add(info_to_update)
+      db.session.commit()
+
+      info_to_update = info_to_update.to_dict()
+      jsonified_list = json.dumps(info_to_update)
+
+      return jsonified_list
+
+    else:
+      info_to_update.apt_number = body['apt_number']
+      info_to_update.city = body['city']
+      info_to_update.company = body['company']
+      info_to_update.country = body['country']
+      info_to_update.primary = body['primary']
+      info_to_update.billing_name = body['billing_name']
+      info_to_update.state = body['state']
+      info_to_update.street = body['street']
+      info_to_update.user_id = body['user_id']
+      info_to_update.zip = body['zip']
+      info_to_update.phone = body['phone']
+      info_to_update.updatedat = str(datetime.now())
+
+      print('UPDATED: ', info_to_update.to_dict())
+
+      db.session.add(info_to_update)
+      db.session.commit()
+
+      info_to_update = info_to_update.to_dict()
+      jsonified_list = json.dumps(info_to_update)
+
+      return jsonified_list
+  print('VALIDATIOON ERRORS: ', form.errors)
+  return {'errors': validation_errors_to_error_messages(form.errors)}, 401

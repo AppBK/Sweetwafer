@@ -77,6 +77,30 @@ export const thunkReadBilling = (user_id) => async (dispatch) => {
   }
 }
 
+export const thunkUpdateBilling = (id, new_info) => async (dispatch) => {
+  const response = await fetch(`/api/billing/update/${id}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      ...new_info
+    })
+  });
+
+  if (response.ok) {
+    const updated = await response.json();
+    dispatch(actionUpdateBilling(updated));
+    return null;
+  } else {
+    const data = await response.json();
+    if (data.errors) {
+      const filteredErrs = parseErrors([...data.errors])
+      return filteredErrs;
+    } else {
+      return ['Could Not Read Info'];
+    }
+  }
+}
+
 
 export const thunkDeleteBilling = (id, user_id) => async (dispatch) => {
   const response = await fetch('/api/billing/delete', {
@@ -101,8 +125,8 @@ export const thunkDeleteBilling = (id, user_id) => async (dispatch) => {
     }
   }
 }
-// Reducer
 
+// Reducer
 export default function billingReducer(state = {}, action) {
   switch(action.type) {
     case CREATE_BILLING: {
@@ -111,9 +135,14 @@ export default function billingReducer(state = {}, action) {
       return newState;
     }
     case READ_BILLING: {
-      // if (Object.keys(action.billings).length === 0) return [];
       const newState = {...action.billings};
 
+      return newState;
+    }
+    case UPDATE_BILLING: {
+      const newState = {...state};
+
+      newState[action.billing.id] = action.billing;
       return newState;
     }
     case DELETE_BILLING: {

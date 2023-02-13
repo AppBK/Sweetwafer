@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { thunkReadBilling, thunkCreateBilling, thunkDeleteBilling } from '../../store/billing';
+import { thunkReadBilling, thunkCreateBilling, thunkUpdateBilling, thunkDeleteBilling } from '../../store/billing';
 import './Billing.css'
 
 export default function Billing() {
@@ -186,7 +186,7 @@ export default function Billing() {
     setRenderUpdate(false);
   }
 
-  const updateShipping = async (e) => {
+  const updateBilling = async (e) => {
     e.preventDefault();
 
     const update = {
@@ -195,14 +195,15 @@ export default function Billing() {
       company: companyName,
       country: countryName,
       primary: primary,
-      shipping_name: firstName + ' ' + lastName,
+      billing_name: firstName + ' ' + lastName,
       state: stateCodeParser(stateName),
       street: addressOne,
       user_id: user.id,
+      phone: phone,
       zip: zip,
     }
 
-    const data = await dispatch(thunkDeleteBilling(shippingId, update));
+    const data = await dispatch(thunkUpdateBilling(shippingId, update));
     if (data) {
       console.log('ERRORS: ', data);
       setErrors(data);
@@ -307,7 +308,7 @@ export default function Billing() {
             ))}
           </div>) : null}
           <div id="update-address">Update Billing Address</div>
-          <form onSubmit={updateShipping}>
+          <form onSubmit={updateBilling}>
             <div id="shipping-name-label">Phone Number</div>
             <div id="billing-phone-div">
               <input id="phone" className="shipping-input" type="text" placeholder="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required></input>
