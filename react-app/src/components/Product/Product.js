@@ -19,20 +19,21 @@ export default function Product() {
   const { numInCart, setNumInCart } = useContext(SweetContext);
 
   const [selectedThumb, setSelectedThumb] = useState('');
-  const [keepBorder, setKeepBorder] = useState('');
-  const [mousePosition, setMousePosition] = useState(0);
-  const [gridPosition, setGridPosition] = useState('0px');
-  const [trackImgY, setTrackImgY] = useState('0px');
-  const [trackImgX, setTrackImgX] = useState('50px');
-  const [bgSize, setBgSize] = useState('');
+
+  // Lines 24-29, 173-205, 222-223: For future implementation of 'auto-zoom' hover effect...
+  // const [keepBorder, setKeepBorder] = useState('');
+  // const [mousePosition, setMousePosition] = useState(0);
+  // const [gridPosition, setGridPosition] = useState('0px');
+  // const [trackImgY, setTrackImgY] = useState('0px');
+  // const [trackImgX, setTrackImgX] = useState('50px');
+  // const [bgSize, setBgSize] = useState('');
 
   const hoveredImgRef = useRef();
 
-  console.log(user);
-
-
   useEffect(() => {
-    dispatch(thunkReadProduct(id))
+    if (!product) {
+      dispatch(thunkReadProduct(id));
+    }
   }, [])
 
   let alreadyInCart;
@@ -76,50 +77,55 @@ export default function Product() {
 
 
   function removeTabs(str) {
-    let output = '';
+    let output = [];
     for (let i = 0; i < str.length; i++) {
       if (str[i] === '\t') {
-        output += ' ';
+        output.push(' ');
       } else {
-        output += str[i];
+        output.push(str[i]);
       }
     }
-    return output;
+    return output.join('');
   }
 
 
-// 'GENERAL#Number of Strings: 6;Left-/Right-handed: Right-handed;BODY#Body Type: Solidbody;Body Shape: JP15;Body Material: Okoume;Top Material: Flamed Maple;Body Finish: High Gloss Polyester;Color: Purple Nebula Flame;NECK#Neck Material: Roasted Figured Maple;Neck Shape: 	Super Thin/Flat;Neck Joint: 5-way Bolt-on;Radius: 17";Fingerboard Material: Roasted Figured Maple;Fingerboard Inlay: JP Shields;Number of Frets: 24, Medium Jumbo, Stainless Steel;Scale Length: 25.5" Multi-scale;Nut Width: 1.6875";Nut Material: Melamine;HARDWARE#Bridge/Tailpiece: Music Man Custom Piezzo Floating Tremolo;Tuners: Schaller M6-IND Locking;ELECTRONICS#Neck Pickup: DiMarzio Illuminator Humbucker;Bridge Pickup: DiMarzio Illuminator Humbucker, Piezo Pickup;Controls: 	1 x volume (push/push gain boost), 1 x tone (push/push pickup config), 1 x Piezo volume, 2 x 1/4" (mono/stereo);Switching: 3-way toggle pickup switch, 3-way piezo/magnet toggle switch;MISCELLANEOUS#Strings: Ernie Ball Slinky, .010-.046;Case/Gig Bag: Softshell Case;Manufacturer Part Number: 661-JJF-10-00-MB-CR;'
+  // Example Input String 1: 'GENERAL#Number of Strings: 6;Left-/Right-handed: Right-handed;BODY#Body Type: Solidbody;Body Shape: JP15;Body Material: Okoume;Top Material: Flamed Maple;Body Finish: High Gloss Polyester;Color: Purple Nebula Flame;NECK#Neck Material: Roasted Figured Maple;Neck Shape: 	Super Thin/Flat;Neck Joint: 5-way Bolt-on;Radius: 17";Fingerboard Material: Roasted Figured Maple;Fingerboard Inlay: JP Shields;Number of Frets: 24, Medium Jumbo, Stainless Steel;Scale Length: 25.5" Multi-scale;Nut Width: 1.6875";Nut Material: Melamine;HARDWARE#Bridge/Tailpiece: Music Man Custom Piezzo Floating Tremolo;Tuners: Schaller M6-IND Locking;ELECTRONICS#Neck Pickup: DiMarzio Illuminator Humbucker;Bridge Pickup: DiMarzio Illuminator Humbucker, Piezo Pickup;Controls: 	1 x volume (push/push gain boost), 1 x tone (push/push pickup config), 1 x Piezo volume, 2 x 1/4" (mono/stereo);Switching: 3-way toggle pickup switch, 3-way piezo/magnet toggle switch;MISCELLANEOUS#Strings: Ernie Ball Slinky, .010-.046;Case/Gig Bag: Softshell Case;Manufacturer Part Number: 661-JJF-10-00-MB-CR;'
+  // Example Input String 2: 'Number of Strings: 5;Left-/Right-handed: Right-handed;Body Shape:	StingRay Special;Body Material: Select Hardwoods;Body Finish: Gloss;Color: Burnt Ends;Neck Material:	Select Roasted Maple;Neck Joint: 5-way Bolt-on;Radius: 11";Fingerboard Material: Rosewood;Fingerboard Inlay: White Dots;Number of Frets:	22, High Wide;Scale Length:	34";Nut Width: 1.75";Nut Material: Melamine;Bridge/Tailpiece: Vintage Music Man Topload Steel Bridge with Vintage Nickel Plated Steel Saddles;Tuners:	Custom Music Man;Neck Pickup:	Music Man Neodymium Humbucker;Bridge Pickup:	Music Man Neodymium Humbucker;Controls:	1 x master volulme, 1 x balance, 4-band Stacked Active EQ;Switching: 5-way blade pickup switch;Strings:	Super Slinky Bass, .045-.130;Case/Gig Bag: Softshell Case;Manufacturer Part Number:	208-HA-20-03-MB-CR;'
 
   function parseTechSpecs(string) {
-    let temp = removeTabs(string);
+    let temp = removeTabs(string); // Some tabs are masquerading as spaces on the Sweetwater site. Beware! Lines: 80-90 for the code.
     let pairs = temp.split(';');
 
     let output = [];
 
     for (let i = 0; i < pairs.length; i++) {
-      output.push(pairs[i].split(':'));
+      output.push(pairs[i].split(':')); // each tech-spec is added to the output as an array with 2 values
+      // The first being the title and the second it's value.
     }
 
     let temp1;
     let temp2;
     let temp3;
-    // let temp4;
     const outputObject = {};
 
-    if (output[0][0].split('#').length > 1) {
+    // If the input string has been additionally delimited with the '#' symbol, we are gonna make an object!
+    // O(n * (n(n-1)/2)) time complexity
+    if (output[0][0].split('#').length > 1) { // If we found a '#', commence!!
       for (let i = 0; i < output.length; i++) {
-        temp1 = output[i][0];
-        temp1 = temp1.split('#')
+        temp1 = output[i][0]; // Get the category headder and value key
+        temp1 = temp1.split('#'); // Separate the above
         if (temp1.length > 1) {
+          // Below: { 'GENERAL': [['Number of Strings:', 6], ...] }
           outputObject[temp1[0]] = [[temp1[1], output[i][1]]];
           for (let j = i + 1; j < output.length; j++) {
             temp2 = output[j];
-            temp3 = temp2[0].split('#');
+            temp3 = temp2[0].split('#'); // Check to see if we have come to a new category
 
-            if (temp3.length > 1) {
+            if (temp3.length > 1) { // If so, set i to the previous value of j and break inner loop
               i = j - 1;
               break;
             } else {
+              // If not a new category, continue pushing key/value pairs into the current category array
               outputObject[temp1[0]].push(temp2);
             }
           }
@@ -127,15 +133,14 @@ export default function Product() {
       }
 
       // REMOVE the empty '' at the end of array caused by splitting on the semi-colon
-      outputObject['MISCELLANEOUS'].pop();
+      outputObject['MISCELLANEOUS'].pop(); // O(1)
+      // Return the output object along with a boolean indicating the TYPE of that object!
       return [outputObject, true];
     }
 
-    // console.log(' before pop OUTPUT: ', output);
-
     // REMOVE the empty '' at the end of array caused by splitting on the semi-colon
-    output.pop();
-    // console.log(' after pop OUTPUT: ', output);
+    output.pop(); // O(1)
+    // Return the output object along with a boolean indicating the TYPE of that object!
     return [output, false];
   }
 
@@ -145,7 +150,8 @@ export default function Product() {
   if (!product) return null;
 
   let tech_specs;
-  let specsArray;
+
+  // 'NOPE' is given as a default value when a product does not have technical spec info
   if (product.tech_specs !== 'NOPE') {
     tech_specs = true;
   }
@@ -187,9 +193,6 @@ export default function Product() {
     console.log('X POS: ', e.nativeEvent.offsetX);
     console.log('Y POS: ', e.nativeEvent.offsetY);
 
-    // let tempX = e.nativeEvent.offsetX * 2.4;
-    // let tempY = e.nativeEvent.offsetY * 2.4;
-
     if (e.nativeEvent.offsetX > halfWidth) {
       setTrackImgX((e.nativeEvent.offsetX * -2.4 - (128)) + 'px');
     } else {
@@ -217,17 +220,15 @@ export default function Product() {
         <div id="main-event">
           <div id="product-pics">
             <div id="main-img-div">
-              <img src={selectedThumb} onMouseMove={trackImgPosition} ref={hoveredImgRef}></img>
-              <div id="zoomed-in-baby" style={{backgroundPosition: `${trackImgX} ${trackImgY}`, backgroundSize: `${bgSize}`}}></div>
-              {/* <div id="zoomed-in-baby" style={{ backgroundPosition: '-200px -300px' }}></div> */}
+              <img src={selectedThumb}></img>
+              {/* <img src={selectedThumb} onMouseMove={trackImgPosition} ref={hoveredImgRef}></img> */}
+              {/* <div id="zoomed-in-baby" style={{backgroundPosition: `${trackImgX} ${trackImgY}`, backgroundSize: `${bgSize}`}}></div> */}
             </div>
             <div id="thumbs-div">
               {product.product_images.map(img => (
                 <div id={img.url} className="product-tiny-thumbs" style={{backgroundImage: `url(${img.url})`}} onClick={(e) => setSelectedThumb(e.target.id)}></div>
               ))}
             </div>
-            {/* {keepBorder ? null : setKeepBorder(selectedThumb)}
-            {keepBorder ? selectMainImage('') : null } */}
           </div>
           <div id="sidebar-right">
             <div id="main-price">{toPriceMain(product.price)}</div>

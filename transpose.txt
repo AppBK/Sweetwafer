@@ -20,3 +20,9 @@ function transposeArray(array) {
 
   return array;
 }
+
+
+Hey now!! I am a fellow App Academy graduate (Jan 20th 2023) and looking to grow my network!
+I figure, the more the merrier!!
+Cheers!
+-Brian

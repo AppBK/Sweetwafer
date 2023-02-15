@@ -48,11 +48,7 @@ def create_billing_info():
   # Add CSRF Token to the form
   form['csrf_token'].data = request.cookies['csrf_token']
   if form.validate_on_submit():
-    print('VALIDATEDDDDDDDDDDDDDDDDD!!!!!!!!!')
     new_billing = Billing(apt_number=body['apt_number'], city=body['city'], phone=body['phone'], company=body['company'], country=body['country'], primary=body['primary'], billing_name=body['billing_name'], state=body['state'], street=body['street'], user_id=body['user_id'], zip=body['zip'], createdat=str(datetime.now()), updatedat=str(datetime.now()))
-
-    # print('NEW SHIPPING: ', new_shipping.to_dict())
-    # print('ALL SHIPPING: ', primary_shipping)
 
     # If new address has been set to primary, we must UNSET the previous primary!
     if body['primary'] == True:

@@ -82,9 +82,9 @@
   position: relative;
 }
 
-#main-img-div:hover {
+/* #main-img-div:hover {
   cursor: zoom-in;
-}
+} */
 
 #main-img-div:hover #zoomed-in-baby {
   visibility: visible;
