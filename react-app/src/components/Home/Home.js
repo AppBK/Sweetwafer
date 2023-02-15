@@ -67,8 +67,8 @@ export default function Home() {
     <>
     <div id="home-outer">
       <div id="page-top-adds">
-        <div><img id="img-yearend" src="/png/year-end.png"></img></div>
-        <div><img id="img-financing" src="/png/financing.png"></img></div>
+        <img id="img-yearend" src="/png/year-end.png"></img>
+        <img id="img-financing" src="/png/financing.png"></img>
       </div>
       <div id="getmore-title">Get More at Sweetwafer</div>
       <div id="getmore">
