@@ -25,6 +25,7 @@ import FourOFour from './components/SpecialPages/FourOFour';
 import Checkout from './components/Cart/Checkout';
 import Warranty from './components/SpecialPages/Warranty';
 import FreeShipping from './components/SpecialPages/FreeShipping';
+import PracticeAWS from './components/AWS/PracticeAWS';
 import { authenticate, login } from './store/session';
 
 
@@ -143,6 +144,11 @@ function App() {
           <FreeShipping />
           <NewGearFooter />
           <Footer />
+        </Route>
+        <Route path='/aws' exact={true}>
+          <Header />
+          <Navigation />
+          <PracticeAWS />
         </Route>
         <Route path="*">
           <FourOFour />

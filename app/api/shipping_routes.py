@@ -50,9 +50,12 @@ def delete_from_shipping():
 @shipping_routes.route('/<int:id>', methods=['GET'])
 @login_required
 def get_shipping_info(id):
-  print('THE ID: ', id)
+  # print('THE REQUEST BEFORE SPLIT: ', request.headers.get('Cookie'))
+  # print('THE REQUEST: ', request.headers.get('Cookie').split('csrf_token=')[1])
 
-  user_shipping_info = Shipping.query.filter(Shipping.user_id == id).all();
+  print('COOKIE: ', request.cookies['csrf_token'])
+
+  user_shipping_info = Shipping.query.filter(Shipping.user_id == id).all()
   print('USER INFO: ', user_shipping_info)
 
   shipping_list = [info.to_dict() for info in user_shipping_info]
