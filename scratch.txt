@@ -87,3 +87,6 @@ Connection: close
 
 
 From request.headers['Cookie']: THE REQUEST:  session=.eJwlzk1qQzEMBOC7eJ2FrR_LzmUekiXREmjhvWQVcvcaupsZZvG9y5FnXF_l_jxfcSvHt5d7CaTKQSNZWdgqOGjNFgY0amvBkIATPaQn7d_UISBT3Zt3FEYzsqE8EE3WYloaAFN7HVhdTASmm6VNSXDqc_AAx44pKouhbMjrivNf03Zd15nH8_cRP3sQXF3nNoBVoupL69oBUdoE2itv-nApnz-Laj3-.Y_0IxA.FZXG_7Zrx36VDD0RndAuwnoJ9pc; csrf_token=IjczYzZhOTJmMjJiMDQ0MGRjYTBjMDQ0MzM3MTkyNDIyYjU0OGY4ZDci.Y_0K4Q.F5XBU78Vl1H9R2cR3FBEiCCQx1s
+
+
+127.0.0.1 - - [17/Mar/2023 13:30:23] "OPTIONS /api/auth HTTP/1.1" 308 -
