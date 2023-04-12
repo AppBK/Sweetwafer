@@ -5,8 +5,7 @@ const sweetwaferURL = 'https://sweetwafer.onrender.com';
 const splangyURL = 'https://splangy01.herokuapp.com';
 
 
-const keepAlive = () => {
-  setInterval(async () => {
+const keepAlive = async () => {
     let res;
 
     try {
@@ -30,7 +29,6 @@ const keepAlive = () => {
     } catch (err) {
       console.log(err);
     }
-  }, 900000);
 }
 
 keepAlive();
