@@ -21,12 +21,12 @@ export default function Product() {
   const [selectedThumb, setSelectedThumb] = useState('');
 
   // Lines 24-29, 173-205, 222-223: For future implementation of 'auto-zoom' hover effect...
-  // const [keepBorder, setKeepBorder] = useState('');
-  // const [mousePosition, setMousePosition] = useState(0);
-  // const [gridPosition, setGridPosition] = useState('0px');
-  // const [trackImgY, setTrackImgY] = useState('0px');
-  // const [trackImgX, setTrackImgX] = useState('50px');
-  // const [bgSize, setBgSize] = useState('');
+  const [keepBorder, setKeepBorder] = useState('');
+  const [mousePosition, setMousePosition] = useState(0);
+  const [gridPosition, setGridPosition] = useState('0px');
+  const [trackImgY, setTrackImgY] = useState('0px');
+  const [trackImgX, setTrackImgX] = useState('50px');
+  const [bgSize, setBgSize] = useState('');
 
   const hoveredImgRef = useRef();
 
