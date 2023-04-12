@@ -1,6 +1,8 @@
 from . import db, environment, SCHEMA, add_prefix_for_prod
 from flask_login import UserMixin
 
+
+
 inventory_product_images = db.Table(
   "inventory_product_images",
   db.Column(

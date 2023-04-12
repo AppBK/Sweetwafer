@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import LoginForm from './components/auth/LoginForm';
@@ -25,7 +25,9 @@ import FourOFour from './components/SpecialPages/FourOFour';
 import Checkout from './components/Cart/Checkout';
 import Warranty from './components/SpecialPages/Warranty';
 import FreeShipping from './components/SpecialPages/FreeShipping';
+import PracticeAWS from './components/AWS/PracticeAWS';
 import { authenticate, login } from './store/session';
+import { SweetContext } from './context/Context';
 
 
 function App() {
@@ -38,6 +40,8 @@ function App() {
       setLoaded(true);
     })();
   }, [dispatch]);
+
+
 
   if (!loaded) {
     return null;
@@ -143,6 +147,11 @@ function App() {
           <FreeShipping />
           <NewGearFooter />
           <Footer />
+        </Route>
+        <Route path='/aws' exact={true}>
+          <Header />
+          <Navigation />
+          <PracticeAWS />
         </Route>
         <Route path="*">
           <FourOFour />

@@ -5,3 +5,4 @@ from .shipping import Shipping
 from .cart import Cart
 from .inventory import Inventory, ProductImages, inventory_product_images
 from .billing import Billing
+from .image import Image
