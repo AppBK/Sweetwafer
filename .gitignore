@@ -3,6 +3,7 @@ instance/
 node_modules/
 .vscode/
 __pycache__/
+local/
 
 # FILES:
 dev.db
