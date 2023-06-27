@@ -43,4 +43,4 @@ https://sweetwafer.onrender.com
 # Endpoints
 | Request                                                  | Return Value                                            |
 | :------------------------------------------------------- | :-----------------------------------------------------  |
-| GET /api/auth/                                           | {<br>&nbsp;&nbsp;'id': INT,<br>&nbsp;&nbsp;'username': STRING,<br>&nbsp;&nbsp;'email': STRING,<br>}<br>|                                                                                                                
+| GET /api/auth/                                           | {<br>&nbsp;&nbsp;&nbsp;'id': INT,<br>&nbsp;&nbsp;&nbsp;'username': STRING,<br>&nbsp;&nbsp;&nbsp;'email': STRING,<br>}<br>|                                                                                                                
