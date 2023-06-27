@@ -35,6 +35,15 @@ https://sweetwafer.onrender.com
  
  <img width="1569" alt="Screen Shot 2023-01-07 at 8 52 25 PM" src="https://user-images.githubusercontent.com/107947798/211181149-0bad7f89-9f89-4120-966a-94d50e20cc6b.png">
 
+# Endpoints
+| Request                                                  | Return Value                                            |
+| :------------------------------------------------------- | :-----------------------------------------------------: |
+| GET /api/auth/                                           | {                                                       |
+|                                                          |    'id': INT,                                           |
+|                                                          |    'username': STRING,                                  |
+|                                                          |    'email': STRING,                                     |
+|                                                          | }                                                       |
+
 # Cart
  
 <img width="1567" alt="Screen Shot 2023-01-07 at 8 52 38 PM" src="https://user-images.githubusercontent.com/107947798/211181166-fbeef254-49bb-49f0-b1fd-e5d50f9d7834.png">
