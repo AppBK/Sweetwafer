@@ -28,7 +28,6 @@ https://sweetwafer.onrender.com
 
 # Landing Page
 
- <img width="1323" alt="Screen Shot 2023-01-07 at 8 51 35 PM" src="https://user-images.githubusercontent.com/107947798/211181120-b48723f5-8f62-4708-a01a-f04a43066944.png">
  ![landing4gif](https://github.com/AppBK/Sweetwafer/assets/107947798/a0f0053b-f42f-4dab-8fbd-2d7ad58938ba)
 
  
