@@ -36,7 +36,7 @@ https://sweetwafer.onrender.com
 
 # Landing Page
 
- ![landing4gif](https://github.com/AppBK/Sweetwafer/assets/107947798/a0f0053b-f42f-4dab-8fbd-2d7ad58938ba)
+ ![landing4gif](https://github.com/AppBK/Sweetwafer/assets/107947798/a0f0053b-f42f-4dab-8fbd-2d7ad58938ba | width=400)
 
  
  # Product Page
