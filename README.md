@@ -35,8 +35,10 @@ https://sweetwafer.onrender.com
 * Logged in users can optionally upload images with their review using aws.
 
 # Landing Page
+https://s3.console.aws.amazon.com/s3/object/sweetwafers3bucket?region=us-west-1&prefix=landing4gif.gif
 
-<img src="https://sweetwafers3bucket.s3.us-west-1.amazonaws.com/landing4gif.gif" data-canonical-src="https://sweetwafers3bucket.s3.us-west-1.amazonaws.com/landing4gif.gif" width="400px"/>
+
+<img src="https://s3.console.aws.amazon.com/s3/object/sweetwafers3bucket?region=us-west-1&prefix=landing4gif.gif" data-canonical-src="https://sweetwafers3bucket.s3.us-west-1.amazonaws.com/landing4gif.gif" width="400px"/>
  ![landing4gif](https://github.com/AppBK/Sweetwafer/assets/107947798/a0f0053b-f42f-4dab-8fbd-2d7ad58938ba)
 
  
