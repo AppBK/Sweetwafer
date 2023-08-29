@@ -41,11 +41,10 @@ https://sweetwafer.onrender.com
  
  # Product Page
 <img width="600px" src="https://github.com/AppBK/Sweetwafer/assets/107947798/d964f0b3-a257-48c4-aa1f-caf443c05b22" data-canonical-src="https://sweetwafers3bucket.s3.us-west-1.amazonaws.com/ProductPageSweetwaferCropped.gif">
-![CartSweetwafer](https://github.com/AppBK/Sweetwafer/assets/107947798/9339bfa0-1723-449a-b94f-b3e8b978612c)
 
 
 # Cart
-<img src="https://github.com/AppBK/Sweetwafer/assets/107947798/9339bfa0-1723-449a-b94f-b3e8b978612c" data-canonical-src="https://sweetwafers3bucket.s3.us-west-1.amazonaws.com/CartSweetwafer.gif" width="600px" />
+<img src="https://github.com/AppBK/Sweetwafer/assets/107947798/bcced383-2fa9-4046-a94d-244cab2ee2c6" data-canonical-src="https://sweetwafers3bucket.s3.us-west-1.amazonaws.com/CartSweetwaferCropped.gif" width="600px" />
  
 <!-- <img width="1567" alt="Screen Shot 2023-01-07 at 8 52 38 PM" src="https://user-images.githubusercontent.com/107947798/211181166-fbeef254-49bb-49f0-b1fd-e5d50f9d7834.png"> -->
 
