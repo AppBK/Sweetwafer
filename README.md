@@ -44,7 +44,7 @@ https://sweetwafer.onrender.com
 
 
 # Cart
-<img src="https://github.com/AppBK/Sweetwafer/assets/107947798/39d57b9d-beff-46a9-9a27-45e8e02287b0" data-canonical-src="https://sweetwafers3bucket.s3.us-west-1.amazonaws.com/CartSweetwaferCroppedTop.gif" width="600px" />
+<img src="https://github.com/AppBK/Sweetwafer/assets/107947798/e41c4b1e-73b4-44c6-99b8-f4d01bf38970" data-canonical-src="https://sweetwafers3bucket.s3.us-west-1.amazonaws.com/CartSweetwaferCroppedTop.gif" width="600px" />
  
 
 
