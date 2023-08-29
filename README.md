@@ -49,8 +49,8 @@ https://sweetwafer.onrender.com
 
 
 # Endpoints
-| Request               | Purpose                        | Return Value       | HTTP Status Code
-| :-------------------- | :-----------------------------:| :-----------------: | :----------------- |
+| Request                        | Purpose                         | Return Value                  | HTTP Status Code
+| :----------------------------- | :-----------------------------: | :---------------------------: | :----------------- |
 | GET /api/auth/        | This fetch is sent upon initial app load and on subsequent refreshes.<br>It returns an object representing the current user, if user is logged in.                                 | {<br>&nbsp;&nbsp;&nbsp;'id': INT,<br>&nbsp;&nbsp;&nbsp;'username': STRING,<br>&nbsp;&nbsp;&nbsp;'email': STRING,<br>}<br>| 200 |
 | POST /api/auth/unauthorized/      | This endpoint will be routed to in the case that a protected route does not pass validations for the current user.<br>It returns an object with an errors property, which is an array with the value 'Unauthorized'                                | {<br>&nbsp;&nbsp;&nbsp;'errors': ARRAY[STRINGS]<br>}<br>| 401 |
 | POST /api/auth/signup        | This fetch sends the form data signup from data to the backend to process the creation of a new user.<br>It returns an object representing the current user, after logging them in, if account creation succeeds.                                 | {<br>&nbsp;&nbsp;&nbsp;'id': INT,<br>&nbsp;&nbsp;&nbsp;'username': STRING,<br>&nbsp;&nbsp;&nbsp;'email': STRING,<br>}<br>| 200 |
