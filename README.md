@@ -40,13 +40,12 @@ https://sweetwafer.onrender.com
 
  
  # Product Page
-<img width="600px" src="https://github.com/AppBK/Sweetwafer/assets/107947798/d964f0b3-a257-48c4-aa1f-caf443c05b22" data-canonical-src="https://sweetwafers3bucket.s3.us-west-1.amazonaws.com/ProductPageSweetwaferCropped.gif">
+<img width="600px" src="https://github.com/AppBK/Sweetwafer/assets/107947798/975d61c5-5b23-4686-9731-4525f3a9cd16" data-canonical-src="https://sweetwafers3bucket.s3.us-west-1.amazonaws.com/ProductPageSweetwaferCroppedTop.gif">
 
 
 # Cart
-<img src="https://github.com/AppBK/Sweetwafer/assets/107947798/bcced383-2fa9-4046-a94d-244cab2ee2c6" data-canonical-src="https://sweetwafers3bucket.s3.us-west-1.amazonaws.com/CartSweetwaferCropped.gif" width="600px" />
+<img src="https://github.com/AppBK/Sweetwafer/assets/107947798/39d57b9d-beff-46a9-9a27-45e8e02287b0" data-canonical-src="https://sweetwafers3bucket.s3.us-west-1.amazonaws.com/CartSweetwaferCroppedTop.gif" width="600px" />
  
-<!-- <img width="1567" alt="Screen Shot 2023-01-07 at 8 52 38 PM" src="https://user-images.githubusercontent.com/107947798/211181166-fbeef254-49bb-49f0-b1fd-e5d50f9d7834.png"> -->
 
 
 # Endpoints
