@@ -41,8 +41,9 @@ https://sweetwafer.onrender.com
 
  
  # Product Page
- 
- <img width="1569" alt="Screen Shot 2023-01-07 at 8 52 25 PM" src="https://user-images.githubusercontent.com/107947798/211181149-0bad7f89-9f89-4120-966a-94d50e20cc6b.png">
+<img width="600px" src="https://github.com/AppBK/Sweetwafer/assets/107947798/d964f0b3-a257-48c4-aa1f-caf443c05b22" data-canonical-src="https://sweetwafers3bucket.s3.us-west-1.amazonaws.com/ProductPageSweetwaferCropped.gif">
+
+ <!-- <img width="1569" alt="Screen Shot 2023-01-07 at 8 52 25 PM" src="https://user-images.githubusercontent.com/107947798/211181149-0bad7f89-9f89-4120-966a-94d50e20cc6b.png"> -->
 
 # Cart
  
