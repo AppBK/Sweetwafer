@@ -17,7 +17,7 @@ https://sweetwafer.onrender.com
 
 # Index
 
-[Feature List](https://github.com/AppBK/Sweetwafer/wiki/Features) | 
+[Feature List](https://github.com/AppBK/Sweetwafer/wiki/Features) | [Database Schema](https://github.com/AppBK/Sweetwafer/wiki/DB-Schema) | [User Stories](https://github.com/AppBK/Sweetwafer/wiki/User-Stories) | [Wireframes](https://github.com/AppBK/Sweetwafer/wiki/Wireframes)
 # MVP Core Features
 
 ## 1. Shopping Cart
