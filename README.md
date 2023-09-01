@@ -6,7 +6,7 @@ Sweetwafer is a partial clone of the website 'Sweetwater', an e-commerce site th
 https://sweetwafer.onrender.com
 
 ## Tech Stack
-### Frameworks, Platforms, and Libraries
+### Frameworks and Libraries
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
  ### Database:
@@ -18,23 +18,6 @@ https://sweetwafer.onrender.com
 # Index
 
 [Feature List](https://github.com/AppBK/Sweetwafer/wiki/Features) | [Database Schema](https://github.com/AppBK/Sweetwafer/wiki/DB-Schema) | [User Stories](https://github.com/AppBK/Sweetwafer/wiki/User-Stories) | [Wireframes](https://github.com/AppBK/Sweetwafer/wiki/Wireframes)
-# MVP Core Features
-
-## 1. Shopping Cart
-* Logged in users should be able to add to, edit, and delete the content of their shopping carts. Checkout when finished.
-
-## 2. Shipping Info
-* Logged in users can add addresses to their info to have products shipped to different locations.
-* Logged in users can edit and delete these shipping addresses
-
-## 3. Billing Info 
-* Logged in users can add billing acounts to their info to have orders billed to different enteties.
-* Logged in users can edit and delete their billing accounts.
-
-## 4. Product Reviews
-* Logged in users can add a single review to a product info page.
-* Logged in users can edit and delete their reviews.
-* Logged in users can optionally upload images with their review using aws.
 
 # Landing Page
 
