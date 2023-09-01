@@ -15,7 +15,9 @@ https://sweetwafer.onrender.com
  ### Hosting:
  ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
 
+# Index
 
+[Feature List](https://github.com/AppBK/Sweetwafer/wiki/Features) | 
 # MVP Core Features
 
 ## 1. Shopping Cart
