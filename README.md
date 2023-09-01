@@ -59,9 +59,14 @@ https://sweetwafer.onrender.com
 | POST /api/auth/logout | This fetch will logout the current user.<br>It returns an object with the message 'User logged Out' if it succeeds.                                 | {<br>&nbsp;&nbsp;&nbsp;'message': STRING<br>}<br><br>Status: 200<br>|
 
 ## Cart
-| Request                        | <div style="width: 100px">Purpose</div>                | Return Value  | 
+| Request                        | Purpose                | Return Value  | 
 | :----------------------------- | :--------------------: | :------------------------------ |
 | POST /api/cart/add        | This fetch is sent to add a new item to the cart table. Upon success, it returns an object representing that item.                 | {<br>&nbsp;&nbsp;&nbsp;'id': INT,<br>&nbsp;&nbsp;&nbsp;'category': STRING,<br>&nbsp;&nbsp;&nbsp;'vendor_name': STRING,<br>&nbsp;&nbsp;&nbsp;'manufacturer_id': STRING,<br>&nbsp;&nbsp;&nbsp;'name': STRING,<br>&nbsp;&nbsp;&nbsp;'model': STRING,<br>&nbsp;&nbsp;&nbsp;'serial': STRING,<br>&nbsp;&nbsp;&nbsp;'description': STRING,<br>&nbsp;&nbsp;&nbsp;'tech_specs': STRING,<br>&nbsp;&nbsp;&nbsp;'price': FLOAT<br>}<br><br>Status: 201<br>|
 | PUT /api/cart/quantity        | This fetch is sent to update the quantity value of a cart item. Upon success, it returns an object representing that item in the cart, with a new quantity.                 | {<br>&nbsp;&nbsp;&nbsp;'id': INT,<br>&nbsp;&nbsp;&nbsp;'user_id': INT,<br>&nbsp;&nbsp;&nbsp;'item_id': INT,<br>&nbsp;&nbsp;&nbsp;'quantity': INT,<br>}<br><br>Status: 200<br>|
 | DELETE /api/cart/delete/<int:id>        | This fetch is sent to delete an item from the cart. Upon success, it returns the string "Success", otherwise, we throw an error.                | "Success"<br><br>Status: 200<br>|
 | DELETE /api/cart/clear        | This fetch is sent to delete all items from the cart. Upon success, it returns the string "Cart Emptied", otherwise, we throw an error.                | "Cart Emptied"<br><br>Status: 200<br>|
+
+## Shipping Info
+| Request                        | Purpose                | Return Value  | 
+| :----------------------------- | :--------------------: | :------------------------------ |
+| GET /api/shipping/<int:user_id>        | This fetch is sent to retrieve all shipping info records for the user specified by the id. Upon success, we return an array of objects representing that data.           | ARRAY[<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;apt_number: INT,&nbsp;&nbsp;&nbsp;city: STRING,<br>&nbsp;&nbsp;&nbsp;company: STRING,<br>&nbsp;&nbsp;&nbsp;country: STRING,<br>&nbsp;&nbsp;&nbsp;primary: BOOLEAN,<br>&nbsp;&nbsp;&nbsp;shipping_name: STRING,<br>&nbsp;&nbsp;&nbsp;state: STRING,<br>&nbsp;&nbsp;&nbsp;street: STRING,<br>&nbsp;&nbsp;&nbsp;user_id: INT,<br>&nbsp;&nbsp;&nbsp;zip: STRING,<br><br>Status: 200<br>|
