@@ -80,3 +80,6 @@ https://sweetwafer.onrender.com
 4. Sales Professionals
 5. Payment Accounts (Credit Cards / PayPal)
 6. Make pixel perfect to target site.
+
+# Connect
+[LinkedIn](https://www.linkedin.com/in/brian-kiesel-94475696/)
