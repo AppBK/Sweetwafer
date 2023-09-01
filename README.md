@@ -65,4 +65,5 @@ https://sweetwafer.onrender.com
 1. Reviews (w/AWS image uploads)
 2. ChatHelpBot (websockets)
 3. Sales Professionals
-4. Make pixel perfect to target site.
+4. Payment Accounts (Credit Cards / PayPal)
+5. Make pixel perfect to target site.
