@@ -45,6 +45,7 @@ def seed_inventory():
     )
 
     # Join Table
+    # consider item1.append(img#) in a loop, then you don't need the add_all() you can just commit.
     item1.product_images = [img1, img2, img3, img4, img5, img6]
 
     db.session.add_all([item1, img1, img2, img3, img4, img5, img6])

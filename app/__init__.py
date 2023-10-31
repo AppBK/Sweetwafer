@@ -84,10 +84,10 @@ def api_help():
                     for rule in app.url_map.iter_rules() if rule.endpoint != 'static' }
     return route_list
 
-# Makes sure that hard-refreshes don't hit the backend, we want to serve from React
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def react_root(path):
+    print("CURRENT PATH: ", path)
     """
     This route will direct to the public directory in our
     react builds in the production environment for favicon

@@ -93,7 +93,7 @@ export default function Product() {
   // Example Input String 2: 'Number of Strings: 5;Left-/Right-handed: Right-handed;Body Shape:	StingRay Special;Body Material: Select Hardwoods;Body Finish: Gloss;Color: Burnt Ends;Neck Material:	Select Roasted Maple;Neck Joint: 5-way Bolt-on;Radius: 11";Fingerboard Material: Rosewood;Fingerboard Inlay: White Dots;Number of Frets:	22, High Wide;Scale Length:	34";Nut Width: 1.75";Nut Material: Melamine;Bridge/Tailpiece: Vintage Music Man Topload Steel Bridge with Vintage Nickel Plated Steel Saddles;Tuners:	Custom Music Man;Neck Pickup:	Music Man Neodymium Humbucker;Bridge Pickup:	Music Man Neodymium Humbucker;Controls:	1 x master volulme, 1 x balance, 4-band Stacked Active EQ;Switching: 5-way blade pickup switch;Strings:	Super Slinky Bass, .045-.130;Case/Gig Bag: Softshell Case;Manufacturer Part Number:	208-HA-20-03-MB-CR;'
 
   function parseTechSpecs(string) {
-    let temp = removeTabs(string); // Some tabs are masquerading as spaces on the Sweetwater site. Beware! Lines: 80-90 for the code.
+    let temp = removeTabs(string); // Some tabs are masquerading as spaces on the Sweetwater site. Beware! Lines: 80-89 for the code.
     let pairs = temp.split(';');
 
     let output = [];

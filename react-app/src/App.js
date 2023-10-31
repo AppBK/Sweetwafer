@@ -28,7 +28,7 @@ import FreeShipping from './components/SpecialPages/FreeShipping';
 import PracticeAWS from './components/AWS/PracticeAWS';
 import { authenticate, login } from './store/session';
 import { SweetContext } from './context/Context';
-
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -57,6 +57,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Switch>
         <Route path='/login_page' exact={true}>
           <LoginPage />

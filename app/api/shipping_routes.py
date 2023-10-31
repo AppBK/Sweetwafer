@@ -27,13 +27,13 @@ def delete_from_shipping():
     body = json.loads(request.data.decode('UTF-8'))
     print('HOT BODY: ', body)
 
-    shipping_info_to_delete = Shipping.query.get(body['id']);
+    shipping_info_to_delete = Shipping.query.get(body['id'])
 
     if shipping_info_to_delete:
       db.session.delete(shipping_info_to_delete)
-      db.session.commit();
+      db.session.commit()
 
-      all_shipping = Shipping.query.filter(Shipping.user_id == body['user_id']).all();
+      all_shipping = Shipping.query.filter(Shipping.user_id == body['user_id']).all()
 
       if all_shipping:
         shipping_list = [info.to_dict() for info in all_shipping]
@@ -111,7 +111,7 @@ def create_new_shipping():
     user_shipping = [shipping.to_dict() for shipping in user_shipping]
     jsonified_list = json.dumps(user_shipping)
 
-    return jsonified_list
+    return jsonified_list, 201
 
   print('VALIDATIOON ERRORS: ', form.errors)
   return {'errors': validation_errors_to_error_messages(form.errors)}, 401
@@ -154,7 +154,7 @@ def update_shipping_info(id):
       db.session.add(info_to_update)
       db.session.commit()
 
-      user_shipping_all = Shipping.query.filter(Shipping.user_id == body['user_id']).all();
+      user_shipping_all = Shipping.query.filter(Shipping.user_id == body['user_id']).all()
       user_shipping_all = [shipping.to_dict() for shipping in user_shipping_all]
       jsonified_list = json.dumps(user_shipping_all)
 
