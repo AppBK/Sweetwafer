@@ -15,7 +15,10 @@ def add_to_cart():
   body = json.loads(request.data.decode('UTF-8'))
   # print('REQUEST DATA', body)
 
+  # Here we are searching the database for the specified product.
   item_info = Inventory.query.filter(Inventory.id == body['item_id']).first()
+
+  # Maybe throw an error here if the item is not found.
 
   new_item = Cart(user_id=body['user_id'], item_id=body['item_id'], createdat=str(datetime.now()), updatedat=str(datetime.now()), quantity=1)
 
@@ -35,7 +38,7 @@ def add_to_cart():
   # new_item['actual_item'] = item_info.to_dict()
 
   # print('FINAL ITEM: ', new_item)
-  return new_item
+  return new_item, 201
 
 
 
@@ -85,7 +88,7 @@ def delete_item(id):
     db.session.delete(item_to_delete)
     db.session.commit()
 
-    return "Success"
+    return "Success", 200
   except:
     raise Exception("Could Not Remove Item!!")
 
@@ -96,7 +99,7 @@ def clear_cart():
   Cart.query.delete()
   db.session.commit()
 
-  return 'Cart Emptied'
+  return 'Cart Emptied', 200
 
 
 # @cart_routes.route('/')
