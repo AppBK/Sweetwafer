@@ -22,27 +22,20 @@ def validation_errors_to_error_messages(validation_errors):
 @billing_routes.route('/<int:id>', methods=['GET'])
 @login_required
 def get_billing_info(id):
-  print('THE ID: ', id)
-
-  user_billing_info = Billing.query.filter(Billing.user_id == id).all();
-  print('USER INFO: ', user_billing_info)
+  user_billing_info = Billing.query.filter(Billing.user_id == id).all()
 
   billing_list = [info.to_dict() for info in user_billing_info]
   billing_obj = {info['id'] : info for info in billing_list}
 
   jsonified_list = json.dumps(billing_obj)
 
-
-  print('BILLING LIST: ', jsonified_list)
-
-  return jsonified_list
+  return jsonified_list, 200
 
 @billing_routes.route('/add', methods=['POST'])
 @login_required
 def create_billing_info():
   # Save the body of the json request, decoded, into a variable
   body = json.loads(request.data.decode('UTF-8'))
-  print('HOT BODY: ', body)
 
   form = AddBillingForm()
   # Add CSRF Token to the form
@@ -60,7 +53,6 @@ def create_billing_info():
           primary_billing.updatedat = str(datetime.now())
           # update the 'previous' primary which is no longer primary
           db.session.add(primary_billing)
-          print('Changed PRIMARY: ', primary_billing.to_dict())
 
         db.session.add(new_billing)
         db.session.commit()
@@ -79,21 +71,19 @@ def create_billing_info():
 
     return jsonified_list
 
-  print('VALIDATION ERRORS: ', form.errors)
-  return {'errors': validation_errors_to_error_messages(form.errors)}, 401
+  return {'errors': validation_errors_to_error_messages(form.errors)}, 400
 
 
 @billing_routes.route('/delete', methods=['DELETE'])
 @login_required
 def delete_from_shipping():
     body = json.loads(request.data.decode('UTF-8'))
-    print('HOT BODY: ', body)
 
-    billing_info_to_delete = Billing.query.get(body['id']);
+    billing_info_to_delete = Billing.query.get(body['id'])
 
     if billing_info_to_delete:
       db.session.delete(billing_info_to_delete)
-      db.session.commit();
+      db.session.commit()
 
       return json.dumps({"message": "Success!"})
 
@@ -107,7 +97,6 @@ def update_billing_info(id):
   info_to_update = Billing.query.filter(Billing.id == id).first()
   body = json.loads(request.data.decode('UTF-8'))
 
-  print('FOUND BILLING TO UPDATE: ', info_to_update.id)
 
   form = AddBillingForm()
   form['csrf_token'].data = request.cookies['csrf_token']
@@ -119,7 +108,6 @@ def update_billing_info(id):
         primary_billing.primary = False
         primary_billing.updatedat = str(datetime.now())
         db.session.add(primary_billing)
-        print('Changed PRIMARY: ', primary_billing.to_dict())
 
       info_to_update.apt_number = body['apt_number']
       info_to_update.city = body['city']
@@ -156,7 +144,6 @@ def update_billing_info(id):
       info_to_update.phone = body['phone']
       info_to_update.updatedat = str(datetime.now())
 
-      print('UPDATED: ', info_to_update.to_dict())
 
       db.session.add(info_to_update)
       db.session.commit()
@@ -165,5 +152,4 @@ def update_billing_info(id):
       jsonified_list = json.dumps(info_to_update)
 
       return jsonified_list
-  print('VALIDATIOON ERRORS: ', form.errors)
-  return {'errors': validation_errors_to_error_messages(form.errors)}, 401
+  return {'errors': validation_errors_to_error_messages(form.errors)}, 400

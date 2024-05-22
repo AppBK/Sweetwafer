@@ -13,7 +13,6 @@ cart_routes = Blueprint('cart', __name__)
 @login_required
 def add_to_cart():
   body = json.loads(request.data.decode('UTF-8'))
-  # print('REQUEST DATA', body)
 
   # Here we are searching the database for the specified product.
   item_info = Inventory.query.filter(Inventory.id == body['item_id']).first()
@@ -35,9 +34,6 @@ def add_to_cart():
     else:
       new_item[key] = item_info[key]
 
-  # new_item['actual_item'] = item_info.to_dict()
-
-  # print('FINAL ITEM: ', new_item)
   return new_item, 201
 
 
@@ -46,7 +42,6 @@ def add_to_cart():
 @login_required
 def update_quantity():
   body = json.loads(request.data.decode('UTF-8'))
-  print('REQUEST DATA', body)
 
   item_to_update = Cart.query.filter(Cart.item_id == body['id']).first()
   # item_to_update = item_to_update.to_dict()
@@ -56,7 +51,6 @@ def update_quantity():
   if item_to_update.quantity < 1:
     item_to_update.quantity = 1
   item_to_update.updatedat = str(datetime.now())
-  print(item_to_update)
 
   db.session.add(item_to_update)
   db.session.commit()
@@ -71,7 +65,7 @@ def update_quantity():
     else:
       item_to_update[key] = item_info[key]
 
-  return item_to_update
+  return item_to_update, 200
 
 
 
@@ -79,10 +73,8 @@ def update_quantity():
 @cart_routes.route('/delete/<int:id>', methods=['DELETE'])
 @login_required
 def delete_item(id):
-  print('GIVEN ID: ', type(id), id)
   item_to_delete = Cart.query.filter(Cart.id == id).first()
   # item_to_delete = Cart.query.all()
-  print('TO DELETE: ', item_to_delete)
 
   try:
     db.session.delete(item_to_delete)
@@ -100,9 +92,3 @@ def clear_cart():
   db.session.commit()
 
   return 'Cart Emptied', 200
-
-
-# @cart_routes.route('/')
-# @login_required
-# def view_cart():
-#   print('CURRENT_USER', current_user)

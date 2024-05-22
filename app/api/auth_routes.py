@@ -24,7 +24,6 @@ def authenticate():
     """
     Authenticates a user.
     """
-    print('CURRENT_USER: ', current_user.get_id())
     id = current_user.get_id()
     if current_user.is_authenticated:
         # Trouble...
@@ -35,14 +34,11 @@ def authenticate():
             temp_product_images = []
             for item in user.cart:
                 temp_dict = item.to_dict()
-                print('DICT ITEM: ', temp_dict)
                 # temp_item IS the object from the inventory array. Can we get it's images?...
                 temp_item = Inventory.query.filter(Inventory.id == temp_dict['item_id']).first()
-                # print('TEMP ITEM: ', temp_item.product_images)
                 if len(temp_item.product_images):
                     for img in temp_item.product_images:
                         temp_product_images.append(img.to_dict())
-                        print('IN LOOP: ', temp_product_images)
 
                 temp_item = temp_item.to_dict() # turn this bizarre python iterable into a useable dictionary
                 temp_item['product_images'] = temp_product_images
@@ -51,15 +47,9 @@ def authenticate():
 
                 cart_items.append(temp_item)
 
-            print('TEMP PRODUCT IMAGES: ', temp_product_images)
-
             fetched_user = user.to_dict()
             fetched_user['cart'] = cart_items
-            print('FETCHED USER: ', fetched_user)
 
-
-
-            # print('CART: ', [item.to_dict for item in user.cart]);
             return fetched_user
 
         else:
@@ -85,14 +75,11 @@ def login():
         temp_product_images = []
         for item in user.cart:
             temp_dict = item.to_dict()
-            print('DICT ITEM: ', temp_dict)
             # temp_item IS the object from the inventory array. Can we get it's images?...
             temp_item = Inventory.query.filter(Inventory.id == temp_dict['item_id']).first()
-            # print('TEMP ITEM: ', temp_item.product_images)
             if len(temp_item.product_images):
                 for img in temp_item.product_images:
                     temp_product_images.append(img.to_dict())
-                    print('IN LOOP: ', temp_product_images)
 
             temp_item = temp_item.to_dict() # turn this bizarre python iterable into a useable dictionary
             temp_item['product_images'] = temp_product_images
@@ -101,17 +88,12 @@ def login():
 
             cart_items.append(temp_item)
 
-        print('TEMP PRODUCT IMAGES: ', temp_product_images)
-
         fetched_user = user.to_dict()
         fetched_user['cart'] = cart_items
-        print('FETCHED USER: ', fetched_user)
 
 
-
-        # print('CART: ', [item.to_dict for item in user.cart]);
         return fetched_user
-    return {'errors': validation_errors_to_error_messages(form.errors)}, 401
+    return {'errors': validation_errors_to_error_messages(form.errors)}, 400
 
 
 @auth_routes.route('/logout')
@@ -142,7 +124,7 @@ def sign_up():
         db.session.commit()
         login_user(user)
         return user.to_dict()
-    return {'errors': validation_errors_to_error_messages(form.errors)}, 401
+    return {'errors': validation_errors_to_error_messages(form.errors)}, 400
 
 
 @auth_routes.route('/unauthorized')
