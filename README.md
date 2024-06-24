@@ -72,20 +72,32 @@ https://sweetwafer.onrender.com
 ## Auth Routes
 
 ### Current User
+* Purpose: This fetch is sent upon initial app load and on subsequent refreshes and navigations. It returns an object representing the current user, if user is logged in.
 * Method: ```POST```
 * URL: ```/api/auth/```
 * Body: None
 * Successful Response: HTTP Status Code 200
 ```json
 {
-    "cart": [],
+    "cart": ARRAY,
     "createdat": "2024-05-22 23:00:49.036175",
     "email": "demo@aa.io",
     "id": 1,
     "updatedat": "2024-05-22 23:00:49.036197",
-    "username": "Demo"
+    "username": STRING
 }
 ```
+* Error Response: HTTP Status Code 401
+```json
+{
+  "errors": ["Unauthorized"]
+}
+```
+### Unauthorized (from @login_required)
+* Purpose: This endpoint will be routed to in the case that a protected route does not pass validations for the current user.
+* Method ```POST```
+* URL: ```/api/auth/unauthorized```
+* Successful Response: NA 
 * Error Response: HTTP Status Code 401
 ```json
 {
