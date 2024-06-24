@@ -72,7 +72,7 @@ https://sweetwafer.onrender.com
 ## Auth Routes
 
 ### Current User
-* Method: POST
+* Method: <span style="background-color: #161b22;">POST</span>
 * URL: /api/auth/
 * Body: None
 * Successful Response: HTTP Status Code 200
