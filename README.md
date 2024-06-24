@@ -72,7 +72,7 @@ https://sweetwafer.onrender.com
 ## Auth Routes
 
 ### Current User
----
+___
 * Purpose: This fetch is sent upon initial app load and on subsequent refreshes and navigations. It returns an object representing the current user, if user is logged in.
 * Method: ```POST```
 * URL: ```/api/auth/```
@@ -94,7 +94,7 @@ https://sweetwafer.onrender.com
   "errors": ["Unauthorized"]
 }
 ```
----
+___
 ### Unauthorized (from @login_required)
 ---
 * Purpose: This endpoint will be routed to in the case that a protected route does not pass validations for the current user.
