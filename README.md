@@ -76,7 +76,6 @@ https://sweetwafer.onrender.com
 * Purpose: This fetch is sent upon initial app load and on subsequent refreshes and navigations. It returns an object representing the current user, if user is logged in.
 * Method: ```POST```
 * URL: ```/api/auth/```
-* Body: None
 * Successful Response: HTTP Status Code 200
 ```python
 {
