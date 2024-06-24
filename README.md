@@ -71,7 +71,8 @@ https://sweetwafer.onrender.com
 
 ## Auth Routes
 
-## Current User
+### Current User
+##
 * Purpose: This fetch is sent upon initial app load and on subsequent refreshes and navigations. It returns an object representing the current user, if user is logged in.
 * Method: ```POST```
 * URL: ```/api/auth/```
@@ -82,7 +83,7 @@ https://sweetwafer.onrender.com
     'cart': ARRAY_OF_PRODUCT_OBJECTS,
     'createdat': STRING,
     'email': STRING,
-    'id': INTEGER,
+    'id': INT,
     'updatedat': STRING,
     'username': STRING
 }
@@ -93,7 +94,8 @@ https://sweetwafer.onrender.com
   'errors': 'Unauthorized'
 }
 ```
-## Unauthorized (from @login_required)
+### Unauthorized (from @login_required)
+##
 * Purpose: This endpoint will be routed to in the case that a protected route does not pass validations for the current user.
 * Method ```POST```
 * URL: ```/api/auth/unauthorized```
@@ -104,7 +106,8 @@ https://sweetwafer.onrender.com
   'errors': 'Unauthorized'
 }
 ```
-## Sign Up
+### Sign Up
+##
 * Purpose: This fetch sends the signup form data to the backend to process the creation of a new user.
 * Method: ```POST```
 * URL: ```/api/auth/signup```
@@ -122,7 +125,8 @@ https://sweetwafer.onrender.com
    'errors': ARRAY_OF_STRINGS
 }
 ```
-## Login
+### Login
+##
 * Purpose: This fetch attempts to login a user with the provided credentials.
 * Method: ```POST```
 * URL: ```/api/auth/login```
@@ -140,7 +144,8 @@ https://sweetwafer.onrender.com
    'errors': ARRAY_OF_STRINGS
 }
 ```
-## Logout
+### Logout
+##
 * Purpose: This fetch will logout the current user.
 * Method: ```POST```
 * URL: ```/api/auth/logout```
@@ -160,7 +165,8 @@ https://sweetwafer.onrender.com
 
 ## Cart Routes
 
-## Add Item to Cart
+### Add Item to Cart
+##
 * Purpose: This fetch is sent to add a new item to the cart table.
 * Method: ```POST```
 * URL: ```/api/cart/add```
@@ -176,7 +182,8 @@ https://sweetwafer.onrender.com
    'serial': STRING,
    'description': STRING,
    'tech_specs': STRING,
-   'price': FLOAT
+   'price': FLOAT,
+   'quantity': INT
 }
 ```
 * Error Response: HTTP Status 404
@@ -185,6 +192,86 @@ https://sweetwafer.onrender.com
    'error': 'Item with given id Not Found'
 }
 ```
+
+### Update Cart Item Quantity
+##
+* Purpose: This fetch is sent to update the quantity value of a cart item.
+* Method: ```PUT```
+* URL: ```/api/cart/quantity```
+* Body:
+```python
+{
+   'id': INT,
+   'val': INT
+}
+```
+* Successful Response: HTTP Status 200
+```python
+{
+   'id': INT,
+   'category': STRING,
+   'vendor_name': STRING,
+   'manufacturer_id': STRING,
+   'name': STRING,
+   'model': STRING,
+   'serial': STRING,
+   'description': STRING,
+   'tech_specs': STRING,
+   'price': FLOAT,
+   'quantity': INT
+}
+```
+* Error Response1: HTTP Status 404
+```python
+{
+   'errors': 'Item with given id Not Found'
+}
+```
+* Error Response2: HTTP Status 400
+```python
+{
+   'errors': ARRAY_OF_STRINGS
+}
+```
+### Remove Item from Cart
+##
+* Purpose: This fetch is sent to delete an item from the cart.
+* Method: ```DELETE```
+* URL: ```/api/cart/delete/int:id```
+* Body: None
+* Successful Response: HTTP Status 200
+```python
+{
+   'message': 'Success'
+}
+```
+* Error Response: HTTP Status 404
+```python
+{
+   'errors': 'Item with given id Not Found'
+}
+```
+
+### Empty Cart
+##
+* Purpose: This fetch is sent to delete all items from the cart.
+* Method: ```DELETE```
+* URL: ```/api/cart/clear/int:id```
+* Body: None
+* Successful Response: HTTP Status 200
+```python
+{
+   'message': 'Cart Emptied'
+}
+```
+* Error Response: HTTP Status 404
+```python
+{
+   'errors': 'Cart with given id Not Found'
+}
+```
+
+##
 
 
 # Feature List
