@@ -141,22 +141,22 @@ https://sweetwafer.onrender.com
 }
 ```
 ## Logout
-* Purpose: This fetch will logout the current user. It returns an object with the message 'User logged Out' if it succeeds and 'No session' if not.	
+* Purpose: This fetch will logout the current user.
 * Method: ```POST```
 * URL: ```/api/auth/logout```
 * Successful Response: HTTP Status 200
 ```python
 {
-   'message': STRING
+   'message': 'User logged Out'
 }
 ```
 * Error Response: HTTP Status 404
 ```python
 {
-   'errors': STRING
+   'errors': 'No session'
 }
 ```
----
+##
 
 # Feature List
 1. Cart
