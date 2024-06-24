@@ -79,18 +79,18 @@ https://sweetwafer.onrender.com
 * Successful Response: HTTP Status Code 200
 ```python
 {
-    "cart": ARRAY_OF_PRODUCT_OBJECTS,
-    "createdat": STRING,
-    "email": STRING,
-    "id": INTEGER,
-    "updatedat": STRING,
-    "username": STRING
+    'cart': ARRAY_OF_PRODUCT_OBJECTS,
+    'createdat': STRING,
+    'email': STRING,
+    'id': INTEGER,
+    'updatedat': STRING,
+    'username': STRING
 }
 ```
 * Error Response: HTTP Status Code 401
 ```python
 {
-  "errors": ["Unauthorized"]
+  'errors': 'Unauthorized'
 }
 ```
 ## Unauthorized (from @login_required)
@@ -101,7 +101,7 @@ https://sweetwafer.onrender.com
 * Error Response: HTTP Status Code 401
 ```python
 {
-  "errors": ["Unauthorized"]
+  'errors': 'Unauthorized'
 }
 ```
 ## Sign Up
