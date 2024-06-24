@@ -72,7 +72,7 @@ https://sweetwafer.onrender.com
 ## Auth Routes
 
 ### Current User
-<hr style="border: 1px solid #ccc;">
+---
 * Purpose: This fetch is sent upon initial app load and on subsequent refreshes and navigations. It returns an object representing the current user, if user is logged in.
 * Method: ```POST```
 * URL: ```/api/auth/```
@@ -94,7 +94,7 @@ https://sweetwafer.onrender.com
   "errors": ["Unauthorized"]
 }
 ```
-<hr style="border: 1px solid #ccc;">
+---
 ### Unauthorized (from @login_required)
 ---
 * Purpose: This endpoint will be routed to in the case that a protected route does not pass validations for the current user.
@@ -108,6 +108,27 @@ https://sweetwafer.onrender.com
 }
 ```
 ---
+### Sign Up
+---
+* Purpose: This fetch sends the signup form data to the backend to process the creation of a new user.
+* Method: ```POST```
+* URL: ```/api/auth/signup```
+* Successful Response: HTTP Status 201
+```python
+{
+   'id': INT,
+   'username': STRING,
+   'email': STRING,
+}
+```
+* Error Response: HTTP Status 400
+```python
+{
+   'errors': ARRAY_OF_STRINGS
+}
+```
+---
+
 
 # Feature List
 1. Cart
