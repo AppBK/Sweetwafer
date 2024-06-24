@@ -71,8 +71,7 @@ https://sweetwafer.onrender.com
 
 ## Auth Routes
 
-### Current User
----
+## Current User
 * Purpose: This fetch is sent upon initial app load and on subsequent refreshes and navigations. It returns an object representing the current user, if user is logged in.
 * Method: ```POST```
 * URL: ```/api/auth/```
@@ -94,9 +93,7 @@ https://sweetwafer.onrender.com
   "errors": ["Unauthorized"]
 }
 ```
----
-### Unauthorized (from @login_required)
----
+## Unauthorized (from @login_required)
 * Purpose: This endpoint will be routed to in the case that a protected route does not pass validations for the current user.
 * Method ```POST```
 * URL: ```/api/auth/unauthorized```
@@ -107,9 +104,7 @@ https://sweetwafer.onrender.com
   "errors": ["Unauthorized"]
 }
 ```
----
-### Sign Up
----
+## Sign Up
 * Purpose: This fetch sends the signup form data to the backend to process the creation of a new user.
 * Method: ```POST```
 * URL: ```/api/auth/signup```
@@ -127,8 +122,41 @@ https://sweetwafer.onrender.com
    'errors': ARRAY_OF_STRINGS
 }
 ```
+## Login
+* Purpose: This fetch attempts to login a user with the provided credentials.
+* Method: ```POST```
+* URL: ```/api/auth/login```
+* Successful Response: HTTP Status 200
+```python
+{
+   'id': INT,
+   'username': STRING,
+   'email': STRING,
+}
+```
+* Error Response: HTTP Status 400
+```python
+{
+   'errors': ARRAY_OF_STRINGS
+}
+```
+## Logout
+* Purpose: This fetch will logout the current user. It returns an object with the message 'User logged Out' if it succeeds and 'No session' if not.	
+* Method: ```POST```
+* URL: ```/api/auth/logout```
+* Successful Response: HTTP Status 200
+```python
+{
+   'message': STRING
+}
+```
+* Error Response: HTTP Status 404
+```python
+{
+   'errors': STRING
+}
+```
 ---
-
 
 # Feature List
 1. Cart
