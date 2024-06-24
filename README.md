@@ -73,10 +73,10 @@ https://sweetwafer.onrender.com
 
 ### Current User
 * Method: ```POST```
-* URL: /api/auth/
+* URL: ```/api/auth/```
 * Body: None
 * Successful Response: HTTP Status Code 200
-```json
+```
 {
     "cart": [],
     "createdat": "2024-05-22 23:00:49.036175",
