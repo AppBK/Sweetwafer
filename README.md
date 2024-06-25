@@ -34,22 +34,22 @@ https://sweetwafer.onrender.com
 
 
 # Endpoints
-## Auth
+<!-- ## Auth
 | Request                        | Purpose                | Return Value  |                  
 | :----------------------------- | :--------------------: | :------------------------------ |
 | GET /api/auth/        | This fetch is sent upon initial app load and on subsequent refreshes.<br>It returns an object representing the current user, if user is logged in.                                 | {<br>&nbsp;&nbsp;&nbsp;'id': INT,<br>&nbsp;&nbsp;&nbsp;'username': STRING,<br>&nbsp;&nbsp;&nbsp;'email': STRING,<br>}<br><br>Status: 200<br>|
 | POST /api/auth/unauthorized      | This endpoint will be routed to in the case that a protected route does not pass validations for the current user.<br>It returns an object with an errors property, which is an array with the value 'Unauthorized'          | {<br>&nbsp;&nbsp;&nbsp;'errors': ARRAY[STRINGS]<br>}<br><br>Status: 401<br>|
 | POST /api/auth/signup        | This fetch sends the form data signup from data to the backend to process the creation of a new user.<br>It returns an object representing the current user, after logging them in, if account creation succeeds.                                 | {<br>&nbsp;&nbsp;&nbsp;'id': INT,<br>&nbsp;&nbsp;&nbsp;'username': STRING,<br>&nbsp;&nbsp;&nbsp;'email': STRING,<br>}<br><br>Status: 200<br>|
 | POST /api/auth/login | This fetch attempts to login a user with the provided credentials.<br>It returns an object representing the current user, if validation succeeds.                                 | {<br>&nbsp;&nbsp;&nbsp;'id': INT,<br>&nbsp;&nbsp;&nbsp;'username': STRING,<br>&nbsp;&nbsp;&nbsp;'email': STRING,<br>}<br><br>Status: 200<br>|                                                                        
-| POST /api/auth/logout | This fetch will logout the current user.<br>It returns an object with the message 'User logged Out' if it succeeds.                                 | {<br>&nbsp;&nbsp;&nbsp;'message': STRING<br>}<br><br>Status: 200<br>|
+| POST /api/auth/logout | This fetch will logout the current user.<br>It returns an object with the message 'User logged Out' if it succeeds.                                 | {<br>&nbsp;&nbsp;&nbsp;'message': STRING<br>}<br><br>Status: 200<br>| -->
 
-## Cart
+<!-- ## Cart
 | Request                        | Purpose                | Return Value  | 
 | :----------------------------- | :--------------------: | :------------------------------ |
 | POST /api/cart/add        | This fetch is sent to add a new item to the cart table. Upon success, it returns an object representing that item.                 | {<br>&nbsp;&nbsp;&nbsp;'id': INT,<br>&nbsp;&nbsp;&nbsp;'category': STRING,<br>&nbsp;&nbsp;&nbsp;'vendor_name': STRING,<br>&nbsp;&nbsp;&nbsp;'manufacturer_id': STRING,<br>&nbsp;&nbsp;&nbsp;'name': STRING,<br>&nbsp;&nbsp;&nbsp;'model': STRING,<br>&nbsp;&nbsp;&nbsp;'serial': STRING,<br>&nbsp;&nbsp;&nbsp;'description': STRING,<br>&nbsp;&nbsp;&nbsp;'tech_specs': STRING,<br>&nbsp;&nbsp;&nbsp;'price': FLOAT<br>}<br><br>Status: 201<br>|
 | PUT /api/cart/quantity        | This fetch is sent to update the quantity value of a cart item. Upon success, it returns an object representing that item in the cart, with a new quantity.                 | {<br>&nbsp;&nbsp;&nbsp;'id': INT,<br>&nbsp;&nbsp;&nbsp;'user_id': INT,<br>&nbsp;&nbsp;&nbsp;'item_id': INT,<br>&nbsp;&nbsp;&nbsp;'quantity': INT,<br>}<br><br>Status: 200<br>|
 | DELETE /api/cart/delete/<int:id>        | This fetch is sent to delete an item from the cart. Upon success, it returns the string "Success", otherwise, we throw an error.                | "Success"<br><br>Status: 200<br>|
-| DELETE /api/cart/clear        | This fetch is sent to delete all items from the cart. Upon success, it returns the string "Cart Emptied", otherwise, we throw an error.                | "Cart Emptied"<br><br>Status: 200<br>|
+| DELETE /api/cart/clear        | This fetch is sent to delete all items from the cart. Upon success, it returns the string "Cart Emptied", otherwise, we throw an error.                | "Cart Emptied"<br><br>Status: 200<br>| -->
 
 ## Shipping Info
 | Request                        | Purpose                | Return Value  | 
@@ -66,6 +66,218 @@ https://sweetwafer.onrender.com
 | POST /api/billing/add        | This fetch is sent to add a new entry to the billing info table. Due to the existence of the Primary property, we update the frontend store by sending back an array of all entries and replacing the value of the current state upon success.        | ARRAY[<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;apt_number: INT,<br>&nbsp;&nbsp;&nbsp;city: STRING,<br>&nbsp;&nbsp;&nbsp;company: STRING,<br>&nbsp;&nbsp;&nbsp;country: STRING,<br>&nbsp;&nbsp;&nbsp;primary: BOOLEAN,<br>&nbsp;&nbsp;&nbsp;shipping_name: STRING,<br>&nbsp;&nbsp;&nbsp;state: STRING,<br>&nbsp;&nbsp;&nbsp;street: STRING,<br>&nbsp;&nbsp;&nbsp;user_id: INT,<br>&nbsp;&nbsp;&nbsp;zip: STRING,<br>&nbsp;&nbsp;&nbsp;},<br>]<br><br>Status: 201<br>|
 | PUT /api/shipping/update/<int:billing_id>        | This fetch is sent to update the billing info record specified by the billing id. Upon success, we return an array of objects representing all entries for current user.           | ARRAY[<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;apt_number: INT,<br>&nbsp;&nbsp;&nbsp;city: STRING,<br>&nbsp;&nbsp;&nbsp;company: STRING,<br>&nbsp;&nbsp;&nbsp;country: STRING,<br>&nbsp;&nbsp;&nbsp;primary: BOOLEAN,<br>&nbsp;&nbsp;&nbsp;shipping_name: STRING,<br>&nbsp;&nbsp;&nbsp;state: STRING,<br>&nbsp;&nbsp;&nbsp;street: STRING,<br>&nbsp;&nbsp;&nbsp;user_id: INT,<br>&nbsp;&nbsp;&nbsp;zip: STRING,<br>&nbsp;&nbsp;&nbsp;},<br>]<br><br>Status: 200<br>|
 | DELETE /api/billing/delete     | This fetch sends a billing info id in the body of the request. Upon successful deletion we return the updated array of user entries. | ARRAY[<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;apt_number: INT,<br>&nbsp;&nbsp;&nbsp;city: STRING,<br>&nbsp;&nbsp;&nbsp;company: STRING,<br>&nbsp;&nbsp;&nbsp;country: STRING,<br>&nbsp;&nbsp;&nbsp;primary: BOOLEAN,<br>&nbsp;&nbsp;&nbsp;shipping_name: STRING,<br>&nbsp;&nbsp;&nbsp;state: STRING,<br>&nbsp;&nbsp;&nbsp;street: STRING,<br>&nbsp;&nbsp;&nbsp;user_id: INT,<br>&nbsp;&nbsp;&nbsp;zip: STRING,<br>&nbsp;&nbsp;&nbsp;},<br>]<br><br>Status: 200<br>|
+
+# Endpoints Revision
+
+## Auth Routes
+
+### Current User
+##
+* Purpose: This fetch is sent upon initial app load and on subsequent refreshes and navigations. It returns an object representing the current user, if user is logged in.
+* Method: ```POST```
+* URL: ```/api/auth/```
+* Successful Response: HTTP Status Code 200
+```python
+{
+    'cart': ARRAY_OF_PRODUCT_OBJECTS,
+    'createdat': STRING,
+    'email': STRING,
+    'id': INT,
+    'updatedat': STRING,
+    'username': STRING
+}
+```
+* Error Response: HTTP Status Code 401
+```python
+{
+  'errors': 'Unauthorized'
+}
+```
+### Unauthorized (from @login_required)
+##
+* Purpose: This endpoint will be routed to in the case that a protected route does not pass validations for the current user.
+* Method ```POST```
+* URL: ```/api/auth/unauthorized```
+* Successful Response: NA 
+* Error Response: HTTP Status Code 401
+```python
+{
+  'errors': 'Unauthorized'
+}
+```
+### Sign Up
+##
+* Purpose: This fetch sends the signup form data to the backend to process the creation of a new user.
+* Method: ```POST```
+* URL: ```/api/auth/signup```
+* Successful Response: HTTP Status 201
+```python
+{
+   'id': INT,
+   'username': STRING,
+   'email': STRING,
+}
+```
+* Error Response: HTTP Status 400
+```python
+{
+   'errors': ARRAY_OF_STRINGS
+}
+```
+### Login
+##
+* Purpose: This fetch attempts to login a user with the provided credentials.
+* Method: ```POST```
+* URL: ```/api/auth/login```
+* Successful Response: HTTP Status 200
+```python
+{
+   'id': INT,
+   'username': STRING,
+   'email': STRING,
+}
+```
+* Error Response: HTTP Status 400
+```python
+{
+   'errors': ARRAY_OF_STRINGS
+}
+```
+### Logout
+##
+* Purpose: This fetch will logout the current user.
+* Method: ```POST```
+* URL: ```/api/auth/logout```
+* Successful Response: HTTP Status 200
+```python
+{
+   'message': 'User logged Out'
+}
+```
+* Error Response: HTTP Status 404
+```python
+{
+   'errors': 'No session'
+}
+```
+##
+
+## Cart Routes
+
+### Add Item to Cart
+##
+* Purpose: This fetch is sent to add a new item to the cart table.
+* Method: ```POST```
+* URL: ```/api/cart/add```
+* Body:
+```python
+{
+   'item_id': INT
+}
+```
+* Successful Response: HTTP Status 201
+```python
+{
+   'id': INT,
+   'category': STRING,
+   'vendor_name': STRING,
+   'manufacturer_id': STRING,
+   'name': STRING,
+   'model': STRING,
+   'serial': STRING,
+   'description': STRING,
+   'tech_specs': STRING,
+   'price': FLOAT,
+   'quantity': INT
+}
+```
+* Error Response: HTTP Status 404
+```python
+{
+   'error': 'Item with given id Not Found'
+}
+```
+
+### Update Cart Item Quantity
+##
+* Purpose: This fetch is sent to update the quantity value of a cart item.
+* Method: ```PUT```
+* URL: ```/api/cart/quantity```
+* Body:
+```python
+{
+   'id': INT,
+   'val': INT
+}
+```
+* Successful Response: HTTP Status 200
+```python
+{
+   'id': INT,
+   'category': STRING,
+   'vendor_name': STRING,
+   'manufacturer_id': STRING,
+   'name': STRING,
+   'model': STRING,
+   'serial': STRING,
+   'description': STRING,
+   'tech_specs': STRING,
+   'price': FLOAT,
+   'quantity': INT
+}
+```
+* Error Response1: HTTP Status 404
+```python
+{
+   'errors': 'Item with given id Not Found'
+}
+```
+* Error Response2: HTTP Status 400
+```python
+{
+   'errors': ARRAY_OF_STRINGS
+}
+```
+### Remove Item from Cart
+##
+* Purpose: This fetch is sent to delete an item from the cart.
+* Method: ```DELETE```
+* URL: ```/api/cart/delete/int:id```
+* Body: None
+* Successful Response: HTTP Status 200
+```python
+{
+   'message': 'Success'
+}
+```
+* Error Response: HTTP Status 404
+```python
+{
+   'errors': 'Item with given id Not Found'
+}
+```
+
+### Empty Cart
+##
+* Purpose: This fetch is sent to delete all items from the cart.
+* Method: ```DELETE```
+* URL: ```/api/cart/clear/int:id```
+* Body: None
+* Successful Response: HTTP Status 200
+```python
+{
+   'message': 'Cart Emptied'
+}
+```
+* Error Response: HTTP Status 404
+```python
+{
+   'errors': 'Cart with given id Not Found'
+}
+```
+
+##
+
 
 # Feature List
 1. Cart
