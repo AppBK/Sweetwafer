@@ -33,8 +33,8 @@ https://sweetwafer.onrender.com
  
 
 
-# Endpoints
-<!-- ## Auth
+<!-- # Endpoints
+## Auth
 | Request                        | Purpose                | Return Value  |                  
 | :----------------------------- | :--------------------: | :------------------------------ |
 | GET /api/auth/        | This fetch is sent upon initial app load and on subsequent refreshes.<br>It returns an object representing the current user, if user is logged in.                                 | {<br>&nbsp;&nbsp;&nbsp;'id': INT,<br>&nbsp;&nbsp;&nbsp;'username': STRING,<br>&nbsp;&nbsp;&nbsp;'email': STRING,<br>}<br><br>Status: 200<br>|
@@ -59,15 +59,15 @@ https://sweetwafer.onrender.com
 | PUT /api/shipping/update/<int:shipping_id>        | This fetch is sent to update the shipping info record specified by the shipping id. Upon success, we return an array of objects representing all entries for current user.           | ARRAY[<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;apt_number: INT,<br>&nbsp;&nbsp;&nbsp;city: STRING,<br>&nbsp;&nbsp;&nbsp;company: STRING,<br>&nbsp;&nbsp;&nbsp;country: STRING,<br>&nbsp;&nbsp;&nbsp;primary: BOOLEAN,<br>&nbsp;&nbsp;&nbsp;shipping_name: STRING,<br>&nbsp;&nbsp;&nbsp;state: STRING,<br>&nbsp;&nbsp;&nbsp;street: STRING,<br>&nbsp;&nbsp;&nbsp;user_id: INT,<br>&nbsp;&nbsp;&nbsp;zip: STRING,<br>&nbsp;&nbsp;&nbsp;},<br>]<br><br>Status: 200<br>|
 | DELETE /api/shipping/delete     | This fetch sends a shipping info id in the body of the request. Upon successful deletion we return the updated array of user entries. | ARRAY[<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;apt_number: INT,<br>&nbsp;&nbsp;&nbsp;city: STRING,<br>&nbsp;&nbsp;&nbsp;company: STRING,<br>&nbsp;&nbsp;&nbsp;country: STRING,<br>&nbsp;&nbsp;&nbsp;primary: BOOLEAN,<br>&nbsp;&nbsp;&nbsp;shipping_name: STRING,<br>&nbsp;&nbsp;&nbsp;state: STRING,<br>&nbsp;&nbsp;&nbsp;street: STRING,<br>&nbsp;&nbsp;&nbsp;user_id: INT,<br>&nbsp;&nbsp;&nbsp;zip: STRING,<br>&nbsp;&nbsp;&nbsp;},<br>]<br><br>Status: 200<br>| -->
 
-## Billing Info
+<!-- ## Billing Info
 | Request                        | Purpose                | Return Value  | 
 | :----------------------------- | :--------------------: | :------------------------------ |
 | GET /api/billing/<int:user_id>        | This fetch is sent to retrieve all billing info records for the user specified by the id. Upon success, we return an array of objects representing that data.           | ARRAY[<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;apt_number: INT,<br>&nbsp;&nbsp;&nbsp;city: STRING,<br>&nbsp;&nbsp;&nbsp;company: STRING,<br>&nbsp;&nbsp;&nbsp;country: STRING,<br>&nbsp;&nbsp;&nbsp;primary: BOOLEAN,<br>&nbsp;&nbsp;&nbsp;shipping_name: STRING,<br>&nbsp;&nbsp;&nbsp;state: STRING,<br>&nbsp;&nbsp;&nbsp;street: STRING,<br>&nbsp;&nbsp;&nbsp;user_id: INT,<br>&nbsp;&nbsp;&nbsp;zip: STRING,<br>&nbsp;&nbsp;&nbsp;},<br>]<br><br>Status: 200<br>|
 | POST /api/billing/add        | This fetch is sent to add a new entry to the billing info table. Due to the existence of the Primary property, we update the frontend store by sending back an array of all entries and replacing the value of the current state upon success.        | ARRAY[<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;apt_number: INT,<br>&nbsp;&nbsp;&nbsp;city: STRING,<br>&nbsp;&nbsp;&nbsp;company: STRING,<br>&nbsp;&nbsp;&nbsp;country: STRING,<br>&nbsp;&nbsp;&nbsp;primary: BOOLEAN,<br>&nbsp;&nbsp;&nbsp;shipping_name: STRING,<br>&nbsp;&nbsp;&nbsp;state: STRING,<br>&nbsp;&nbsp;&nbsp;street: STRING,<br>&nbsp;&nbsp;&nbsp;user_id: INT,<br>&nbsp;&nbsp;&nbsp;zip: STRING,<br>&nbsp;&nbsp;&nbsp;},<br>]<br><br>Status: 201<br>|
 | PUT /api/shipping/update/<int:billing_id>        | This fetch is sent to update the billing info record specified by the billing id. Upon success, we return an array of objects representing all entries for current user.           | ARRAY[<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;apt_number: INT,<br>&nbsp;&nbsp;&nbsp;city: STRING,<br>&nbsp;&nbsp;&nbsp;company: STRING,<br>&nbsp;&nbsp;&nbsp;country: STRING,<br>&nbsp;&nbsp;&nbsp;primary: BOOLEAN,<br>&nbsp;&nbsp;&nbsp;shipping_name: STRING,<br>&nbsp;&nbsp;&nbsp;state: STRING,<br>&nbsp;&nbsp;&nbsp;street: STRING,<br>&nbsp;&nbsp;&nbsp;user_id: INT,<br>&nbsp;&nbsp;&nbsp;zip: STRING,<br>&nbsp;&nbsp;&nbsp;},<br>]<br><br>Status: 200<br>|
-| DELETE /api/billing/delete     | This fetch sends a billing info id in the body of the request. Upon successful deletion we return the updated array of user entries. | ARRAY[<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;apt_number: INT,<br>&nbsp;&nbsp;&nbsp;city: STRING,<br>&nbsp;&nbsp;&nbsp;company: STRING,<br>&nbsp;&nbsp;&nbsp;country: STRING,<br>&nbsp;&nbsp;&nbsp;primary: BOOLEAN,<br>&nbsp;&nbsp;&nbsp;shipping_name: STRING,<br>&nbsp;&nbsp;&nbsp;state: STRING,<br>&nbsp;&nbsp;&nbsp;street: STRING,<br>&nbsp;&nbsp;&nbsp;user_id: INT,<br>&nbsp;&nbsp;&nbsp;zip: STRING,<br>&nbsp;&nbsp;&nbsp;},<br>]<br><br>Status: 200<br>|
+| DELETE /api/billing/delete     | This fetch sends a billing info id in the body of the request. Upon successful deletion we return the updated array of user entries. | ARRAY[<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;apt_number: INT,<br>&nbsp;&nbsp;&nbsp;city: STRING,<br>&nbsp;&nbsp;&nbsp;company: STRING,<br>&nbsp;&nbsp;&nbsp;country: STRING,<br>&nbsp;&nbsp;&nbsp;primary: BOOLEAN,<br>&nbsp;&nbsp;&nbsp;shipping_name: STRING,<br>&nbsp;&nbsp;&nbsp;state: STRING,<br>&nbsp;&nbsp;&nbsp;street: STRING,<br>&nbsp;&nbsp;&nbsp;user_id: INT,<br>&nbsp;&nbsp;&nbsp;zip: STRING,<br>&nbsp;&nbsp;&nbsp;},<br>]<br><br>Status: 200<br>| -->
 
-# Endpoints Revision
+# Endpoints
 
 ## Auth Routes
 
@@ -342,10 +342,16 @@ https://sweetwafer.onrender.com
    }
 ]
 ```
-* Error Response: HTTP Status 400
+* Error Response1: HTTP Status 400
 ```python
 {
    'errors': ARRAY_OF_STRINGS
+}
+```
+* Error Response2: HTTP Status 404
+```python
+{
+   'errors': 'User with given id Not Found'
 }
 ```
 
@@ -392,7 +398,7 @@ https://sweetwafer.onrender.com
    'errors': ARRAY_OF_STRINGS
 }
 ```
-* Error Response1: HTTP Status 404
+* Error Response2: HTTP Status 404
 ```python
 {
    'errors': 'Shipping Record with given id Not Found'
@@ -433,7 +439,174 @@ https://sweetwafer.onrender.com
    'errors': 'Shipping Record with given id Not Found'
 }
 ```
+## Billing Info Routes
 
+### Get Current User Billing Info
+##
+* Purpose: This fetch is sent to retrieve all billing info records for the user specified by the id.
+* Method: ```GET```
+* URL: ```/api/billing/int:user_id```
+* Successful Response: HTTP Status 200
+```python
+[
+   {
+      apt_number: INT,
+      city: STRING,
+      company: STRING,
+      country: STRING,
+      primary: BOOLEAN,
+      shipping_name: STRING,
+      state: STRING,
+      street: STRING,
+      user_id: INT,
+      zip: STRING
+   }
+]
+```
+* Error Response: HTTP Status 404
+```python
+{
+   'errors': 'User with the given id Not Found'
+}
+```
+
+### Create new Billing Record
+* Purpose: This fetch is sent to add a new entry to the billing info table.
+* Method: ```POST```
+* URL: ```/api/billing/add```
+* Body:
+```python
+{
+   apt_number: INT,
+   city: STRING,
+   company: STRING,
+   country: STRING,
+   primary: BOOLEAN,
+   shipping_name: STRING,
+   state: STRING,
+   street: STRING,
+   user_id: INT,
+   zip: STRING
+}
+```
+* Successful Response: HTTP 201
+```python
+[
+   {
+      apt_number: INT,
+      city: STRING,
+      company: STRING,
+      country: STRING,
+      primary: BOOLEAN,
+      shipping_name: STRING,
+      state: STRING,
+      street: STRING,
+      user_id: INT,
+      zip: STRING
+   }
+]
+```
+* Error Response1: HTTP Status 400
+```python
+{
+   'errors': ARRAY_OF_STRINGS
+}
+```
+* Error Response2: HTTP Status 404
+```python
+{
+   'errors': 'User with given id Not Found'
+}
+```
+
+### Update Billing Record
+* Purpose: This fetch is sent to update the billing info record specified by the billing id.
+* Method: ```PUT```
+* URL: ```/api/shipping/update/int:billing_id```
+* Body:
+```python
+{
+   apt_number: INT,
+   city: STRING,
+   company: STRING,
+   country: STRING,
+   primary: BOOLEAN,
+   shipping_name: STRING,
+   state: STRING,
+   street: STRING,
+   user_id: INT,
+   zip: STRING
+}
+```
+* Successful Response: HTTP Status 200
+```python
+[
+   {
+      apt_number: INT,
+      city: STRING,
+      company: STRING,
+      country: STRING,
+      primary: BOOLEAN,
+      shipping_name: STRING,
+      state: STRING,
+      street: STRING,
+      user_id: INT,
+      zip: STRING
+   }
+]
+```
+* Error Response1: HTTP Status 400
+```python
+{
+   'errors': ARRAY_OF_STRINGS
+}
+```
+* Error Response2: HTTP Status 404
+```python
+{
+   'errors': 'Billing Record with given id Not Found'
+}
+```
+* Error Response3: HTTP Status 404
+```python
+{
+   'errors': 'User with given id Not Found'
+}
+```
+### Delete Billing Record
+##
+* Purpose: This fetch sends a billing info id in the body of the request. Upon successful deletion we return the updated array of user entries.
+* Method: ```DELETE```
+* URL: ```/api/billing/delete```
+* Body:
+```python
+{
+   'id': INT
+}
+```
+* Successful Response: HTTP Status 200
+```python
+[
+   {
+      apt_number: INT,
+      city: STRING,
+      company: STRING,
+      country: STRING,
+      primary: BOOLEAN,
+      shipping_name: STRING,
+      state: STRING,
+      street: STRING,
+      user_id: INT,
+      zip: STRING
+   }
+]
+```
+* Error Response: HTTP Status 404
+```python
+{
+   'errors': 'Billing record with given id Not Found'
+}
+```
 ##
 
 
