@@ -243,7 +243,6 @@ https://sweetwafer.onrender.com
 * Purpose: This fetch is sent to delete an item from the cart.
 * Method: ```DELETE```
 * URL: ```/api/cart/delete/int:id```
-* Body: None
 * Successful Response: HTTP Status 200
 ```python
 {
@@ -262,7 +261,6 @@ https://sweetwafer.onrender.com
 * Purpose: This fetch is sent to delete all items from the cart.
 * Method: ```DELETE```
 * URL: ```/api/cart/clear/int:id```
-* Body: None
 * Successful Response: HTTP Status 200
 ```python
 {
@@ -273,6 +271,166 @@ https://sweetwafer.onrender.com
 ```python
 {
    'errors': 'Cart with given id Not Found'
+}
+```
+
+## Shipping Info Routes
+
+### Get Current User Shipping Info
+##
+* Purpose: This fetch is sent to retrieve all shipping info records for the user specified by the id.
+* Method: ```GET```
+* URL: ```/api/shipping/int:user_id```
+* Successful Response: HTTP Status 200
+```python
+[
+   {
+      apt_number: INT,
+      city: STRING,
+      company: STRING,
+      country: STRING,
+      primary: BOOLEAN,
+      shipping_name: STRING,
+      state: STRING,
+      street: STRING,
+      user_id: INT,
+      zip: STRING
+   }
+]
+```
+* Error Response: HTTP Status 404
+```python
+{
+   'errors': 'User with given id Not Found'
+}
+```
+
+### Create a new Shipping Record
+##
+* Purpose: This fetch is sent to add a new entry to the shipping info table.
+* Method: ```POST```
+* URL: ```/api/shipping/add```
+* Body:
+```python
+   {
+      apt_number: INT,
+      city: STRING,
+      company: STRING,
+      country: STRING,
+      primary: BOOLEAN,
+      shipping_name: STRING,
+      state: STRING,
+      street: STRING,
+      user_id: INT,
+      zip: STRING
+   }
+```
+* Success Response: HTTP Status 201
+```python
+[
+   {
+      apt_number: INT,
+      city: STRING,
+      company: STRING,
+      country: STRING,
+      primary: BOOLEAN,
+      shipping_name: STRING,
+      state: STRING,
+      street: STRING,
+      user_id: INT,
+      zip: STRING
+   }
+]
+```
+* Error Response: HTTP Status 400
+```python
+{
+   'errors': ARRAY_OF_STRINGS
+}
+```
+
+### Update Shipping Record
+##
+* Purpose: This fetch is sent to update the shipping info record specified by the shipping id.
+* Method: ```PUT```
+* URL: ```/api/shipping/update/int:shipping_id```
+* Body:
+```python
+   {
+      apt_number: INT,
+      city: STRING,
+      company: STRING,
+      country: STRING,
+      primary: BOOLEAN,
+      shipping_name: STRING,
+      state: STRING,
+      street: STRING,
+      user_id: INT,
+      zip: STRING
+   }
+```
+* Successful Response: HTTP Status 200
+```python
+[
+   {
+      apt_number: INT,
+      city: STRING,
+      company: STRING,
+      country: STRING,
+      primary: BOOLEAN,
+      shipping_name: STRING,
+      state: STRING,
+      street: STRING,
+      user_id: INT,
+      zip: STRING
+   }
+]
+```
+* Error Response1: HTTP Status 400
+```python
+{
+   'errors': ARRAY_OF_STRINGS
+}
+```
+* Error Response1: HTTP Status 404
+```python
+{
+   'errors': 'Shipping Record with given id Not Found'
+}
+```
+
+### Delete Shipping Record
+##
+* Purpose: This fetch sends a shipping info id in the body of the request of the record to be deleted.
+* Method: ```DELETE```
+* URL: ```/api/shipping/delete```
+* Body:
+```python
+{
+   'id': INT
+}
+```
+* Successful Response: HTTP Status 200
+```python
+[
+   {
+      apt_number: INT,
+      city: STRING,
+      company: STRING,
+      country: STRING,
+      primary: BOOLEAN,
+      shipping_name: STRING,
+      state: STRING,
+      street: STRING,
+      user_id: INT,
+      zip: STRING
+   }
+]
+```
+* Error Response: HTTP Status 404
+```python
+{
+   'errors': 'Shipping Record with given id Not Found'
 }
 ```
 
