@@ -4,6 +4,7 @@ node_modules/
 .vscode/
 __pycache__/
 local/
+api_docs/
 
 # FILES:
 dev.db

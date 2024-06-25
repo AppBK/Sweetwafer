@@ -137,7 +137,7 @@ def update_shipping_info(id):
       user_shipping_all = [shipping.to_dict() for shipping in user_shipping_all]
       jsonified_list = json.dumps(user_shipping_all)
 
-      return jsonified_list
+      return jsonified_list, 200
 
     else:
       info_to_update.apt_number = body['apt_number']
@@ -159,5 +159,5 @@ def update_shipping_info(id):
       user_shipping_all = [shipping.to_dict() for shipping in user_shipping_all]
       jsonified_list = json.dumps(user_shipping_all)
 
-      return jsonified_list
+      return jsonified_list, 200
   return {'errors': validation_errors_to_error_messages(form.errors)}, 400

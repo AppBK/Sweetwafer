@@ -24,7 +24,12 @@ def validation_errors_to_error_messages(validation_errors):
 def get_billing_info(id):
   user_billing_info = Billing.query.filter(Billing.user_id == id).all()
 
+  if len(user_billing_info) == 0:
+     return jsonify([]), 200
+
+  # Create a list of objects
   billing_list = [info.to_dict() for info in user_billing_info]
+  # Normalize the list data
   billing_obj = {info['id'] : info for info in billing_list}
 
   jsonified_list = json.dumps(billing_obj)
@@ -69,7 +74,7 @@ def create_billing_info():
     new_billing = new_billing.to_dict()
     jsonified_list = json.dumps(new_billing)
 
-    return jsonified_list
+    return jsonified_list, 201
 
   return {'errors': validation_errors_to_error_messages(form.errors)}, 400
 
@@ -85,7 +90,7 @@ def delete_from_shipping():
       db.session.delete(billing_info_to_delete)
       db.session.commit()
 
-      return json.dumps({"message": "Success!"})
+      return json.dumps({"message": "Success!"}), 200
 
     else:
       return "Error: Could not find info"
@@ -128,7 +133,7 @@ def update_billing_info(id):
       info_to_update = info_to_update.to_dict()
       jsonified_list = json.dumps(info_to_update)
 
-      return jsonified_list
+      return jsonified_list, 200
 
     else:
       info_to_update.apt_number = body['apt_number']
@@ -151,5 +156,5 @@ def update_billing_info(id):
       info_to_update = info_to_update.to_dict()
       jsonified_list = json.dumps(info_to_update)
 
-      return jsonified_list
+      return jsonified_list, 200
   return {'errors': validation_errors_to_error_messages(form.errors)}, 400

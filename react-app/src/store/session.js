@@ -29,7 +29,6 @@ export const authenticate = () => async (dispatch) => {
 
   //   dispatch(setUser(data));
   // }
-  console.log('RESPONSE OBJECT: ', response)
   if (response.ok) {
     const data = await response.json();
     console.log('RETURN FROM LOGIN: ', data)

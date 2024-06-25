@@ -18,6 +18,8 @@ def add_to_cart():
   item_info = Inventory.query.filter(Inventory.id == body['item_id']).first()
 
   # Maybe throw an error here if the item is not found.
+  if item_info == None:
+    return jsonify({ 'error': 'Item with given id Not Found' }), 404
 
   new_item = Cart(user_id=body['user_id'], item_id=body['item_id'], createdat=str(datetime.now()), updatedat=str(datetime.now()), quantity=1)
 
@@ -34,7 +36,7 @@ def add_to_cart():
     else:
       new_item[key] = item_info[key]
 
-  return new_item, 201
+  return jsonify(new_item), 201
 
 
 
@@ -59,6 +61,7 @@ def update_quantity():
   item_info = Inventory.query.filter(Inventory.id == body['id']).first()
   item_info = item_info.to_dict()
 
+  # Combine the values from the 2 objects
   for key in item_info:
     if key == 'id':
       pass
@@ -80,7 +83,7 @@ def delete_item(id):
     db.session.delete(item_to_delete)
     db.session.commit()
 
-    return "Success", 200
+    return jsonify("Success"), 200
   except:
     raise Exception("Could Not Remove Item!!")
 
@@ -91,4 +94,4 @@ def clear_cart():
   Cart.query.delete()
   db.session.commit()
 
-  return 'Cart Emptied', 200
+  return jsonify('Cart Emptied'), 200

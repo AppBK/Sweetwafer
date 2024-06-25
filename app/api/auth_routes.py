@@ -50,11 +50,11 @@ def authenticate():
             fetched_user = user.to_dict()
             fetched_user['cart'] = cart_items
 
-            return fetched_user
+            return fetched_user, 200
 
         else:
-            return current_user.to_dict()
-    return {'errors': ['Unauthorized']}
+            return current_user.to_dict(), 200
+    return {'errors': ['Unauthorized']}, 401
 
 
 @auth_routes.route('/login', methods=['POST'])

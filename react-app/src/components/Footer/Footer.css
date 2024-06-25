@@ -123,4 +123,27 @@
 
 .about-me-links:link {
   color: black;
+  width: 48px;
+}
+
+.about-me-links:visited {
+  color: black;
+}
+
+.about-me-links:hover {
+  color: #0072ba;
+}
+
+.fa-24 {
+  font-size: 24px;
+}
+
+.fa-hover {
+  transition: all .20s ease-in-out;
+}
+
+.fa-hover:hover {
+  color: #0072ba;
+  font-size: 40px;
+  margin-left: -4px;
 }
